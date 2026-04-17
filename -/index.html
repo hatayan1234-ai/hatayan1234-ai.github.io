@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>秦 康宏 研究室｜大阪大谷大学 社会福祉学・高齢者福祉論</title>
-  > **本サイトについて**  
-> 本ページは、秦康宏個人の研究・教育・社会活動に関する記録公開を目的として作成しています。  
-> 入試広報・学生募集を目的とするものではありません。  
-> 入試・学科案内等の公式情報は、大学公式サイトをご確認ください。
     <style>
         :root {
-            --col-bg-filter: rgba(244, 248, 240, 0.45); /* スウェーデンの風景を活かす薄緑フィルター */
-            --col-card-bg: rgba(255, 255, 255, 0.98);    /* 文字を際立たせる純白背景 */
-            --col-main: #335c1f;      /* 深みのあるフォレストグリーン（知性） */
-            --col-gold: #b08d57;      /* アカデミックな輝き（国際賞） */
-            --col-accent: #e1eedb;    /* 優しい黄緑（福祉） */
+            --col-bg-filter: rgba(244, 248, 240, 0.45);
+            --col-card-bg: rgba(255, 255, 255, 0.98);
+            --col-main: #335c1f;
+            --col-gold: #b08d57;
+            --col-accent: #e1eedb;
             --col-text: #1a1a1a;
         }
 
@@ -31,80 +27,192 @@
             line-height: 2.2;
         }
 
-        /* 背景の視認性向上フィルター */
         body::before {
-            content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--col-bg-filter); z-index: -1;
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: var(--col-bg-filter);
+            z-index: -1;
         }
 
-        /* ナビゲーション */
         nav {
             background: rgba(255, 255, 255, 0.95);
-            padding: 20px 0; position: fixed; top: 0; left: 0; right: 0;
-            display: flex; justify-content: center; z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-bottom: 4px solid var(--col-gold);
+            padding: 20px 0;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--col-gold);
         }
-        nav a { color: var(--col-main); text-decoration: none; margin: 0 25px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.1em; }
 
-        /* 重厚なヘッダー */
+        nav a {
+            color: var(--col-main);
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: 700;
+            font-size: 1.1em;
+            letter-spacing: 0.1em;
+        }
+
         header {
-            padding: 250px 20px 140px; text-align: center; color: #fff;
-            background: rgba(45, 80, 25, 0.75); margin-bottom: 80px;
+            padding: 250px 20px 140px;
+            text-align: center;
+            color: #fff;
+            background: rgba(45, 80, 25, 0.75);
+            margin-bottom: 80px;
             border-bottom: 12px solid var(--col-gold);
         }
-        header h1 { font-size: 3.8em; margin: 0; letter-spacing: 0.2em; text-shadow: 3px 3px 8px rgba(0,0,0,0.5); }
-        .subtitle { font-size: 1.6em; margin-top: 15px; font-weight: 400; letter-spacing: 0.1em; }
 
-        /* コンテンツ配置 */
-        .container { max-width: 1100px; margin: 0 auto 150px; padding: 0 20px; }
+        header h1 {
+            font-size: 3.8em;
+            margin: 0;
+            letter-spacing: 0.2em;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            font-size: 1.6em;
+            margin-top: 15px;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto 150px;
+            padding: 0 20px;
+        }
+
         .content-card {
-            background: var(--col-card-bg); padding: 80px; border-radius: 2px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.3); border: 1px solid var(--col-accent);
+            background: var(--col-card-bg);
+            padding: 80px;
+            border-radius: 2px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+            border: 1px solid var(--col-accent);
             position: relative;
         }
-        .content-card::after { /* 装飾用フレーム */
-            content: ''; position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px;
-            border: 2px solid var(--col-gold); pointer-events: none; opacity: 0.5;
+
+        .content-card::after {
+            content: '';
+            position: absolute;
+            top: 15px; left: 15px; right: 15px; bottom: 15px;
+            border: 2px solid var(--col-gold);
+            pointer-events: none;
+            opacity: 0.5;
         }
 
-        /* 章タイトル */
         h2 {
-            color: var(--col-main); border-bottom: 3px solid var(--col-gold);
-            padding-bottom: 15px; margin-top: 80px; font-size: 2.4em;
-            display: flex; align-items: center; gap: 15px;
+            color: var(--col-main);
+            border-bottom: 3px solid var(--col-gold);
+            padding-bottom: 15px;
+            margin-top: 80px;
+            font-size: 2.4em;
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
-        h2::before { content: ''; width: 12px; height: 1.2em; background: var(--col-gold); display: inline-block; }
 
-        /* 各セクションの装飾 */
-        .profile-section { display: flex; gap: 60px; align-items: flex-start; margin-bottom: 60px; }
-        .profile-img { width: 280px; border: 10px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        h2::before {
+            content: '';
+            width: 12px;
+            height: 1.2em;
+            background: var(--col-gold);
+            display: inline-block;
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+            margin-bottom: 60px;
+        }
+
+        .profile-img {
+            width: 280px;
+            border: 10px solid #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
 
         .focus-area {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 50px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 50px 0;
         }
+
         .focus-item {
-            background: var(--col-accent); padding: 40px; border-left: 8px solid var(--col-main);
-            border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            background: var(--col-accent);
+            padding: 40px;
+            border-left: 8px solid var(--col-main);
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        .focus-item h3 { color: var(--col-main); margin-top: 0; font-size: 1.5em; border-bottom: 1px solid var(--col-gold); padding-bottom: 10px; }
 
-        /* 実績リスト */
-        .achievement-list { list-style: none; padding: 0; }
+        .focus-item h3 {
+            color: var(--col-main);
+            margin-top: 0;
+            font-size: 1.5em;
+            border-bottom: 1px solid var(--col-gold);
+            padding-bottom: 10px;
+        }
+
+        .achievement-list {
+            list-style: none;
+            padding: 0;
+        }
+
         .achievement-list li {
-            padding: 20px 0; border-bottom: 1px solid #eee; display: flex; gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            gap: 20px;
         }
-        .date { font-weight: 700; color: var(--col-gold); min-width: 120px; }
 
-        /* 社会活動のバッジ */
-        .social-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-        .tag { background: var(--col-main); color: #fff; padding: 5px 15px; border-radius: 3px; font-size: 0.9em; font-weight: 500; }
+        .date {
+            font-weight: 700;
+            color: var(--col-gold);
+            min-width: 120px;
+        }
 
-        footer { background: #1a1a1a; color: rgba(255,255,255,0.8); padding: 100px 20px; text-align: center; }
+        .social-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            background: var(--col-main);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: rgba(255,255,255,0.8);
+            padding: 100px 20px;
+            text-align: center;
+        }
 
         @media (max-width: 900px) {
-            .profile-section, .focus-area { flex-direction: column; grid-template-columns: 1fr; }
-            .content-card { padding: 40px 25px; }
-            header h1 { font-size: 2.5em; }
+            .profile-section {
+                flex-direction: column;
+            }
+            .focus-area {
+                grid-template-columns: 1fr;
+            }
+            .content-card {
+                padding: 40px 25px;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
         }
     </style>
 </head>
@@ -118,18 +226,19 @@
 </nav>
 
 <header>
-    <h1>秦 康宏 研究室</h1><div style="border:1px solid #d9d9d9; background:#fafafa; padding:12px 14px; margin:14px 0 20px; font-size:0.95rem; line-height:1.7;">
-  <strong>本サイトについて</strong><br>
-  本ページは、秦康宏個人の研究・教育・社会活動に関する記録公開を目的として作成しています。<br>
-  入試広報・学生募集を目的とするものではありません。<br>
-  入試・学科案内等の公式情報は、大学公式サイトをご確認ください。
-</div>
+    <h1>秦 康宏 研究室</h1>
+    <div style="border:1px solid #d9d9d9; background:#fafafa; padding:12px 14px; margin:14px 0 20px; font-size:0.95rem; line-height:1.7; color:#222;">
+        <strong>本サイトについて</strong><br>
+        本ページは、秦康宏個人の研究・教育・社会活動に関する記録公開を目的として作成しています。<br>
+        入試広報・学生募集を目的とするものではありません。<br>
+        入試・学科案内等の公式情報は、大学公式サイトをご確認ください。
+    </div>
     <div class="subtitle">理論と現場、日本と世界を繋ぐ社会福祉</div>
 </header>
 
 <div class="container">
     <div class="content-card">
-        
+
         <section id="biography">
             <h2>Biography & Mission</h2>
             <div class="profile-section">
@@ -206,14 +315,15 @@
         <p><strong>大阪大谷大学 人間社会学部 心理・福祉学科</strong></p>
         <p>秦 康宏 研究室｜Hata Laboratory of Social Welfare</p>
         <p>〒584-8540 大阪府富田林市錦織北3丁目11番1号</p>
-        <p>Email: hatayasu@osaka-ohtani.ac.jp</p><p style="font-size:0.95rem; line-height:1.7;">
-  ご連絡は、研究・講演・共同研究・社会活動に関する内容を対象としております。<br>
-  入試・学科案内に関するお問い合わせは、大学公式窓口へお願いいたします。
-</p>
-        <p style="font-size: 0.8em; margin-top: 40px; opacity: 0.5;">&copy; 2026 Yasuhiro Hata All Rights Reserved.</p>
-        <p style="font-size:0.82rem; color:#666; margin-top:8px; line-height:1.6;">
-  本サイトは個人の活動紹介であり、所属組織の公式見解を示すものではありません。
-</p>
+        <p>Email: hatayasu@osaka-ohtani.ac.jp</p>
+        <p style="font-size:0.95rem; line-height:1.7;">
+            ご連絡は、研究・講演・共同研究・社会活動に関する内容を対象としております。<br>
+            入試・学科案内に関するお問い合わせは、大学公式窓口へお願いいたします。
+        </p>
+        <p style="font-size: 0.8em; margin-top: 40px; opacity: 0.6;">&copy; 2026 Yasuhiro Hata All Rights Reserved.</p>
+        <p style="font-size:0.82rem; color:#bbb; margin-top:8px; line-height:1.6;">
+            本サイトは個人の活動紹介であり、所属組織の公式見解を示すものではありません。
+        </p>
     </div>
 </footer>
 
