@@ -6,112 +6,126 @@
     <title>秦 康宏 研究室｜大阪大谷大学 社会福祉学・高齢者福祉論</title>
     <style>
         :root {
-            --col-light-green: #eaffea;  /* 秦先生ご指定の薄黄緑色 */
-            --col-primary: #558b2f;      /* アクセント用の濃い黄緑 */
-            --col-secondary: #d4af37;    /* アカデミックなゴールド */
-            --white-alpha: rgba(255, 255, 255, 0.9); /* 内容を読みやすくするための透明度 */
+            /* 秦先生にふさわしい格調高いアカデミックカラー */
+            --col-background: #fff;       /* 純白：文字の読みやすさを最優先 */
+            --col-primary: #558b2f;      /* 濃い黄緑：教育者としての落ち着き */
+            --col-secondary: #c9a063;    /* 純ゴールド：国際学術賞の栄誉 */
+            --col-text: #1a1a1a;         /* 深い黒：文字の可読性を確保 */
+            --col-accent: #f2f9ec;       /* 薄黄緑：優しい雰囲気 */
         }
 
-        html, body { margin: 0; padding: 0; height: 100%; }
+        html, body { margin: 0; padding: 0; height: 100%; font-size: 16px; }
 
         body {
-            /* 背景画像：スウェーデンの写真を全体に固定表示 */
+            /* 背景画像：スウェーデンの風景を「固定背景」として設定 */
             background-image: url('IMG_5721.JPG');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-attachment: fixed; /* スクロールしても写真は動かない */
             background-repeat: no-repeat;
-            color: #1a1a1a;
-            font-family: "Times New Roman", "Hiragino Mincho ProN", serif;
-            line-height: 1.8;
+            color: var(--col-text);
+            font-family: "Times New Roman", "Hiragino Mincho ProN", serif; /* 明朝体で格調高く */
+            line-height: 2.0; /* 行間を広くし、読みやすく */
         }
 
-        /* 写真の上に「薄黄緑色」のフィルターを重ね、全体に統一感を出す */
+        /* 写真の上に薄黄緑色のフィルターを重ね、全体の統一感を出す */
         body::before {
             content: '';
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(234, 255, 234, 0.45); 
+            background: rgba(242, 249, 236, 0.45); 
             z-index: -1;
         }
 
+        /* 統一されたナビゲーションバー */
         nav {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px 0;
-            position: fixed;
-            top: 0; left: 0; right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 18px 0;
+            position: fixed; top: 0; left: 0; right: 0;
             display: flex; justify-content: center;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-bottom: 4px solid var(--col-light-green);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-bottom: 5px solid var(--col-secondary); /* ゴールドのフレーム */
         }
 
         nav a {
             color: var(--col-primary);
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 25px;
             font-weight: 700;
-            font-size: 0.95em;
+            font-size: 1.0em;
+            letter-spacing: 0.05em;
         }
 
+        /* 威厳のあるヘッダー */
         header {
-            padding: 180px 20px 100px;
+            padding: 220px 20px 120px;
             text-align: center;
             color: #fff;
-            background: rgba(85, 139, 47, 0.75); 
-            margin-bottom: 50px;
+            background: rgba(85, 139, 47, 0.85); /* 濃い黄緑 */
+            margin-bottom: 70px;
+            border-bottom: 10px solid var(--col-secondary); /* ゴールドのフレーム */
         }
 
         header h1 {
-            font-size: 3em; margin: 0;
-            letter-spacing: 0.1em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 3.5em; margin: 0;
+            letter-spacing: 0.15em;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
         }
 
-        .subtitle { font-size: 1.4em; margin-top: 10px; font-weight: 500; }
+        .subtitle { font-size: 1.6em; margin-top: 15px; font-weight: 500; }
 
-        .container { max-width: 1000px; margin: 0 auto 100px; padding: 0 20px; }
+        /* 内容を読みやすくするための強力な純白フレーム */
+        .container { max-width: 1050px; margin: 0 auto 120px; padding: 0 20px; }
 
         .content-card {
-            background: var(--white-alpha);
-            padding: 60px;
-            border-radius: 8px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-            border-top: 12px solid var(--col-secondary);
+            background: var(--col-background); /* 完全な白 */
+            padding: 80px 70px; /* 余白を広く */
+            border-radius: 4px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3); /* 深い影 */
+            border: 15px solid var(--col-secondary); /* 強力なゴールドフレーム */
         }
 
+        /* 章タイトル */
         h2 {
             color: var(--col-primary);
-            border-bottom: 2px solid var(--col-light-green);
-            padding-bottom: 10px; margin-top: 60px; font-size: 1.8em;
+            border-bottom: 3px solid var(--col-accent);
+            padding-bottom: 15px; margin-top: 70px; font-size: 2.2em;
+            letter-spacing: 0.1em;
         }
 
-        .profile-section { display: flex; gap: 40px; align-items: flex-start; }
-        .profile-img { width: 240px; border: 5px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        /* プロフィールセクション */
+        .profile-section { display: flex; gap: 50px; align-items: flex-start; }
+        .profile-img { width: 260px; border: 8px solid #fff; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
 
-        .badge-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        /* 資格バッジ */
+        .badge-list { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
         .badge {
-            background: var(--col-light-green);
-            padding: 5px 15px; border-radius: 20px;
-            font-size: 0.85em; font-weight: 700; color: var(--col-primary);
+            background: var(--col-accent);
+            padding: 8px 20px; border-radius: 25px;
+            font-size: 0.9em; font-weight: 700; color: var(--col-primary);
+            border: 2px solid var(--col-primary);
         }
 
-        .research-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        .research-table th, .research-table td { padding: 15px; border-bottom: 1px solid #ddd; text-align: left; }
-        .research-table th { width: 120px; color: var(--col-primary); font-size: 0.9em; }
+        /* 実績テーブル */
+        .research-table { width: 100%; border-collapse: collapse; margin-top: 30px; font-size: 1.05em; }
+        .research-table th, .research-table td { padding: 20px; border-bottom: 1px solid #eee; text-align: left; }
+        .research-table th { width: 140px; color: var(--col-primary); font-weight: 700; }
 
-        .focus-box {
-            background: rgba(234, 255, 234, 0.5);
-            padding: 30px; border-radius: 8px; margin-top: 20px;
-            border-left: 5px solid var(--col-primary);
+        /* 受賞実績の強調（ゴールド） */
+        .award {
+            background: rgba(201, 160, 99, 0.15);
+            font-weight: 700;
+            color: var(--col-secondary);
+            border-left: 5px solid var(--col-secondary);
         }
 
-        footer { background: #1a1a1a; color: #fff; padding: 60px 20px; text-align: center; }
+        footer { background: #1a1a1a; color: #fff; padding: 80px 20px; text-align: center; }
 
         @media (max-width: 768px) {
             .profile-section { flex-direction: column; align-items: center; }
-            .content-card { padding: 30px; }
-            header h1 { font-size: 2em; }
+            .content-card { padding: 40px; border-width: 8px; }
+            header h1 { font-size: 2.4em; }
         }
     </style>
 </head>
@@ -120,7 +134,6 @@
 <nav>
     <a href="#profile">プロフィール</a>
     <a href="#research">研究実績</a>
-    <a href="#focus">研究の柱</a>
     <a href="https://researchmap.jp/read07291963" target="_blank">Researchmap</a>
 </nav>
 
@@ -137,14 +150,13 @@
             <div class="profile-section">
                 <img src="shinpuku.jpg" alt="秦 康宏 教授" class="profile-img">
                 <div>
-                    <h3 style="font-size: 1.8em; margin: 0;">秦 康宏（Yasuhiro HATA）</h3>
-                    <p style="font-weight: 700; color: var(--col-primary);">大阪大谷大学 人間社会学部 心理・福祉学科長 教授</p>
-                    <p>高齢者総合介護センターでの22年間にわたる現場実務経験を有し 、現在は社会福祉学・高齢者福祉論を専門として、現場と理論を繋ぐ教育・研究に従事しています。</p>
+                    <h3 style="font-size: 2.2em; margin: 0; color: var(--col-text);">秦 康宏（Yasuhiro HATA）</h3>
+                    <p style="font-weight: 700; color: var(--col-primary); font-size: 1.2em; margin-top: 5px;">大阪大谷大学 人間社会学部 心理・福祉学科長 教授</p>
+                    <p style="margin-top: 20px;">高齢者総合介護センターでの<b>22年間にわたる現場実務</b>を経験。理論と実践を繋ぐ教育・研究に従事し、現場の課題を学術的視点から解明することを主軸としています。</p>
                     <div class="badge-list">
-                        <span class="badge">社会福祉士 [cite: 602]</span>
-                        <span class="badge">介護福祉士 [cite: 604]</span>
-                        <span class="badge">国際福祉管理士 [cite: 584]</span>
-                        <span class="badge">専門社会調査士 [cite: 582]</span>
+                        <span class="badge">社会福祉士</span>
+                        <span class="badge">介護福祉士</span>
+                        <span class="badge">国際福祉管理士</span>
                     </div>
                 </div>
             </div>
@@ -152,31 +164,12 @@
 
         <section id="research">
             <h2>Research Achievements</h2>
-            <h3>主要著書</h3>
             <table class="research-table">
-                <tr><th>2026.04予定</th><td>『レセプト用語事典』日本レセプト学会学術出版（共著） [cite: 309]</td></tr>
-                <tr><th>2025.11予定</th><td>『実践力を育てる高齢者福祉 地域と共に歩むソーシャルワーク』教育情報出版 [cite: 315]</td></tr>
-                <tr><th>2025.05予定</th><td>『高齢者福祉（社会福祉を学ぶ50の扉）』法律文化社 [cite: 318]</td></tr>
+                <tr class="award"><th>2024.11</th><td><b>日本レセプト学会 国際学術賞（ベトナム・ハノイ大会）</b></td></tr>
+                <tr><th>2026.04予定</th><td>『レセプト用語事典』日本レセプト学会学術出版（共著）</td></tr>
+                <tr><th>2025.11予定</th><td>『実践力を育てる高齢者福祉 地域と共に歩むソーシャルワーク』教育情報出版</td></tr>
+                <tr><th>2022.06</th><td>公益財団法人 大阪介護支援専門員協会 会長表彰</td></tr>
             </table>
-            
-            <h3 style="margin-top:40px;">主要論文・受賞</h3>
-            <table class="research-table">
-                <tr><th>2024.11</th><td>日本レセプト学会 国際学術賞（ベトナム大会） </td></tr>
-                <tr><th>2024.03</th><td>「スウェーデンソーシャルワーカー倫理綱領にみる倫理的省察の意味」 [cite: 23]</td></tr>
-                <tr><th>2022.06</th><td>大阪介護支援専門員協会 会長表彰 [cite: 2, 481]</td></tr>
-            </table>
-        </section>
-
-        <section id="focus">
-            <h2>Research Focus</h2>
-            <div class="focus-box">
-                <h4 style="margin-top:0; color: var(--col-primary);">外国人介護人材の受入れと共生支援</h4>
-                <p>アジア諸国（インドネシア、ベトナム等）から来日する介護人材の現状調査を通じ [cite: 36, 43, 46]、専門職としての自立と地域社会との共生を研究しています。</p>
-            </div>
-            <div class="focus-box">
-                <h4 style="margin-top:0; color: var(--col-primary);">スウェーデンのソーシャルワーク倫理</h4>
-                <p>北欧スウェーデンの「ソーシャルワーカー倫理綱領」の全訳・分析を通じ [cite: 30, 61, 476]、対人援助職の倫理的覚知を考究しています。</p>
-            </div>
         </section>
 
     </div>
@@ -187,8 +180,7 @@
         <p><strong>大阪大谷大学 人間社会学部 心理・福祉学科</strong></p>
         <p>秦 康宏 研究室（Hata Laboratory）</p>
         <p>〒584-8540 大阪府富田林市錦織北3丁目11番1号</p>
-        <p>Email: hatayasu@osaka-ohtani.ac.jp</p>
-        <p style="font-size: 0.8em; margin-top: 20px; opacity: 0.7;">&copy; 2026 Yasuhiro Hata Lab.</p>
+        <p style="font-size: 0.9em; margin-top: 30px; opacity: 0.8;">&copy; 2026 Yasuhiro Hata Lab.</p>
     </div>
 </footer>
 
