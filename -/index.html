@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>秦 康宏 研究室｜大阪大谷大学 社会福祉学・高齢者福祉論</title>
   <style>
-    /* 既存のスタイルを維持しつつ、資料カード用のスタイルを追加 */
     :root {
       --col-bg-filter: rgba(244, 248, 240, 0.45);
       --col-card-bg: rgba(255, 255, 255, 0.98);
@@ -138,13 +137,8 @@
       opacity: 0.45;
     }
 
-    section {
-      margin-top: 56px;
-    }
-
-    section:first-of-type {
-      margin-top: 0;
-    }
+    section { margin-top: 56px; }
+    section:first-of-type { margin-top: 0; }
 
     h2 {
       color: var(--col-main);
@@ -153,7 +147,6 @@
       margin: 0 0 22px;
       font-size: 2.0rem;
       font-weight: 700;
-      letter-spacing: 0.03em;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -174,7 +167,7 @@
       font-weight: 700;
     }
 
-    /* 教育資料カード用のスタイル */
+    /* Resources Grid */
     .resource-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -201,30 +194,15 @@
 
     .resource-thumb {
       width: 100%;
-      height: 180px;
+      height: 160px;
       background-color: #eee;
       background-size: cover;
       background-position: top;
-      border-bottom: 1px solid #eee;
     }
 
-    .resource-info {
-      padding: 16px;
-      flex-grow: 1;
-    }
-
-    .resource-info h3 {
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-      line-height: 1.4;
-    }
-
-    .resource-info p {
-      font-size: 0.88rem;
-      line-height: 1.6;
-      color: var(--col-muted);
-      margin: 0;
-    }
+    .resource-info { padding: 16px; flex-grow: 1; }
+    .resource-info h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .resource-info p { font-size: 0.88rem; line-height: 1.6; color: var(--col-muted); margin: 0; }
 
     .resource-tag {
       display: inline-block;
@@ -236,185 +214,47 @@
       margin-bottom: 8px;
     }
 
-    .profile-section {
-      display: flex;
-      gap: 46px;
-      align-items: flex-start;
-    }
-
-    .profile-img {
-      width: 270px;
-      border: 8px solid #fff;
-      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.18);
-    }
-
-    .profile-name {
-      font-size: 2rem;
-      margin: 0;
-      line-height: 1.4;
-    }
-
-    .profile-title {
-      margin: 8px 0 10px;
-      color: var(--col-main);
-      font-size: 1.15rem;
-      font-weight: 700;
-    }
+    .profile-section { display: flex; gap: 46px; align-items: flex-start; }
+    .profile-img { width: 270px; border: 8px solid #fff; box-shadow: 0 8px 26px rgba(0, 0, 0, 0.18); }
 
     .academic-note {
       margin-top: 10px;
       color: var(--col-muted);
       font-size: 0.95rem;
-      line-height: 1.75;
       border-left: 3px solid var(--col-gold);
       padding-left: 12px;
     }
 
-    .focus-area {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      margin-top: 20px;
-    }
-
-    .focus-item {
-      background: var(--col-accent);
-      padding: 26px;
-      border-left: 6px solid var(--col-main);
-      border-radius: 3px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    }
-
-    .focus-item h3 { margin-bottom: 12px; }
-    .focus-item p { margin: 8px 0 0; }
+    .focus-area { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 20px; }
+    .focus-item { background: var(--col-accent); padding: 26px; border-left: 6px solid var(--col-main); border-radius: 3px; }
 
     .lang-summary {
       margin-top: 10px;
       font-size: 0.92rem;
       color: #333;
-      line-height: 1.7;
       background: rgba(255, 255, 255, 0.66);
       border: 1px solid #d9e1d2;
       padding: 10px 12px;
     }
 
-    .social-intro { margin: 0 0 14px; }
+    .social-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 10px; }
+    .tag { background: var(--col-main); color: #fff; padding: 6px 14px; border-radius: 2px; font-size: 0.86rem; }
 
-    .social-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 10px;
-    }
+    .achievement-list { list-style: none; padding: 0; }
+    .achievement-list li { padding: 16px 0; border-bottom: 1px solid #ececec; display: flex; gap: 16px; }
+    .date { font-weight: 700; color: var(--col-gold); min-width: 100px; }
 
-    .tag {
-      background: var(--col-main);
-      color: #fff;
-      padding: 6px 14px;
-      border-radius: 2px;
-      font-size: 0.86rem;
-      font-weight: 500;
-      line-height: 1.5;
-    }
+    .researchmap-area { text-align: center; margin-top: 54px; }
+    .researchmap-link { display: inline-block; padding: 13px 32px; background: var(--col-gold); color: #fff; text-decoration: none; font-weight: 700; border-radius: 3px; }
 
-    .achievement-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .achievement-list li {
-      padding: 16px 0;
-      border-bottom: 1px solid #ececec;
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-
-    .date {
-      font-weight: 700;
-      color: var(--col-gold);
-      min-width: 124px;
-      font-size: 0.96rem;
-    }
-
-    .researchmap-area {
-      text-align: center;
-      margin-top: 54px;
-    }
-
-    .researchmap-link {
-      display: inline-block;
-      padding: 13px 32px;
-      background: var(--col-gold);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 3px;
-      box-shadow: 0 3px 10px rgba(159, 123, 69, 0.32);
-    }
-
-    .researchmap-link:hover { opacity: 0.9; }
-
-    .researchmap-sub {
-      margin-top: 10px;
-      font-size: 0.9rem;
-      color: var(--col-muted);
-    }
-
-    footer {
-      background: #1a1a1a;
-      color: rgba(255, 255, 255, 0.86);
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    footer .inner {
-      max-width: 840px;
-      margin: 0 auto;
-      line-height: 1.85;
-    }
-
-    .contact-scope {
-      margin-top: 8px;
-      font-size: 0.94rem;
-      color: rgba(255, 255, 255, 0.88);
-    }
-
-    .contact-scope-multi {
-      margin-top: 8px;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.76);
-      line-height: 1.7;
-    }
-
-    .copyright {
-      font-size: 0.8rem;
-      margin-top: 30px;
-      opacity: 0.65;
-    }
-
-    .disclaimer {
-      font-size: 0.82rem;
-      color: #c0c0c0;
-      margin-top: 8px;
-      line-height: 1.7;
-    }
+    footer { background: #1a1a1a; color: rgba(255, 255, 255, 0.86); padding: 80px 20px; text-align: center; }
+    .copyright { font-size: 0.8rem; margin-top: 30px; opacity: 0.65; }
 
     @media (max-width: 920px) {
-      nav { padding: 12px 8px; }
-      nav a { margin: 4px 8px; font-size: 0.95rem; }
-      header { padding: 190px 16px 95px; }
+      nav a { font-size: 0.9rem; margin: 4px 6px; }
       header h1 { font-size: 2.2rem; }
-      .subtitle { font-size: 1.1rem; }
-      .content-card { padding: 36px 22px; }
       .profile-section { flex-direction: column; }
-      .profile-img { width: 210px; }
-      .focus-area { grid-template-columns: 1fr; }
-      .resource-grid { grid-template-columns: 1fr; }
-      h2 { font-size: 1.55rem; }
-      .achievement-list li { flex-direction: column; gap: 4px; }
-      .date { min-width: auto; }
+      .focus-area, .resource-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -433,8 +273,7 @@
     <div class="notice-box">
       <strong>本サイトについて</strong><br />
       本ページは、秦康宏個人の研究・教育・社会活動に関する記録公開を目的として作成しています。<br />
-      入試広報・学生募集を目的とするものではありません。<br />
-      入試・学科案内等の公式情報は、大学公式サイトをご確認ください。
+      公式情報は大学公式サイトをご確認ください。
     </div>
     <div class="subtitle">理論と実践の往還を基盤とする社会福祉研究</div>
   </header>
@@ -448,9 +287,7 @@
           地域福祉政策および専門職教育へ接続することを主たる課題としています。
         </p>
         <div class="academic-note">
-          EN: This laboratory develops social welfare theory grounded in field practice, with a focus on ethics, aging, and multicultural inclusion.<br />
-          SV: Detta laboratorium utvecklar välfärdsteori med grund i praktik, med fokus på etik, åldrande och mångkulturell inkludering.<br />
-          ID: Laboratorium ini mengembangkan teori kesejahteraan sosial berbasis praktik lapangan, dengan fokus pada etika, penuaan, dan inklusi multikultural.
+          SV: Detta laboratorium utvecklar välfärdsteori med grund i praktik, med fokus på etik, åldrande och mångkulturell inkludering.
         </div>
       </section>
 
@@ -459,12 +296,10 @@
         <div class="profile-section">
           <img src="shinpuku.jpg" alt="秦 康宏 教授" class="profile-img" />
           <div>
-            <h3 class="profile-name">秦 康宏（Yasuhiro HATA）</h3>
-            <p class="profile-title">大阪大谷大学 人間社会学部 心理・福祉学科長 教授</p>
+            <h3>秦 康宏（Yasuhiro HATA）</h3>
+            <p>大阪大谷大学 人間社会学部 心理・福祉学科長 教授</p>
             <p>
-              高齢者総合介護センター「ひらかた聖徳園」において22年間の実務経験を有し、
-              現在はその実践知を基盤として、対人支援職の倫理的省察と多文化共生の理論的枠組みの構築に従事しています。
-              現場の課題を学術的言語へと転換し、福祉専門職養成に資する教育研究の展開を使命としています。
+              高齢者総合介護センターにおいて22年間の実務経験を有し、現在は対人支援職の倫理的省察と多文化共生の理論的枠組みの構築に従事しています。
             </p>
           </div>
         </div>
@@ -475,23 +310,16 @@
         <div class="focus-area">
           <article class="focus-item">
             <h3>スウェーデンの福祉倫理研究</h3>
-            <p>
-              スウェーデンにおけるソーシャルワーカー倫理綱領の分析を通じて、
-              専門職倫理における倫理的覚知の構造を明確化し、日本の福祉実践への適用可能性を検討しています。
-            </p>
+            <p>スウェーデンにおけるソーシャルワーカー倫理綱領の分析を通じて、日本の福祉実践への適用可能性を検討しています。</p>
             <div class="lang-summary">
-              <b>EN:</b> Translation and analysis of Swedish social work ethics, with a comparative focus on applicability to Japanese welfare practice.
+              <b>SV:</b> Översättning och analys av svensk socialarbetaretik med jämförande fokus på tillämpning i japansk välfärdspraxis.
             </div>
           </article>
-
           <article class="focus-item">
             <h3>外国人介護人材の受入れと共生</h3>
-            <p>
-              インドネシア・ベトナム等の外国人介護人材に関し、就労環境・地域受容の実証的検討を行い、
-              「地域メディエーション支援モデル」の構築を目指しています。
-            </p>
+            <p>外国人介護人材に関し、地域受容の実証的検討を行い「地域メディエーション支援モデル」の構築を目指しています。</p>
             <div class="lang-summary">
-              <b>EN:</b> Empirical study on inclusive systems for migrant care workers, aiming to build a community mediation support model in Japan.
+              <b>SV:</b> Empirisk studie av inkluderande system för migrerande omsorgsarbetare.
             </div>
           </article>
         </div>
@@ -499,89 +327,64 @@
 
       <section id="resources">
         <h2>Educational Resources</h2>
-        <p>講義や講演で使用している教育資料・スライドの一部を公開しています。図像をクリックするとPDF形式で閲覧いただけます。</p>
-        
         <div class="resource-grid">
           <a href="世界から見た社会福祉.pdf" class="resource-card" target="_blank">
             <div class="resource-thumb" style="background-image: url('lecture1.jpg');"></div>
             <div class="resource-info">
-              <span class="resource-tag">グローバル視点</span>
+              <span class="resource-tag">グローバル</span>
               <h3>「社会福祉」をデザインする</h3>
-              <p>スウェーデンやカンボジアの事例から、環境を整える福祉と内面に寄り添う心理の両輪で「真のWelfare」を目指すフィールドノートです 。</p>
+              <p>スウェーデンやカンボジアの事例から描くフィールドノート。</p>
             </div>
           </a>
-
           <a href="社会福祉の仕事.pdf" class="resource-card" target="_blank">
             <div class="resource-thumb" style="background-image: url('lecture2.jpg');"></div>
             <div class="resource-info">
-              <span class="resource-tag">キャリア・専門職</span>
+              <span class="resource-tag">キャリア</span>
               <h3>社会福祉の仕事</h3>
-              <p>ひとりひとりの幸せな暮らしを支援するソーシャルワーカーの核となる役割や、ヤングケアラー等の現代的課題について解説しています。</p>
+              <p>ソーシャルワーカーの核となる役割と現代的課題の解説。</p>
             </div>
           </a>
-
           <a href="コミュニケーションの魔法.pdf" class="resource-card" target="_blank">
             <div class="resource-thumb" style="background-image: url('lecture3.jpg');"></div>
             <div class="resource-info">
-              <span class="resource-tag">対人援助技術</span>
+              <span class="resource-tag">対人援助</span>
               <h3>コミュニケーションの魔法</h3>
-              <p>心理学の知見を用い、非言語メッセージや傾聴（SOLER）など、支援の土台となる「信頼関係」を築くための技法を紹介します。</p>
+              <p>心理学の知見を用いた信頼関係構築の技法紹介。</p>
             </div>
           </a>
         </div>
       </section>
 
       <section id="social">
-        <h2>Social Contribution & Policy Engagement</h2>
-        <p class="social-intro">
-          自治体委員会・職能団体・市民組織における継続的な実務参画を通じて、地域福祉の質的向上と政策形成への知的貢献を行っています。
-        </p>
+        <h2>Social Contribution</h2>
         <div class="social-tags">
           <span class="tag">豊中市介護人材対策部会 会長</span>
           <span class="tag">河内長野市高齢者保健福祉計画等推進委員会 会長</span>
-          <span class="tag">大阪介護支援専門員協会 監事</span>
-          <span class="tag">介護保険市民オンブズマン機構大阪 副代表</span>
           <span class="tag">羽曳野市高齢者・障害者虐待防止ネットワーク 会長</span>
         </div>
       </section>
 
       <section id="awards">
-        <h2>Awards & Academic Achievements</h2>
+        <h2>Awards & Achievements</h2>
         <ul class="achievement-list">
-          <li>
-            <span class="date">2024.11</span>
-            <div>
-              <strong style="color: var(--col-gold);">日本レセプト学会 国際学術賞（ベトナム大会）</strong><br />
-              インドネシア人介護人材予定者から見た日本就労イメージに関する国際研究への貢献
-            </div>
-          </li>
-          <li>
-            <span class="date">2022.06</span>
-            <div>
-              <strong>大阪介護支援専門員協会 会長表彰</strong><br />
-              長年にわたる介護支援専門員としての実務的・職能的貢献
-            </div>
-          </li>
+          <li><span class="date">2024.11</span><div><strong>日本レセプト学会 国際学術賞</strong></div></li>
+          <li><span class="date">2022.06</span><div><strong>大阪介護支援専門員協会 会長表彰</strong></div></li>
         </ul>
-
         <div class="researchmap-area">
-          <a class="researchmap-link" href="https://researchmap.jp/read07291963" target="_blank" rel="noopener noreferrer">
-            詳細な研究業績（Researchmap）
-          </a>
-          <div class="researchmap-sub">査読論文・学会発表等の最新情報は Researchmap をご参照ください。</div>
+          <a class="researchmap-link" href="https://researchmap.jp/read07291963" target="_blank">Researchmap で業績を見る</a>
         </div>
       </section>
     </div>
   </div>
 
   <footer>
-    <div class="inner">
-      <p><strong>大阪大谷大学 人間社会学部 心理・福祉学科</strong></p>
-      <p>秦 康宏 研究室｜Hata Laboratory of Social Welfare</p>
-      <p>〒584-8540 大阪府富田林市錦織北3丁目11番1号</p>
-      <p>Email: hatayasu@osaka-ohtani.ac.jp</p>
-      <p class="copyright">&copy; 2026 Yasuhiro Hata All Rights Reserved.</p>
-    </div>
+    <p><strong>大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏 研究室</strong></p>
+    <p>〒584-8540 大阪府富田林市錦織北3丁目11番1号</p>
+    <p>Email: hatayasu@osaka-ohtani.ac.jp</p>
+    <p style="font-size: 0.9rem; margin-top: 15px; color: #aaa;">
+      SV: Förfrågningar tas emot om forskning, föreläsningar, samarbetsprojekt och samhällsengagemang.
+    </p>
+    <p class="copyright">&copy; 2026 Yasuhiro Hata All Rights Reserved.</p>
   </footer>
 </body>
 </html>
