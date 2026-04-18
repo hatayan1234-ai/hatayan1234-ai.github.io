@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>秦 康宏 研究室｜大阪大谷大学 社会福祉学・高齢者福祉論</title>
   <style>
+    /* 既存のスタイルを維持しつつ、資料カード用のスタイルを追加 */
     :root {
       --col-bg-filter: rgba(244, 248, 240, 0.45);
       --col-card-bg: rgba(255, 255, 255, 0.98);
@@ -173,6 +174,68 @@
       font-weight: 700;
     }
 
+    /* 教育資料カード用のスタイル */
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .resource-card {
+      background: #fff;
+      border: 1px solid var(--col-accent);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+
+    .resource-thumb {
+      width: 100%;
+      height: 180px;
+      background-color: #eee;
+      background-size: cover;
+      background-position: top;
+      border-bottom: 1px solid #eee;
+    }
+
+    .resource-info {
+      padding: 16px;
+      flex-grow: 1;
+    }
+
+    .resource-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .resource-info p {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--col-muted);
+      margin: 0;
+    }
+
+    .resource-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      background: var(--col-accent);
+      color: var(--col-main);
+      padding: 2px 8px;
+      border-radius: 2px;
+      margin-bottom: 8px;
+    }
+
     .profile-section {
       display: flex;
       gap: 46px;
@@ -222,9 +285,8 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
 
-    .focus-item p {
-      margin: 8px 0 0;
-    }
+    .focus-item h3 { margin-bottom: 12px; }
+    .focus-item p { margin: 8px 0 0; }
 
     .lang-summary {
       margin-top: 10px;
@@ -236,9 +298,7 @@
       padding: 10px 12px;
     }
 
-    .social-intro {
-      margin: 0 0 14px;
-    }
+    .social-intro { margin: 0 0 14px; }
 
     .social-tags {
       display: flex;
@@ -294,9 +354,7 @@
       box-shadow: 0 3px 10px rgba(159, 123, 69, 0.32);
     }
 
-    .researchmap-link:hover {
-      opacity: 0.9;
-    }
+    .researchmap-link:hover { opacity: 0.9; }
 
     .researchmap-sub {
       margin-top: 10px;
@@ -344,55 +402,19 @@
     }
 
     @media (max-width: 920px) {
-      nav {
-        padding: 12px 8px;
-      }
-
-      nav a {
-        margin: 4px 8px;
-        font-size: 0.95rem;
-      }
-
-      header {
-        padding: 190px 16px 95px;
-      }
-
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      .subtitle {
-        font-size: 1.1rem;
-      }
-
-      .content-card {
-        padding: 36px 22px;
-      }
-
-      .profile-section {
-        flex-direction: column;
-      }
-
-      .profile-img {
-        width: 210px;
-      }
-
-      .focus-area {
-        grid-template-columns: 1fr;
-      }
-
-      h2 {
-        font-size: 1.55rem;
-      }
-
-      .achievement-list li {
-        flex-direction: column;
-        gap: 4px;
-      }
-
-      .date {
-        min-width: auto;
-      }
+      nav { padding: 12px 8px; }
+      nav a { margin: 4px 8px; font-size: 0.95rem; }
+      header { padding: 190px 16px 95px; }
+      header h1 { font-size: 2.2rem; }
+      .subtitle { font-size: 1.1rem; }
+      .content-card { padding: 36px 22px; }
+      .profile-section { flex-direction: column; }
+      .profile-img { width: 210px; }
+      .focus-area { grid-template-columns: 1fr; }
+      .resource-grid { grid-template-columns: 1fr; }
+      h2 { font-size: 1.55rem; }
+      .achievement-list li { flex-direction: column; gap: 4px; }
+      .date { min-width: auto; }
     }
   </style>
 </head>
@@ -401,6 +423,7 @@
     <a href="#overview">概要</a>
     <a href="#biography">略歴と使命</a>
     <a href="#research">研究領域</a>
+    <a href="#resources">教育資料</a>
     <a href="#social">社会実装</a>
     <a href="#awards">実績</a>
   </nav>
@@ -453,36 +476,65 @@
           <article class="focus-item">
             <h3>スウェーデンの福祉倫理研究</h3>
             <p>
-              スウェーデンにおけるソーシャルワーカー倫理綱領の翻訳・解釈・比較分析を通じて、
-              専門職倫理における倫理的覚知の構造を明確化し、日本の福祉実践への理論的適用可能性を検討しています。
+              スウェーデンにおけるソーシャルワーカー倫理綱領の分析を通じて、
+              専門職倫理における倫理的覚知の構造を明確化し、日本の福祉実践への適用可能性を検討しています。
             </p>
             <div class="lang-summary">
-              <b>EN:</b> Translation and analysis of Swedish social work ethics, with a comparative focus on applicability to Japanese welfare practice.<br />
-              <b>SV:</b> Översättning och analys av svensk socialarbetaretik med jämförande fokus på tillämpning i japansk välfärdspraxis.<br />
-              <b>ID:</b> Penerjemahan dan analisis etika pekerja sosial Swedia dengan fokus komparatif pada penerapannya dalam praktik kesejahteraan Jepang.
+              <b>EN:</b> Translation and analysis of Swedish social work ethics, with a comparative focus on applicability to Japanese welfare practice.
             </div>
           </article>
 
           <article class="focus-item">
             <h3>外国人介護人材の受入れと共生</h3>
             <p>
-              インドネシア・ベトナム等の外国人介護人材に関し、就労環境・地域受容・制度連携の実証的検討を行い、
-              地域社会と支援機関を接続する「地域メディエーション支援モデル」の構築を目指しています。
+              インドネシア・ベトナム等の外国人介護人材に関し、就労環境・地域受容の実証的検討を行い、
+              「地域メディエーション支援モデル」の構築を目指しています。
             </p>
             <div class="lang-summary">
-              <b>EN:</b> Empirical study on inclusive systems for migrant care workers, aiming to build a community mediation support model in Japan.<br />
-              <b>SV:</b> Empirisk studie av inkluderande system för migrerande omsorgsarbetare med mål att utveckla en modell för samhällelig mediering i Japan.<br />
-              <b>ID:</b> Kajian empiris tentang sistem inklusif bagi pekerja perawatan migran dengan tujuan membangun model dukungan mediasi komunitas di Jepang.
+              <b>EN:</b> Empirical study on inclusive systems for migrant care workers, aiming to build a community mediation support model in Japan.
             </div>
           </article>
+        </div>
+      </section>
+
+      <section id="resources">
+        <h2>Educational Resources</h2>
+        <p>講義や講演で使用している教育資料・スライドの一部を公開しています。図像をクリックするとPDF形式で閲覧いただけます。</p>
+        
+        <div class="resource-grid">
+          <a href="世界から見た社会福祉.pdf" class="resource-card" target="_blank">
+            <div class="resource-thumb" style="background-image: url('lecture1.jpg');"></div>
+            <div class="resource-info">
+              <span class="resource-tag">グローバル視点</span>
+              <h3>「社会福祉」をデザインする</h3>
+              <p>スウェーデンやカンボジアの事例から、環境を整える福祉と内面に寄り添う心理の両輪で「真のWelfare」を目指すフィールドノートです [cite: 1, 2, 95]。</p>
+            </div>
+          </a>
+
+          <a href="社会福祉の仕事.pdf" class="resource-card" target="_blank">
+            <div class="resource-thumb" style="background-image: url('lecture2.jpg');"></div>
+            <div class="resource-info">
+              <span class="resource-tag">キャリア・専門職</span>
+              <h3>社会福祉の仕事</h3>
+              <p>ひとりひとりの幸せな暮らしを支援するソーシャルワーカーの核となる役割や、ヤングケアラー等の現代的課題について解説しています [cite: 112, 119, 173]。</p>
+            </div>
+          </a>
+
+          <a href="コミュニケーションの魔法.pdf" class="resource-card" target="_blank">
+            <div class="resource-thumb" style="background-image: url('lecture3.jpg');"></div>
+            <div class="resource-info">
+              <span class="resource-tag">対人援助技術</span>
+              <h3>コミュニケーションの魔法</h3>
+              <p>心理学の知見を用い、非言語メッセージや傾聴（SOLER）など、支援の土台となる「信頼関係」を築くための技法を紹介します [cite: 214, 241, 248, 265]。</p>
+            </div>
+          </a>
         </div>
       </section>
 
       <section id="social">
         <h2>Social Contribution & Policy Engagement</h2>
         <p class="social-intro">
-          本研究室では、研究成果の社会実装を重視し、自治体委員会・職能団体・市民組織における継続的な実務参画を通じて、
-          地域福祉の質的向上と政策形成への知的貢献を行っています。
+          自治体委員会・職能団体・市民組織における継続的な実務参画を通じて、地域福祉の質的向上と政策形成への知的貢献を行っています。
         </p>
         <div class="social-tags">
           <span class="tag">豊中市介護人材対策部会 会長</span>
@@ -510,10 +562,6 @@
               長年にわたる介護支援専門員としての実務的・職能的貢献
             </div>
           </li>
-          <li>
-            <span class="date">2026.04予定</span>
-            <div>『レセプト用語事典』日本レセプト学会学術出版（共著）</div>
-          </li>
         </ul>
 
         <div class="researchmap-area">
@@ -532,21 +580,7 @@
       <p>秦 康宏 研究室｜Hata Laboratory of Social Welfare</p>
       <p>〒584-8540 大阪府富田林市錦織北3丁目11番1号</p>
       <p>Email: hatayasu@osaka-ohtani.ac.jp</p>
-
-      <p class="contact-scope">
-        ご連絡は、研究・講演・共同研究・社会活動に関する内容を対象としております。<br />
-        入試・学科案内に関するお問い合わせは、大学公式窓口へお願いいたします。
-      </p>
-      <p class="contact-scope-multi">
-        EN: Inquiries are accepted for research, lectures, collaborative projects, and social contribution activities.<br />
-        SV: Förfrågningar tas emot om forskning, föreläsningar, samarbetsprojekt och samhällsengagemang.<br />
-        ID: Pertanyaan diterima untuk penelitian, kuliah, kolaborasi, dan kegiatan pengabdian masyarakat.
-      </p>
-
       <p class="copyright">&copy; 2026 Yasuhiro Hata All Rights Reserved.</p>
-      <p class="disclaimer">
-        本サイトは個人の活動紹介であり、所属組織の公式見解を示すものではありません。
-      </p>
     </div>
   </footer>
 </body>
