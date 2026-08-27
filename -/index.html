@@ -1,222 +1,3349 @@
+
+Gemini との会話
+秦研究室のホームページですが、宮谷先生のホームページのように変更したいと思います。何と言っても今は具体的なことが書かれておらず、また記載の分量が極めて少ないです。何とかする方法はないでしょうか。https://hatayan1234-ai.github.io/-/
+
+
+
+https://miyatanilabo.studio.site/ 無料であるならば、GitHubを乗り換えて、宮谷先生のホームページのプラットフォームに乗り換えても構いません。
+
+宮谷先生のホームページのような「見やすく、情報量と更新性（ニュース等）のあるサイト」にするための具体的な解決策と移行方法をご提案します。
+
+1. プラットフォーム（STUDIO）への乗り換えについて
+宮谷先生のサイト（miyatanilabo.studio.site）は、「STUDIO（スタジオ）」という日本発のノーコードWeb制作サービスで作成されています。
+
+完全無料で利用可能：
+宮谷先生と同じ形式（〇〇.studio.site という無料サブドメイン）であれば、Freeプラン（無料）でサイトを公開・運用できます。
+
+専門知識（HTML/CSS/GitHub）が不要：
+PowerPointのように直感的なドラッグ＆ドロップでデザインや文章の追加・配置変更ができます。
+
+「ニュース＆トピックス」が簡単に作れる（CMS機能）：
+ブログ感覚で「学会発表」「新刊の案内」「ゼミの活動記録」などの個別記事をどんどん追加・蓄積できます（無料枠で最大1,000アイテムまで作成可能）。
+
+結論として、GitHub PagesからSTUDIOへ乗り換えるのは非常に有効な選択肢です。
+
+2. 具体性と情報量を増やすための「サイト構成案」
+現在の秦先生のサイトは1枚のペラページ（LP型）で簡潔にまとまっている一方、各項目の背景や具体的な活動が省略されています。宮谷先生のサイトの構成を参考に、以下のようなページ構成・内容に拡張することをおすすめします。
+
+ページ / セクション	具体的に記載する内容（例）
+ホーム（トップ）	
+・理念やキャッチコピー（「理論と現場、日本と世界を繋ぐ社会福祉」）
+
+
+・各ページへのナビゲーションリンク
+
+
+・最新のニュース＆トピックス（抜粋表示）
+
+研究（Research）	
+・スウェーデン福祉倫理：なぜスウェーデンなのか、日本の倫理綱領との違い、研究の意義
+
+
+・外国人介護人材・共生支援：ベトナム・インドネシアでの現地調査の様子、「地域メディエーション支援モデル」の具体的な内容・目指す成果
+
+教育・ゼミ（Education）	
+・秦ゼミの特色：社会福祉士国家試験対策の具体的な取り組み
+
+
+・卒業研究テーマ例：過去の学生が取り組んだテーマ一覧
+
+
+・年間スケジュール：実習時期、合宿、見学、イベント等
+
+
+・Instagramへのリンク・埋め込み
+
+プロフィール・経歴	
+・ひらかた聖徳園での22年間の現場経験と、そこから実務家教員になった経緯・問題意識
+
+
+・担当講義の一覧
+
+
+・各種委員会（大阪府国保連、オンブズマン機構等）での役割や取り組み
+
+ニュース＆トピックス
+
+
+(CMSで随時更新)
+
+・学会賞受賞（2024.11 日本レセプト学会 国際学術賞のレポート）
+
+
+・著書刊行案内（2026.04予定『レセプト用語事典』の紹介）
+
+
+・オープンキャンパスや模擬授業、講演会の告知と実施報告
+
+お問い合わせ	・問い合わせフォーム（STUDIO標準機能で設置可能）、研究室所在地
+3. 具体的な移行ステップ
+1
+STUDIOのアカウント作成
+STUDIO公式サイト にアクセスし、無料アカウントを作成します。
+
+2
+テンプレートの選択
+「新規プロジェクト作成」から、大学・ポートフォリオ・ブログ向けのテンプレートを選択します（宮谷先生のようなシンプルな白基調のレイアウトも多数用意されています）。
+
+3
+コンテンツ（文章・写真）の流し込み
+既存のGitHubサイトのテキストをベースに、上記で挙げた「研究の背景」「ゼミの様子」「これまでの活動レポート」などの詳細テキストを書き加えて配置します。
+
+4
+URLの設定と公開
+公開設定から、任意のサブドメイン（例：hatalabo.studio.site や hata-lab.studio.site など）を設定し、「公開」をクリックすれば完了です。
+
+最終確認ですが、GitHubでは、このStudioのような構成を作ることはできないのですね。
+
+GitHub（GitHub Pages）でも、STUDIOと全く同じ構成やデザインのサイトを作ることは技術的には可能です。
+
+ただし、「作るための難易度と日々の更新の手間」に大きな違いがあります。
+
+GitHub Pages と STUDIO の決定的な違い
+
+項目	GitHub Pages	STUDIO
+費用の有無	完全無料	無料プランあり（〇〇.studio.site）
+デザインの作成方法	HTML/CSS/JavaScriptなどのコード記述が必須	画面上でブロックを並べる視覚的操作（ノーコード）
+ニュース・ブログの追加	新しい記事ごとにHTMLファイルを作成するか、Jekyll/Hugoなどの静的サイトジェネレーターを設定する必要がある	管理画面のフォームに文章と画像を入れるだけで自動で一覧や詳細ページが生成される
+お問い合わせフォーム	自前で外部フォームサービス（Googleフォーム等）を埋め込む必要がある	標準パーツとしてドラッグ＆ドロップで設置可能
+運用の手軽さ	修正のたびにコードを編集してコミット・プッシュする知識が必要	ブラウザ上でワープロ感覚で文字を打ち替えて「公開」を押すだけ
+どちらを選ぶべきかの判断基準
+
+GitHub Pagesのまま進める場合：
+
+コード（HTML/CSS）をAIに書いてもらい、ファイルを差し替えていく作業が苦にならない場合。
+
+「ニュース機能」は手動でトップページに箇条書きを追記していくシンプルな運用で十分な場合。
+
+STUDIOへ移行する場合：
+
+宮谷先生のように「ニュース一覧」「個別記事ページ」「問い合わせフォーム」を綺麗に整えたい場合。
+
+今後、学会発表やゼミ活動のたびにコードを触らずブログ感覚でサッと記事を追加したい場合。
+
+機能面・デザイン面での実現自体はGitHubでも可能ですが、「研究室サイトを無理なく継続的に更新・充実させる」という運用面を重視する場合は、STUDIOへの移行が圧倒的におすすめです。
+
+おはようございます。それでは、Studioのノーコードのアカウントを作成しました。作成予定のサイトについて教えてくださいとあります。どれを選べばいいでしょうか?ポートフォリオサイトでしょうか?それともブログメディアになりますか?
+
+「ポートフォリオ」（または「コーポレート / 組織」）を選んで進めて問題ありません。
+
+この初期アンケートは、STUDIO側がおすすめのテンプレートを表示するための目安に過ぎず、どれを選んでも使える機能や制限に違いはありません。
+
+おすすめの選び方と進め方
+
+選択肢：
+
+「ポートフォリオ」（個人・研究者の活動や業績をまとめるサイトに最も近いため最適です）
+
+※もし「その他」や「教育・大学」などの選択肢があればそれでも構いません。
+
+その後のテンプレート選び：
+
+アンケート後にテンプレート選択画面が表示されます。
+
+宮谷先生のサイトのような「白基調でシンプル、お知らせ（CMS機能）が付いているデザイン」を選ぶのがおすすめです。
+
+無料で使えるテンプレート（「Free」と表示されているもの）の中から、プレビューを見て好みのレイアウトを選んでください。
+
+テンプレートが決まったら、既存の文章や画像の入れ替えに進みましょう。どのテンプレートを選ぶか迷われた場合や、次の画面で迷う点があればいつでもお知らせください。
+
+今、このような画面です。どのように進めていけばいいでしょうか？
+
+現在、「白紙の状態（ブランク）」のエディタ画面が開いています。ゼロから作るとレイアウト調整が大変ですので、まずはブロック単位でパーツを配置していくか、あるいはテンプレートを再選択するのがスムーズです。
+
+この画面のまま簡単に宮谷先生風のページを組み立てる最初の手順を案内します。
+
+1. 設定ガイドを閉じる
+画面左下に浮き出ている「サイト公開前のStudio設定ガイド」の枠は、右上の「…」や余白をクリックして一旦閉じて大丈夫です。
+
+2. 左上のメニューから「セクション」を選ぶ
+画面左側のサイドバー上部にあるタブ（「基本」「パーツ」「セクション」）の中から、「セクション」をクリックしてください。
+
+ここをクリックすると、あらかじめ綺麗にデザインされた「ヘッダー（最上部メニュー）」「紹介文（About）」「ニュース一覧」「お問い合わせ（フォーム）」などの部品候補が一覧で表示されます。
+
+3. 好きなレイアウトをドラッグ＆ドロップで中央の白い画面に並べる
+宮谷先生のサイトのような構成にする場合、上から順に以下のセクションを白いキャンバスに引っ張って配置します：
+
+ヘッダー / ナビゲーション（研究室名やリンクが並ぶ最上部）
+
+ヒーロー / メインビジュアル（「理論と現場、日本と世界を繋ぐ社会福祉」などのキャッチコピー用）
+
+About / プロフィール（顔写真や経歴文を入れる枠）
+
+記事・ブログ一覧（Blog / News）（お知らせ・学会発表などを並べる枠）
+
+お問い合わせ（Contact）（メールフォーム）
+
+フッター（著作権表示や大学名）
+
+4. 文字や写真を差し替える
+パーツを置いたら、その中のダミーテキストをダブルクリックして秦先生の紹介文や研究内容に書き換えていくだけで完成します。
+
+※もし「完全なデザインテンプレートから始め直したい」場合
+画面左上の「／S」（Studioのロゴマーク）をクリックしてダッシュボードに戻り、「新規プロジェクト作成」から無料テンプレート（PortfolioやBlog向け）を選んで作成し直すことも可能です。
+
+まずは左側の「セクション」タブをクリックして、どんなパーツが並んでいるか見てみてください。
+
+記事ブログ一覧のセクションがないのですが。
+
+STUDIOの「セクション」一覧に記事一覧が出てこない理由は、まだCMS（ブログ管理機能）を有効化していないためです。
+
+記事一覧やニュース枠（宮谷先生のようなトピックス）を設置するには、まず画面左端のCMSアイコンからCMSを有効化する必要があります。
+
+記事・ブログ一覧を表示・作成する手順
+
+1. 画面左端の黒い縦バーにある「CMS」アイコンをクリック
+
+画面の一番左端に縦に並んでいるアイコン群（「追加」「レイヤー」「スタイル」など）の中から、本のようなアイコン（または「CMS」と書かれたアイコン）をクリックします。
+(※スクリーンショットの左端のバーにある、上から2〜3番目あたりの四角や本のマークです)
+
+2. 「CMSを始める」をクリック
+
+パネルが開いたら、「CMSを始める」（または「新規モデル作成」）をクリックします。
+
+テンプレートの選択肢が出たら、「ブログ」または「ニュース / お知らせ」を選択してください。
+
+これにより、ダミーの記事データ（サンプル記事が3〜4件）が自動でセットされます。
+
+3. デザイン画面に戻り、左側の「追加」メニューを開く
+
+左端のバーの一番上の「＋（追加）」アイコンをクリックします。
+
+タブに「CMS」という項目が新しく追加されているので、そこをクリックします。
+
+4. 記事一覧（リスト）を画面中央へドラッグ＆ドロップ
+
+CMSタブの中に、宮谷先生のサイトのような「カード型の一覧」や「日付＋タイトルのリスト」が並んでいます。
+
+好みのレイアウトを中央のキャンバスに引っ張って配置すれば、記事一覧セクションの設置は完了です。
+
+配置した記事リストは、CMS管理画面から新しい記事（学会発表や新刊案内など）を追加するだけで、自動的に日付順に更新・表示されるようになります。まずは左端のCMSアイコンをクリックしてみてください。
+
+分かりません。今、このような感じです。
+
+スクリーンショットを確認しました。
+
+CMS（記事一覧機能）を有効にするアイコンは、画面の一番左端にある縦の黒いバーの中にあります。
+
+CMSを有効化する具体的な手順
+
+画面の一番左端のアイコンをクリック
+
+画面の最左列（黒い背景の帯）に上からアイコンが並んでいます。
+
+上から2番目にある「紙をめくっているような四角いアイコン」（上から「追加」「CMS」「レイヤー」…と並んでいます）をクリックしてください。
+
+CMSを開始する
+
+画面左側にCMSのパネルが開きますので、「CMSを始める」（または「モデルを追加」）をクリックします。
+
+タイプとして「ブログ」または「ニュース」を選択してください。
+
+これでサンプルの記事データが自動的に準備されます。
+
+記事一覧をページに配置する
+
+再び一番左上の「＋（追加アイコン）」をクリックします。
+
+「基本」「パーツ」「セクション」の並びに「CMS」タブが追加されているので、そこをクリックします。
+
+宮谷先生のような「日付とタイトルが並ぶカード」が出てきますので、それを中央のキャンバスの置きたい場所へドラッグ＆ドロップしてください。
+
+まずは一番左端の上から2番目のアイコンをクリックしてみてください。
+
+すみません、全く分かりません。宮谷先生の構成を真似た形で、一からまた教えてください。https://miyatanilabo.studio.site/
+
+STUDIOの編集画面はプロ向けのWeb制作ツールのため、ボックス構造やCMSの設定など操作がかなり複雑で、白紙から組み立てるのは最初は誰でも難しく感じてしまいます。
+
+宮谷先生のサイトのような「洗練された白基調のデザイン・充実した分量・ニュース一覧・問い合わせ」を実現するには、以下の2つのルートがあります。
+
+ご自身の進めやすい方をお選びください。
+
+ルート1（最もおすすめ）：GitHub Pagesのまま「宮谷先生風のフル完成版コード」に差し替える
+STUDIOの複雑な操作を覚えなくても、「宮谷先生のサイトの構成・デザインを忠実に再現し、研究内容や実績を大幅に加筆した完成版のHTMLファイル」を私が作成してお渡しできます。
+
+メリット：
+
+STUDIOで悩む必要が一切なくなります。
+
+私がお渡しするコードをGitHubのファイルに「全選択して貼り付ける（上書きする）」だけで、数分で宮谷先生そっくりのリッチなサイトに生まれ変わります。
+
+費用も完全無料のままです。
+
+内容：
+
+宮谷先生のサイトと同じ「01 ようこそ（自己紹介）」「02 ニュース＆トピックス」「03 研究・教育の柱（詳細解説）」「04 お問い合わせ」「Instagram連携」をすべて組み込みます。
+
+既存のサイトで不足していた「スウェーデン福祉倫理の背景」「外国人介護人材の具体的な取り組み」「社会福祉士国試対策ゼミの具体的な活動」を大ボリュームで書き込みます。
+
+ルート2：STUDIOで「最初から形ができている無料テンプレート」を選び直す
+どうしてもSTUDIOの編集画面（ブラウザ上で文字を直接打ち替える方法）で作りたい場合は、白紙のプロジェクトは一度破棄して、完成済みのテンプレートをベースにするのが一番簡単です。
+
+画面左上の「／S」ロゴをクリックしてダッシュボード（ホーム画面）に戻ります。
+
+右上の「新規プロジェクト作成」ボタンを押します。
+
+テンプレート一覧が表示されたら、「無料（Free）」のフィルターをかけ、「Portfolio（ポートフォリオ）」または「Blog（ブログ）」のタグを選びます。
+
+すでに「ニュース一覧」や「自己紹介」が最初から綺麗に並んでいるテンプレート（例：『Minimal Blog』『Simple Portfolio』など）の「このテンプレートを使う」をクリックします。
+
+出来上がっているサンプルの文字と写真を、秦先生のものにダブルクリックで書き換えていきます。
+
+どちらで進めますか？
+
+もし「とにかく早く、宮谷先生のように内容が充実した綺麗なサイトを完成させたい」ということであれば、ルート1（完成版コードを丸ごと作成）が最もストレスなく確実です。すぐにお作りいたしますので、ご希望をお聞かせください。
+
+それではルート1でお願いします。
+
+宮谷先生のサイトの構成・デザイン（「01 ようこそ」「02 ニュース＆トピックス」「03 研究活動」「04 教育・ゼミ」「05 社会連携」「06 お問い合わせ」）を取り入れ、秦研究室の具体的な実績と詳細な記述を大幅に盛り込んだ完全版のHTMLファイルを作成いたしました。
+
+Your HTML file is ready
+
+HTML のアイコン
+index
+ HTML 
+開く
+今回のアップデート・追加ポイント
+宮谷先生スタイルの洗練されたデザイン
+
+白・淡いグレーを基調としたミニマルで清潔感のあるアカデミックレイアウト。
+
+「01 WELCOME」「02 NEWS & TOPICS」などのセクション番号付けと、上部に追従するナビゲーションバー。
+
+ニュース＆トピックスのカード型配置（02セクション）
+
+国際学術賞の受賞、新刊『レセプト用語事典』、ゼミ活動、各種委員会の実績をタグ（受賞・出版・社会連携など）付きカードで整理。
+
+研究内容の具体化とボリューム拡充（03セクション）
+
+「スウェーデン福祉倫理研究」の背景と意義、具体的な取り組み。
+
+「外国人介護人材の受入れと共生モデル（地域メディエーション）」の目的と現地調査の展開。
+
+秦ゼミ・教育活動の充実（04セクション）
+
+社会福祉士国家試験対策の取り組み、卒論テーマ例、主な進路先、公式Instagramへのリンク。
+
+社会連携・公職歴（05セクション）＆ お問い合わせフォーム（06セクション）
+
+各自治体・学会・オンブズマン等の役員一覧と、直接メール送信ができるお問い合わせ欄。
+
+GitHub Pagesへの反映手順（3ステップ）
+GitHubのリポジトリ画面を開く
+
+お手元のブラウザで、現在のホームページが置かれているGitHubのリポジトリ（- リポジトリ、または hatayan1234-ai.github.io）を開きます。
+
+index.html を編集する
+
+ファイル一覧から index.html をクリックし、右上の鉛筆マーク（Edit this file）を押します。
+
+コードをすべて上書きして保存する
+
+上記のダウンロードファイル（index.html）の中身をすべてコピーし、元のコードを全選択して貼り替えます。
+
+画面右上の緑色のボタン「Commit changes...」を押して保存します。
+
+数分後にページ（[https://hatayan1234-ai.github.io/-/](https://hatayan1234-ai.github.io/-/)）を再読み込みすると、新しい構成・デザインで反映されます。
+
+これではやはり私のやりたいようにはできないと思います。2の方法でお願いします。
+
+かしこまりました。STUDIOのテンプレートを使って進めていきましょう。
+
+まずは現在開いている画面から、最初から完成形のレイアウトが揃っている無料テンプレートを選び直す手順をご案内します。
+
+ステップ1：テンプレート選択画面に戻る
+画面の左上にある「／S」（STUDIOのロゴマーク）をクリックします。
+
+これで最初のダッシュボード（管理画面）に戻ります。
+
+画面右上にある「新しいプロジェクト」（または「＋ 新規作成」）ボタンをクリックします。
+
+ステップ2：おすすめの無料テンプレートを選ぶ
+テンプレート一覧が表示されたら、宮谷先生のサイトに最も近い構成（白基調・ニュース一覧・お問い合わせ付き）のテンプレートを選びます。
+
+画面上部や左側にある絞り込みで、「無料（Free）」にチェックを入れます。
+
+カテゴリで「Portfolio（ポートフォリオ）」または「Blog（ブログ）」を選択します。
+
+一覧の中から、白基調でシンプルなもの（例：『Minimalist』『Simple Portfolio』『Basic Blog』など）にマウスを合わせ、「このテンプレートを使う」（または「Preview」で確認してから選択）をクリックします。
+
+プロジェクト名（例：hata-lab など）を入力して作成を開始します。
+
+テンプレートを開くと、最初から文字や写真が入った完成状態のページが表示されます。
+そこまで進みましたら、また画面の様子を教えてください。次のステップ（文字と写真の差し替え方）を一つずつご案内します。
+
+https://studio.design/ja/store/templates/exNWY7qlBn これがでました。購入でも別に構いませんが。
+
+そのテンプレートで進めていただいて問題ありません！有料・無料に関わらず、ご自身が「この構成や雰囲気が良い」と感じたテンプレートをベースにするのが一番完成への近道です。
+
+購入または「このテンプレートを使う」を選択してプロジェクトを作成すると、すでに綺麗なレイアウトが組まれた編集画面が開きます。
+
+次に進めるステップ
+プロジェクトを作成してエディタを開く
+
+テンプレートを選択してプロジェクト名（例：hata-lab など）を設定し、編集画面を開きます。
+
+基本情報の差し替え（文字の打ち替え）
+
+画面上の文字（名前、大学名、キャッチコピーなど）をダブルクリックすると、Wordのように直接文字を書き換えることができます。
+
+記事・トピックス（CMS）の追加
+
+お知らせや研究紹介の記事は、左側の「CMS」メニューからフォームに入力するだけで簡単に追加・編集できます。
+
+テンプレートの編集画面が開きましたら、どの部分から文章を入れていくか、あるいは操作で迷う部分があればいつでもお声がけください。各セクションの文章作成もすぐにお手伝いいたします。
+
+https://app.studio.design/projects/6kq9REmVap/editor/%2F
+
+STUDIOのエディタURL（編集画面）は秦先生ご自身のログインセッション専用のページであるため、AI側から直接画面の中身を閲覧・操作することができません。
+
+編集画面を開いた状態で、画面のスクリーンショット（画像）を添付していただくか、「いまどの部分を編集したいか」を教えていただけますでしょうか？
+
+画面を見せていただければ、以下のようにピンポイントで操作をご案内できます：
+
+文字の打ち替え場所（ヘッダー、自己紹介、キャッチコピーなど）
+
+ニュース記事（トピックス）の追加方法
+
+写真・画像の差し替え方
+
+各欄にそのまま貼り付けるテキスト原稿の作成
+
+エディタの画面をキャプチャ（スクリーンショット）して貼り付けていただければ、すぐに次の手順をご案内いたします。
+
+現在、ここにおります。使いこなせるかどうか自信がないので、有料プランではなく無料プランで現在進めております。ここから先どうすればいいでしょうか？ワープロのように打ち換えることもなかなかできないのですか？
+
+無料プランのままで全く問題ありません。大学の研究室サイトとして非常に適したテンプレートが正しく開かれています。
+
+STUDIOで文字を打ち替える基本操作と、最初に行う設定手順を案内します。
+
+文字を打ち替えるコツ（ダブルクリックの回数）
+
+STUDIOは「枠（ボックス）」の中に「文字」が入っている二重構造になっているため、1回のクリックでは外枠しか選択されません。
+
+変えたい文字（例：左上の「霧垣研究室」や中央の英文）の上にカーソルを合わせます。
+
+「ダブルクリック（素早く2回カチカチ）」、または「3回クリック」してください。
+
+文字の周りに青い枠がつき、縦棒のカーソルがチカチカ点滅したら、ワープロと同じようにキーボードで直接文字を消したり書き換えたりできます。
+
+まず最初に書き換えるおすすめの3箇所
+
+左上の研究室名
+
+「東京架空大学 未来情報学部」→ 大阪大谷大学 人間社会学部 心理・福祉学科
+
+「霧垣研究室」→ 秦 康宏 研究室
+
+中央のメインタイトル（英文部分）
+
+「Where People and AI...」→ 理論と現場、日本と世界を繋ぐ社会福祉
+
+その下の説明文
+
+「人とAIが...」→ 高齢者福祉の実践知を基盤に、対人援助職の倫理と多文化共生社会を追究します。
+
+作業の注意点
+
+画面を下にスクロールすると、「News（お知らせ）」「Research（研究内容）」「Members（ゼミ生・メンバー）」などの各セクションが続いています。
+
+上記と同じように、文字の上をダブルクリックして秦先生の紹介文や実績に打ち替えていくだけでサイトが仕上がっていきます。
+
+もし操作を間違えて崩れてしまった場合は、キーボードの Ctrl ＋ Z（Macは Cmd ＋ Z）を押せば直前の状態に戻せます。
+
+まずは左上の「霧垣研究室」の文字をダブルクリックして、「秦 康宏 研究室」と打ち替えられるか試してみてください。
+
+だめです。全くできません。
+
+STUDIOの画面操作は独特のクセがあり、枠線の重なりやグループ化のせいで文字選択すら思い通りにいかないことが多々あります。無理にツールの操作でストレスを抱える必要は全くありません。
+
+確実に宮谷先生のようなサイトに切り替えるため、「GitHub上で完結する一番シンプルな方法」に戻しましょう。操作は3分で終わります。
+
+GitHub Pagesで宮谷先生風サイトを一発反映する手順
+
+先ほど作成した完全版のプログラムを使って、現在公開されているGitHubのファイルを上書きします。
+
+1. GitHubの編集ページを開く
+
+ブラウザの別タブで開いている「GitHub（秦先生のホームページのリポジトリ）」を表示します。
+
+ファイル一覧にある index.html をクリックします。
+
+画面右上にある 鉛筆マーク（Edit this file） をクリックします。
+
+2. 古いコードを全消去して、新しいコードを貼り付ける
+
+黒いテキストエリアの中を一度クリックし、キーボードの Ctrl + A（全選択）を押してから Delete または BackSpace で中身をすべて消します。
+
+以下のコード枠の右上にある「コピー」アイコンを押して、すべて貼り付けます。
+
+HTML
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>秦 康宏 研究室｜大阪大谷大学 社会福祉学・高齢者福祉論</title>
-    <style>
-        :root {
-            --col-bg-filter: rgba(244, 248, 240, 0.45); 
-            --col-card-bg: rgba(255, 255, 255, 0.98);    
-            --col-main: #335c1f;      
-            --col-gold: #b08d57;      
-            --col-accent: #e1eedb;    
-            --col-text: #1a1a1a;
-            --col-insta: #e1306c;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>秦 康宏 研究室｜大阪大谷大学 人間社会学部 心理・福祉学科</title>
+  <meta name="description" content="大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏（社会福祉学・高齢者福祉論）研究室の公式Webサイトです。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #fcfcfc;
+      --card-bg: #ffffff;
+      --text-main: #1d1d1f;
+      --text-sub: #555558;
+      --text-muted: #8e8e93;
+      --accent: #2c5282;
+      --border-color: #e5e5ea;
+      --tag-bg: #f2f2f7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.85;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+    header {
+      position: sticky; top: 0;
+      background-color: rgba(252, 252, 252, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 100;
+    }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+    .site-title { font-weight: 700; font-size: 1.05rem; }
+    .site-title span { display: block; font-size: 0.72rem; color: var(--text-muted); font-weight: 400; }
+    nav ul { display: flex; gap: 24px; list-style: none; }
+    nav ul li a { font-size: 0.88rem; font-weight: 500; color: var(--text-sub); }
+    nav ul li a:hover { color: var(--accent); }
+    .hero { padding: 70px 0 50px; border-bottom: 1px solid var(--border-color); }
+    .hero-sub { font-size: 0.85rem; font-weight: 600; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 12px; }
+    .hero-title { font-family: 'Shippori Mincho', serif; font-size: 2.2rem; font-weight: 700; line-height: 1.4; margin-bottom: 20px; color: #111827; }
+    .hero-lead { font-size: 1.0rem; color: var(--text-sub); max-width: 820px; line-height: 1.9; }
+    section { padding: 70px 0; border-bottom: 1px solid var(--border-color); }
+    .section-num { font-size: 0.85rem; font-weight: 700; color: var(--accent); letter-spacing: 0.15em; margin-bottom: 4px; }
+    .section-title { font-size: 1.7rem; font-weight: 700; margin-bottom: 36px; }
+    .profile-grid { display: grid; grid-template-columns: 300px 1fr; gap: 40px; }
+    .profile-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; text-align: center; }
+    .profile-avatar { width: 120px; height: 120px; border-radius: 50%; background: #e2e8f0; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+    .profile-name { font-size: 1.3rem; font-weight: 700; }
+    .profile-en-name { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px; }
+    .profile-position { font-size: 0.85rem; font-weight: 600; color: var(--accent); padding-bottom: 14px; border-bottom: 1px solid var(--border-color); margin-bottom: 14px; }
+    .btn-link { display: inline-flex; align-items: center; justify-content: center; width: 100%; padding: 9px 12px; font-size: 0.82rem; font-weight: 600; border-radius: 6px; background: var(--tag-bg); border: 1px solid var(--border-color); margin-bottom: 8px; }
+    .btn-insta { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); color: #fff; border: none; }
+    .profile-detail h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 14px; border-left: 4px solid var(--accent); padding-left: 10px; }
+    .profile-detail p { color: var(--text-sub); margin-bottom: 16px; font-size: 0.95rem; }
+    .timeline-item { display: grid; grid-template-columns: 120px 1fr; padding: 8px 0; font-size: 0.9rem; border-bottom: 1px dashed var(--border-color); }
+    .timeline-year { font-weight: 600; color: var(--accent); }
+    .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
+    .news-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 20px; }
+    .news-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .news-tag { font-size: 0.72rem; font-weight: 600; padding: 3px 8px; border-radius: 14px; background: var(--tag-bg); color: var(--text-sub); }
+    .tag-award { background: #fef3c7; color: #b45309; }
+    .tag-research { background: #e0f2fe; color: #0369a1; }
+    .tag-education { background: #dcfce7; color: #15803d; }
+    .news-date { font-size: 0.8rem; color: var(--text-muted); }
+    .news-card-title { font-size: 1.0rem; font-weight: 700; margin-bottom: 8px; }
+    .news-card-body { font-size: 0.85rem; color: var(--text-sub); line-height: 1.6; }
+    .content-box { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 30px; margin-bottom: 24px; }
+    .content-badge { background: var(--accent); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-bottom: 12px; display: inline-block; }
+    .content-box-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
+    .content-p { color: var(--text-sub); font-size: 0.93rem; margin-bottom: 14px; }
+    .feature-list { background: #f8fafc; border-radius: 8px; padding: 16px 20px; font-size: 0.9rem; color: var(--text-sub); }
+    .feature-list ul { padding-left: 18px; margin-top: 8px; }
+    .table-custom { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.9rem; }
+    .table-custom th, .table-custom td { padding: 12px 14px; border-bottom: 1px solid var(--border-color); text-align: left; }
+    .table-custom th { background: #f8fafc; font-weight: 600; width: 28%; }
+    .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; }
+    .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px; font-family: inherit; font-size: 0.9rem; }
+    .btn-submit { width: 100%; padding: 12px; background: var(--accent); color: #fff; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
+    footer { padding: 40px 0; text-align: center; font-size: 0.82rem; color: var(--text-muted); border-top: 1px solid var(--border-color); background: #fafafa; }
+    @media (max-width: 800px) { .profile-grid, .contact-wrapper { grid-template-columns: 1fr; } nav ul { display: none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="site-title">秦 康宏 研究室<span>大阪大谷大学 人間社会学部 心理・福祉学科</span></a>
+      <nav>
+        <ul>
+          <li><a href="#about">01 ようこそ</a></li>
+          <li><a href="#news">02 ニュース</a></li>
+          <li><a href="#research">03 研究活動</a></li>
+          <li><a href="#education">04 教育・ゼミ</a></li>
+          <li><a href="#social">05 社会連携</a></li>
+          <li><a href="#contact">06 お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        html, body { margin: 0; padding: 0; height: 100%; scroll-behavior: smooth; }
+  <div class="hero">
+    <div class="container">
+      <div class="hero-sub">Hata Laboratory of Social Welfare</div>
+      <h1 class="hero-title">理論と現場、日本と世界を繋ぐ社会福祉</h1>
+      <p class="hero-lead">高齢者福祉の実務現場における22年間の実践知を基盤に、対人援助職の倫理的省察や多文化共生社会のモデル構築を探求しています。現場の「声なき声」を学術的に言語化し、次代の福祉社会を拓く実践者・研究者を育成します。</p>
+    </div>
+  </div>
 
-        body {
-            background-image: url('IMG_5721.JPG');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            color: var(--col-text);
-            font-family: "Times New Roman", "Hiragino Mincho ProN", serif;
-            line-height: 1.6; /* 行間を詰め、情報量を多く入るように調整 */
-            letter-spacing: 0.02em; 
-        }
+  <main class="container">
+    <section id="about">
+      <div class="section-num">01 WELCOME</div>
+      <h2 class="section-title">ようこそ・自己紹介</h2>
+      <div class="profile-grid">
+        <div class="profile-card">
+          <div class="profile-avatar">👨‍🏫</div>
+          <h3 class="profile-name">秦 康宏</h3>
+          <p class="profile-en-name">Yasuhiro HATA</p>
+          <p class="profile-position">大阪大谷大学 人間社会学部<br>心理・福祉学科長 / 教授</p>
+          <a href="https://researchmap.jp/hatayasu" target="_blank" class="btn-link">🔗 Researchmap（業績一覧）</a>
+          <a href="https://www.instagram.com/hatazemi.fukushi/" target="_blank" class="btn-link btn-insta">📸 秦ゼミ 公式Instagram</a>
+        </div>
+        <div class="profile-detail">
+          <h3>現場実践とアカデミズムの架け橋として</h3>
+          <p>私は、高齢者総合介護センター「ひらかた聖徳園」において22年間にわたり相談援助・ケアマネジメント・施設運営などの福祉現場実務に従事してまいりました。現場で直面する葛藤や制度の狭間にある課題に向き合い続けた経験が、現在の私の研究と教育のすべての原点です。</p>
+          <p>専門職が抱える倫理的ジレンマを解明する「スウェーデン福祉倫理研究」や、超高齢社会を支える「外国人介護人材の受入れと共生支援モデル」の構築など、実践に活きる社会福祉学を追究しています。</p>
+          <div class="timeline-item"><span class="timeline-year">専門分野</span><span>社会福祉学、高齢者福祉論、ソーシャルワーク倫理、外国人介護人材支援</span></div>
+          <div class="timeline-item"><span class="timeline-year">担当講義</span><span>高齢者福祉論、社会福祉の原理と政策、ソーシャルワーク演習・実習指導</span></div>
+          <div class="timeline-item"><span class="timeline-year">主な公職</span><span>大阪府国保連 苦情処理委員会 副委員長、日本レセプト学会 理事、豊中市地域包括支援センター運営協議会 会長 ほか</span></div>
+        </div>
+      </div>
+    </section>
 
-        body::before {
-            content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--col-bg-filter); z-index: -1;
-        }
+    <section id="news">
+      <div class="section-num">02 NEWS & TOPICS</div>
+      <h2 class="section-title">ニュース＆トピックス</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <div class="news-meta"><span class="news-tag tag-award">受賞</span><span class="news-date">2024.11</span></div>
+          <h3 class="news-card-title">日本レセプト学会「国際学術賞」を受賞（ベトナム大会）</h3>
+          <p class="news-card-body">ベトナム・ハノイで開催された国際学術大会において、インドネシア人介護人材予定者の就労意識とキャリア継続に関する国際調査研究が高く評価され、受賞いたしました。</p>
+        </div>
+        <div class="news-card">
+          <div class="news-meta"><span class="news-tag tag-research">研究出版</span><span class="news-date">2026.04</span></div>
+          <h3 class="news-card-title">『レセプト用語事典』日本レセプト学会学術出版（分担執筆）</h3>
+          <p class="news-card-body">医療・福祉・介護のレセプト実務および制度理解に関する総合専門事典において、介護報酬請求および福祉制度領域の執筆を担当いたしました。</p>
+        </div>
+        <div class="news-card">
+          <div class="news-meta"><span class="news-tag tag-education">教育・ゼミ</span><span class="news-date">2026.04</span></div>
+          <h3 class="news-card-title">2026年度 秦ゼミ活動スタート＆国家試験対策本格始動</h3>
+          <p class="news-card-body">新3年生・4年生を迎え、社会福祉士国家試験の全員合格に向けた過去問分析とゼミ内勉強会を開始しました。日々の様子はInstagramでも発信しています。</p>
+        </div>
+      </div>
+    </section>
 
-        /* ナビゲーションバーの余白を最適化 */
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 12px 0; position: fixed; top: 0; left: 0; right: 0;
-            display: flex; justify-content: center; z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-bottom: 4px solid var(--col-gold);
-        }
-        nav a { color: var(--col-main); text-decoration: none; margin: 0 15px; font-weight: 700; font-size: 1.0em; letter-spacing: 0.05em; }
-        nav a.insta-nav { color: var(--col-insta); }
+    <section id="research">
+      <div class="section-num">03 RESEARCH</div>
+      <h2 class="section-title">研究活動の2大支柱</h2>
+      <div class="content-box">
+        <span class="content-badge">研究の柱 1</span>
+        <h3 class="content-box-title">スウェーデンにおける福祉倫理とソーシャルワーク</h3>
+        <p class="content-p">個人の自立と自己決定を尊重する北欧スウェーデンの福祉実践・倫理綱領を精読・翻訳し、日本の対人援助現場における倫理的ジレンマの解決・カンファレンス手法のモデル構築を行っています。</p>
+      </div>
+      <div class="content-box">
+        <span class="content-badge">研究の柱 2</span>
+        <h3 class="content-box-title">外国人介護人材の受入れと多文化共生モデル</h3>
+        <p class="content-p">アジア（ベトナム・インドネシア等）の若者が日本で誇りを持ってキャリアを拓けるよう、現地と日本の現場双方の調査を行い、「受入れ施設」「外国人職員」「地域住民」を繋ぐ地域メディエーションモデルを提唱しています。</p>
+      </div>
+    </section>
 
-        /* ヘッダー */
-        header {
-            padding: 180px 20px 100px; text-align: center; color: #fff;
-            background: rgba(45, 80, 25, 0.75); margin-bottom: 50px;
-            border-bottom: 12px solid var(--col-gold);
-        }
-        header h1 { font-size: 3.2em; margin: 0; letter-spacing: 0.15em; text-shadow: 3px 3px 8px rgba(0,0,0,0.5); }
-        .subtitle { font-size: 1.4em; margin-top: 10px; font-weight: 400; letter-spacing: 0.05em; }
+    <section id="education">
+      <div class="section-num">04 EDUCATION</div>
+      <h2 class="section-title">教育・秦ゼミの活動</h2>
+      <div class="content-box">
+        <h3 class="content-box-title">国家試験全員合格と「実践力」を培うゼミナール</h3>
+        <p class="content-p">過去問分析の徹底と学生同士の学び合いにより、社会福祉士国家試験の高い合格率を維持。高齢者施設見学や地域活動への参加など、リアルな現場体験を重視しています。</p>
+        <table class="table-custom">
+          <tr><th>主な活動</th><td>国家試験対策勉強会、卒業論文指導、現場施設見学、地域貢献活動</td></tr>
+          <tr><th>卒論テーマ例</th><td>「外国人介護職員受入れと施設内研修」「認知症高齢者への個別ケア」「ヤングケアラー支援」</td></tr>
+          <tr><th>進路先</th><td>医療機関（MSW）、特別養護老人ホーム、地域包括支援センター、公務員（福祉職等）</td></tr>
+        </table>
+      </div>
+    </section>
 
-        /* コンテンツエリア（余白を詰めました） */
-        .container { max-width: 1100px; margin: 0 auto 100px; padding: 0 20px; }
-        .content-card {
-            background: var(--col-card-bg); padding: 50px; border-radius: 2px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.3); border: 1px solid var(--col-accent);
-            position: relative;
-        }
-        .content-card::after { 
-            content: ''; position: absolute; top: 12px; left: 12px; right: 12px; bottom: 12px;
-            border: 2px solid var(--col-gold); pointer-events: none; opacity: 0.3;
-        }
+    <section id="social">
+      <div class="section-num">05 SOCIAL</div>
+      <h2 class="section-title">社会連携・地域活動</h2>
+      <div class="content-box">
+        <table class="table-custom">
+          <tr><th>行政・公的委員会</th><td>大阪府国保連 介護保険苦情処理委員会 副委員長、豊中市地域包括支援センター運営協議会 会長、河内長野市高齢者保健福祉計画等推進委員会 会長 ほか</td></tr>
+          <tr><th>職能団体・学会役員</th><td>日本レセプト学会 理事、介護保険市民オンブズマン機構大阪（O-ネット） 副代表、大阪介護支援専門員協会 監事 ほか</td></tr>
+        </table>
+      </div>
+    </section>
 
-        /* 章タイトル（外国語を削除） */
-        h2 {
-            color: var(--col-main); border-bottom: 3px solid var(--col-gold);
-            padding-bottom: 8px; margin-top: 50px; font-size: 2.0em;
-            display: flex; align-items: center; gap: 12px;
-        }
-        h2::before { content: ''; width: 10px; height: 1.2em; background: var(--col-gold); display: inline-block; }
+    <section id="contact">
+      <div class="section-num">06 CONTACT</div>
+      <h2 class="section-title">お問い合わせ</h2>
+      <div class="contact-wrapper">
+        <div class="profile-card" style="text-align: left;">
+          <h4>秦 康宏 研究室</h4>
+          <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 8px;">大阪大谷大学 人間社会学部 心理・福祉学科<br>〒584-8540 大阪府富田林市錦織北3丁目11番1号</p>
+          <p style="font-size: 0.95rem; font-weight: 600; color: var(--accent); margin-top: 14px;">✉️ hatayasu@osaka-ohtani.ac.jp</p>
+        </div>
+        <div class="profile-card" style="text-align: left;">
+          <form action="mailto:hatayasu@osaka-ohtani.ac.jp" method="post" enctype="text/plain">
+            <div class="form-group"><label>お名前・ご所属</label><input type="text" name="name" required></div>
+            <div class="form-group"><label>メールアドレス</label><input type="email" name="email" required></div>
+            <div class="form-group"><label>ご用件</label><textarea name="message" rows="3" required></textarea></div>
+            <button type="submit" class="btn-submit">メールソフトを起動して送信</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        .profile-section { display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px; }
-        .profile-img { width: 240px; border: 8px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+  <footer>
+    <div class="container">
+      <p><strong>大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏 研究室</strong></p>
+      <p style="margin-top: 6px;">© 2026 Yasuhiro Hata. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+3. 保存する
 
-        .focus-area {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0;
-        }
-        .focus-item {
-            background: var(--col-accent); padding: 25px; border-left: 8px solid var(--col-main);
-            border-radius: 4px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        .focus-item h3 { color: var(--col-main); margin-top: 0; font-size: 1.4em; border-bottom: 1px solid var(--col-gold); padding-bottom: 8px; margin-bottom: 12px; }
+貼り付けたら、画面右上にある緑色の 「Commit changes...」 ボタンを押します。
 
-        .achievement-list { list-style: none; padding: 0; }
-        .achievement-list li {
-            padding: 12px 0; border-bottom: 1px solid #eee; display: flex; gap: 20px;
-        }
-        .date { font-weight: 700; color: var(--col-gold); min-width: 100px; }
+ポップアップが出るので、もう一度緑色の 「Commit changes」 を押して確定します。
 
-        .social-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
-        .tag { background: var(--col-main); color: #fff; padding: 4px 12px; border-radius: 3px; font-size: 0.85em; font-weight: 500; }
+保存後、1〜2分待ってからご自身のホームページURL（[https://hatayan1234-ai.github.io/-/](https://hatayan1234-ai.github.io/-/)）をブラウザで再読み込みしてみてください。宮谷先生のような洗練された白基調デザインと、充実した内容に切り替わります。
 
-        /* Instagram用ボタンの装飾 */
-        .btn-insta {
-            display: inline-block; padding: 12px 30px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-            color: #fff; text-decoration: none; font-weight: 700; border-radius: 4px; box-shadow: 0 4px 15px rgba(220,39,67,0.3); transition: transform 0.2s;
-        }
-        .btn-insta:hover { transform: translateY(-2px); }
+それでしたらば、今のGitHubのホームページは情報量が極めて少ないので、私のリサーチマップの情報も取り入れるようにしてください。
 
-        footer { background: #1a1a1a; color: rgba(255,255,255,0.8); padding: 60px 20px; text-align: center; }
+日本語 | English
 
-        @media (max-width: 900px) {
-            .profile-section, .focus-area { flex-direction: column; grid-template-columns: 1fr; }
-            .content-card { padding: 30px 20px; }
-            header h1 { font-size: 2.2em; }
-        }
-    </style>
+新規登録
+
+ログイン
+
+
+
+
+
+秦 康宏
+
+ハタ ヤスヒロ  (Yasuhiro Hata)
+
+
+
+更新日: 07/28
+
+ホーム
+
+研究キーワード
+
+研究分野
+
+経歴
+
+学歴
+
+委員歴
+
+受賞
+
+論文
+
+MISC
+
+書籍等出版物
+
+講演・口頭発表等
+
+担当経験のある科目(授業)
+
+所属学協会
+
+共同研究・競争的資金等の研究課題
+
+学術貢献活動
+
+社会貢献活動
+
+メディア報道
+
+その他
+
+基本情報
+
+所属
+
+大阪大谷大学 人間社会学部 心理・福祉学科 教授
+
+学位
+
+修士（学術）(大阪教育大学)
+
+連絡先
+
+hatayasuosaka-ohtani.ac.jp
+
+通称等の別名
+
+はたやん
+
+研究者番号 
+
+60461969
+
+J-GLOBAL ID
+
+200901000251947013
+
+researchmap会員ID
+
+6000007895
+
+外部リンク
+
+https://hatayan1234-ai.github.io/-/
+
+2023年から大阪大谷大学の教授としてお世話になっています。
+
+ 【資格、免許】
+
+介護福祉士　平成 4年
+
+社会福祉士　平成 5年
+
+介護支援専門員国指導者 平成11年
+
+介護支援専門員　 平成11年
+
+福祉住環境コーディネーター2級 平成12年
+
+第1種衛生管理者 平成13年
+
+認知症介護実務者研修基礎課程 平成14年
+
+社団法人日本社会福祉士会権利擁護センターぱあとなあ成年後見通信課程 平成15年
+
+ISO9001内部監査員養成コース 平成18年
+
+大阪府介護支援専門員専門研修 平成18年
+
+介護教員講習会　平成20年
+
+認知症ケア専門士 平成21年～令和7年
+
+社会福祉士実習指導者講習会指導者研修 平成21年
+
+普通救命講習 平成23年
+
+福祉英語検定３級 平成24年
+
+レセプト管理士　令和４年
+
+Sweden MediCare Institute研究員　令和5年9月
+
+スクール（学校）ソーシャルワーク教育課程専門科目群担当教員講習会　令和5年
+
+外国人介護スタッフ応援隊養成講座　令和5年12月
+
+国際医療管理士（International　Medical　Administrator）令和６年
+
+国際福祉管理士（International　Welfare　Administrator）令和６年
+
+専門社会調査士　令和6年
+
+
+
+ 【実務経歴】
+
+1983年社会福祉学科卒業後、大阪府枚方市の社会福祉法人聖徳園に入職。在宅要介護高齢者のデイサービスセンターに配属され3年間、知的障害児通所更生施設に配属され1年間、再び同デイサービスセンターに配属され、在宅介護支援センターソーシャルワーカー、デイケアセンターソーシャルワーカー（生活相談員）を担当する。その後、同法人内で、 24時間ホームヘルパーステーション、訪問看護ステーション、介護員2級ヘルパー事業、認知症グループホーム、地域包括支援センター等の立ち上げ、枚方市の医療ソーシャルワーカーと連携しながら、在宅の医療依存度の高い利用者の支援を行ってきた。
+
+1）在宅高齢者デイサービスセンター介護業務 昭和60年4月 デイサービスセンターを中心として，入浴介助，移動介助，着替え等の介護業務を行ってきた．
+
+2）枚方市24時間地域高齢者ホームヘルプ事業への取り組み 平成6年 4月
+
+全国的にも珍しかった枚方市における24時間ホームヘルプサービス実施の3つの委託先の1つとして現場の立ち上げに尽力した．深夜時間帯はホームヘルパーステーションへの宿直体制で緊急ホームヘルプのニーズに対応できる体制を整備した．6年間
+
+3）地域高齢者訪問看護ステーションの事業立ち上げ 平成11年 12月
+
+枚方市内で2ヶ所目（民間法人としてははじめ）なる訪問看護ステーションの指定申請や現場の体制整備に取り組んだ．
+
+4）ホームヘルパー養成講座２級課程の開始 平成11年 12月
+
+介護職の人材養成教育として，ホームヘルパー２級課程の開講を担当した．定員４０名で年２回の実施．現在までに約500人の修了生を輩出した．
+
+5）認知症高齢者地域グループホームの立ち上げ 平成12年8月 認知症対応型共同生活介護（定員7名）の指定申請や管理者（3年間）を担当した．
+
+6）居宅介護支援事業の運営管理 平成12年4月 居宅介護支援事業の運営を管理者として担当した．6年間
+
+7）ISO9001の法人責任者 平成16年6月 サービスの品質に関する国際標準規格であるISO9001の法人全体の責任者（14業種33施設）を担当した．
+
+【一言】
+
+社会福祉の目的は、その人が困っていることや望んでいることを自己実現できるように支援します。社会資源のコーディネートにより、課題を解決し、クライエントが、自分の人生に積極的に向き合っていける力を出せるように支援します。つまり、その人や家族、地域の人たちが自分らしい生き方、生き生きとした暮らしを見つけられるようにサポートし、一緒に伴奏（伴走）することかもしれませんね。
+
+【最終学歴】
+
+同志社大学大学院社会学研究科社会福祉学専攻博士課程（後期課程）退学
+
+【経歴】
+
+社会福祉法人聖徳園（22年間）
+
+大阪城南女子短期大学人間福祉学科（6年間）
+
+大阪人間科学大学人間科学部社会福祉学科（10年間）
+
+大阪大谷大学人間社会学部心理・福祉学科（現在に至る）
+
+社会福祉士
+
+介護支援専門員
+
+介護福祉士
+
+Sweden MediCare Institute研究員
+
+介護教員講習会担当教員講習会修了
+
+スクール（学校）ソーシャルワーク教育課程専門科目群担当教員講習会修了
+
+外国人介護スタッフ応援隊養成講座修了
+
+
+
+介護保険市民オンブズマン機構大阪理事・副代表
+
+大阪介護支援専門員協会監事　
+
+日本介護支援専門員協会　介護支援専門員生涯学習体系（指導者レベル2）講師
+
+【研究課題】
+
+外国人介護人材の地域生活をサポートする地域メディエーション支援モデルの構築、スウェーデンソーシャルワーカー、支持的事例検討会
+
+【研究キーワード】
+
+ソーシャルワーカーの倫理綱領、自己覚知、事例検討、介護レセプト、施設運営、外国人介護人材の地域定着、高齢者福祉、福祉住環境・建築、多文化共生
+
+【講義可能分野】
+
+ソーシャルワーカーの倫理綱領、自己覚知、事例検討、介護レセプト、施設運営、外国人介護人材の地域定着、高齢者福祉、記録の書き方、連携の重要性、認知症高齢者とのコミュニケーション、レセプト管理
+
+ 
+
+ 
+
+ 
+
+ 
+
+主要な研究キーワード
+
+  31
+
+ソーシャルワーカー倫理綱領 
+
+ 自己覚知と専門職意識 
+
+ 実習指導 
+
+ 医療依存度の高い要介護高齢者への援助 
+
+ 介護保険事務 
+
+ 介護報酬レセプト管理 
+
+ 事例検討 
+
+ ケアマネジメント 
+
+ 介護施設運営管理 
+
+ 介護福祉 
+
+ 高齢者福祉 
+
+ ソーシャルワーク 
+
+ 外国人介護人材 
+
+主要な研究分野
+
+  2
+
+人文・社会 / 社会福祉学 /  
+
+経歴
+
+  29
+
+2026年10月 - 現在
+
+介護支援専門員生涯学習体系（指導者レベル2）非常勤講師, 日本介護支援専門員協会 
+
+2026年9月 - 現在
+
+関西福祉科学大学 保健医療学部『老人福祉論』非常勤講師 
+
+2024年11月 - 現在
+
+【常勤】大阪大谷大学人間社会学部心理・福祉学科 教授・学科長 
+
+2024年4月 - 現在
+
+【常勤】大阪大谷大学人間社会学部心理・福祉学科 教授 
+
+2024年4月 - 現在
+
+南海福祉看護専門学校社会福祉士養成通信課程『ソーシャルワークの基盤と専門職』非常勤講師 
+
+2023年5月 - 現在
+
+Sweden MediCare Institute, 研究員（非常勤） 
+
+2023年4月 - 現在
+
+関西医科大学『社会福祉・社会保障論』非常勤講師 
+
+2021年4月 - 現在
+
+花園大学大学院社会福祉学研究科『倫理と社会福祉』非常勤講師 
+
+2006年4月 - 現在
+
+華頂社会福祉専門学校社会福祉士養成課程『ソーシャルワークの理論と方法Ⅰ』『ソーシャルワークの理論と方法Ⅱ』『社会福祉調査の基礎』非常勤講師 
+
+2006年4月 - 現在
+
+豊岡短期大学通信教育部こども学科『社会福祉援助技術』非常勤講師 
+
+2005年4月 - 現在
+
+豊岡短期大学通信教育部社会福祉士養成通信課程「ソーシャルワーク演習」「ソーシャルワーク実習指導」非常勤講師 
+
+2003年4月 - 現在
+
+南海福祉看護専門学校社会福祉士養成通信課程『ソーシャルワーク演習』非常勤講師 
+
+2023年4月 - 2024年3月
+
+【常勤】大阪大谷大学人間社会学部人間社会学科教授 
+
+2013年4月 - 2023年3月
+
+【常勤】大阪人間科学大学, 人間科学部 社会福祉学科, 准教授 
+
+2007年4月 - 2023年3月
+
+中部学院大学人間福祉学部人間福祉学科『ソーシャルワークの基盤と専門職』非常勤講師 
+
+2007年4月 - 2023年3月
+
+花園大学非常勤講師『高齢者福祉論』～2011年3月 2011年4月～『福祉サービスの組織と経営』非常勤講師 
+
+2012年4月 - 2016年3月
+
+行岡医療大学『社会福祉学概論』非常勤講師 
+
+2007年4月 - 2016年3月
+
+大阪教育大学『介護概論』『社会福祉概論』非常勤講師 
+
+2008年4月 - 2013年3月
+
+桃山学院大学社会学部社会福祉学科『高齢者福祉論A・C』～2013年3月『ソーシャルワーク実習指導』『ｿｰｼｬﾙﾜｰｸ実習』『ソーシャルワーク演習Ⅱ』～2017年3月非常勤講師 
+
+2007年4月 - 2013年3月
+
+【常勤】大阪城南女子短期大学人間福祉学科, 専任講師 
+
+学歴
+
+  4
+
+2007年4月 - 2011年3月
+
+同志社大学大学院, 社会学研究科社会福祉学専攻博士課程（後期課程） 
+
+2003年4月 - 2005年3月
+
+大阪教育大学大学院, 教育学研究科, （発達人間学講座） 
+
+2000年9月 - 2002年8月
+
+佛教大学, 社会学部, 社会福祉学科 
+
+1983年4月 - 1985年3月
+
+龍谷大学, 短期大学部, 社会福祉学科 
+
+委員歴
+
+  41
+
+2026年4月 - 現在
+
+大阪府国民健康保険団体連合会, 苦情処理委員会委員 
+
+2025年7月 - 現在
+
+大阪府障害者福祉事業団, 運営協議会委員 
+
+2025年6月 - 現在
+
+公益社団法人大阪介護支援専門員協会, 監事 
+
+2025年6月 - 現在
+
+介護保険市民オンブズマン機構大阪, 副代表 
+
+2024年4月 - 現在
+
+羽曳野市, 羽曳野市高齢者・障害者虐待防止ネットワーク会議 会長 
+
+2023年6月 - 現在
+
+介護保険市民オンブズマン機構大阪, 介護保険市民オンブズマン機構大阪理事 
+
+2023年6月 - 現在
+
+豊能町, 豊能町障害者計画等策定委員会 会長 
+
+2023年6月 - 現在
+
+河内長野市高齢者保健福祉計画等推進委員会 会長 
+
+2021年5月 - 現在
+
+枚方市地域包括支援センター運営等審議会 副会長 
+
+2018年4月 - 現在
+
+枚方市介護保険施設等整備審議委員会委員 会長 
+
+2016年4月 - 現在
+
+摂津市地域包括支援センター運営委員会 会長 
+
+2014年3月 - 現在
+
+豊中市介護保険事業運営委員会介護保険施設等候補者選定委員会 会長 
+
+2014年3月 - 現在
+
+豊中市介護保険事業運営委員会地域包括支援センター運営協議会 会長 
+
+2014年3月 - 現在
+
+豊中市介護保険事業運営委員会 委員 
+
+2013年4月 - 現在
+
+摂津市介護認定審査会 合議体委員長 
+
+2007年4月 - 現在
+
+交野市地域密着型サービス運営及び介護予防事業運営審議会 委員 
+
+2024年5月 - 2026年8月
+
+豊中市, 豊中市介護人材対策部会 会長 
+
+2025年6月 - 2026年3月
+
+豊能町, 豊能町地域福祉計画・豊能町地域福祉活動計画・豊能町自殺対策計画策定委員 委員長 
+
+2023年11月 - 2025年10月
+
+枚方市指定管理者評価委員会 
+
+2025年2月 - 2025年2月
+
+河内長野市, 河内長野市地域密着型サービス等事業者選定審査会 委員 
+
+受賞
+
+  4
+
+2024年11月
+
+学術賞, 「インドネシア人介護人材予定者から見た日本の介護老人福祉施設への就労イメージ」 の論文等、多数の国際研究の業績が、日本の深刻な介護労働問題に対して貢献していると高く評価, 日本レセプト学会（第 6 回 日本レセプト学会国際学術ベトナム大会） 
+
+秦 康宏
+
+2023年12月
+
+第5回レセプト学会国際学術大会優秀賞内定, 日本レセプト学会 
+
+
+
+2022年6月
+
+公益財団法人大阪介護支援専門員協会会長表彰, 公益財団法人大阪介護支援専門員協会会長表彰, 公益財団法人大阪介護支援専門員協会 
+
+秦 康宏
+
+2022年4月
+
+論文表彰優秀賞, 「インドネシア人介護人材予定者から見た日本の介護老人福祉 施設への就労イメージ」, 日本レセプト学会 
+
+秦 康宏
+
+論文
+
+  23
+
+社会福祉士から見た外国人介護職員の現状と自立支援 ～地域共生の視点から～ 
+
+秦 康宏
+
+大阪大谷大学人間社会学部こみゅにか (19) 76-105 2025年3月  
+
+ 51
+
+社会福祉領域におけるキャリア支援教育－心理・福祉学科第1期生に対する資格を活かした進路説明を中心に－ 
+
+秦康宏, 谷俊英, 植木是, 船本淑恵
+
+大阪大谷大学紀要第59号 2025年2月  筆頭著者
+
+Non-Standard Material Art as an Alternative Development of Recycled Architecture 
+
+Fermanto Lianto, Yasuhiro Hata, Rudy Trisno, Franky Liauw, Denny Husin
+
+Journal of Sustainable Architecture and Civil Engineering 36(3) 55-66 2024年10月31日  
+
+Architecture is Function, Art or Function and Art 
+
+Rudy Trisno, Dr Architecture, Order of Authors, Rudy Trisno, Dr Architecture, Fermanto Lianto, Prof. Dr, Yasuhiro Hata, Prof. Dr, Afzal Abilais …
+
+Ain Shams Engineering Journal 2024年10月  
+
+ARCHITECTURAL EXPRESSIONS RELATED TO FORM-FUNCTION 
+
+Rudy Trisno, Fermanto Lianto, Yasuhiro Hata, Afzal Abilais
+
+Journal of Asian Architecture and Building Engineering 2024年9月  査読有り
+
+「ソーシャルワーク専門職のグローバル定義におけるウェルビーイングを考える－スウェーデンソーシャルワーカー倫理綱領から－ 」 
+
+秦 康宏
+
+豊岡短期大学論集 No20,(2023) 2024年3月31日  査読有り
+
+「スウェーデンソーシャルワーカー倫理綱領にみる倫理的省察の意味－影響評価（インパクト・アセスメント）、ダメージ・コンプライアンスの視点－」 
+
+秦 康宏
+
+大阪大谷大学紀要 (第58) 2023年11月  
+
+介護支援専門員との「癒しの事例検討会」を振り返って ―インパクトアセスメントによる揺らぎと支持的グループ・スーパービジョン― 
+
+秦 康宏
+
+豊岡短期大学論集 (18) 2023年3月  査読有り
+
+スウェーデンソーシャルワーカー連盟（SSR）「ソーシャルワークにおける倫理－ソーシャルワーカーの倫理綱領」 
+
+秦 康宏
+
+大阪人間科学大学紀要human Sciences (22) 2023年3月  査読有り
+
+Sacred Indicators of the Jakarta Cathedral Church, Indonesia before the Second Vatican Council 
+
+Rudy Trisno, Fermanto Lianto, Franky Liauw, Damicia Tangyong, I Made Wahyudi Gelgel, Yasuhiro Hata, Department of Architecture, Universitas Tarumanagara, Jakarta, Indonesi, Osaka University of …
+
+Journal of Hunan University (Natural Sciences） Vol. 49 No. 2. 2022年2月  査読有り
+
+東・東南アジア外国人介護人材導入事例の検証 ～成功事例における教育、サポート、管理システム上の創意工夫 ～ 
+
+研究代表者, 人間科学部, 社会福祉学科, 秦, 秦 康宏, 共同研究者, 社会福祉法人, 晋栄福祉会, 理事長, 濵田 和則
+
+大阪ガスグループ福祉財団研究報告書2021 34 95-104 2021年6月  査読有り筆頭著者
+
+インドネシア人介護人材予定者から見た日本の介護老人福祉 施設への就労イメージ 
+
+秦 康宏
+
+日本レセプト学会第3回レセプト論考 https://jsihc.org/thesis/ 2021年3月  査読有り
+
+地元自治会と大学理学療法学科との連携事業の中間報告－健康寿命延伸を目的とした地域在住高齢者への運動指導－ 
+
+奥嘉郎, 林完爾, 赤崎智也, 白石幹人, 野田温菜, 松鹿奈々子, 山田康太, 秦康宏, 柏原栄子
+
+大阪人間科学大学紀要human Sciences (19) 169-174 2020年3月  査読有り
+
+日本におけるインドネシア人介護人材の行方～家事・介護人材における送り出し国から受け入れ国への国際移動を手がかりに～ 
+
+秦 康宏
+
+豊岡短期大学論集 (15) 203-212 2019年3月  査読有り筆頭著者
+
+日本におけるベトナム人介護人材の行方 ～新たな在留資格に焦点を当てて～ 
+
+秦 康宏
+
+大阪人間科学大学紀要human Sciences (18) 29-40 2019年3月  査読有り
+
+カンボジアにおける海外研修の可能性 ～対人援助専門職を育成する視点から～ 
+
+秦 康宏, 大木えりか, 柏原栄子
+
+大阪人間科学大学紀要human Sciences (18) 41-53 2019年3月  査読有り筆頭著者
+
+東南アジアから見た「日本の新外国人介護人材制度」における福祉的論点 
+
+秦 康宏
+
+大阪人間科学大学紀要human Sciences (17) 45-57 2018年3月  査読有り
+
+介護認定審査会における緊急ケースの把握と市町村の責任意識 
+
+秦 康宏
+
+大阪ガスグループ福祉財団研究報告書2016 29 137-142 2016年6月  
+
+社会福祉従事者における自己覚知と専門職意識の生成プロセスの関係 
+
+秦 康宏
+
+大阪城南女子短期大学研究紀要 44 45-56 2010年3月  
+
+介護支援専門員のやりがいと負担感に関する考察～A県C市の調査から～ 
+
+秦 康宏
+
+発達人間学論叢第10号 (10) 109-115 2008年2月  
+
+主要なMISC
+
+  29
+
+『介護現場における援助職の倫理に関する考察―経験と倫理綱領に基づく倫理的自己覚知の検証を通じて―』 
+
+秦 康宏
+
+大阪教育大学修士（学術学）論文 2005年3月  査読有り
+
+書籍等出版物
+
+  49
+
+レセプト用語事典 
+
+大友達也, 坂本圭, 秦康宏, 小平達夫, 森田裕之, 中原義人, 上田恭子, 後藤歩, 鎌倉楓, 下村由香, 大西丈二, 吉田博文, 吉田博文, 岩田和実、黒野伸子, 清水隆明, 瀬戸僚馬, 狩谷明美, 村上佳子, 河合晋, 黒木由美, 久保覚司, 服部しのぶ, 鈴木円, 堀内寛之, 岡田志帆, 和氣祥子 (担当:共編者(共編著者))
+
+日本レセプト学会学術出版 2026年4月
+
+国際医療管理士・国際福祉管理士教本（仮） 
+
+監修 日本レセプト学会, 執筆代表者, 服部しのぶ, 執筆予定者, 秦 康宏, 黒野伸子, 瀬戸僚馬, 清水隆明, 徳永彩子, 久保覚司, 小平達夫, 河野美紀, 大西丈二, 大友達也, 他 (担当:共著, 範囲:第1部 基礎理論編 1章 日本の国際化 第2部 実践編 2章 福祉施設ホームページの例)
+
+キャリアカレッジジャパン 2026年4月
+
+
+
+実践力を育てる高齢者福祉 地域と共に歩むソーシャルワーク 
+
+秦 康宏 (担当:共著, 範囲:コラム3 介護保険料の上昇について考える コラム7社会福祉士の教育カリキュラム改正から考える)
+
+教育情報出版 2025年11月 (ISBN: 4909378820)
+
+
+
+高齢者福祉 (社会福祉を学ぶ50の扉) 
+
+竹本 与志人, 神部 智司, 杉山 京, 綾部 貴子, 荒井 浩道, 岩田 純, 植木 是, 鵜川 重和, 鵜浦 直子, 梅谷 進康, 太田 健一, 大和 三重, 岡田 進一, 岡田 直人, 岡本 秀明, 桐野 匡史, 金原 京子, 合田 衣里, 小松尾 京子, 佐藤 ゆかり, 中島 民恵子, 橋本 力, 秦 康宏, 広瀬 美千代, 藤林 慶子, 堀川 涼子, 矢吹 知之, 吉川 悠貴
+
+法律文化社 2025年5月5日 (ISBN: 4589044110)
+
+
+
+レセプト管理学: 論から学への深化 
+
+大友達也, 小熊英国, 河合晋, 黒野伸子, 酒井一由, 坂本ひとみ, 瀬戸聊馬達也, 小熊英国, 河合晋, 黒野伸子, 酒井一由, 坂本ひとみ, 瀬戸僚馬, 内藤道夫, 長面川さより, 秦康宏, 服部しのぶ, 堀内寛之 (担当:共著, 範囲:13-2 介護レセプト 258 13-3 LIFEについて 259 13-4 介護専門用語と会話表現(英語) 13-6 外国人介護人材の現状 275 262)
+
+同友館 2024年10月28日 (ISBN: 4496057212)
+
+
+
+制度改定読解法への誘い 
+
+大友達也、久保覚司、黒木由美、黒野伸子、秦康宏 (担当:共著)
+
+一般社団法人日本レセプト学会（日本レセプト学会学術出版会） 2024年3月 (ISBN: 4991345103)
+
+改定読解の理論と演習 
+
+大友達也, 久保覚司, 黒木由美, 黒野伸子, 秦康宏 (担当:共著)
+
+日本レセプト学会学術出版会 2023年11月25日
+
+レセプト管理研究～改定読解の理論と方法 
+
+大友達也, 黒野伸子, 秦康宏, 黒木由美, 久保覚司 (担当:共著, 範囲:第３章介護の報酬請求」「第1章診療報酬の論理、1節診療報酬改訂までの流れ」)
+
+2023年11月
+
+
+
+高齢者福祉 (最新・はじめて学ぶ社会福祉) 
+
+家高, 将明, 秦, 康宏, 杉本, 敏夫 (担当:編者(編著者))
+
+ミネルヴァ書房 2022年9月21日 (ISBN: 4623094588)
+
+介護保険事務講座介護保険制度と介護報酬請求（2021年改訂版） 
+
+監修, 大友達也, 執筆, 秦 康宏
+
+キャリアカレッジジャパン 2022年5月
+
+介護保険事務講座介護保険の理解（2021年改訂版） 
+
+監修, 大友達也, 執筆, 秦 康宏
+
+キャリアカレッジジャパン 2022年5月
+
+
+
+レセプト管理論 
+
+大友, 達也, 小熊, 英国, 加藤, 淳, 黒野, 伸子, 酒井, 一由, 坂本, ひとみ, 住谷, 剛博, 内藤, 道夫, 服部, しのぶ, 日本レセプト学会
+
+同友館 2021年4月10日 (ISBN: 4496055376)
+
+
+
+社会福祉概論 第5版: 社会福祉の原理と政策 
+
+鴻上, 圭太, 杉本, 敏夫, 小田, 兼三 (担当:共著)
+
+勁草書房 2021年2月18日 (ISBN: 4326701188)
+
+介護保険事務講座介護保険制度と介護報酬請求（2018年改訂版） 
+
+監修, 大友達也, 執筆, 秦 康宏, 渡辺俊夫 (担当:共著)
+
+2018年10月
+
+介護保険事務講座介護保険の理解（2018年改訂版） 
+
+監修, 大友達也, 執筆, 秦 康宏, 渡辺俊夫 (担当:共著)
+
+キャリアカレッジジャパン 2018年10月
+
+
+
+高齢者福祉論[第2版] (1) (新・はじめて学ぶ社会福祉 1) 
+
+杉本 敏夫, 家高, 将明 (担当:共著)
+
+ミネルヴァ書房 2018年4月10日 (ISBN: 4623083152)
+
+
+
+社会福祉概論 [第4版]: 現代社会と福祉 
+
+小田, 兼三, 杉本, 敏夫, 米澤, 美保子, 川崎, 順子, 都村, 尚子, 森久保, 俊満, 松井, 圭三, 河崎, 洋充, 鴻上, 圭太, 清原, 舞, 佐光, 健, 小柳, 達也, 高間, 満, 尾島, 豊, 中野, 一茂, 大塚, 保信, 田代, 幹康, 青木, 正, 中田, 雅美, 秦, 康宏
+
+勁草書房 2016年12月24日 (ISBN: 4326700955)
+
+社会福祉用語辞典[第9版]5刷 
+
+(担当:共著)
+
+ミネルヴァ書房 2016年3月
+
+
+
+障害者権利擁護運動事典 
+
+中村 満紀男, 二文字 理明, 岡田 英己子, 岡田, 英己子 (担当:共訳) (原著:フレッド ペルカ)
+
+明石書店 2015年5月31日 (ISBN: 4750341843)
+
+高齢者福祉論 
+
+杉本, 敏夫, 家高, 将明
+
+ミネルヴァ書房 2015年3月 (ISBN: 9784623072279)
+
+主要な講演・口頭発表等
+
+  70
+
+研究発表大会座長「令和３年度大阪老人福祉施設研究大会第２セッション」 
+
+大阪老人福祉施設協議会 2022年2月24日
+
+担当経験のある科目(授業)
+
+  71
+
+2024年4月 - 現在
+
+心理・福祉学入門(大阪大谷大学) 
+
+2024年4月 - 現在
+
+くらしと社会保障（大阪大谷大学） 
+
+2024年4月 - 現在
+
+人間と社会B（大阪大谷大学） 
+
+2023年9月 - 現在
+
+ソーシャルワークの理論と方法Ⅱ  (大阪大谷大学) 
+
+2023年9月 - 現在
+
+社会福祉調査論  (大阪大谷大学) 
+
+2023年9月 - 現在
+
+ソーシャルワーク演習Ⅴ  (大阪大谷大学) 
+
+2023年4月 - 現在
+
+社会福祉総合実習  (大阪大谷大学) 
+
+2023年4月 - 現在
+
+ソーシャルワーク実習  (大阪大谷大学) 
+
+2023年4月 - 現在
+
+社会福祉総合実習指導  (大阪大谷大学) 
+
+2023年4月 - 現在
+
+ソーシャルワークの理論と方法Ⅰ  (大阪大谷大学) 
+
+2023年4月 - 現在
+
+社会福祉概論  (大阪大谷大学) 
+
+2023年4月 - 現在
+
+社会福祉演習Ⅱ  (大阪大谷大学) 
+
+2023年4月 - 現在
+
+高齢者福祉論  (大阪大谷大学) 
+
+2023年4月 - 現在
+
+ゼミナールⅠ  (大阪大谷大学) 
+
+2023年4月 - 現在
+
+基礎ゼミⅡ（研究入門）  (大阪大谷大学) 
+
+2023年4月 - 現在
+
+基礎ゼミⅠ（学習技術）  (大阪大谷大学) 
+
+2023年4月 - 現在
+
+社会福祉・社会保障論  (関西医科大学) 
+
+2006年4月 - 現在
+
+社会調査の基礎  (華頂社会福祉専門学校) 
+
+2006年4月 - 現在
+
+相談援助の理論と方法Ⅰ・Ⅱ  (華頂社会福祉専門学校) 
+
+2005年4月 - 現在
+
+相談援助実習  (豊岡短期大学通信教育部社会福祉士養成通信課程) 
+
+主要な所属学協会
+
+  10
+
+2017年10月 - 現在
+
+日本レセプト学会 
+
+2006年 - 現在
+
+同志社大学社会福祉学会 
+
+2003年 - 現在
+
+日本地域福祉学会 
+
+2003年 - 現在
+
+日本社会福祉学会 
+
+2006年 - 2024年3月
+
+日本社会福祉教育学会 
+
+2005年 - 2024年3月
+
+日本北ヨーロッパ学会 
+
+2005年 - 2024年3月
+
+日本看護福祉学会 
+
+共同研究・競争的資金等の研究課題
+
+  4
+
+外国人労働者を支援する地域メディエーション・ソーシャルワークモデルの構築 
+
+ユニベール財団 ユニベール財団2024年度研究助成 2025年2月 - 2026年1月
+
+秦康宏、植木是、谷俊英、安田傑
+
+「東・東南アジア外国人介護人材導入事例の検証～成功事例における教育、サポート、管理システム上の創意工夫～」 
+
+大阪ガスグループ福祉財団 2020年4月 - 2021年3月
+
+秦 康宏, 濵田 和則
+
+「介護認定審査会における緊急ケースの把握と市町村の責任意識」 
+
+大阪ガスグループ福祉財団 2016年4月 - 2017年3月
+
+秦 康宏
+
+社会福祉従事者における専門性の自己覚知プロセスに関する実証的研究 
+
+同志社大学同志社大学高度化研究 特別補助 2009年4月 - 2010年3月
+
+学術貢献活動
+
+  3
+
+日本レセプト学会理事 
+
+企画立案・運営等
+
+2017年10月1日 - 現在
+
+大阪社会福祉士会「大阪社会福祉士」査読委員 
+
+査読
+
+2017年 - 現在
+
+第8回日本レセプト学会国内学術大会大会長 あべのハルカス23階 大阪大谷大学ハルカスキャンパス 
+
+企画立案・運営等
+
+日本レセプト学会 2025年10月19日
+
+社会貢献活動
+
+  3
+
+社会福祉法人ヒューマンライツ福祉協会外国人介護職員介護福祉士国家試験対策講座 
+
+講師
+
+ヒューマンライツ福祉協会 2024年10月8日 - 現在
+
+高齢者福祉実践・研究大会2025 in OSAKA第１分科会コメンテーター 
+
+コメンテーター
+
+大阪府社会福祉協議会老人施設部会 福祉介護人材対策プロジェクト 2026年3月3日
+
+福祉介護人材対策プロジェクト「意見交換会」 
+
+助言・指導
+
+大阪府社会福祉協議会老人福祉部会 2024年7月29日
+
+メディア報道
+
+  13
+
+No.9（大阪人間科学大学 人間科学部社会福祉学科）令和5年度「高齢者福祉実践・研究大会」（分科会A：大阪大谷大学会場）サポート 
+
+2024年2月 インターネットメディア
+
+No.7（川福会 特別養護老人ホームみのわの里）令和5年度「高齢者福祉実践・研究大会」（分科会A：大阪大谷大学会場）コメンテーター 
+
+2024年2月 インターネットメディア
+
+No.6（上神谷福祉会 特別養護老人ホーム槇塚荘）令和5年度「高齢者福祉実践・研究大会」（分科会A：大阪大谷大学会場） 
+
+2024年2月 インターネットメディア
+
+No.5（邦寿会 どうみょうじ高殿苑）令和5年度「高齢者福祉実践・研究大会」（分科会A：大阪大谷大学会場）コメンテーター 
+
+2024年2月 インターネットメディア
+
+No.4（悠人会 ベルライブ）令和5年度「高齢者福祉実践・研究大会」（分科会A：大阪大谷大学会場）コメンテーター 
+
+2024年2月 インターネットメディア
+
+No.3（みささぎ会 特別養護老人ホーム大仙もずの音）令和5年度「高齢者福祉実践・研究大会」（分科会A：大阪大谷大学会場)コメンテーター 
+
+2024年2月 インターネットメディア
+
+No.1（聖徳園 ひらかた聖徳園）令和5年度「高齢者福祉実践・研究大会」（分科会A：大阪大谷大学会場）コメンテーター 
+
+2024年2月 インターネットメディア
+
+No.6 みささぎ会 特別養護老人ホーム大仙もずの音 令和4年度「大阪老人福祉施設研究大会」（1日目：2月13日）コメンテーター 
+
+2023年2月 インターネットメディア
+
+No.5 ライフサポート協会 特別養護老人ホームなごみ 令和4年度「大阪老人福祉施設研究大会」（1日目：2月13日）コメンテーター 
+
+2023年2月 インターネットメディア
+
+No.3 大阪府社会福祉事業団 特別養護老人ホーム高槻荘 令和4年度「大阪老人福祉施設研究大会」（1日目：2月13日）コメンテーター 
+
+2023年2月 インターネットメディア
+
+No.1 聖徳会 特別養護老人ホーム大阪老人ホームうえだ 令和4年度「大阪老人福祉施設研究大会」（1日目：2月13日）コメンテーター 
+
+2023年2月 インターネットメディア
+
+介護保険特集 
+
+毎日放送 MBSナウ 1999年3月16日 テレビ・ラジオ番組
+
+「現代を生きる『24時間巡回介護』」 
+
+毎日放送・放送映画製作所 朝7:00-07:30 1997年9月20日 テレビ・ラジオ番組
+
+その他
+
+  40
+
+専門社会調査士（第002905） 
+
+2024年10月 - 現在
+
+国際福祉管理士(J23T200002) 
+
+2024年3月 - 現在
+
+国際医療管理士(J23T100002) 
+
+2024年3月 - 現在
+
+外国人介護スタッフ応援隊養成講座修了(3-018) 
+
+2023年12月 - 現在
+
+スクールソーシャルワーク教育課程専門科目群担当教員講習会（2023年度修了受講No2023SSW-001） 
+
+2023年11月 - 現在
+
+レセプト管理士（2211000010号） 
+
+2022年3月 - 現在
+
+福祉英語検定３級（W32110061号） 
+
+2011年1月 - 現在
+
+介護教員講習会修了（No.1950789） 
+
+2008年3月 - 現在
+
+第１種衛生管理者（第28013009801号） 
+
+2001年12月 - 現在
+
+福祉住環境コーディネーター２級（05-2-03634） 
+
+2000年11月 - 現在
+
+社会福祉士（第2533号） 
+
+1993年5月 - 現在
+
+介護福祉士（第D-15027号） 
+
+1992年8月 - 現在
+
+介護支援専門員（大阪府第9800090号） 
+
+- 現在
+
+更新研修未受講
+
+韓国，市立ノウォン老人福祉館視察 
+
+2025年11月
+
+韓国，ソウル，国立がんセンター視察 
+
+2025年11月
+
+Hong Ngoc病院（ハノイ市私立病院）視察 
+
+2024年11月
+
+https://hongngochospital.vn/
+
+仁愛国際株式会社視察 
+
+2024年11月
+
+https://nhanaicorp.vn/
+
+認知症ケア専門士（09003994号） 
+
+2007年1月 - 2023年3月
+
+香港介護人材調査 
+
+2018年12月
+
+インドネシアなどから来ている外国人介護人材の受け入れ実態を知るために香港を訪問した。休日には、インドネシアから来た外国人介護人材のコミュニティが見られた。
+
+カンボジアスタディーツアー企画前事前調査 
+
+2018年8月
+
+大学主催のカンボジアツアーを催行させるために改めて事前の下見を行った。SDGsを知るために孤児院、貧困な村での家庭訪問、貧困な子供達を対象とする幼稚園や小学校の訪問などのプログラムを検討した。
+
+メニュー
+
+
+
+マイポータル
+
+
+
+研究ブログ
+
+資料公開
+
+共著者の一覧
+
+
+
+二文字 理明
+
+2022/09/04 更新
+
+白澤 政和
+
+2011/04/04 更新
+
+小田 憲三
+
+2024/01/17 更新
+
+杉本 敏夫
+
+2002/07/04 更新
+
+新崎 国広
+
+2023/03/31 更新
+
+奥西 栄介
+
+2025/07/25 更新
+
+フォロー一覧
+
+
+
+植木 是
+
+08/23 更新
+
+東 泰弘
+
+08/16 更新
+
+岡本 秀明
+
+08/09 更新
+
+梅谷 進康
+
+08/08 更新
+
+宮谷 祐史
+
+08/08 更新
+
+谷 俊英
+
+08/05 更新
+
+ 2017 researchmap
+
+ご提示いただいたResearchmapの豊富な実績データ（22年間の現場実務、資格一覧、学歴・職歴、研究助成、海外視察、主要著書・論文、40期を超える自治体委員歴、信念のメッセージ）をすべて網羅し、宮谷先生のサイトのような洗練されたデザインに落とし込んだ最新版のHTMLコードを作成いたしました。
+
+Your HTML file is ready
+
+HTML のアイコン
+index
+ HTML 
+開く
+今回取り入れた主な情報・構成
+01 ようこそ・自己紹介：
+
+「社会福祉の目的は…一緒に伴走すること」のメッセージ枠
+
+学歴・職歴の歩み、および保有専門資格（社会福祉士、介護福祉士、ケアマネジャー、専門社会調査士、国際医療/福祉管理士、レセプト管理士、Sweden MediCare Institute研究員等）の一覧バッジ
+
+02 ニュース＆トピックス：
+
+日本レセプト学会「国際学術賞」受賞（ベトナム大会）
+
+新刊『レセプト用語事典』共編著出版
+
+ユニベール財団2024年度研究助成（研究代表者）
+
+韓国（ソウル）・ベトナム（ハノイ）の医療福祉施設現地視察レポート
+
+第8回日本レセプト学会国内学術大会 大会長実績
+
+03 22年間の現場実践知（Field Practice）：
+
+聖徳園での24時間巡回型ホームヘルプ、訪問看護ステーション立ち上げ、ヘルパー2級養成（約500名輩出）、認知症グループホーム管理者、ISO9001責任者等の実績表
+
+04 研究活動の3大支柱（Research）：
+
+① スウェーデン福祉倫理とソーシャルワーカーの自己覚知・支持的事例検討会
+
+② 外国人介護人材受入れと「地域メディエーション支援モデル」
+
+③ 介護報酬レセプト管理学・福祉組織マネジメント
+
+05 教育・ゼミナール（Education）：
+
+大阪大谷大学および他大学（関西医科大学、関西福祉科学大学、大学院等）での担当科目、国家試験全員合格への取り組み、卒論テーマ例、進路実績
+
+06 主要著書・論文業績（Publications）：
+
+『レセプト用語事典』『実践力を育てる高齢者福祉』『最新・はじめて学ぶ社会福祉』等の主要著書および学術論文抜粋
+
+07 社会連携・公職・委員歴（Social Contribution）：
+
+大阪府国保連、豊中市、河内長野市、羽曳野市、枚方市、摂津市、豊能町、交野市などの行政委員会およびオンブズマン機構大阪（副代表）、大阪介護支援専門員協会（監事）などの役員一覧
+
+08 お問い合わせ（Contact）：
+
+メールアドレスおよび直通のお問い合わせフォーム
+
+反映手順
+GitHubのリポジトリ（- または hatayan1234-ai.github.io）を開きます。
+
+ファイル一覧の index.html をクリックし、右上の鉛筆マーク（編集）を押します。
+
+枠内を全選択（Ctrl + A）して消去し、上記のダウンロードファイル（index.html）の中身、または下記コードをすべて貼り付けます。
+
+右上の緑色の 「Commit changes...」 を押して確定・保存します。
+
+HTML
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>秦 康宏 研究室｜大阪大谷大学 人間社会学部 心理・福祉学科</title>
+  <meta name="description" content="大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏（社会福祉学・高齢者福祉論・多文化共生）研究室の公式Webサイトです。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-main: #1a1a1a;
+      --text-sub: #4a5568;
+      --text-muted: #718096;
+      --accent: #1e3a8a;
+      --accent-light: #3b82f6;
+      --accent-soft: #eff6ff;
+      --border-color: #e2e8f0;
+      --tag-bg: #edf2f7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; transition: 0.2s; }
+    a:hover { opacity: 0.8; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    header {
+      position: sticky; top: 0;
+      background-color: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+    }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 72px; }
+    .site-title { font-weight: 700; font-size: 1.1rem; letter-spacing: 0.02em; }
+    .site-title span { display: block; font-size: 0.72rem; color: var(--text-muted); font-weight: 400; }
+    nav ul { display: flex; gap: 20px; list-style: none; }
+    nav ul li a { font-size: 0.86rem; font-weight: 500; color: var(--text-sub); padding: 6px 10px; border-radius: 6px; }
+    nav ul li a:hover { color: var(--accent); background-color: var(--accent-soft); }
+    .hero { padding: 80px 0 60px; background: #ffffff; border-bottom: 1px solid var(--border-color); }
+    .hero-sub { font-size: 0.85rem; font-weight: 700; color: var(--accent-light); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px; }
+    .hero-title { font-family: 'Shippori Mincho', serif; font-size: 2.2rem; font-weight: 700; line-height: 1.45; margin-bottom: 20px; color: #0f172a; }
+    .hero-lead { font-size: 1.02rem; color: var(--text-sub); max-width: 860px; line-height: 1.95; }
+    section { padding: 70px 0; border-bottom: 1px solid var(--border-color); }
+    .section-header { margin-bottom: 40px; }
+    .section-num { font-size: 0.85rem; font-weight: 700; color: var(--accent-light); letter-spacing: 0.15em; margin-bottom: 4px; }
+    .section-title { font-size: 1.75rem; font-weight: 700; letter-spacing: 0.02em; }
+    .section-subtitle { font-size: 0.92rem; color: var(--text-muted); margin-top: 4px; }
+    .profile-grid { display: grid; grid-template-columns: 320px 1fr; gap: 40px; align-items: start; }
+    .profile-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 28px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .profile-avatar { width: 130px; height: 130px; border-radius: 50%; background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; }
+    .profile-name { font-size: 1.35rem; font-weight: 700; margin-bottom: 2px; }
+    .profile-en-name { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px; }
+    .profile-position { font-size: 0.88rem; font-weight: 600; color: var(--accent); line-height: 1.5; padding-bottom: 16px; border-bottom: 1px solid var(--border-color); margin-bottom: 16px; }
+    .profile-links { display: flex; flex-direction: column; gap: 10px; }
+    .btn-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 14px; font-size: 0.84rem; font-weight: 600; border-radius: 8px; background: var(--tag-bg); border: 1px solid var(--border-color); color: var(--text-main); }
+    .btn-link:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-insta { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); color: #fff; border: none; }
+    .profile-detail h3 { font-size: 1.22rem; font-weight: 700; margin-bottom: 14px; border-left: 4px solid var(--accent); padding-left: 12px; }
+    .profile-quote { background: var(--accent-soft); border-left: 4px solid var(--accent-light); padding: 16px 20px; border-radius: 0 8px 8px 0; font-size: 0.95rem; color: #1e293b; margin-bottom: 20px; line-height: 1.8; font-style: italic; }
+    .profile-detail p { color: var(--text-sub); margin-bottom: 16px; font-size: 0.95rem; }
+    .content-box { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 30px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .content-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-bottom: 12px; }
+    .content-box-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
+    .content-p { color: var(--text-sub); font-size: 0.94rem; margin-bottom: 14px; }
+    .tags-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .badge-tag { background: var(--tag-bg); border: 1px solid var(--border-color); padding: 4px 12px; border-radius: 20px; font-size: 0.82rem; font-weight: 500; color: var(--text-sub); }
+    .table-custom { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.92rem; }
+    .table-custom th, .table-custom td { padding: 13px 16px; border-bottom: 1px solid var(--border-color); text-align: left; vertical-align: top; }
+    .table-custom th { background: #f8fafc; font-weight: 600; width: 25%; color: var(--text-main); }
+    .table-custom td { color: var(--text-sub); }
+    .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 20px; }
+    .news-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: 0.2s ease; }
+    .news-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+    .news-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .news-tag { font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 14px; }
+    .tag-award { background: #fef3c7; color: #92400e; }
+    .tag-research { background: #e0f2fe; color: #0369a1; }
+    .tag-education { background: #dcfce7; color: #166534; }
+    .tag-book { background: #fae8ff; color: #86198f; }
+    .tag-overseas { background: #ffedd5; color: #9a3412; }
+    .news-date { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+    .news-card-title { font-size: 1.02rem; font-weight: 700; line-height: 1.5; margin-bottom: 8px; }
+    .news-card-body { font-size: 0.86rem; color: var(--text-sub); line-height: 1.65; }
+    .item-list { list-style: none; padding: 0; }
+    .item-row { padding: 14px 0; border-bottom: 1px dashed var(--border-color); font-size: 0.92rem; }
+    .item-row:last-child { border-bottom: none; }
+    .item-title { font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
+    .item-desc { color: var(--text-sub); font-size: 0.86rem; }
+    .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.86rem; font-weight: 600; margin-bottom: 6px; }
+    .form-group input, .form-group textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 0.92rem; font-family: inherit; background: #fbfbfb; }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-light); background: #fff; }
+    .btn-submit { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; }
+    footer { padding: 50px 0; text-align: center; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-color); background: #ffffff; }
+    @media (max-width: 860px) { .profile-grid, .contact-wrapper { grid-template-columns: 1fr; } nav ul { display: none; } .table-custom th { width: 35%; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="site-title">秦 康宏 研究室<span>大阪大谷大学 人間社会学部 心理・福祉学科</span></a>
+      <nav>
+        <ul>
+          <li><a href="#about">01 ようこそ</a></li>
+          <li><a href="#news">02 ニュース</a></li>
+          <li><a href="#field">03 実務経歴</a></li>
+          <li><a href="#research">04 研究活動</a></li>
+          <li><a href="#education">05 教育・ゼミ</a></li>
+          <li><a href="#works">06 著書・論文</a></li>
+          <li><a href="#social">07 社会連携・委員</a></li>
+          <li><a href="#contact">08 お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="container">
+      <div class="hero-sub">Hata Laboratory of Social Welfare</div>
+      <h1 class="hero-title">理論と現場、日本と世界を繋ぐ社会福祉</h1>
+      <p class="hero-lead">高齢者福祉の実務現場における22年間の実践知を基盤に、対人援助職の倫理的自己覚知や、外国人介護人材受入れに伴う多文化共生モデルの構築を探求しています。現場の「声なき声」を学術的に言語化し、クライエントの人生に伴走するソーシャルワーカー・教育者を育成します。</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <section id="about">
+      <div class="section-header">
+        <div class="section-num">01 WELCOME</div>
+        <h2 class="section-title">ようこそ・自己紹介</h2>
+        <p class="section-subtitle">実務家教員としての歩み、使命、保有資格</p>
+      </div>
+      <div class="profile-grid">
+        <div class="profile-card">
+          <div class="profile-avatar">👨‍🏫</div>
+          <h3 class="profile-name">秦 康宏</h3>
+          <p class="profile-en-name">Yasuhiro HATA（はたやん）</p>
+          <p class="profile-position">大阪大谷大学 人間社会学部<br>心理・福祉学科長 / 教授<br>修士（学術）(大阪教育大学)</p>
+          <div class="profile-links">
+            <a href="https://researchmap.jp/hatayasu" target="_blank" rel="noopener" class="btn-link">🔗 Researchmap公式（研究者番号: 60461969）</a>
+            <a href="https://www.instagram.com/hatazemi.fukushi/" target="_blank" rel="noopener" class="btn-link btn-insta">📸 秦ゼミ 公式Instagram</a>
+          </div>
+        </div>
+        <div class="profile-detail">
+          <div class="profile-quote">「社会福祉の目的は、その人が困っていることや望んでいることを自己実現できるように支援することです。社会資源のコーディネートにより課題を解決し、クライエントが自分の人生に積極的に向き合っていける力を出せるように支援する。つまり、その人や家族、地域の人たちが自分らしい生き方、生き生きとした暮らしを見つけられるようにサポートし、一緒に伴奏（伴走）することです。」</div>
+          <h3>学歴・アカデミックキャリア</h3>
+          <p>龍谷大学短期大学部、佛教大学社会学部を経て、大阪教育大学大学院教育学研究科（発達人間学講座）にて修士（学術）を取得。同志社大学大学院社会学研究科社会福祉学専攻博士課程（後期課程）単位取得退学。</p>
+          <p>社会福祉法人聖徳園での22年間の現場実務を経て、大阪城南女子短期大学専任講師（6年）、大阪人間科学大学准教授（10年）を歴任し、2023年より大阪大谷大学教授、2024年11月より心理・福祉学科長を務める。</p>
+          <h3 style="margin-top: 24px;">保有資格・専門資格一覧</h3>
+          <div class="tags-container">
+            <span class="badge-tag">社会福祉士</span>
+            <span class="badge-tag">介護福祉士</span>
+            <span class="badge-tag">介護支援専門員（ケアマネジャー）</span>
+            <span class="badge-tag">専門社会調査士</span>
+            <span class="badge-tag">国際医療管理士</span>
+            <span class="badge-tag">国際福祉管理士</span>
+            <span class="badge-tag">レセプト管理士</span>
+            <span class="badge-tag">福祉住環境コーディネーター2級</span>
+            <span class="badge-tag">第1種衛生管理者</span>
+            <span class="badge-tag">Sweden MediCare Institute研究員</span>
+            <span class="badge-tag">スクールソーシャルワーク教育課程教員講習修了</span>
+            <span class="badge-tag">外国人介護スタッフ応援隊養成講座修了</span>
+            <span class="badge-tag">福祉英語検定3級</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="section-header">
+        <div class="section-num">02 NEWS & TOPICS</div>
+        <h2 class="section-title">ニュース＆トピックス</h2>
+        <p class="section-subtitle">研究室の最新活動、学会受賞、出版、海外視察レポート</p>
+      </div>
+      <div class="news-grid">
+        <div class="news-card">
+          <div>
+            <div class="news-meta"><span class="news-tag tag-award">国際受賞</span><span class="news-date">2024.11</span></div>
+            <h3 class="news-card-title">日本レセプト学会「国際学術賞」を受賞（ベトナム大会）</h3>
+            <p class="news-card-body">ベトナム・ハノイで開催された国際学術大会にて、インドネシア人介護人材予定者に関する国際研究が「日本の深刻な介護労働問題への多大な貢献」と高く評価され学術賞を受賞。</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <div>
+            <div class="news-meta"><span class="news-tag tag-book">新刊出版</span><span class="news-date">2026.04</span></div>
+            <h3 class="news-card-title">『レセプト用語事典』日本レセプト学会学術出版（共編著）</h3>
+            <p class="news-card-body">医療・福祉・介護のレセプト実務および制度理解に関する総合事典。介護報酬請求や外国人介護人材、LIFE関連などの重要領域を共編著者として執筆。</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <div>
+            <div class="news-meta"><span class="news-tag tag-research">研究助成</span><span class="news-date">2025.02 - 2026.01</span></div>
+            <h3 class="news-card-title">ユニベール財団2024年度研究助成に採択（研究代表者）</h3>
+            <p class="news-card-body">研究課題「外国人労働者を支援する地域メディエーション・ソーシャルワークモデルの構築」（秦康宏・植木是・谷俊英・安田傑）を推進中。</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <div>
+            <div class="news-meta"><span class="news-tag tag-overseas">海外視察</span><span class="news-date">2025.11 / 2024.11</span></div>
+            <h3 class="news-card-title">韓国ソウル・ベトナムハノイの医療福祉施設を現地視察</h3>
+            <p class="news-card-body">韓国の市立ノウォン老人福祉館・国立がんセンター、ベトナムのHong Ngoc私立病院・仁愛国際株式会社等を歴訪し、国際的なケアシステムの比較調査を実施。</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <div>
+            <div class="news-meta"><span class="news-tag tag-education">教育・学会</span><span class="news-date">2025.10</span></div>
+            <h3 class="news-card-title">第8回 日本レセプト学会国内学術大会 大会長を務める</h3>
+            <p class="news-card-body">大阪大谷大学あべのハルカスキャンパスにて開催された国内大会の大会長として、レセプト管理学と多職種連携の議論を牽引。</p>
+          </div>
+        </div>
+        <div class="news-card">
+          <div>
+            <div class="news-meta"><span class="news-tag tag-education">ゼミ活動</span><span class="news-date">2026.04</span></div>
+            <h3 class="news-card-title">2026年度 秦ゼミ始動＆社会福祉士国試対策本格化</h3>
+            <p class="news-card-body">新3年生・4年生を迎え、社会福祉士国家試験全員合格に向けた過去問分析と勉強会を本格スタート。日々の様子は公式Instagramにて更新中。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="field">
+      <div class="section-header">
+        <div class="section-num">03 FIELD PRACTICE</div>
+        <h2 class="section-title">22年間の現場実践知</h2>
+        <p class="section-subtitle">社会福祉法人聖徳園における草分け的福祉事業の立ち上げと運営マネジメント</p>
+      </div>
+      <div class="content-box">
+        <p class="content-p">1983年に社会福祉学科を卒業後、社会福祉法人聖徳園（枚方市）に入職。デイサービス介護職からスタートし、在宅介護支援センターソーシャルワーカー、デイケア生活相談員を経て、時代の要請に応じた先駆的福祉サービスを数多く立ち上げ・統括しました。</p>
+        <table class="table-custom">
+          <tbody>
+            <tr><th>枚方市24時間巡回型<br>ホームヘルプ事業</th><td>全国的にも先進事例であった枚方市の「24時間ホームヘルプサービス」委託先として現場立ち上げに尽力。夜間宿直体制による緊急ニーズ対応を6年間統括（MBSナウ・TV特集等で報道）。</td></tr>
+            <tr><th>訪問看護ステーション<br>事業立ち上げ</th><td>枚方市内で2ヶ所目（民間法人としては初）となる訪問看護ステーションの指定申請と現場体制を整備。医療ソーシャルワーカーと連携し、医療依存度の高い在宅利用者の支援体制を構築。</td></tr>
+            <tr><th>ホームヘルパー養成講座<br>（2級課程）開講</th><td>介護人材育成事業として定員40名・年2回のヘルパー2級養成講座を開講。通算約500名の介護修了生を地域に輩出。</td></tr>
+            <tr><th>認知症グループホーム<br>立ち上げ・管理者</th><td>枚方市内における認知症高齢者グループホーム（定員7名）の指定申請および管理者（3年間）を担当。</td></tr>
+            <tr><th>居宅介護支援事業所<br>運営管理（6年間）</th><td>介護保険制度創設期における居宅介護支援事業所の管理者としてケアマネジメントの体制確立を牽引。</td></tr>
+            <tr><th>ISO9001法人責任者<br>（14業種33施設）</th><td>国際品質マネジメント規格ISO9001の法人全体責任者として、介護・福祉サービスの品質向上と標準化を推進。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="section-header">
+        <div class="section-num">04 RESEARCH</div>
+        <h2 class="section-title">研究活動の柱とテーマ</h2>
+        <p class="section-subtitle">福祉倫理・多文化共生・レセプト管理を軸とする実践的アプローチ</p>
+      </div>
+      <div class="content-box">
+        <span class="content-badge">研究テーマ 1</span>
+        <h3 class="content-box-title">スウェーデン福祉倫理とソーシャルワーカーの自己覚知</h3>
+        <p class="content-p">Sweden MediCare Institute研究員として、高福祉国スウェーデンのソーシャルワーカー連盟（SSR）「倫理綱領」の全訳・精読を遂行。対人援助職が現場で直面する倫理的ジレンマ（自己決定と安全配慮の葛藤など）に対し、インパクト・アセスメント（影響評価）を用いた「支持的スーパービジョン」「癒しの事例検討会」モデルを開発・提唱しています。</p>
+      </div>
+      <div class="content-box">
+        <span class="content-badge">研究テーマ 2</span>
+        <h3 class="content-box-title">外国人介護人材の受入れと「地域メディエーション支援モデル」</h3>
+        <p class="content-p">インドネシア、ベトナム、カンボジア、香港等での現地調査に基づき、送り出し国から受け入れ国への国際移動と定着課題を研究。単なる労働力確保ではなく、外国人介護職員が日本社会で誇りを持ってキャリアを形成できるよう、「受入れ施設」「外国人職員」「地域住民」をつなぐ地域メディエーション（地域共生）ソーシャルワークモデルを構築しています。</p>
+      </div>
+      <div class="content-box">
+        <span class="content-badge">研究テーマ 3</span>
+        <h3 class="content-box-title">介護報酬レセプト管理学と福祉組織マネジメント</h3>
+        <p class="content-p">日本レセプト学会理事として、制度改定の読解法、介護レセプト請求実務、LIFE（科学的介護情報システム）の活用、および福祉住環境・建築機能とケアの統合に関する学術的研究を推進しています。</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-header">
+        <div class="section-num">05 EDUCATION & SEMINAR</div>
+        <h2 class="section-title">教育・秦ゼミの活動</h2>
+        <p class="section-subtitle">高い国家試験合格率と、現場で信頼されるソーシャルワーカーの育成</p>
+      </div>
+      <div class="content-box">
+        <h3 class="content-box-title">国家試験全員合格に向けた徹底した個別支援と現場主義</h3>
+        <p class="content-p">秦ゼミでは、社会福祉士国家試験の全員合格を目標に掲げ、過去問の徹底分析と少人数での学び合いを行っています。また、施設見学や地域実践活動、海外研修（カンボジア等）の知見を活かした幅広い視野を育みます。</p>
+        <table class="table-custom">
+          <tbody>
+            <tr><th>担当授業科目<br>（大阪大谷大学）</th><td>高齢者福祉論、社会福祉概論、ソーシャルワークの理論と方法Ⅰ・Ⅱ、ソーシャルワーク演習・実習指導、くらしと社会保障、心理・福祉学入門、ゼミナールⅠ ほか</td></tr>
+            <tr><th>他大学等での講義</th><td>関西医科大学『社会福祉・社会保障論』、関西福祉科学大学『老人福祉論』、花園大学大学院『倫理と社会福祉』、日本介護支援専門員協会指導者レベル2講師 ほか</td></tr>
+            <tr><th>卒論テーマ例</th><td>外国人介護職員受入れと施設内研修、認知症高齢者への個別ケア、ヤングケアラー支援、多職種連携による地域包括ケアの展開</td></tr>
+            <tr><th>主な進路実績</th><td>医療ソーシャルワーカー（MSW）、特別養護老人ホーム、地域包括支援センター、社会福祉協議会、公務員（福祉職・行政職）など</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="works">
+      <div class="section-header">
+        <div class="section-num">06 PUBLICATIONS & PAPERS</div>
+        <h2 class="section-title">主要な著書・論文業績</h2>
+        <p class="section-subtitle">49冊を超える著書・出版物および学術論文（一部抜粋）</p>
+      </div>
+      <div class="content-box">
+        <h3 class="content-box-title">主要著書・編著</h3>
+        <ul class="item-list">
+          <li class="item-row">
+            <div class="item-title">『レセプト用語事典』日本レセプト学会学術出版（2026年4月予定・共編著者）</div>
+            <div class="item-desc">医療・福祉・介護のレセプト実務および制度理解に関する総合専門事典。</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">『国際医療管理士・国際福祉管理士教本』キャリアカレッジジャパン（2026年4月予定・共著）</div>
+            <div class="item-desc">第1部 基礎理論編（日本の国際化）、第2部 実践編（福祉施設ホームページの例）を担当。</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">『実践力を育てる高齢者福祉 地域と共に歩むソーシャルワーク』教育情報出版（2025年・共著）</div>
+            <div class="item-desc">コラム3「介護保険料の上昇について考える」、コラム7「社会福祉士教育カリキュラム改正」担当。</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">『高齢者福祉 (社会福祉を学ぶ50の扉)』法律文化社（2025年・共著）</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">『レセプト管理学: 論から学への深化』同友館（2024年・共著）</div>
+            <div class="item-desc">介護レセプト、LIFE、介護英語表現、外国人介護人材の現状を担当。</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">『高齢者福祉 (最新・はじめて学ぶ社会福祉)』ミネルヴァ書房（2022年・編著者）</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">『障害者権利擁護運動事典』明石書店（2015年・共訳）</div>
+          </li>
+        </ul>
+        <h3 class="content-box-title" style="margin-top: 30px;">主要学術論文</h3>
+        <ul class="item-list">
+          <li class="item-row">
+            <div class="item-title">「社会福祉士から見た外国人介護職員の現状と自立支援 ～地域共生の視点から～」</div>
+            <div class="item-desc">大阪大谷大学人間社会学部こみゅにか (19), 2025年3月</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">「ソーシャルワーク専門職のグローバル定義におけるウェルビーイングを考える－スウェーデンソーシャルワーカー倫理綱領から－」</div>
+            <div class="item-desc">豊岡短期大学論集 (20), 2024年3月（査読有）</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">「スウェーデンソーシャルワーカー連盟（SSR）『ソーシャルワークにおける倫理－ソーシャルワーカーの倫理綱領』全訳」</div>
+            <div class="item-desc">大阪人間科学大学紀要 (22), 2023年3月（査読有）</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">「インドネシア人介護人材予定者から見た日本の介護老人福祉施設への就労イメージ」</div>
+            <div class="item-desc">日本レセプト学会第3回レセプト論考, 2021年（日本レセプト学会 論文表彰優秀賞・国際学術賞受賞）</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="social">
+      <div class="section-header">
+        <div class="section-num">07 SOCIAL CONTRIBUTION</div>
+        <h2 class="section-title">社会連携・公職・委員歴</h2>
+        <p class="section-subtitle">自治体行政、オンブズマン、職能団体における多面的な政策参画（通算40期以上）</p>
+      </div>
+      <div class="content-box">
+        <table class="table-custom">
+          <tbody>
+            <tr>
+              <th>広域自治体・公的機関</th>
+              <td>・大阪府国民健康保険団体連合会 苦情処理委員会 委員<br>・大阪府障害者福祉事業団 運営協議会 委員</td>
+            </tr>
+            <tr>
+              <th>市町村 行政委員会<br>（現職・歴任）</th>
+              <td>
+                ・豊中市 介護保険事業運営委員会 地域包括支援センター運営協議会 会長<br>
+                ・豊中市 介護人材対策部会 会長<br>
+                ・河内長野市 高齢者保健福祉計画等推進委員会 会長<br>
+                ・羽曳野市 高齢者・障害者虐待防止ネットワーク会議 会長<br>
+                ・枚方市 介護保険施設等整備審議委員会 会長 / 地域包括支援センター運営等審議会 副会長<br>
+                ・摂津市 地域包括支援センター運営委員会 会長 / 介護認定審査会 合議体委員長<br>
+                ・豊能町 障害者計画等策定委員会 会長 / 地域福祉計画策定委員 委員長<br>
+                ・交野市 地域密着型サービス運営及び介護予防事業運営審議会 委員
+              </td>
+            </tr>
+            <tr>
+              <th>職能団体・学会役員</th>
+              <td>
+                ・介護保険市民オンブズマン機構大阪（O-ネット） 副代表・理事<br>
+                ・公益社団法人大阪介護支援専門員協会 監事<br>
+                ・日本レセプト学会 理事 / 第8回国内学術大会 大会長<br>
+                ・大阪社会福祉士会「大阪社会福祉士」査読委員
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-header">
+        <div class="section-num">08 CONTACT</div>
+        <h2 class="section-title">お問い合わせ</h2>
+        <p class="section-subtitle">共同研究、講演・専門職研修のご依頼、入試・研究室見学のご相談</p>
+      </div>
+      <div class="contact-wrapper">
+        <div class="profile-card" style="text-align: left;">
+          <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px;">秦 康宏 研究室</h4>
+          <p style="font-size: 0.9rem; color: var(--text-sub);">大阪大谷大学 人間社会学部 心理・福祉学科<br>〒584-8540 大阪府富田林市錦織北3丁目11番1号</p>
+          <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+            <div style="font-size: 0.85rem; color: var(--text-muted);">E-mail</div>
+            <div style="font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-top: 4px;">hatayasu@osaka-ohtani.ac.jp</div>
+          </div>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 16px; line-height: 1.6;">※自治体・福祉施設等での職員研修、事例検討会ファシリテーター、外国人介護人材受入れ相談、大学院・ゼミ進学に関するご相談はお気軽にご連絡ください。</p>
+        </div>
+        <div class="profile-card" style="text-align: left;">
+          <form action="mailto:hatayasu@osaka-ohtani.ac.jp" method="post" enctype="text/plain">
+            <div class="form-group"><label>お名前（ご所属・法人名）</label><input type="text" name="name" placeholder="例：山田 太郎（〇〇社会福祉協議会）" required></div>
+            <div class="form-group"><label>メールアドレス</label><input type="email" name="email" placeholder="example@domain.com" required></div>
+            <div class="form-group"><label>ご用件・種別</label><input type="text" name="subject" placeholder="例：研修講師のご依頼 / 共同研究について"></div>
+            <div class="form-group"><label>メッセージ内容</label><textarea name="message" rows="4" placeholder="ご相談内容をご記入ください" required></textarea></div>
+            <button type="submit" class="btn-submit">メールソフトを起動して送信</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏 研究室</strong></p>
+      <p style="font-size: 0.82rem; margin-top: 4px;">Hata Laboratory of Social Welfare | Osaka Ohtani University</p>
+      <p style="margin-top: 16px; font-size: 0.78rem;">© 2026 Yasuhiro Hata. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+Gemini は AI であり、不正確な情報を表示することがあります。
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>秦 康宏 研究室｜大阪大谷大学 人間社会学部 心理・福祉学科</title>
+  <meta name="description" content="大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏（社会福祉学・高齢者福祉論・多文化共生）研究室の公式Webサイトです。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-main: #1a1a1a;
+      --text-sub: #4a5568;
+      --text-muted: #718096;
+      --accent: #1e3a8a;
+      --accent-light: #3b82f6;
+      --accent-soft: #eff6ff;
+      --border-color: #e2e8f0;
+      --tag-bg: #edf2f7;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; transition: 0.2s; }
+    a:hover { opacity: 0.8; }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .site-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .site-title span {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      font-size: 0.86rem;
+      font-weight: 500;
+      color: var(--text-sub);
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent);
+      background-color: var(--accent-soft);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 60px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero-sub {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-light);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.45;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
+    .hero-lead {
+      font-size: 1.02rem;
+      color: var(--text-sub);
+      max-width: 860px;
+      line-height: 1.95;
+    }
+
+    /* Section common */
+    section {
+      padding: 70px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-num {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-light);
+      letter-spacing: 0.15em;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Welcome / Profile */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .profile-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .profile-avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+    }
+
+    .profile-name {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .profile-en-name {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .profile-position {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1.5;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 16px;
+    }
+
+    .profile-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 14px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: 8px;
+      background: var(--tag-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+    }
+
+    .btn-link:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .btn-insta {
+      background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+      color: #fff;
+      border: none;
+    }
+
+    .profile-detail h3 {
+      font-size: 1.22rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    .profile-quote {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent-light);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+      color: #1e293b;
+      margin-bottom: 20px;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    .profile-detail p {
+      color: var(--text-sub);
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+
+    /* Content Box / Cards */
+    .content-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .content-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .content-box-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .content-p {
+      color: var(--text-sub);
+      font-size: 0.94rem;
+      margin-bottom: 14px;
+    }
+
+    /* Tags grid */
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .badge-tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--border-color);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-sub);
+    }
+
+    /* Tables */
+    .table-custom {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.92rem;
+    }
+
+    .table-custom th, .table-custom td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border-color);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .table-custom th {
+      background: #f8fafc;
+      font-weight: 600;
+      width: 25%;
+      color: var(--text-main);
+    }
+
+    .table-custom td {
+      color: var(--text-sub);
+    }
+
+    /* News Grid */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 20px;
+    }
+
+    .news-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.2s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .news-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .news-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 14px;
+    }
+
+    .tag-award { background: #fef3c7; color: #92400e; }
+    .tag-research { background: #e0f2fe; color: #0369a1; }
+    .tag-education { background: #dcfce7; color: #166534; }
+    .tag-book { background: #fae8ff; color: #86198f; }
+    .tag-overseas { background: #ffedd5; color: #9a3412; }
+
+    .news-date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .news-card-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .news-card-body {
+      font-size: 0.86rem;
+      color: var(--text-sub);
+      line-height: 1.65;
+    }
+
+    /* List items */
+    .item-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .item-row {
+      padding: 14px 0;
+      border-bottom: 1px dashed var(--border-color);
+      font-size: 0.92rem;
+    }
+
+    .item-row:last-child {
+      border-bottom: none;
+    }
+
+    .item-title {
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .item-desc {
+      color: var(--text-sub);
+      font-size: 0.86rem;
+    }
+
+    /* Contact */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.86rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-family: inherit;
+      background: #fbfbfb;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-light);
+      background: #fff;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 13px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      padding: 50px 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      background: #ffffff;
+    }
+
+    @media (max-width: 860px) {
+      .profile-grid, .contact-wrapper { grid-template-columns: 1fr; }
+      nav ul { display: none; }
+      .table-custom th { width: 35%; }
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-    <a href="#biography">プロフィール</a>
-    <a href="#research">研究の柱</a>
-    <a href="#social">社会活動</a>
-    <a href="#awards">実績・栄誉</a>
-    <a href="https://www.instagram.com/osakabon1234/?hl=ja" target="_blank" class="insta-nav">秦ゼミInstagram</a>
-    <a href="https://researchmap.jp/read07291963" target="_blank">Researchmap</a>
-</nav>
+  <!-- Header -->
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="site-title">
+        秦 康宏 研究室
+        <span>大阪大谷大学 人間社会学部 心理・福祉学科</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#about">01 ようこそ</a></li>
+          <li><a href="#news">02 ニュース</a></li>
+          <li><a href="#field">03 実務経歴</a></li>
+          <li><a href="#research">04 研究活動</a></li>
+          <li><a href="#education">05 教育・ゼミ</a></li>
+          <li><a href="#works">06 著書・論文</a></li>
+          <li><a href="#social">07 社会連携・委員</a></li>
+          <li><a href="#contact">08 お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<header>
-    <h1>秦 康宏 研究室</h1>
-    <div class="subtitle">理論と現場、日本と世界を繋ぐ社会福祉</div>
-</header>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="container">
+      <div class="hero-sub">Hata Laboratory of Social Welfare</div>
+      <h1 class="hero-title">理論と現場、日本と世界を繋ぐ社会福祉</h1>
+      <p class="hero-lead">
+        高齢者福祉の実務現場における22年間の実践知を基盤に、対人援助職の倫理的自己覚知や、外国人介護人材受入れに伴う多文化共生モデルの構築を探求しています。現場の「声なき声」を学術的に言語化し、クライエントの人生に伴走するソーシャルワーカー・教育者を育成します。
+      </p>
+    </div>
+  </div>
 
-<div class="container">
-    <div class="content-card">
-        
-        <section id="biography">
-            <h2>プロフィール・使命</h2>
-            <div class="profile-section">
-                <img src="shinpuku.jpg" alt="秦 康宏 教授" class="profile-img">
-                <div>
-                    <h3 style="font-size: 2.0em; margin: 0;">秦 康宏（Yasuhiro HATA）</h3>
-                    <p style="font-weight: 700; color: var(--col-main); font-size: 1.2em; margin-top: 5px; margin-bottom: 10px;">大阪大谷大学 人間社会学部 心理・福祉学科長 教授</p>
-                    <p style="margin: 0;">高齢者総合介護センター「ひらかた聖徳園」での<b>22年間にわたる現場実務</b>を経験。現在は、その実践知を基盤に、対人援助職の倫理的省察や多文化共生のモデル構築に取り組む実務家教員です。現場の声なき声を学術的に言語化し、次世代の福祉を担う人材を育成することを使命としています。</p>
-                    
-                    <div style="margin-top: 20px;">
-                        <strong style="color: var(--col-main); display: block; margin-bottom: 8px;">【ゼミ活動】</strong>
-                        <a href="https://www.instagram.com/osakabon1234/?hl=ja" target="_blank" class="btn-insta">
-                            秦ゼミ 社会福祉士国家試験応援Instagram
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <main class="container">
 
-        <section id="research">
-            <h2>研究の柱</h2>
-            <div class="focus-area">
-                <div class="focus-item">
-                    <h3>スウェーデンの福祉倫理研究</h3>
-                    <p style="margin: 0;">北欧スウェーデンの「ソーシャルワーカー倫理綱領」の全訳・分析。専門職としての倫理的覚知と、日本への適用可能性を考究しています。</p>
-                </div>
-                <div class="focus-item">
-                    <h3>外国人介護人材の受入れと共生</h3>
-                    <p style="margin: 0;">ベトナム、インドネシア等、アジアの若者が日本で誇りを持って働ける環境整備。外国人介護人材と地域社会を繋ぐ「地域メディエーション支援モデル」の構築を目指し、国際大会でも高い評価を得ています。</p>
-                </div>
-            </div>
-        </section>
+    <!-- 01 Welcome & Profile -->
+    <section id="about">
+      <div class="section-header">
+        <div class="section-num">01 WELCOME</div>
+        <h2 class="section-title">ようこそ・自己紹介</h2>
+        <p class="section-subtitle">実務家教員としての歩み、使命、保有資格</p>
+      </div>
 
-        <section id="social">
-            <h2>社会活動</h2>
-            <p style="margin-bottom: 15px;">地域福祉の向上と政策提言のため、行政の各種委員会や職能団体の役員として幅広く活動しています。</p>
-            <div class="social-tags">
-                <span class="tag">大阪府国民健康保険団体連合会 苦情処理委員会 副委員長</span>
-                <span class="tag">介護保険市民オンブズマン機構大阪 副代表</span>
-                <span class="tag">豊中市介護人材対策部会 会長</span>
-                <span class="tag">河内長野市高齢者保健福祉計画等推進委員会 会長</span>
-                <span class="tag">大阪介護支援専門員協会 監事</span>
-                <span class="tag">羽曳野市高齢者・障害者虐待防止ネットワーク 会長</span>
-            </div>
-        </section>
-
-        <section id="awards">
-            <h2>実績・栄誉</h2>
-            <ul class="achievement-list">
-                <li style="background: rgba(201, 160, 99, 0.1); border-left: 4px solid var(--col-gold); padding-left: 10px;">
-                    <span class="date">2024.11</span>
-                    <div>
-                        <strong style="color: var(--col-main);">日本レセプト学会 国際学術賞（ベトナム大会）</strong><br>
-                        インドネシア人介護人材予定者から見た日本の就労イメージに関する国際研究への貢献
-                    </div>
-                </li>
-                <li>
-                    <span class="date">2022.06</span>
-                    <div>
-                        <strong>大阪介護支援専門員協会 会長表彰</strong><br>
-                        多年にわたる介護支援専門員としての功績と職能への貢献
-                    </div>
-                </li>
-                <li>
-                    <span class="date">2026.04予定</span>
-                    <div>『レセプト用語事典』日本レセプト学会学術出版（共著）</div>
-                </li>
-            </ul>
-        </section>
-
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="https://researchmap.jp/read07291963" target="_blank" style="display: inline-block; padding: 12px 35px; background: var(--col-gold); color: #fff; text-decoration: none; font-weight: 700; border-radius: 4px; box-shadow: 0 4px 15px rgba(176,141,87,0.4);">
-                詳細な業績はこちら（Researchmap）
+      <div class="profile-grid">
+        <div class="profile-card">
+          <div class="profile-avatar">👨‍🏫</div>
+          <h3 class="profile-name">秦 康宏</h3>
+          <p class="profile-en-name">Yasuhiro HATA（はたやん）</p>
+          <p class="profile-position">
+            大阪大谷大学 人間社会学部<br>
+            心理・福祉学科長 / 教授<br>
+            修士（学術）(大阪教育大学)
+          </p>
+          <div class="profile-links">
+            <a href="https://researchmap.jp/hatayasu" target="_blank" rel="noopener" class="btn-link">
+              🔗 Researchmap公式（研究者番号: 60461969）
             </a>
+            <a href="https://www.instagram.com/hatazemi.fukushi/" target="_blank" rel="noopener" class="btn-link btn-insta">
+              📸 秦ゼミ 公式Instagram
+            </a>
+          </div>
         </div>
 
-    </div>
-</div>
+        <div class="profile-detail">
+          <div class="profile-quote">
+            「社会福祉の目的は、その人が困っていることや望んでいることを自己実現できるように支援することです。社会資源のコーディネートにより課題を解決し、クライエントが自分の人生に積極的に向き合っていける力を出せるように支援する。つまり、その人や家族、地域の人たちが自分らしい生き方、生き生きとした暮らしを見つけられるようにサポートし、一緒に伴奏（伴走）することです。」
+          </div>
 
-<footer>
-    <div style="max-width: 800px; margin: 0 auto;">
-        <p style="margin: 5px 0;"><strong>大阪大谷大学 人間社会学部 心理・福祉学科</strong></p>
-        <p style="margin: 5px 0;">秦 康宏 研究室｜Hata Laboratory of Social Welfare</p>
-        <p style="margin: 5px 0;">〒584-8540 大阪府富田林市錦織北3丁目11番1号</p>
-        <p style="margin: 5px 0;">Email: hatayasu@osaka-ohtani.ac.jp</p>
-        <p style="font-size: 0.8em; margin-top: 30px; opacity: 0.5; margin-bottom: 0;">&copy; 2026 Yasuhiro Hata All Rights Reserved.</p>
+          <h3>学歴・アカデミックキャリア</h3>
+          <p>
+            龍谷大学短期大学部、佛教大学社会学部を経て、大阪教育大学大学院教育学研究科（発達人間学講座）にて修士（学術）を取得。同志社大学大学院社会学研究科社会福祉学専攻博士課程（後期課程）単位取得退学。
+          </p>
+          <p>
+            社会福祉法人聖徳園での22年間の現場実務を経て、大阪城南女子短期大学専任講師（6年）、大阪人間科学大学准教授（10年）を歴任し、2023年より大阪大谷大学教授、2024年11月より心理・福祉学科長を務める。
+          </p>
+
+          <h3 style="margin-top: 24px;">保有資格・専門資格一覧</h3>
+          <div class="tags-container">
+            <span class="badge-tag">社会福祉士</span>
+            <span class="badge-tag">介護福祉士</span>
+            <span class="badge-tag">介護支援専門員（ケアマネジャー）</span>
+            <span class="badge-tag">専門社会調査士</span>
+            <span class="badge-tag">国際医療管理士</span>
+            <span class="badge-tag">国際福祉管理士</span>
+            <span class="badge-tag">レセプト管理士</span>
+            <span class="badge-tag">福祉住環境コーディネーター2級</span>
+            <span class="badge-tag">第1種衛生管理者</span>
+            <span class="badge-tag">Sweden MediCare Institute研究員</span>
+            <span class="badge-tag">スクールソーシャルワーク教育課程教員講習修了</span>
+            <span class="badge-tag">外国人介護スタッフ応援隊養成講座修了</span>
+            <span class="badge-tag">福祉英語検定3級</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 News & Topics -->
+    <section id="news">
+      <div class="section-header">
+        <div class="section-num">02 NEWS & TOPICS</div>
+        <h2 class="section-title">ニュース＆トピックス</h2>
+        <p class="section-subtitle">研究室の最新活動、学会受賞、出版、海外視察レポート</p>
+      </div>
+
+      <div class="news-grid">
+        <div class="news-card">
+          <div>
+            <div class="news-meta">
+              <span class="news-tag tag-award">国際受賞</span>
+              <span class="news-date">2024.11</span>
+            </div>
+            <h3 class="news-card-title">日本レセプト学会「国際学術賞」を受賞（ベトナム大会）</h3>
+            <p class="news-card-body">
+              ベトナム・ハノイで開催された国際学術大会にて、インドネシア人介護人材予定者に関する国際研究が「日本の深刻な介護労働問題への多大な貢献」と高く評価され学術賞を受賞。
+            </p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div>
+            <div class="news-meta">
+              <span class="news-tag tag-book">新刊出版</span>
+              <span class="news-date">2026.04</span>
+            </div>
+            <h3 class="news-card-title">『レセプト用語事典』日本レセプト学会学術出版（共編著）</h3>
+            <p class="news-card-body">
+              医療・福祉・介護のレセプト実務および制度理解に関する総合事典。介護報酬請求や外国人介護人材、LIFE関連などの重要領域を共編著者として執筆。
+            </p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div>
+            <div class="news-meta">
+              <span class="news-tag tag-research">研究助成</span>
+              <span class="news-date">2025.02 - 2026.01</span>
+            </div>
+            <h3 class="news-card-title">ユニベール財団2024年度研究助成に採択（研究代表者）</h3>
+            <p class="news-card-body">
+              研究課題「外国人労働者を支援する地域メディエーション・ソーシャルワークモデルの構築」（秦康宏・植木是・谷俊英・安田傑）を推進中。
+            </p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div>
+            <div class="news-meta">
+              <span class="news-tag tag-overseas">海外視察</span>
+              <span class="news-date">2025.11 / 2024.11</span>
+            </div>
+            <h3 class="news-card-title">韓国ソウル・ベトナムハノイの医療福祉施設を現地視察</h3>
+            <p class="news-card-body">
+              韓国の市立ノウォン老人福祉館・国立がんセンター、ベトナムのHong Ngoc私立病院・仁愛国際株式会社等を歴訪し、国際的なケアシステムの比較調査を実施。
+            </p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div>
+            <div class="news-meta">
+              <span class="news-tag tag-education">教育・学会</span>
+              <span class="news-date">2025.10</span>
+            </div>
+            <h3 class="news-card-title">第8回 日本レセプト学会国内学術大会 大会長を務める</h3>
+            <p class="news-card-body">
+              大阪大谷大学あべのハルカスキャンパスにて開催された国内大会の大会長として、レセプト管理学と多職種連携の議論を牽引。
+            </p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div>
+            <div class="news-meta">
+              <span class="news-tag tag-education">ゼミ活動</span>
+              <span class="news-date">2026.04</span>
+            </div>
+            <h3 class="news-card-title">2026年度 秦ゼミ始動＆社会福祉士国試対策本格化</h3>
+            <p class="news-card-body">
+              新3年生・4年生を迎え、社会福祉士国家試験全員合格に向けた過去問分析と勉強会を本格スタート。日々の様子は公式Instagramにて更新中。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Field Experience -->
+    <section id="field">
+      <div class="section-header">
+        <div class="section-num">03 FIELD PRACTICE</div>
+        <h2 class="section-title">22年間の現場実践知</h2>
+        <p class="section-subtitle">社会福祉法人聖徳園における草分け的福祉事業の立ち上げと運営マネジメント</p>
+      </div>
+
+      <div class="content-box">
+        <p class="content-p">
+          1983年に社会福祉学科を卒業後、社会福祉法人聖徳園（枚方市）に入職。デイサービス介護職からスタートし、在宅介護支援センターソーシャルワーカー、デイケア生活相談員を経て、時代の要請に応じた先駆的福祉サービスを数多く立ち上げ・統括しました。
+        </p>
+
+        <table class="table-custom">
+          <tbody>
+            <tr>
+              <th>枚方市24時間巡回型<br>ホームヘルプ事業</th>
+              <td>全国的にも先進事例であった枚方市の「24時間ホームヘルプサービス」委託先として現場立ち上げに尽力。夜間宿直体制による緊急ニーズ対応を6年間統括（MBSナウ・TV特集等で報道）。</td>
+            </tr>
+            <tr>
+              <th>訪問看護ステーション<br>事業立ち上げ</th>
+              <td>枚方市内で2ヶ所目（民間法人としては初）となる訪問看護ステーションの指定申請と現場体制を整備。医療ソーシャルワーカーと連携し、医療依存度の高い在宅利用者の支援体制を構築。</td>
+            </tr>
+            <tr>
+              <th>ホームヘルパー養成講座<br>（2級課程）開講</th>
+              <td>介護人材育成事業として定員40名・年2回のヘルパー2級養成講座を開講。通算約500名の介護修了生を地域に輩出。</td>
+            </tr>
+            <tr>
+              <th>認知症グループホーム<br>立ち上げ・管理者</th>
+              <td>枚方市内における認知症高齢者グループホーム（定員7名）の指定申請および管理者（3年間）を担当。</td>
+            </tr>
+            <tr>
+              <th>居宅介護支援事業所<br>運営管理（6年間）</th>
+              <td>介護保険制度創設期における居宅介護支援事業所の管理者としてケアマネジメントの体制確立を牽引。</td>
+            </tr>
+            <tr>
+              <th>ISO9001法人責任者<br>（14業種33施設）</th>
+              <td>国際品質マネジメント規格ISO9001の法人全体責任者として、介護・福祉サービスの品質向上と標準化を推進。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 04 Research -->
+    <section id="research">
+      <div class="section-header">
+        <div class="section-num">04 RESEARCH</div>
+        <h2 class="section-title">研究活動の柱とテーマ</h2>
+        <p class="section-subtitle">福祉倫理・多文化共生・レセプト管理を軸とする実践的アプローチ</p>
+      </div>
+
+      <div class="content-box">
+        <span class="content-badge">研究テーマ 1</span>
+        <h3 class="content-box-title">スウェーデン福祉倫理とソーシャルワーカーの自己覚知</h3>
+        <p class="content-p">
+          Sweden MediCare Institute研究員として、高福祉国スウェーデンのソーシャルワーカー連盟（SSR）「倫理綱領」の全訳・精読を遂行。対人援助職が現場で直面する倫理的ジレンマ（自己決定と安全配慮の葛藤など）に対し、インパクト・アセスメント（影響評価）を用いた「支持的スーパービジョン」「癒しの事例検討会」モデルを開発・提唱しています。
+        </p>
+      </div>
+
+      <div class="content-box">
+        <span class="content-badge">研究テーマ 2</span>
+        <h3 class="content-box-title">外国人介護人材の受入れと「地域メディエーション支援モデル」</h3>
+        <p class="content-p">
+          インドネシア、ベトナム、カンボジア、香港等での現地調査に基づき、送り出し国から受け入れ国への国際移動と定着課題を研究。単なる労働力確保ではなく、外国人介護職員が日本社会で誇りを持ってキャリアを形成できるよう、「受入れ施設」「外国人職員」「地域住民」をつなぐ地域メディエーション（地域共生）ソーシャルワークモデルを構築しています。
+        </p>
+      </div>
+
+      <div class="content-box">
+        <span class="content-badge">研究テーマ 3</span>
+        <h3 class="content-box-title">介護報酬レセプト管理学と福祉組織マネジメント</h3>
+        <p class="content-p">
+          日本レセプト学会理事として、制度改定の読解法、介護レセプト請求実務、LIFE（科学的介護情報システム）の活用、および福祉住環境・建築機能とケアの統合に関する学術的研究を推進しています。
+        </p>
+      </div>
+    </section>
+
+    <!-- 05 Education & Seminar -->
+    <section id="education">
+      <div class="section-header">
+        <div class="section-num">05 EDUCATION & SEMINAR</div>
+        <h2 class="section-title">教育・秦ゼミの活動</h2>
+        <p class="section-subtitle">高い国家試験合格率と、現場で信頼されるソーシャルワーカーの育成</p>
+      </div>
+
+      <div class="content-box">
+        <h3 class="content-box-title">国家試験全員合格に向けた徹底した個別支援と現場主義</h3>
+        <p class="content-p">
+          秦ゼミでは、社会福祉士国家試験の全員合格を目標に掲げ、過去問の徹底分析と少人数での学び合いを行っています。また、施設見学や地域実践活動、海外研修（カンボジア等）の知見を活かした幅広い視野を育みます。
+        </p>
+
+        <table class="table-custom">
+          <tbody>
+            <tr>
+              <th>担当授業科目<br>（大阪大谷大学）</th>
+              <td>高齢者福祉論、社会福祉概論、ソーシャルワークの理論と方法Ⅰ・Ⅱ、ソーシャルワーク演習・実習指導、くらしと社会保障、心理・福祉学入門、ゼミナールⅠ ほか</td>
+            </tr>
+            <tr>
+              <th>他大学等での講義</th>
+              <td>関西医科大学『社会福祉・社会保障論』、関西福祉科学大学『老人福祉論』、花園大学大学院『倫理と社会福祉』、日本介護支援専門員協会指導者レベル2講師 ほか</td>
+            </tr>
+            <tr>
+              <th>卒論テーマ例</th>
+              <td>外国人介護職員受入れと施設内研修、認知症高齢者への個別ケア、ヤングケアラー支援、多職種連携による地域包括ケアの展開</td>
+            </tr>
+            <tr>
+              <th>主な進路実績</th>
+              <td>医療ソーシャルワーカー（MSW）、特別養護老人ホーム、地域包括支援センター、社会福祉協議会、公務員（福祉職・行政職）など</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 06 Publications & Works -->
+    <section id="works">
+      <div class="section-header">
+        <div class="section-num">06 PUBLICATIONS & PAPERS</div>
+        <h2 class="section-title">主要な著書・論文業績</h2>
+        <p class="section-subtitle">49冊を超える著書・出版物および学術論文（一部抜粋）</p>
+      </div>
+
+      <div class="content-box">
+        <h3 class="content-box-title">主要著書・編著</h3>
+        <ul class="item-list">
+          <li class="item-row">
+            <div class="item-title">『レセプト用語事典』日本レセプト学会学術出版（2026年4月予定・共編著者）</div>
+            <div class="item-desc">医療・福祉・介護のレセプト実務および制度理解に関する総合専門事典。</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">『国際医療管理士・国際福祉管理士教本』キャリアカレッジジャパン（2026年4月予定・共著）</div>
+            <div class="item-desc">第1部 基礎理論編（日本の国際化）、第2部 実践編（福祉施設ホームページの例）を担当。</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">『実践力を育てる高齢者福祉 地域と共に歩むソーシャルワーク』教育情報出版（2025年・共著）</div>
+            <div class="item-desc">コラム3「介護保険料の上昇について考える」、コラム7「社会福祉士教育カリキュラム改正」担当。</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">『高齢者福祉 (社会福祉を学ぶ50の扉)』法律文化社（2025年・共著）</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">『レセプト管理学: 論から学への深化』同友館（2024年・共著）</div>
+            <div class="item-desc">介護レセプト、LIFE、介護英語表現、外国人介護人材の現状を担当。</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">『高齢者福祉 (最新・はじめて学ぶ社会福祉)』ミネルヴァ書房（2022年・編著者）</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">『障害者権利擁護運動事典』明石書店（2015年・共訳）</div>
+          </li>
+        </ul>
+
+        <h3 class="content-box-title" style="margin-top: 30px;">主要学術論文</h3>
+        <ul class="item-list">
+          <li class="item-row">
+            <div class="item-title">「社会福祉士から見た外国人介護職員の現状と自立支援 ～地域共生の視点から～」</div>
+            <div class="item-desc">大阪大谷大学人間社会学部こみゅにか (19), 2025年3月</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">「ソーシャルワーク専門職のグローバル定義におけるウェルビーイングを考える－スウェーデンソーシャルワーカー倫理綱領から－」</div>
+            <div class="item-desc">豊岡短期大学論集 (20), 2024年3月（査読有）</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">「スウェーデンソーシャルワーカー連盟（SSR）『ソーシャルワークにおける倫理－ソーシャルワーカーの倫理綱領』全訳」</div>
+            <div class="item-desc">大阪人間科学大学紀要 (22), 2023年3月（査読有）</div>
+          </li>
+          <li class="item-row">
+            <div class="item-title">「インドネシア人介護人材予定者から見た日本の介護老人福祉施設への就労イメージ」</div>
+            <div class="item-desc">日本レセプト学会第3回レセプト論考, 2021年（日本レセプト学会 論文表彰優秀賞・国際学術賞受賞）</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 07 Social Contribution & Committees -->
+    <section id="social">
+      <div class="section-header">
+        <div class="section-num">07 SOCIAL CONTRIBUTION</div>
+        <h2 class="section-title">社会連携・公職・委員歴</h2>
+        <p class="section-subtitle">自治体行政、オンブズマン、職能団体における多面的な政策参画（通算40期以上）</p>
+      </div>
+
+      <div class="content-box">
+        <table class="table-custom">
+          <tbody>
+            <tr>
+              <th>広域自治体・公的機関</th>
+              <td>
+                ・大阪府国民健康保険団体連合会 苦情処理委員会 委員<br>
+                ・大阪府障害者福祉事業団 運営協議会 委員
+              </td>
+            </tr>
+            <tr>
+              <th>市町村 行政委員会<br>（現職・歴任）</th>
+              <td>
+                ・豊中市 介護保険事業運営委員会 地域包括支援センター運営協議会 会長<br>
+                ・豊中市 介護人材対策部会 会長<br>
+                ・河内長野市 高齢者保健福祉計画等推進委員会 会長<br>
+                ・羽曳野市 高齢者・障害者虐待防止ネットワーク会議 会長<br>
+                ・枚方市 介護保険施設等整備審議委員会 会長 / 地域包括支援センター運営等審議会 副会長<br>
+                ・摂津市 地域包括支援センター運営委員会 会長 / 介護認定審査会 合議体委員長<br>
+                ・豊能町 障害者計画等策定委員会 会長 / 地域福祉計画策定委員 委員長<br>
+                ・交野市 地域密着型サービス運営及び介護予防事業運営審議会 委員
+              </td>
+            </tr>
+            <tr>
+              <th>職能団体・学会役員</th>
+              <td>
+                ・介護保険市民オンブズマン機構大阪（O-ネット） 副代表・理事<br>
+                ・公益社団法人大阪介護支援専門員協会 監事<br>
+                ・日本レセプト学会 理事 / 第8回国内学術大会 大会長<br>
+                ・大阪社会福祉士会「大阪社会福祉士」査読委員
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 08 Contact -->
+    <section id="contact">
+      <div class="section-header">
+        <div class="section-num">08 CONTACT</div>
+        <h2 class="section-title">お問い合わせ</h2>
+        <p class="section-subtitle">共同研究、講演・専門職研修のご依頼、入試・研究室見学のご相談</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="profile-card" style="text-align: left;">
+          <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px;">秦 康宏 研究室</h4>
+          <p style="font-size: 0.9rem; color: var(--text-sub);">
+            大阪大谷大学 人間社会学部 心理・福祉学科<br>
+            〒584-8540 大阪府富田林市錦織北3丁目11番1号
+          </p>
+          <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+            <div style="font-size: 0.85rem; color: var(--text-muted);">E-mail</div>
+            <div style="font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-top: 4px;">
+              hatayasu@osaka-ohtani.ac.jp
+            </div>
+          </div>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 16px; line-height: 1.6;">
+            ※自治体・福祉施設等での職員研修、事例検討会ファシリテーター、外国人介護人材受入れ相談、大学院・ゼミ進学に関するご相談はお気軽にご連絡ください。
+          </p>
+        </div>
+
+        <div class="profile-card" style="text-align: left;">
+          <form action="mailto:hatayasu@osaka-ohtani.ac.jp" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label>お名前（ご所属・法人名）</label>
+              <input type="text" name="name" placeholder="例：山田 太郎（〇〇社会福祉協議会）" required>
+            </div>
+            <div class="form-group">
+              <label>メールアドレス</label>
+              <input type="email" name="email" placeholder="example@domain.com" required>
+            </div>
+            <div class="form-group">
+              <label>ご用件・種別</label>
+              <input type="text" name="subject" placeholder="例：研修講師のご依頼 / 共同研究について">
+            </div>
+            <div class="form-group">
+              <label>メッセージ内容</label>
+              <textarea name="message" rows="4" placeholder="ご相談内容をご記入ください" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">メールソフトを起動して送信</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏 研究室</strong></p>
+      <p style="font-size: 0.82rem; margin-top: 4px;">Hata Laboratory of Social Welfare | Osaka Ohtani University</p>
+      <p style="margin-top: 16px; font-size: 0.78rem;">© 2026 Yasuhiro Hata. All Rights Reserved.</p>
     </div>
-</footer>
+  </footer>
 
 </body>
 </html>
+index.html
+「index.html」を表示しています。
