@@ -21,94 +21,503 @@
       --border-color: #e2e8f0;
       --tag-bg: #edf2f7;
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: 'Inter', 'Noto Sans JP', sans-serif;
       background-color: var(--bg-color);
       color: var(--text-main);
       line-height: 1.85;
       -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+      overflow-wrap: break-word;
     }
+
     a { color: inherit; text-decoration: none; transition: 0.2s; }
     a:hover { opacity: 0.8; }
-    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
     header {
-      position: sticky; top: 0;
-      background-color: rgba(255, 255, 255, 0.94);
+      position: sticky;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-color);
       z-index: 1000;
     }
-    .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 72px; }
-    .site-title { font-weight: 700; font-size: 1.1rem; letter-spacing: 0.02em; }
-    .site-title span { display: block; font-size: 0.72rem; color: var(--text-muted); font-weight: 400; }
-    nav ul { display: flex; gap: 20px; list-style: none; }
-    nav ul li a { font-size: 0.86rem; font-weight: 500; color: var(--text-sub); padding: 6px 10px; border-radius: 6px; }
-    nav ul li a:hover { color: var(--accent); background-color: var(--accent-soft); }
-    .hero { padding: 80px 0 60px; background: #ffffff; border-bottom: 1px solid var(--border-color); }
-    .hero-sub { font-size: 0.85rem; font-weight: 700; color: var(--accent-light); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px; }
-    .hero-title { font-family: 'Shippori Mincho', serif; font-size: 2.2rem; font-weight: 700; line-height: 1.45; margin-bottom: 20px; color: #0f172a; }
-    .hero-lead { font-size: 1.02rem; color: var(--text-sub); max-width: 860px; line-height: 1.95; }
-    section { padding: 70px 0; border-bottom: 1px solid var(--border-color); }
-    .section-header { margin-bottom: 40px; }
-    .section-num { font-size: 0.85rem; font-weight: 700; color: var(--accent-light); letter-spacing: 0.15em; margin-bottom: 4px; }
-    .section-title { font-size: 1.75rem; font-weight: 700; letter-spacing: 0.02em; }
-    .section-subtitle { font-size: 0.92rem; color: var(--text-muted); margin-top: 4px; }
-    .profile-grid { display: grid; grid-template-columns: 320px 1fr; gap: 40px; align-items: start; }
-    .profile-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 28px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
-    .profile-avatar { width: 130px; height: 130px; border-radius: 50%; background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; }
-    .profile-name { font-size: 1.35rem; font-weight: 700; margin-bottom: 2px; }
-    .profile-en-name { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px; }
-    .profile-position { font-size: 0.88rem; font-weight: 600; color: var(--accent); line-height: 1.5; padding-bottom: 16px; border-bottom: 1px solid var(--border-color); margin-bottom: 16px; }
-    .profile-links { display: flex; flex-direction: column; gap: 10px; }
-    .btn-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 14px; font-size: 0.84rem; font-weight: 600; border-radius: 8px; background: var(--tag-bg); border: 1px solid var(--border-color); color: var(--text-main); }
-    .btn-link:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
-    .btn-insta { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); color: #fff; border: none; }
-    .profile-detail h3 { font-size: 1.22rem; font-weight: 700; margin-bottom: 14px; border-left: 4px solid var(--accent); padding-left: 12px; }
-    .profile-quote { background: var(--accent-soft); border-left: 4px solid var(--accent-light); padding: 16px 20px; border-radius: 0 8px 8px 0; font-size: 0.95rem; color: #1e293b; margin-bottom: 20px; line-height: 1.8; font-style: italic; }
-    .profile-detail p { color: var(--text-sub); margin-bottom: 16px; font-size: 0.95rem; }
-    .content-box { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 30px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
-    .content-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-bottom: 12px; }
-    .content-box-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
-    .content-p { color: var(--text-sub); font-size: 0.94rem; margin-bottom: 14px; }
-    .tags-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-    .badge-tag { background: var(--tag-bg); border: 1px solid var(--border-color); padding: 4px 12px; border-radius: 20px; font-size: 0.82rem; font-weight: 500; color: var(--text-sub); }
-    .table-custom { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.92rem; }
-    .table-custom th, .table-custom td { padding: 13px 16px; border-bottom: 1px solid var(--border-color); text-align: left; vertical-align: top; }
-    .table-custom th { background: #f8fafc; font-weight: 600; width: 25%; color: var(--text-main); }
-    .table-custom td { color: var(--text-sub); }
-    .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 20px; }
-    .news-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: 0.2s ease; }
-    .news-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
-    .news-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-    .news-tag { font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 14px; }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .site-title {
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.02em;
+    }
+
+    .site-title span {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 16px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-sub);
+      padding: 6px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent);
+      background-color: var(--accent-soft);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 70px 0 50px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero-sub {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-light);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 2.3rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      color: #0f172a;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-lead {
+      font-size: 1.02rem;
+      color: var(--text-sub);
+      max-width: 880px;
+      line-height: 1.95;
+    }
+
+    /* Section common */
+    section {
+      padding: 70px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .section-header {
+      margin-bottom: 36px;
+    }
+
+    .section-num {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-light);
+      letter-spacing: 0.15em;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .section-subtitle {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Profile Grid */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .profile-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .profile-avatar-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 16px;
+      display: block;
+      border: 3px solid #eff6ff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      background-color: #000;
+    }
+
+    .profile-name {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .profile-en-name {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .profile-position {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1.5;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 14px;
+    }
+
+    .profile-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border-radius: 8px;
+      background: var(--tag-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+    }
+
+    .btn-link:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .btn-insta {
+      background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+      color: #fff;
+      border: none;
+    }
+    .btn-insta:hover {
+      opacity: 0.9;
+      color: #fff;
+    }
+
+    .profile-detail h3 {
+      font-size: 1.22rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    .profile-quote {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent-light);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.94rem;
+      color: #1e293b;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .profile-detail p {
+      color: var(--text-sub);
+      margin-bottom: 14px;
+      font-size: 0.94rem;
+      line-height: 1.85;
+    }
+
+    /* Content Box */
+    .content-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .content-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .content-box-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .content-p {
+      color: var(--text-sub);
+      font-size: 0.93rem;
+      margin-bottom: 14px;
+      line-height: 1.8;
+    }
+
+    /* Sweden Photo Grid in Research */
+    .sweden-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .sweden-img-card {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 160px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .sweden-img-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .sweden-img-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .sweden-img-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      font-size: 0.72rem;
+      padding: 4px 8px;
+      text-align: center;
+    }
+
+    /* Tags */
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .badge-tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--border-color);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-sub);
+    }
+
+    /* Table */
+    .table-custom {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.91rem;
+    }
+
+    .table-custom th, .table-custom td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-color);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .table-custom th {
+      background: #f8fafc;
+      font-weight: 600;
+      width: 25%;
+      color: var(--text-main);
+      white-space: nowrap;
+    }
+
+    .table-custom td {
+      color: var(--text-sub);
+    }
+
+    /* News Grid */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 20px;
+    }
+
+    .news-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.2s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .news-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .news-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 14px;
+    }
+
     .tag-award { background: #fef3c7; color: #92400e; }
     .tag-research { background: #e0f2fe; color: #0369a1; }
     .tag-education { background: #dcfce7; color: #166534; }
     .tag-book { background: #fae8ff; color: #86198f; }
     .tag-overseas { background: #ffedd5; color: #9a3412; }
-    .news-date { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
-    .news-card-title { font-size: 1.02rem; font-weight: 700; line-height: 1.5; margin-bottom: 8px; }
-    .news-card-body { font-size: 0.86rem; color: var(--text-sub); line-height: 1.65; }
+
+    .news-date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .news-card-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .news-card-body {
+      font-size: 0.86rem;
+      color: var(--text-sub);
+      line-height: 1.65;
+    }
+
+    /* Item List */
     .item-list { list-style: none; padding: 0; }
     .item-row { padding: 14px 0; border-bottom: 1px dashed var(--border-color); font-size: 0.92rem; }
     .item-row:last-child { border-bottom: none; }
     .item-title { font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
     .item-desc { color: var(--text-sub); font-size: 0.86rem; }
-    .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+
+    /* Contact */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
     .form-group { margin-bottom: 16px; }
     .form-group label { display: block; font-size: 0.86rem; font-weight: 600; margin-bottom: 6px; }
-    .form-group input, .form-group textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 0.92rem; font-family: inherit; background: #fbfbfb; }
-    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-light); background: #fff; }
-    .btn-submit { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; }
-    footer { padding: 50px 0; text-align: center; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-color); background: #ffffff; }
-    @media (max-width: 860px) { .profile-grid, .contact-wrapper { grid-template-columns: 1fr; } nav ul { display: none; } .table-custom th { width: 35%; } }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-family: inherit;
+      background: #fbfbfb;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-light);
+      background: #fff;
+    }
+    .btn-submit {
+      width: 100%;
+      padding: 13px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      padding: 50px 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      background: #ffffff;
+    }
+
+    @media (max-width: 860px) {
+      .profile-grid, .contact-wrapper { grid-template-columns: 1fr; }
+      nav ul { display: none; }
+      .sweden-gallery { grid-template-columns: 1fr 1fr; }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <div class="container nav-inner">
-      <a href="#" class="site-title">秦 康宏 研究室<span>大阪大谷大学 人間社会学部 心理・福祉学科</span></a>
+      <a href="#" class="site-title">
+        秦 康宏 研究室
+        <span>大阪大谷大学 人間社会学部 心理・福祉学科</span>
+      </a>
       <nav>
         <ul>
           <li><a href="#about">01 ようこそ</a></li>
@@ -117,44 +526,80 @@
           <li><a href="#research">04 研究活動</a></li>
           <li><a href="#education">05 教育・ゼミ</a></li>
           <li><a href="#works">06 著書・論文</a></li>
-          <li><a href="#social">07 社会連携・委員</a></li>
+          <li><a href="#social">07 社会連携</a></li>
           <li><a href="#contact">08 お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Hero Section -->
   <div class="hero">
     <div class="container">
       <div class="hero-sub">Hata Laboratory of Social Welfare</div>
       <h1 class="hero-title">理論と現場、日本と世界を繋ぐ社会福祉</h1>
-      <p class="hero-lead">高齢者福祉の実務現場における22年間の実践知を基盤に、対人援助職の倫理的自己覚知や、外国人介護人材受入れに伴う多文化共生モデルの構築を探求しています。現場の「声なき声」を学術的に言語化し、クライエントの人生に伴走するソーシャルワーカー・教育者を育成します。</p>
+      <p class="hero-lead">
+        高齢者福祉の実務現場における22年間の実践知を基盤に、対人援助職の倫理的自己覚知や、外国人介護人材受入れに伴う多文化共生モデルの構築を探求しています。現場の「声なき声」を学術的に言語化し、クライエントの人生に伴走するソーシャルワーカー・教育者を育成します。
+      </p>
     </div>
   </div>
 
   <main class="container">
+
+    <!-- 01 Welcome & Profile -->
     <section id="about">
       <div class="section-header">
         <div class="section-num">01 WELCOME</div>
         <h2 class="section-title">ようこそ・自己紹介</h2>
         <p class="section-subtitle">実務家教員としての歩み、使命、保有資格</p>
       </div>
+
       <div class="profile-grid">
         <div class="profile-card">
-          <div class="profile-avatar">👨‍🏫</div>
+          <img src="はたイラスト.JPG" alt="秦 康宏 教授" class="profile-avatar-img" onerror="this.src='hata_avatar.jpg'; this.onerror=null;">
           <h3 class="profile-name">秦 康宏</h3>
           <p class="profile-en-name">Yasuhiro HATA（はたやん）</p>
-          <p class="profile-position">大阪大谷大学 人間社会学部<br>心理・福祉学科長 / 教授<br>修士（学術）(大阪教育大学)</p>
+          <p class="profile-position">
+            大阪大谷大学 人間社会学部<br>
+            心理・福祉学科長 / 教授<br>
+            修士（学術）(大阪教育大学)
+          </p>
           <div class="profile-links">
-            <a href="https://researchmap.jp/hatayasu" target="_blank" rel="noopener" class="btn-link">🔗 Researchmap公式（研究者番号: 60461969）</a>
-            <a href="https://www.instagram.com/hatazemi.fukushi/" target="_blank" rel="noopener" class="btn-link btn-insta">📸 秦ゼミ 公式Instagram</a>
+            <a href="https://researchmap.jp/read07291963" target="_blank" rel="noopener" class="btn-link">
+              🔗 Researchmap 公式（研究者番号: 60461969）
+            </a>
+            <div style="margin-top: 6px; font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-align: left; padding-left: 2px;">▼ 公式Instagramアカウント一覧</div>
+            <a href="https://www.instagram.com/ooupsysw/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">
+              📸 大阪大谷大学 心理・福祉学科
+            </a>
+            <a href="https://www.instagram.com/socialwork0729/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">
+              📸 社会福祉士 国家試験対策
+            </a>
+            <a href="https://www.instagram.com/kaigofukushi0729/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">
+              📸 介護福祉士 国家試験対策
+            </a>
+            <a href="https://www.instagram.com/caremana0729/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">
+              📸 ケアマネジャー 受験対策
+            </a>
+            <a href="https://www.instagram.com/osakabon1234/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">
+              📸 大阪ぼん / 地域・福祉情報
+            </a>
           </div>
         </div>
+
         <div class="profile-detail">
-          <div class="profile-quote">「社会福祉の目的は、その人が困っていることや望んでいることを自己実現できるように支援することです。社会資源のコーディネートにより課題を解決し、クライエントが自分の人生に積極的に向き合っていける力を出せるように支援する。つまり、その人や家族、地域の人たちが自分らしい生き方、生き生きとした暮らしを見つけられるようにサポートし、一緒に伴奏（伴走）することです。」</div>
+          <div class="profile-quote">
+            「社会福祉の目的は、その人が困っていることや望んでいることを自己実現できるように支援することです。社会資源のコーディネートにより課題を解決し、クライエントが自分の人生に積極的に向き合っていける力を出せるように支援する。つまり、その人や家族、地域の人たちが自分らしい生き方、生き生きとした暮らしを見つけられるようにサポートし、一緒に伴奏（伴走）することです。」
+          </div>
+
           <h3>学歴・アカデミックキャリア</h3>
-          <p>龍谷大学短期大学部、佛教大学社会学部を経て、大阪教育大学大学院教育学研究科（発達人間学講座）にて修士（学術）を取得。同志社大学大学院社会学研究科社会福祉学専攻博士課程（後期課程）単位取得退学。</p>
-          <p>社会福祉法人聖徳園での22年間の現場実務を経て、大阪城南女子短期大学専任講師（6年）、大阪人間科学大学准教授（10年）を歴任し、2023年より大阪大谷大学教授、2024年11月より心理・福祉学科長を務める。</p>
+          <p>
+            大阪教育大学大学院教育学研究科（発達人間学講座）にて修士（学術）を取得。同志社大学大学院社会学研究科社会福祉学専攻博士課程（後期課程）単位取得退学。
+          </p>
+          <p>
+            社会福祉法人聖徳園での22年間の現場実務を経て、大阪城南女子短期大学専任講師（6年）、大阪人間科学大学准教授（10年）を歴任し、2023年より大阪大谷大学教授、2024年11月より心理・福祉学科長を務める。
+          </p>
+
           <h3 style="margin-top: 24px;">保有資格・専門資格一覧</h3>
           <div class="tags-container">
             <span class="badge-tag">社会福祉士</span>
@@ -175,128 +620,233 @@
       </div>
     </section>
 
+    <!-- 02 News & Topics -->
     <section id="news">
       <div class="section-header">
         <div class="section-num">02 NEWS & TOPICS</div>
         <h2 class="section-title">ニュース＆トピックス</h2>
         <p class="section-subtitle">研究室の最新活動、学会受賞、出版、海外視察レポート</p>
       </div>
+
       <div class="news-grid">
         <div class="news-card">
           <div>
-            <div class="news-meta"><span class="news-tag tag-award">国際受賞</span><span class="news-date">2024.11</span></div>
+            <div class="news-meta">
+              <span class="news-tag tag-award">国際受賞</span>
+              <span class="news-date">2024.11</span>
+            </div>
             <h3 class="news-card-title">日本レセプト学会「国際学術賞」を受賞（ベトナム大会）</h3>
-            <p class="news-card-body">ベトナム・ハノイで開催された国際学術大会にて、インドネシア人介護人材予定者に関する国際研究が「日本の深刻な介護労働問題への多大な貢献」と高く評価され学術賞を受賞。</p>
+            <p class="news-card-body">
+              ベトナム・ハノイで開催された国際学術大会にて、インドネシア人介護人材予定者に関する国際研究が「日本の深刻な介護労働問題への多大な貢献」と高く評価され学術賞を受賞。
+            </p>
           </div>
         </div>
+
         <div class="news-card">
           <div>
-            <div class="news-meta"><span class="news-tag tag-book">新刊出版</span><span class="news-date">2026.04</span></div>
+            <div class="news-meta">
+              <span class="news-tag tag-book">新刊出版</span>
+              <span class="news-date">2026.04</span>
+            </div>
             <h3 class="news-card-title">『レセプト用語事典』日本レセプト学会学術出版（共編著）</h3>
-            <p class="news-card-body">医療・福祉・介護のレセプト実務および制度理解に関する総合事典。介護報酬請求や外国人介護人材、LIFE関連などの重要領域を共編著者として執筆。</p>
+            <p class="news-card-body">
+              医療・福祉・介護のレセプト実務および制度理解に関する総合事典。介護報酬請求や外国人介護人材、LIFE関連などの重要領域を共編著者として執筆。
+            </p>
           </div>
         </div>
+
         <div class="news-card">
           <div>
-            <div class="news-meta"><span class="news-tag tag-research">研究助成</span><span class="news-date">2025.02 - 2026.01</span></div>
+            <div class="news-meta">
+              <span class="news-tag tag-research">研究助成</span>
+              <span class="news-date">2025.02 - 2026.01</span>
+            </div>
             <h3 class="news-card-title">ユニベール財団2024年度研究助成に採択（研究代表者）</h3>
-            <p class="news-card-body">研究課題「外国人労働者を支援する地域メディエーション・ソーシャルワークモデルの構築」（秦康宏・植木是・谷俊英・安田傑）を推進中。</p>
+            <p class="news-card-body">
+              研究課題「外国人労働者を支援する地域メディエーション・ソーシャルワークモデルの構築」（秦康宏・植木是・谷俊英・安田傑）を推進中。
+            </p>
           </div>
         </div>
+
         <div class="news-card">
           <div>
-            <div class="news-meta"><span class="news-tag tag-overseas">海外視察</span><span class="news-date">2025.11 / 2024.11</span></div>
+            <div class="news-meta">
+              <span class="news-tag tag-overseas">海外視察</span>
+              <span class="news-date">2025.11 / 2024.11</span>
+            </div>
             <h3 class="news-card-title">韓国ソウル・ベトナムハノイの医療福祉施設を現地視察</h3>
-            <p class="news-card-body">韓国の市立ノウォン老人福祉館・国立がんセンター、ベトナムのHong Ngoc私立病院・仁愛国際株式会社等を歴訪し、国際的なケアシステムの比較調査を実施。</p>
+            <p class="news-card-body">
+              韓国の市立ノウォン老人福祉館・国立がんセンター、ベトナムのHong Ngoc私立病院・仁愛国際株式会社等を歴訪し、国際的なケアシステムの比較調査を実施。
+            </p>
           </div>
         </div>
+
         <div class="news-card">
           <div>
-            <div class="news-meta"><span class="news-tag tag-education">教育・学会</span><span class="news-date">2025.10</span></div>
+            <div class="news-meta">
+              <span class="news-tag tag-education">教育・学会</span>
+              <span class="news-date">2025.10</span>
+            </div>
             <h3 class="news-card-title">第8回 日本レセプト学会国内学術大会 大会長を務める</h3>
-            <p class="news-card-body">大阪大谷大学あべのハルカスキャンパスにて開催された国内大会の大会長として、レセプト管理学と多職種連携の議論を牽引。</p>
+            <p class="news-card-body">
+              大阪大谷大学あべのハルカスキャンパスにて開催された国内大会の大会長として、レセプト管理学と多職種連携の議論を牽引。
+            </p>
           </div>
         </div>
+
         <div class="news-card">
           <div>
-            <div class="news-meta"><span class="news-tag tag-education">ゼミ活動</span><span class="news-date">2026.04</span></div>
+            <div class="news-meta">
+              <span class="news-tag tag-education">ゼミ活動</span>
+              <span class="news-date">2026.04</span>
+            </div>
             <h3 class="news-card-title">2026年度 秦ゼミ始動＆社会福祉士国試対策本格化</h3>
-            <p class="news-card-body">新3年生・4年生を迎え、社会福祉士国家試験全員合格に向けた過去問分析と勉強会を本格スタート。日々の様子は公式Instagramにて更新中。</p>
+            <p class="news-card-body">
+              新3年生・4年生を迎え、社会福祉士国家試験全員合格に向けた過去問分析と勉強会を本格スタート。日々の様子は公式Instagramにて更新中。
+            </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- 03 Field Experience -->
     <section id="field">
       <div class="section-header">
         <div class="section-num">03 FIELD PRACTICE</div>
         <h2 class="section-title">22年間の現場実践知</h2>
         <p class="section-subtitle">社会福祉法人聖徳園における草分け的福祉事業の立ち上げと運営マネジメント</p>
       </div>
+
       <div class="content-box">
-        <p class="content-p">1983年に社会福祉学科を卒業後、社会福祉法人聖徳園（枚方市）に入職。デイサービス介護職からスタートし、在宅介護支援センターソーシャルワーカー、デイケア生活相談員を経て、時代の要請に応じた先駆的福祉サービスを数多く立ち上げ・統括しました。</p>
+        <p class="content-p">
+          1983年に社会福祉学科を卒業後、社会福祉法人聖徳園（枚方市）に入職。デイサービス介護職からスタートし、在宅介護支援センターソーシャルワーカー、デイケア生活相談員を経て、時代の要請に応じた先駆的福祉サービスを数多く立ち上げ・統括しました。
+        </p>
+
         <table class="table-custom">
           <tbody>
-            <tr><th>枚方市24時間巡回型<br>ホームヘルプ事業</th><td>全国的にも先進事例であった枚方市の「24時間ホームヘルプサービス」委託先として現場立ち上げに尽力。夜間宿直体制による緊急ニーズ対応を6年間統括（MBSナウ・TV特集等で報道）。</td></tr>
-            <tr><th>訪問看護ステーション<br>事業立ち上げ</th><td>枚方市内で2ヶ所目（民間法人としては初）となる訪問看護ステーションの指定申請と現場体制を整備。医療ソーシャルワーカーと連携し、医療依存度の高い在宅利用者の支援体制を構築。</td></tr>
-            <tr><th>ホームヘルパー養成講座<br>（2級課程）開講</th><td>介護人材育成事業として定員40名・年2回のヘルパー2級養成講座を開講。通算約500名の介護修了生を地域に輩出。</td></tr>
-            <tr><th>認知症グループホーム<br>立ち上げ・管理者</th><td>枚方市内における認知症高齢者グループホーム（定員7名）の指定申請および管理者（3年間）を担当。</td></tr>
-            <tr><th>居宅介護支援事業所<br>運営管理（6年間）</th><td>介護保険制度創設期における居宅介護支援事業所の管理者としてケアマネジメントの体制確立を牽引。</td></tr>
-            <tr><th>ISO9001法人責任者<br>（14業種33施設）</th><td>国際品質マネジメント規格ISO9001の法人全体責任者として、介護・福祉サービスの品質向上と標準化を推進。</td></tr>
+            <tr>
+              <th>枚方市24時間巡回型<br>ホームヘルプ事業</th>
+              <td>全国的にも先進事例であった枚方市の「24時間ホームヘルプサービス」委託先として現場立ち上げに尽力。夜間宿直体制による緊急ニーズ対応を6年間統括（MBSナウ・TV特集等で報道）。</td>
+            </tr>
+            <tr>
+              <th>訪問看護ステーション<br>事業立ち上げ</th>
+              <td>枚方市内で2ヶ所目（民間法人としては初）となる訪問看護ステーションの指定申請と現場体制を整備。医療ソーシャルワーカーと連携し、医療依存度の高い在宅利用者の支援体制を構築。</td>
+            </tr>
+            <tr>
+              <th>ホームヘルパー養成講座<br>（2級課程）開講</th>
+              <td>介護人材育成事業として定員40名・年2回のヘルパー2級養成講座を開講。通算約500名の介護修了生を地域に輩出。</td>
+            </tr>
+            <tr>
+              <th>認知症グループホーム<br>立ち上げ・管理者</th>
+              <td>枚方市内における認知症高齢者グループホーム（定員7名）の指定申請および管理者（3年間）を担当。</td>
+            </tr>
+            <tr>
+              <th>居宅介護支援事業所<br>運営管理（6年間）</th>
+              <td>介護保険制度創設期における居宅介護支援事業所の管理者としてケアマネジメントの体制確立を牽引。</td>
+            </tr>
+            <tr>
+              <th>ISO9001法人責任者<br>（14業種33施設）</th>
+              <td>国際品質マネジメント規格ISO9001の法人全体責任者として、介護・福祉サービスの品質向上と標準化を推進。</td>
+            </tr>
           </tbody>
         </table>
       </div>
     </section>
 
+    <!-- 04 Research -->
     <section id="research">
       <div class="section-header">
         <div class="section-num">04 RESEARCH</div>
         <h2 class="section-title">研究活動の柱とテーマ</h2>
         <p class="section-subtitle">福祉倫理・多文化共生・レセプト管理を軸とする実践的アプローチ</p>
       </div>
+
       <div class="content-box">
         <span class="content-badge">研究テーマ 1</span>
         <h3 class="content-box-title">スウェーデン福祉倫理とソーシャルワーカーの自己覚知</h3>
-        <p class="content-p">Sweden MediCare Institute研究員として、高福祉国スウェーデンのソーシャルワーカー連盟（SSR）「倫理綱領」の全訳・精読を遂行。対人援助職が現場で直面する倫理的ジレンマ（自己決定と安全配慮の葛藤など）に対し、インパクト・アセスメント（影響評価）を用いた「支持的スーパービジョン」「癒しの事例検討会」モデルを開発・提唱しています。</p>
+        <p class="content-p">
+          Sweden MediCare Institute研究員として、高福祉国スウェーデンのソーシャルワーカー連盟（SSR）「倫理綱領」の全訳・精読を遂行。対人援助職が現場で直面する倫理的ジレンマ（自己決定と安全配慮の葛藤など）に対し、インパクト・アセスメント（影響評価）を用いた「支持的スーパービジョン」「癒しの事例検討会」モデルを開発・提唱しています。
+        </p>
+
+        <!-- スウェーデン写真ギャラリー -->
+        <div class="sweden-gallery">
+          <div class="sweden-img-card">
+            <img src="IMG_0227_NEW.jpg" alt="ストックホルム旧市街（ガムラスタン）の街並み">
+            <div class="sweden-img-label">ストックホルム旧市街</div>
+          </div>
+          <div class="sweden-img-card">
+            <img src="IMG_0246_NEW.jpg" alt="スウェーデンの路地景観">
+            <div class="sweden-img-label">歴史ある街並みと福祉空間</div>
+          </div>
+          <div class="sweden-img-card">
+            <img src="IMG_0060_NEW.jpg" alt="スウェーデンの豊かな自然と住環境">
+            <div class="sweden-img-label">自然と共生する北欧の暮らし</div>
+          </div>
+        </div>
       </div>
+
       <div class="content-box">
         <span class="content-badge">研究テーマ 2</span>
         <h3 class="content-box-title">外国人介護人材の受入れと「地域メディエーション支援モデル」</h3>
-        <p class="content-p">インドネシア、ベトナム、カンボジア、香港等での現地調査に基づき、送り出し国から受け入れ国への国際移動と定着課題を研究。単なる労働力確保ではなく、外国人介護職員が日本社会で誇りを持ってキャリアを形成できるよう、「受入れ施設」「外国人職員」「地域住民」をつなぐ地域メディエーション（地域共生）ソーシャルワークモデルを構築しています。</p>
+        <p class="content-p">
+          インドネシア、ベトナム、カンボジア、香港等での現地調査に基づき、送り出し国から受け入れ国への国際移動と定着課題を研究。単なる労働力確保ではなく、外国人介護職員が日本社会で誇りを持ってキャリアを形成できるよう、「受入れ施設」「外国人職員」「地域住民」をつなぐ地域メディエーション（地域共生）ソーシャルワークモデルを構築しています。
+        </p>
       </div>
+
       <div class="content-box">
         <span class="content-badge">研究テーマ 3</span>
         <h3 class="content-box-title">介護報酬レセプト管理学と福祉組織マネジメント</h3>
-        <p class="content-p">日本レセプト学会理事として、制度改定の読解法、介護レセプト請求実務、LIFE（科学的介護情報システム）の活用、および福祉住環境・建築機能とケアの統合に関する学術的研究を推進しています。</p>
+        <p class="content-p">
+          日本レセプト学会理事として、制度改定の読解法、介護レセプト請求実務、LIFE（科学的介護情報システム）の活用、および福祉住環境・建築機能とケアの統合に関する学術的研究を推進しています。
+        </p>
       </div>
     </section>
 
+    <!-- 05 Education & Seminar -->
     <section id="education">
       <div class="section-header">
         <div class="section-num">05 EDUCATION & SEMINAR</div>
         <h2 class="section-title">教育・秦ゼミの活動</h2>
         <p class="section-subtitle">高い国家試験合格率と、現場で信頼されるソーシャルワーカーの育成</p>
       </div>
+
       <div class="content-box">
         <h3 class="content-box-title">国家試験全員合格に向けた徹底した個別支援と現場主義</h3>
-        <p class="content-p">秦ゼミでは、社会福祉士国家試験の全員合格を目標に掲げ、過去問の徹底分析と少人数での学び合いを行っています。また、施設見学や地域実践活動、海外研修（カンボジア等）の知見を活かした幅広い視野を育みます。</p>
+        <p class="content-p">
+          秦ゼミでは、社会福祉士国家試験の全員合格を目標に掲げ、過去問の徹底分析と少人数での学び合いを行っています。また、施設見学や地域実践活動、海外研修（カンボジア等）の知見を活かした幅広い視野を育みます。
+        </p>
+
         <table class="table-custom">
           <tbody>
-            <tr><th>担当授業科目<br>（大阪大谷大学）</th><td>高齢者福祉論、社会福祉概論、ソーシャルワークの理論と方法Ⅰ・Ⅱ、ソーシャルワーク演習・実習指導、くらしと社会保障、心理・福祉学入門、ゼミナールⅠ ほか</td></tr>
-            <tr><th>他大学等での講義</th><td>関西医科大学『社会福祉・社会保障論』、関西福祉科学大学『老人福祉論』、花園大学大学院『倫理と社会福祉』、日本介護支援専門員協会指導者レベル2講師 ほか</td></tr>
-            <tr><th>卒論テーマ例</th><td>外国人介護職員受入れと施設内研修、認知症高齢者への個別ケア、ヤングケアラー支援、多職種連携による地域包括ケアの展開</td></tr>
-            <tr><th>主な進路実績</th><td>医療ソーシャルワーカー（MSW）、特別養護老人ホーム、地域包括支援センター、社会福祉協議会、公務員（福祉職・行政職）など</td></tr>
+            <tr>
+              <th>担当授業科目<br>（大阪大谷大学）</th>
+              <td>高齢者福祉論、社会福祉概論、ソーシャルワークの理論と方法Ⅰ・Ⅱ、ソーシャルワーク演習・実習指導、くらしと社会保障、心理・福祉学入門、ゼミナールⅠ ほか</td>
+            </tr>
+            <tr>
+              <th>他大学等での講義</th>
+              <td>関西医科大学『社会福祉・社会保障論』、関西福祉科学大学『老人福祉論』、花園大学大学院『倫理と社会福祉』、日本介護支援専門員協会指導者レベル2講師 ほか</td>
+            </tr>
+            <tr>
+              <th>卒論テーマ例</th>
+              <td>外国人介護職員受入れと施設内研修、認知症高齢者への個別ケア、ヤングケアラー支援、多職種連携による地域包括ケアの展開</td>
+            </tr>
+            <tr>
+              <th>主な進路実績</th>
+              <td>医療ソーシャルワーカー（MSW）、特別養護老人ホーム、地域包括支援センター、社会福祉協議会、公務員（福祉職・行政職）など</td>
+            </tr>
           </tbody>
         </table>
       </div>
     </section>
 
+    <!-- 06 Publications & Works -->
     <section id="works">
       <div class="section-header">
         <div class="section-num">06 PUBLICATIONS & PAPERS</div>
         <h2 class="section-title">主要な著書・論文業績</h2>
         <p class="section-subtitle">49冊を超える著書・出版物および学術論文（一部抜粋）</p>
       </div>
+
       <div class="content-box">
         <h3 class="content-box-title">主要著書・編著</h3>
         <ul class="item-list">
@@ -326,6 +876,7 @@
             <div class="item-title">『障害者権利擁護運動事典』明石書店（2015年・共訳）</div>
           </li>
         </ul>
+
         <h3 class="content-box-title" style="margin-top: 30px;">主要学術論文</h3>
         <ul class="item-list">
           <li class="item-row">
@@ -348,18 +899,23 @@
       </div>
     </section>
 
+    <!-- 07 Social Contribution & Committees -->
     <section id="social">
       <div class="section-header">
         <div class="section-num">07 SOCIAL CONTRIBUTION</div>
         <h2 class="section-title">社会連携・公職・委員歴</h2>
         <p class="section-subtitle">自治体行政、オンブズマン、職能団体における多面的な政策参画（通算40期以上）</p>
       </div>
+
       <div class="content-box">
         <table class="table-custom">
           <tbody>
             <tr>
               <th>広域自治体・公的機関</th>
-              <td>・大阪府国民健康保険団体連合会 苦情処理委員会 委員<br>・大阪府障害者福祉事業団 運営協議会 委員</td>
+              <td>
+                ・大阪府国民健康保険団体連合会 苦情処理委員会 委員<br>
+                ・大阪府障害者福祉事業団 運営協議会 委員
+              </td>
             </tr>
             <tr>
               <th>市町村 行政委員会<br>（現職・歴任）</th>
@@ -388,35 +944,59 @@
       </div>
     </section>
 
+    <!-- 08 Contact -->
     <section id="contact">
       <div class="section-header">
         <div class="section-num">08 CONTACT</div>
         <h2 class="section-title">お問い合わせ</h2>
         <p class="section-subtitle">共同研究、講演・専門職研修のご依頼、入試・研究室見学のご相談</p>
       </div>
+
       <div class="contact-wrapper">
         <div class="profile-card" style="text-align: left;">
           <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px;">秦 康宏 研究室</h4>
-          <p style="font-size: 0.9rem; color: var(--text-sub);">大阪大谷大学 人間社会学部 心理・福祉学科<br>〒584-8540 大阪府富田林市錦織北3丁目11番1号</p>
+          <p style="font-size: 0.9rem; color: var(--text-sub);">
+            大阪大谷大学 人間社会学部 心理・福祉学科<br>
+            〒584-8540 大阪府富田林市錦織北3丁目11番1号
+          </p>
           <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-color);">
             <div style="font-size: 0.85rem; color: var(--text-muted);">E-mail</div>
-            <div style="font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-top: 4px;">hatayasu@osaka-ohtani.ac.jp</div>
+            <div style="font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-top: 4px;">
+              hatayasu@osaka-ohtani.ac.jp
+            </div>
           </div>
-          <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 16px; line-height: 1.6;">※自治体・福祉施設等での職員研修、事例検討会ファシリテーター、外国人介護人材受入れ相談、大学院・ゼミ進学に関するご相談はお気軽にご連絡ください。</p>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 16px; line-height: 1.6;">
+            ※自治体・福祉施設等での職員研修、事例検討会ファシリテーター、外国人介護人材受入れ相談、大学院・ゼミ進学に関するご相談はお気軽にご連絡ください。
+          </p>
         </div>
+
         <div class="profile-card" style="text-align: left;">
           <form action="mailto:hatayasu@osaka-ohtani.ac.jp" method="post" enctype="text/plain">
-            <div class="form-group"><label>お名前（ご所属・法人名）</label><input type="text" name="name" placeholder="例：山田 太郎（〇〇社会福祉協議会）" required></div>
-            <div class="form-group"><label>メールアドレス</label><input type="email" name="email" placeholder="example@domain.com" required></div>
-            <div class="form-group"><label>ご用件・種別</label><input type="text" name="subject" placeholder="例：研修講師のご依頼 / 共同研究について"></div>
-            <div class="form-group"><label>メッセージ内容</label><textarea name="message" rows="4" placeholder="ご相談内容をご記入ください" required></textarea></div>
+            <div class="form-group">
+              <label>お名前（ご所属・法人名）</label>
+              <input type="text" name="name" placeholder="例：山田 太郎（〇〇社会福祉協議会）" required>
+            </div>
+            <div class="form-group">
+              <label>メールアドレス</label>
+              <input type="email" name="email" placeholder="example@domain.com" required>
+            </div>
+            <div class="form-group">
+              <label>ご用件・種別</label>
+              <input type="text" name="subject" placeholder="例：研修講師のご依頼 / 共同研究について">
+            </div>
+            <div class="form-group">
+              <label>メッセージ内容</label>
+              <textarea name="message" rows="4" placeholder="ご相談内容をご記入ください" required></textarea>
+            </div>
             <button type="submit" class="btn-submit">メールソフトを起動して送信</button>
           </form>
         </div>
       </div>
     </section>
+
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p><strong>大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏 研究室</strong></p>
@@ -424,5 +1004,6 @@
       <p style="margin-top: 16px; font-size: 0.78rem;">© 2026 Yasuhiro Hata. All Rights Reserved.</p>
     </div>
   </footer>
+
 </body>
 </html>
