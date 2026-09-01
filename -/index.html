@@ -502,6 +502,41 @@
       background: #ffffff;
     }
 
+    /* 追加分スタイル */
+    .shinpuku-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .shinpuku-gallery img {
+      width: 120px;
+      height: auto;
+    }
+    .article-list {
+      list-style: none;
+      padding: 0;
+    }
+    .article-list li {
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed var(--border-color);
+    }
+    .article-list li:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .article-list a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    .article-list a:hover {
+      color: var(--accent-light);
+    }
+
     @media (max-width: 860px) {
       .profile-grid, .contact-wrapper { grid-template-columns: 1fr; }
       nav ul { display: none; }
@@ -554,6 +589,14 @@
         <p class="section-subtitle">実務家教員としての歩み、使命、保有資格</p>
       </div>
 
+      <!-- しんぷくちゃんの画像 -->
+      <div class="shinpuku-gallery">
+        <img src="しんぷくちゃん.jpg" alt="しんぷくちゃん1">
+        <img src="しんぷくちゃん２.jpg" alt="しんぷくちゃん2">
+        <img src="しんぷくちゃん３.jpg" alt="しんぷくちゃん3">
+        <img src="しんぷくちゃん４.jpg" alt="しんぷくちゃん4">
+      </div>
+
       <div class="profile-grid">
         <div class="profile-card">
           <img src="はたイラスト.JPG" alt="秦 康宏 教授" class="profile-avatar-img" onerror="this.src='hata_avatar.jpg'; this.onerror=null;">
@@ -568,6 +611,14 @@
             <a href="https://researchmap.jp/read07291963" target="_blank" rel="noopener" class="btn-link">
               🔗 Researchmap 公式（研究者番号: 60461969）
             </a>
+            <!-- 追加したリンク -->
+            <a href="https://www.osaka-ohtani.ac.jp/department/teacher/detail/?id=787" target="_blank" rel="noopener" class="btn-link">
+              🔗 大阪大谷大学公式HP（教員紹介）
+            </a>
+            <a href="https://o-netnpo.site/" target="_blank" rel="noopener" class="btn-link">
+              🔗 介護保険市民オンブズマン機構大阪
+            </a>
+            <!-- 追加おわり -->
             <div style="margin-top: 6px; font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-align: left; padding-left: 2px;">▼ 公式Instagramアカウント一覧</div>
             <a href="https://www.instagram.com/ooupsysw/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">
               📸 大阪大谷大学 心理・福祉学科
@@ -642,18 +693,7 @@
           </div>
         </div>
 
-        <div class="news-card">
-          <div>
-            <div class="news-meta">
-              <span class="news-tag tag-book">新刊出版</span>
-              <span class="news-date">2026.04</span>
-            </div>
-            <h3 class="news-card-title">『レセプト用語事典』日本レセプト学会学術出版（共編著）</h3>
-            <p class="news-card-body">
-              医療・福祉・介護のレセプト実務および制度理解に関する総合事典。介護報酬請求や外国人介護人材、LIFE関連などの重要領域を共編著者として執筆。
-            </p>
-          </div>
-        </div>
+        <!-- レセプト用語事典のカードを削除しました -->
 
         <div class="news-card">
           <div>
@@ -706,6 +746,25 @@
             </p>
           </div>
         </div>
+      </div>
+
+      <!-- 代表的な学生発表や紹介記事 -->
+      <div class="content-box" style="margin-top: 30px;">
+        <h3 class="content-box-title">代表的な学生発表や紹介記事・関連リンク</h3>
+        <ul class="article-list">
+          <li><a href="https://www.youtube.com/watch?v=niOH1V7E-Kw" target="_blank">演題：「どうみょうじ高殿苑での学び～高齢者と障害者の個別支援計画の差異とは？～」</a></li>
+          <li><a href="https://www.youtube.com/watch?v=uY0mSujIo2o" target="_blank">演題：「高齢者介護を通じて出会えたお年寄りの笑顔 私がやりたかった介護体験」</a></li>
+          <li><a href="https://www.youtube.com/watch?v=pr5LgpLFlUc&t=41s" target="_blank">演題：「特別養護老人ホームにおける個別ケアの重要性―四天王寺悲田院特別養護老人ホームでのソーシャルワーク実習を通じて―」</a></li>
+          <li><a href="https://www.osaka-ohtani.ac.jp/news/detail/?id=2090" target="_blank">＜速報＞第38回社会福祉士国家試験結果発表 ―― 合格した皆さん、本当におめでとうございます！</a></li>
+          <li><a href="https://www.osaka-ohtani.ac.jp/news/detail/?id=2039" target="_blank">2年生と4年生がW受賞！日本レセプト学会で学生が研究発表を行いました</a></li>
+          <li><a href="https://www.osaka-ohtani.ac.jp/news/detail/?id=1406" target="_blank">ユニベール財団 2024年度研究助成の採択を受けました</a></li>
+          <li><a href="https://www.osaka-ohtani.ac.jp/news/detail/?id=1403" target="_blank">学術賞を受賞！</a></li>
+          <li><a href="https://www.youtube.com/watch?v=WtcOB5hvbFM" target="_blank">介護美容アーバンケア稲田様発表コメント</a></li>
+          <li>
+            <a href="https://www.youtube.com/shorts/lBrrCOz50zA" target="_blank">【地域包括支援センター】どこまで「中立」であるべき？独自ルールを徹底検証！⇒「事業所の設置禁止」は本当に必要？地域包括の中立性と連携をハタピと考える</a><br>
+            <span style="font-size: 0.85rem; color: var(--text-sub);">地域包括支援センターの運営等審議会議を公開へ 🔥「みんなで知恵を出し合う」からこそ、地域づくり、地域福祉（地域包括ケア）は強くなる！🔥</span>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -850,10 +909,7 @@
       <div class="content-box">
         <h3 class="content-box-title">主要著書・編著</h3>
         <ul class="item-list">
-          <li class="item-row">
-            <div class="item-title">『レセプト用語事典』日本レセプト学会学術出版（2026年4月予定・共編著者）</div>
-            <div class="item-desc">医療・福祉・介護のレセプト実務および制度理解に関する総合専門事典。</div>
-          </li>
+          <!-- レセプト用語事典のリストを削除しました -->
           <li class="item-row">
             <div class="item-title">『国際医療管理士・国際福祉管理士教本』キャリアカレッジジャパン（2026年4月予定・共著）</div>
             <div class="item-desc">第1部 基礎理論編（日本の国際化）、第2部 実践編（福祉施設ホームページの例）を担当。</div>
@@ -933,7 +989,8 @@
             <tr>
               <th>職能団体・学会役員</th>
               <td>
-                ・介護保険市民オンブズマン機構大阪（O-ネット） 副代表・理事<br>
+                <!-- リンクに変更しました -->
+                <a href="https://o-netnpo.site/" target="_blank" style="color: var(--accent); text-decoration: underline;">・介護保険市民オンブズマン機構大阪（O-ネット） 副代表・理事</a><br>
                 ・公益社団法人大阪介護支援専門員協会 監事<br>
                 ・日本レセプト学会 理事 / 第8回国内学術大会 大会長<br>
                 ・大阪社会福祉士会「大阪社会福祉士」査読委員
