@@ -4,9 +4,9 @@
   <meta name="google-site-verification" content="ry_TKGBYO8tfGdt8J-VZKZABTKEm73Km5CR6yOY-nus" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>大阪大谷大学 心理・福祉学科（心理福祉学科）秦康宏 研究室</title>
-  <meta name="description" content="大阪大谷大学 人間社会学部 心理・福祉学科（心理福祉学科）秦 康宏（社会福祉学・高齢者福祉論・多文化共生）研究室の公式Webサイトです。">
-  <meta name="keywords" content="大阪大谷大学,心理・福祉学科,心理福祉学科,秦康宏,社会福祉士,公認心理師">
+  <title>大阪大谷大学 心理・福祉学科 秦康宏 研究室</title>
+  <meta name="description" content="大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏（社会福祉学・高齢者福祉論・多文化共生）研究室の公式Webサイトです。">
+  <meta name="keywords" content="大阪大谷大学,心理・福祉学科,秦康宏,社会福祉士,公認心理師">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
@@ -537,14 +537,28 @@
     /* しんぷくちゃんギャラリー */
     .shinpuku-gallery {
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 30px 0;
+    }
+    .shinpuku-images {
+      display: flex;
       justify-content: center;
       gap: 15px;
-      margin: 30px 0;
       flex-wrap: wrap;
+      margin-bottom: 10px;
     }
-    .shinpuku-gallery img {
+    .shinpuku-images img {
       width: 120px;
       height: auto;
+    }
+    .shinpuku-caption {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+      text-align: center;
+      max-width: 800px;
+      line-height: 1.6;
+      padding: 0 16px;
     }
 
     .article-list {
@@ -624,7 +638,7 @@
         padding-top: 0;
       }
 
-      .shinpuku-gallery img {
+      .shinpuku-images img {
         width: calc(50% - 15px);
         max-width: 120px;
       }
@@ -663,19 +677,24 @@
       <div class="hero">
         <div class="container">
           <div class="hero-sub">Hata Laboratory of Social Welfare</div>
-          <h1 class="hero-title">理論と現場、日本と世界を繋ぐ社会福祉</h1>
+          <h1 class="hero-title">理論と現場、日本と世界を繋ぐ社会福祉・臨床心理学、キャリア心理学</h1>
           <p class="hero-lead">
-            高齢者福祉の実務現場における22年間の実践知を基盤に、対人援助職の倫理的自己覚知や、外国人介護人材受入れに伴う多文化共生モデルの構築を探求しています。現場の「声なき声」を学術的に言語化し、クライエントの人生に伴走するソーシャルワーカー・教育者を育成します。
+            高齢者福祉の実務現場における22年間の実践知を基盤に、対人援助職の倫理的自己覚知や、外国人介護人材受入れに伴う多文化共生モデルの構築を探求しています。現場の「声なき声」を学術的に言語化し、クライエントの人生に伴走するソーシャルワーカー・心理職、対人支援職、民間企業人材を育成します。
           </p>
         </div>
       </div>
       <div class="container">
         <!-- しんぷくちゃんの画像 -->
         <div class="shinpuku-gallery">
-          <img src="shinpuku1.png" alt="しんぷくちゃん1">
-          <img src="shinpuku2.png" alt="しんぷくちゃん2">
-          <img src="shinpuku3.png" alt="しんぷくちゃん3">
-          <img src="shinpuku4.png" alt="しんぷくちゃん4">
+          <div class="shinpuku-images">
+            <img src="shinpuku1.png" alt="しんぷくちゃん1">
+            <img src="shinpuku2.png" alt="しんぷくちゃん2">
+            <img src="shinpuku3.png" alt="しんぷくちゃん3">
+            <img src="shinpuku4.png" alt="しんぷくちゃん4">
+          </div>
+          <p class="shinpuku-caption">
+            ※このキャラクターは、秦研究室ではなく、大阪大谷大学心理・福祉学科の公式キャラクター「しんぷくちゃん」です。心理学の「しん」と社会福祉学の「ふく」が名前の由来。元秦ゼミ生が作成したお餅の妖精です。大阪大谷大学心理・福祉学科に所属する研究室として使用させていただきました。
+          </p>
         </div>
       </div>
     </div>
@@ -686,7 +705,7 @@
         <section>
           <div class="section-header">
             <div class="section-num">ABOUT</div>
-            <h2 class="section-title">研究室について</h2>
+            <h2 class="section-title">心理・福祉学研究室</h2>
             <p class="section-subtitle">実務家教員としての歩み、使命、保有資格</p>
           </div>
 
@@ -731,7 +750,7 @@
 
             <div class="profile-detail">
               <div class="profile-quote">
-                「社会福祉の目的は、その人が困っていることや望んでいることを自己実現できるように支援することです。社会資源のコーディネートにより課題を解決し、クライエントが自分の人生に積極的に向き合っていける力を出せるように支援する。つまり、その人や家族、地域の人たちが自分らしい生き方、生き生きとした暮らしを見つけられるようにサポートし、一緒に伴奏（伴走）することです。」
+                「臨床心理学や社会福祉の目的は、その人が困っていることや望んでいることを自己実現できるように支援することです。心理学的アプローチや社会資源のコーディネートにより課題を解決し、クライエントが自分の人生に積極的に向き合っていける力を出せるように支援する。つまり、その人や家族、地域の人たちが自分らしい生き方、生き生きとした暮らしを見つけられるようにサポートし、一緒に伴奏（伴走）することです。」
               </div>
 
               <h3>学歴・アカデミックキャリア</h3>
@@ -775,10 +794,10 @@
           </div>
 
           <div class="content-box">
-            <h3 class="content-box-title">学科長メッセージ・心理・福祉学科の特色</h3>
+            <h3 class="content-box-title">心理・福祉学科メッセージ・学科の特色</h3>
             <p class="content-p">
               大阪大谷大学 人間社会学部 心理・福祉学科は、人の心と暮らしの両面から包括的にアプローチできる対人援助の専門家を育成しています。最大の特徴は、「心理学」と「社会福祉学」の融合的な学びにあります。現代社会が抱える複雑な課題に対しては、心理的なケア（内面へのアプローチ）と社会的なサポート（環境や制度へのアプローチ）の双方の視点を持つことが不可欠です。<br><br>
-              本学科では、人の心に深く寄り添う「公認心理師」と、具体的な生活課題を解決に導く「社会福祉士」の両資格の取得を目指すことができる充実した教育・支援環境を整えています。現場経験豊富な教員陣が実践力と高い倫理観を兼ね備えたソーシャルワーカーや心理専門職を育成し、社会へ多数送り出しています。心理・福祉学科長として、学生一人ひとりの「誰かを支援したい」という思いに全力で伴走し、確かな専門性へと結実させる実践的な学びの場を提供することをお約束いたします。
+              本学科では、人の心に深く寄り添う「公認心理師」と、具体的な生活課題を解決に導く「社会福祉士」の両資格の取得を目指すことができる充実した教育・支援環境を整えています。現場経験豊富な教員陣が実践力と高い倫理観を兼ね備えたソーシャルワーカーや心理専門職を育成し、社会へ多数送り出しています。心理・福祉学科として、学生一人ひとりの「誰かを支援したい」という思いに全力で伴走し、確かな専門性へと結実させる実践的な学びの場を提供することをお約束いたします。
             </p>
           </div>
         </section>
@@ -921,6 +940,15 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          <div class="content-box" style="margin-top: 30px;">
+            <h3 class="content-box-title">資格取得に向けたロードマップ（大学公式動画）</h3>
+            <ul class="article-list">
+              <li><a href="https://www.youtube.com/watch?v=Bwol69jKS7A&list=PLJvyp9D8XP2w&index=27" target="_blank">心理の国家資格「公認心理師」になるための大冒険クエストマップ！大学4年＋大学院2年のプロへの道のり</a></li>
+              <li><a href="https://www.youtube.com/watch?v=SFpg1U-gd_I&list=PLJQZveQC5v9M&index=5" target="_blank">社会福祉士になるための冒険ロードマップ</a></li>
+              <li><a href="https://www.youtube.com/watch?v=mrQ0AjXU7TE&list=PLJQZveQC5v9M&index=6" target="_blank">スクールソーシャルワーカー（SSW）認定資格の取得ロードマップ</a></li>
+            </ul>
           </div>
         </section>
       </div>
