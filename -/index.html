@@ -543,6 +543,34 @@
       .profile-grid, .contact-wrapper { grid-template-columns: 1fr; }
       nav ul { display: none; }
       .sweden-gallery { grid-template-columns: 1fr 1fr; }
+
+      /* 追加：スマートフォン向けレイアウト・余白・フォント調整 */
+      .hero-title { font-size: 1.6rem; }
+      .section-title { font-size: 1.4rem; white-space: normal; }
+      .hero { padding: 40px 0 30px; }
+      section { padding: 40px 0; }
+      .content-box, .profile-card { padding: 16px; }
+
+      /* 追加：テーブルのブロック化（横スクロール・はみ出し防止） */
+      .table-custom th, .table-custom td {
+        display: block;
+        width: 100%;
+        white-space: normal;
+      }
+      .table-custom th {
+        border-bottom: none;
+        padding-bottom: 4px;
+      }
+      .table-custom td {
+        margin-bottom: 12px;
+        padding-top: 0;
+      }
+
+      /* 追加：画像の調整 */
+      .shinpuku-gallery img {
+        width: calc(50% - 15px);
+        max-width: 120px;
+      }
     }
   </style>
 </head>
