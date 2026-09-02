@@ -539,23 +539,42 @@
       color: var(--accent-light);
     }
 
+    /* ▼ スマートフォン向け修正 ▼ */
     @media (max-width: 860px) {
+      /* 長文の折り返しを許可し、画面外への横はみ出しを防ぐ */
+      body, .profile-quote, p, div, span, a, th, td {
+        word-break: normal;
+        overflow-wrap: break-word;
+      }
+
       .profile-grid, .contact-wrapper { grid-template-columns: 1fr; }
       nav ul { display: none; }
       .sweden-gallery { grid-template-columns: 1fr 1fr; }
 
-      /* 追加：スマートフォン向けレイアウト・余白・フォント調整 */
+      /* スマートフォン向けレイアウト・余白・フォント調整 */
       .hero-title { font-size: 1.6rem; }
       .section-title { font-size: 1.4rem; white-space: normal; }
       .hero { padding: 40px 0 30px; }
       section { padding: 40px 0; }
-      .content-box, .profile-card { padding: 16px; }
+      
+      /* はみ出し防止の徹底 */
+      .container { padding: 0 16px; overflow-x: hidden; }
+      .content-box, .profile-card { padding: 16px; width: 100%; box-sizing: border-box; }
 
-      /* 追加：テーブルのブロック化（横スクロール・はみ出し防止） */
+      /* リンクボタンの折り返し許可 */
+      .btn-link {
+        white-space: normal;
+        text-align: left;
+        line-height: 1.5;
+        height: auto;
+      }
+
+      /* テーブルのブロック化（横スクロール・はみ出し防止） */
       .table-custom th, .table-custom td {
         display: block;
         width: 100%;
         white-space: normal;
+        box-sizing: border-box;
       }
       .table-custom th {
         border-bottom: none;
@@ -566,7 +585,7 @@
         padding-top: 0;
       }
 
-      /* 追加：画像の調整 */
+      /* 画像の調整 */
       .shinpuku-gallery img {
         width: calc(50% - 15px);
         max-width: 120px;
