@@ -593,6 +593,36 @@
       margin-bottom: 16px;
     }
 
+    /* 埋め込みリンクカードスタイル */
+    .embed-card {
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      margin-top: 12px;
+      background: #fdfdfd;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .embed-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-color: #cbd5e1;
+      transform: translateY(-2px);
+    }
+    .embed-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .embed-url {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      word-break: break-all;
+    }
+
     /* ▼ スマートフォン向け修正 ▼ */
     @media (max-width: 860px) {
       .profile-grid, .contact-wrapper { grid-template-columns: 1fr; }
@@ -896,7 +926,7 @@
 
           <div class="content-box">
             <p class="content-p">
-              1983年に社会福祉学科を卒業後、社会福祉法人聖徳園（枚方市）に入職。デイサービス介護職からスタートし、在宅介護支援センターソーシャルワーカー、デイケア生活相談員を経て、時代の要請に応じた先駆的福祉サービスを数多く立ち上げ・統括しました。
+              1983年に社会福祉学科を卒業後、社会福祉法人聖徳園（枚方市）に入職。デイサービス介護職からスタートし、在 শক্তিশালী支援センターソーシャルワーカー、デイケア生活相談員を経て、時代の要請に応じた先駆的福祉サービスを数多く立ち上げ・統括しました。
             </p>
 
             <table class="table-custom">
@@ -1004,7 +1034,13 @@
             <div class="section-num">EDUCATION</div>
             <h2 class="section-title">公認心理師・社会福祉士を目指す</h2>
             <p class="section-subtitle">高い国家試験合格率と、現場で信頼されるソーシャルワーカーの育成</p>
-            <a href="https://www.instagram.com/p/DatdbElTzaG/?hl=ja" target="_blank" rel="noopener" style="color: var(--accent); font-weight: 600; text-decoration: underline; font-size: 0.9rem; display: block; margin-top: 10px;">https://www.instagram.com/p/DatdbElTzaG/?hl=ja</a>
+            
+            <!-- 追加・修正したYouTubeリンク -->
+            <a href="https://youtube.com/shorts/mtUYnwgb_4U" target="_blank" rel="noopener" class="embed-card">
+              <span class="embed-title">Youtube【秦ゼミ生－大学生活のリアル】心理・福祉学科社会福祉コースの場合1年〜4年生の時間割を大公開！</span>
+              <span class="embed-url">https://youtube.com/shorts/mtUYnwgb_4U</span>
+            </a>
+            
           </div>
 
           <div class="content-box">
