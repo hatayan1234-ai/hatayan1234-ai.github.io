@@ -623,12 +623,25 @@
       word-break: break-all;
     }
 
-    /* アクセスカウンター用スタイル */
-    .counter-wrapper {
-      margin-top: 24px;
-      display: flex;
-      justify-content: center;
+    /* テキスト型アクセスカウンターのスタイル */
+    .counter-badge-box {
+      margin: 20px auto 10px;
+      display: inline-flex;
       align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      background-color: var(--accent-soft);
+      border: 1px solid #bfdbfe;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .counter-num {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      letter-spacing: 0.05em;
     }
 
     /* ▼ スマートフォン向け修正 ▼ */
@@ -1043,7 +1056,7 @@
             <h2 class="section-title">公認心理師・社会福祉士を目指す</h2>
             <p class="section-subtitle">高い国家試験合格率と、現場で信頼されるソーシャルワーカーの育成</p>
             
-            <!-- 追加・修正したYouTubeリンク -->
+            <!-- YouTubeリンク -->
             <a href="https://youtube.com/shorts/mtUYnwgb_4U" target="_blank" rel="noopener" class="embed-card">
               <span class="embed-title">Youtube【秦ゼミ生－大学生活のリアル】心理・福祉学科社会福祉コースの場合1年〜4年生の時間割を大公開！</span>
               <span class="embed-url">https://youtube.com/shorts/mtUYnwgb_4U</span>
@@ -1356,9 +1369,13 @@
       <p><strong>大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏 研究室</strong></p>
       <p style="font-size: 0.82rem; margin-top: 4px;">Hata Laboratory of Social Welfare | Osaka Ohtani University</p>
       
-      <!-- アクセスカウンター -->
-      <div class="counter-wrapper">
-        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=osaka-ohtani-hata-lab&count_bg=%231E3A8A&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=訪問者数&edge_flat=false" alt="訪問者数カウンター">
+      <!-- テキスト式 訪問者数カウンター -->
+      <div style="text-align: center;">
+        <div class="counter-badge-box">
+          <span>👥 累計アクセス数:</span>
+          <span id="site-visitor-counter" class="counter-num">計測中...</span>
+          <span>人</span>
+        </div>
       </div>
 
       <p style="margin-top: 16px; font-size: 0.78rem;">© 2026 Yasuhiro Hata. All Rights Reserved.</p>
@@ -1419,6 +1436,21 @@
 
       // 初期表示
       showPage(window.location.hash);
+
+      // リアルタイムアクセスカウンターの取得処理
+      fetch('https://api.counterapi.dev/v1/osaka-ohtani-hata-lab/visits/up')
+        .then(response => response.json())
+        .then(data => {
+          const counterEl = document.getElementById('site-visitor-counter');
+          if (counterEl && data && data.count !== undefined) {
+            counterEl.textContent = data.count.toLocaleString();
+          }
+        })
+        .catch(err => {
+          // 接続エラー時のバックアップ表示
+          const counterEl = document.getElementById('site-visitor-counter');
+          if (counterEl) counterEl.textContent = '1';
+        });
     });
   </script>
 </body>
