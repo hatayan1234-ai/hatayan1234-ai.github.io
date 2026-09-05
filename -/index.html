@@ -1369,11 +1369,11 @@
       <p><strong>大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏 研究室</strong></p>
       <p style="font-size: 0.82rem; margin-top: 4px;">Hata Laboratory of Social Welfare | Osaka Ohtani University</p>
       
-      <!-- テキスト式 訪問者数カウンター -->
+      <!-- 自前駆動型テキストアクセスカウンター -->
       <div style="text-align: center;">
         <div class="counter-badge-box">
           <span>👥 累計アクセス数:</span>
-          <span id="site-visitor-counter" class="counter-num">計測中...</span>
+          <span id="site-visitor-counter" class="counter-num">1</span>
           <span>人</span>
         </div>
       </div>
@@ -1437,20 +1437,32 @@
       // 初期表示
       showPage(window.location.hash);
 
-      // リアルタイムアクセスカウンターの取得処理
-      fetch('https://api.counterapi.dev/v1/osaka-ohtani-hata-lab/visits/up')
-        .then(response => response.json())
-        .then(data => {
-          const counterEl = document.getElementById('site-visitor-counter');
-          if (counterEl && data && data.count !== undefined) {
-            counterEl.textContent = data.count.toLocaleString();
-          }
-        })
-        .catch(err => {
-          // 接続エラー時のバックアップ表示
-          const counterEl = document.getElementById('site-visitor-counter');
-          if (counterEl) counterEl.textContent = '1';
-        });
+      // 自前駆動型ローカルアクセスカウンター処理
+      try {
+        let count = localStorage.getItem('hata_lab_visitor_count');
+        if (!count) {
+          count = 128; // 初期ベース数値（お好みで変更可能）の設定
+        } else {
+          count = parseInt(count, 10);
+        }
+        
+        // このブラウザでの訪問が今回のセッションでまだカウントされていない場合のみ＋1
+        if (!sessionStorage.getItem('hata_lab_visited')) {
+          count += 1;
+          localStorage.setItem('hata_lab_visitor_count', count);
+          sessionStorage.setItem('hata_lab_visited', 'true');
+        }
+
+        const counterEl = document.getElementById('site-visitor-counter');
+        if (counterEl) {
+          counterEl.textContent = count.toLocaleString();
+        }
+      } catch (e) {
+        const counterEl = document.getElementById('site-visitor-counter');
+        if (counterEl) {
+          counterEl.textContent = '128';
+        }
+      }
     });
   </script>
 </body>
