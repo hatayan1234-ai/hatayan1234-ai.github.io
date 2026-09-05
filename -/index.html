@@ -77,6 +77,8 @@
       font-weight: 700;
       font-size: 1.15rem;
       letter-spacing: 0.02em;
+      flex-shrink: 0;
+      white-space: nowrap;
     }
 
     .site-title span {
@@ -654,8 +656,8 @@
       letter-spacing: 0.05em;
     }
 
-    /* ▼ スマートフォン向け修正 ▼ */
-    @media (max-width: 860px) {
+    /* ▼ スマートフォン・タブレット向け修正 ▼ */
+    @media (max-width: 1000px) {
       .profile-grid, .contact-wrapper { grid-template-columns: 1fr; }
       
       /* メニューをハンバーガー化 */
@@ -721,7 +723,7 @@
     <div class="container nav-inner">
       <a href="#home" class="site-title">
         秦 康宏 研究室
-        <span>大阪大谷大学 人間社会学部 心理・福祉学科</span>
+        <span>大阪大谷大学 心理・福祉学科</span>
       </a>
       <div class="menu-toggle" id="mobile-menu-btn">☰</div>
       <nav id="global-nav">
@@ -836,7 +838,7 @@
 
             <div class="profile-detail">
               <div class="profile-quote">
-                「臨床心理学や社会福祉の目的は、その人が困っていることや望んでいることを自己実現できるように支援することです。心理学的アプローチや社会資源のコーディネートにより課題を解決し、クライ innovation が自分の人生に積極的に向き合っていける力を出せるように支援する。つまり、その人や家族、地域の人たちが自分らしい生き方、生き生きとした暮らしを見つけられるようにサポートし、一緒に伴奏（伴走）することです。」
+                「臨床心理学や社会福祉の目的は、その人が困っていることや望んでいることを自己実現できるように支援することです。心理学的アプローチや社会資源のコーディネートにより課題を解決し、クライエントが自分の人生に積極的に向き合っていける力を出せるように支援する。つまり、その人や家族、地域の人たちが自分らしい生き方、生き生きとした暮らしを見つけられるようにサポートし、一緒に伴奏（伴走）することです。」
               </div>
 
               <h3>学歴・アカデミックキャリア</h3>
