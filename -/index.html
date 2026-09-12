@@ -204,31 +204,63 @@
       color: var(--text-main);
     }
 
-    /* 高校生向けカードグリッド */
+    /* 高校生向け フリップ（裏返る）カードグリッド */
     .hs-card-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
     }
 
-    .hs-card {
-      background: var(--card-bg);
-      border: 2px solid var(--accent-soft);
+    .flip-card {
+      background-color: transparent;
+      height: 250px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    /* クラス付与で裏返す */
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
       border-radius: 16px;
       padding: 30px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.04);
-      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .flip-card-front {
+      background: var(--card-bg);
+      border: 2px solid var(--accent-soft);
       position: relative;
       overflow: hidden;
     }
     
-    .hs-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    .flip-card-front:hover {
       border-color: var(--accent-light);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
     }
 
-    .hs-card::before {
+    .flip-card-front::before {
       content: "Q.";
       position: absolute;
       top: 10px;
@@ -239,25 +271,48 @@
       z-index: 0;
     }
 
-    .hs-card-title {
-      font-size: 1.25rem;
+    .flip-card-front h3 {
+      font-size: 1.35rem;
       font-weight: 700;
       color: var(--accent);
-      margin-bottom: 16px;
       position: relative;
       z-index: 1;
       line-height: 1.4;
     }
 
-    .hs-card-text {
-      font-size: 0.95rem;
-      color: var(--text-sub);
-      line-height: 1.8;
-      position: relative;
-      z-index: 1;
+    .flip-card-front .tap-hint {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.8rem;
+      color: var(--accent-orange);
+      font-weight: 600;
+      animation: bounce 2s infinite;
     }
 
-    /* 適性診断エリア */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-5px); }
+      60% { transform: translateY(-3px); }
+    }
+
+    .flip-card-back {
+      background: var(--accent-soft);
+      border: 2px solid var(--accent-light);
+      color: var(--text-main);
+      transform: rotateY(180deg);
+      text-align: left;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .flip-card-back p {
+      font-size: 0.95rem;
+      color: #1e293b;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* 7問チャレンジ 適性診断エリア */
     .diagnosis-box {
       background: #fff;
       border: 3px dashed var(--accent-light);
@@ -269,29 +324,46 @@
     .diagnosis-title {
       font-size: 1.5rem;
       font-weight: 800;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
+    }
+
+    .question-container {
+      display: none;
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .question-container.active {
+      display: block;
+    }
+
+    .question-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent-soft);
+      padding-bottom: 10px;
     }
 
     .diagnosis-buttons {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      max-width: 500px;
-      margin: 0 auto 30px;
     }
 
     .diag-btn {
       padding: 16px 20px;
-      font-size: 1.05rem;
-      font-weight: 700;
+      font-size: 1rem;
+      font-weight: 600;
       color: var(--text-main);
       background: #f8fafc;
       border: 2px solid #cbd5e1;
       border-radius: 12px;
       cursor: pointer;
       transition: all 0.2s;
-      display: flex;
-      align-items: center;
       text-align: left;
     }
 
@@ -301,24 +373,77 @@
       transform: scale(1.02);
     }
 
-    .diag-btn span.icon {
-      font-size: 1.4rem;
-      margin-right: 12px;
-    }
-
     #diagnosis-result {
       display: none;
-      background: var(--accent-soft);
-      border-left: 5px solid var(--accent);
-      padding: 20px;
-      border-radius: 0 12px 12px 0;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #1e293b;
+      background: #fff;
+      border: 2px solid var(--accent);
+      padding: 30px;
+      border-radius: 12px;
       margin: 0 auto;
-      max-width: 600px;
+      max-width: 700px;
       text-align: left;
       animation: fadeIn 0.5s ease;
+    }
+
+    .result-type-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent-orange);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .result-desc {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      margin-bottom: 24px;
+      background: var(--accent-soft);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .graph-bar-container {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+    }
+
+    .graph-label {
+      width: 100px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-sub);
+    }
+
+    .graph-bar-bg {
+      flex-grow: 1;
+      background: #e2e8f0;
+      height: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-right: 10px;
+    }
+
+    .graph-bar-fill {
+      height: 100%;
+      background: var(--accent-light);
+      width: 0%; /* JSで設定 */
+      transition: width 1s ease-in-out;
+    }
+
+    .graph-score {
+      width: 30px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .result-footer {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px dashed var(--border-color);
+      text-align: center;
     }
 
     /* 冒険ロードマップ */
@@ -496,9 +621,6 @@
     .content-box-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
     .tags-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
     .badge-tag { background: var(--tag-bg); border: 1px solid var(--border-color); padding: 4px 12px; border-radius: 20px; font-size: 0.82rem; font-weight: 500; color: var(--text-sub); }
-    .item-list { list-style: none; padding: 0; }
-    .item-row { padding: 14px 0; border-bottom: 1px dashed var(--border-color); font-size: 0.92rem; }
-    .item-title { font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
     .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
     .form-group { margin-bottom: 16px; }
     .form-group label { display: block; font-size: 0.86rem; font-weight: 600; margin-bottom: 6px; }
@@ -539,6 +661,7 @@
       .hero-new .catchphrase { font-size: 2rem; }
       .section-title { font-size: 1.6rem; }
       section { padding: 40px 0; }
+      .flip-card { height: 200px; }
     }
   </style>
 </head>
@@ -555,7 +678,7 @@
         <ul>
           <li><a href="#home">トップ</a></li>
           <li><a href="#about-hs">心理・福祉のギモン</a></li>
-          <li><a href="#diagnosis">適性診断</a></li>
+          <li><a href="#diagnosis">7問チャレンジ</a></li>
           <li><a href="#campus-life">大学生活のリアル</a></li>
           <li><a href="#adventure">冒険マップ</a></li>
           <li><a href="#qa">先生Q&A</a></li>
@@ -581,72 +704,203 @@
             ここは、あなたの人を支えたいという思いを形にする研究室です。
           </p>
           <div class="hero-badge">大阪大谷大学 心理・福祉学科</div>
+          
+          <div style="margin-top: 30px;">
+            <a href="#diagnosis" style="display: inline-block; background: var(--accent-orange); color: #fff; padding: 12px 30px; border-radius: 30px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);">👉 まずは適性診断をやってみる！</a>
+          </div>
         </div>
       </div>
       <div class="container" style="padding-top: 40px; text-align: center;">
           <a href="https://youtube.com/shorts/c87-3Fm0zwg" target="_blank" rel="noopener" style="display: inline-block; max-width: 320px;">
             <img src="74ab6356-2593-41b4-99d7-081d2c110c5a.jfif" alt="キャンパス風景" class="responsive-img" style="margin-bottom: 8px;">
-            <div style="color: var(--accent); font-weight: 600; text-decoration: underline; font-size: 0.9rem;">【1分でわかる！】キャンパス風景を覗いてみる (YouTube)</div>
+            <div style="color: var(--accent); font-weight: 600; text-decoration: underline; font-size: 0.9rem;">【14秒でわかる！】キャンパス風景を覗いてみる (YouTube)</div>
           </a>
       </div>
     </div>
 
-    <!-- 高校生の方へ：ギモン解消カード -->
+    <!-- 高校生の方へ：ギモン解消カード（フリップカード） -->
     <div id="about-hs" class="page-section">
       <div class="container">
         <section>
           <div class="section-header">
             <div class="section-num">FOR HIGH SCHOOL STUDENTS</div>
             <h2 class="section-title">🎓 高校生の方へ</h2>
-            <p class="section-subtitle">大学で何を学ぶの？ よくあるギモンにお答えします</p>
+            <p class="section-subtitle">大学で何を学ぶの？ 気になるカードをタップしてみてね！</p>
           </div>
 
           <div class="hs-card-grid">
-            <div class="hs-card">
-              <h3 class="hs-card-title">「心理学って、カウンセリングだけ？」</h3>
-              <p class="hs-card-text">実は、心理学はもっと広いです。「なぜ人はそう考えるの？」「なぜ同じ出来事でも感じ方が違うの？」「高齢者が昔の話をするのはなぜ？」「子どもが学校に行けなくなるのはなぜ？」そんな<strong>「人間の不思議」を科学的に考える</strong>学問です。</p>
+            <!-- カード1 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>「心理学って、カウンセリングだけ？」</h3>
+                  <div class="tap-hint">タップして裏返す☝️</div>
+                </div>
+                <div class="flip-card-back">
+                  <p>実は、心理学はもっと広いです。「なぜ人はそう考えるの？」「なぜ同じ出来事でも感じ方が違うの？」「高齢者が昔の話をするのはなぜ？」「子どもが学校に行けなくなるのはなぜ？」そんな<strong>「人間の不思議」を科学的に考える</strong>学問です。</p>
+                </div>
+              </div>
             </div>
-            <div class="hs-card">
-              <h3 class="hs-card-title">「福祉って、介護だけ？」</h3>
-              <p class="hs-card-text">福祉の対象は全世代です。子ども、若者、障害を持つ人、生活に困っている人など、あらゆる人が<strong>「その人らしく生きる」</strong>ための方法や、社会の仕組みを考え、サポートする実践的な学問です。</p>
+
+            <!-- カード2 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>「福祉って、介護だけ？」</h3>
+                  <div class="tap-hint">タップして裏返す☝️</div>
+                </div>
+                <div class="flip-card-back">
+                  <p>福祉の対象は全世代です。子ども、若者、障害を持つ人、生活に困っている人など、あらゆる人が<strong>「その人らしく生きる」</strong>ための方法や、社会の仕組みを考え、サポートする実践的な学問です。</p>
+                </div>
+              </div>
             </div>
-            <div class="hs-card">
-              <h3 class="hs-card-title">「公認心理師と社会福祉士って何が違う？」</h3>
-              <p class="hs-card-text">公認心理師は<strong>「こころの内面」</strong>からアプローチする心理の専門家。社会福祉士は<strong>「環境や制度、社会との繋がり」</strong>からアプローチする生活支援の専門家。この両方の視点を持つことが、最強の強みになります。</p>
+
+            <!-- カード3 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>「公認心理師と社会福祉士って何が違う？」</h3>
+                  <div class="tap-hint">タップして裏返す☝️</div>
+                </div>
+                <div class="flip-card-back">
+                  <p>公認心理師は<strong>「こころの内面」</strong>からアプローチする心理の専門家。社会福祉士は<strong>「環境や制度、社会との繋がり」</strong>からアプローチする生活支援の専門家。この両方の視点を持つことが、最強の強みになります。</p>
+                </div>
+              </div>
             </div>
-            <div class="hs-card">
-              <h3 class="hs-card-title">「心理学と福祉を一緒に学ぶと、何ができる？」</h3>
-              <p class="hs-card-text">こころ（内面）と暮らし（環境）の両方に寄り添えるプロになれます！病院、学校、福祉施設、公務員、一般企業など、<strong>人と関わるあらゆる仕事で求められる「対人援助」の力</strong>が身につきます。</p>
+
+            <!-- カード4 -->
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>「心理学と福祉を一緒に学ぶと、何ができる？」</h3>
+                  <div class="tap-hint">タップして裏返す☝️</div>
+                </div>
+                <div class="flip-card-back">
+                  <p>こころ（内面）と暮らし（環境）の両方に寄り添えるプロになれます！病院、学校、福祉施設、公務員、一般企業など、<strong>人と関わるあらゆる仕事で求められる「対人援助」の力</strong>が身につきます。</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
     </div>
 
-    <!-- 適性診断 -->
+    <!-- 7問チャレンジ 適性診断 -->
     <div id="diagnosis" class="page-section">
       <div class="container">
         <section>
           <div class="diagnosis-box">
-            <h2 class="diagnosis-title">🧭 あなたはどのタイプ？<br>心理・福祉 適性診断</h2>
-            <p style="margin-bottom: 24px; color: var(--text-sub);">一番直感に近いものを選んでタップしてみてね！</p>
+            <h2 class="diagnosis-title">あなたはどのタイプ？<br>心理×福祉 7問チャレンジ</h2>
+            <p style="margin-bottom: 24px; color: var(--text-sub); font-size: 0.9rem;">
+              ※これは心理検査や医学的診断ではありません。あなたが「人」について、どんなことに興味を持ちやすいかをチェックする簡易診断です。<br>
+              正解・不正解はありません。直感で答えてみてください！
+            </p>
             
-            <div class="diagnosis-buttons">
-              <button class="diag-btn" onclick="showResult('psycho')"><span class="icon">🔵</span> 人の「こころ」が気になる</button>
-              <button class="diag-btn" onclick="showResult('welfare')"><span class="icon">🟢</span> 人の「暮らし」が気になる</button>
-              <button class="diag-btn" onclick="showResult('both')"><span class="icon">🟣</span> こころも暮らしも、両方気になる！</button>
-              <button class="diag-btn" onclick="showResult('social')"><span class="icon">🟠</span> 人の悩みを一緒に考えるのが好き</button>
-              <button class="diag-btn" onclick="showResult('school')"><span class="icon">🟡</span> 子どもや学校に関心がある</button>
+            <!-- 質問エリア -->
+            <div id="quiz-area">
+              <!-- Q1 -->
+              <div class="question-container active" id="q1">
+                <div class="question-text">Q1. クラスに、最近ちょっと元気がない友達がいます。あなたなら？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('A')">A. 何があったのか、じっくり話を聞く</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">B. その人が困っていることは何か考える</button>
+                  <button class="diag-btn" onclick="nextQuestion('C')">C. まず一緒に楽しいことをして気分転換する</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">D. 周りの人にも気づいてもらえるようにする</button>
+                  <button class="diag-btn" onclick="nextQuestion('E')">E. 「なぜ元気がなくなったのだろう？」と考える</button>
+                </div>
+              </div>
+              <!-- Q2 -->
+              <div class="question-container" id="q2">
+                <div class="question-text">Q2. 新しいことを始めるとき、あなたは？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('E')">A. まず調べて、いろいろな方法を考える</button>
+                  <button class="diag-btn" onclick="nextQuestion('C')">B. 誰かと相談しながら進めたい</button>
+                  <button class="diag-btn" onclick="nextQuestion('A')">C. とりあえずやってみる</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">D. みんなが参加しやすい方法を考える</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">E. 計画を立てて、順番に進めたい</button>
+                </div>
+              </div>
+              <!-- Q3 -->
+              <div class="question-container" id="q3">
+                <div class="question-text">Q3. あなたが興味を持ちやすいのは、次のどれ？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('A')">A. 「人はなぜそのように感じるのか」</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">B. 「人が安心して暮らすには何が必要か」</button>
+                  <button class="diag-btn" onclick="nextQuestion('C')">C. 「人と人との関係はどう変わるのか」</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">D. 「社会の仕組みをどう変えられるか」</button>
+                  <button class="diag-btn" onclick="nextQuestion('E')">E. 「いろいろな人の違いには何があるのか」</button>
+                </div>
+              </div>
+              <!-- Q4 -->
+              <div class="question-container" id="q4">
+                <div class="question-text">Q4. テレビやSNSで「困っている人」の話を見たとき、最も気になるのは？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('A')">A. その人はどんな気持ちなのだろう</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">B. なぜそのような状況になったのだろう</button>
+                  <button class="diag-btn" onclick="nextQuestion('C')">C. 周囲の人はどう関わればよいのだろう</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">D. 制度や社会の仕組みを変えられないだろうか</button>
+                  <button class="diag-btn" onclick="nextQuestion('E')">E. 同じことで困っている人は他にもいるのだろうか</button>
+                </div>
+              </div>
+              <!-- Q5 -->
+              <div class="question-container" id="q5">
+                <div class="question-text">Q5. グループ活動では、どの役割が一番自分らしい？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('C')">A. みんなの話を聞いてまとめる</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">B. 困っている人をサポートする</button>
+                  <button class="diag-btn" onclick="nextQuestion('A')">C. アイデアを出して盛り上げる</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">D. 全体を見て調整する</button>
+                  <button class="diag-btn" onclick="nextQuestion('E')">E. 資料を集めて詳しく調べる</button>
+                </div>
+              </div>
+              <!-- Q6 -->
+              <div class="question-container" id="q6">
+                <div class="question-text">Q6. 大学で一番やってみたい授業は？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('A')">A. 人の心や行動について調べる授業</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">B. 福祉施設や地域で実際に人と関わる授業</button>
+                  <button class="diag-btn" onclick="nextQuestion('C')">C. 人間関係について考え、話し合う授業</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">D. 地域や社会の課題を考える授業</button>
+                  <button class="diag-btn" onclick="nextQuestion('E')">E. 心理学・福祉学を組み合わせて考える授業</button>
+                </div>
+              </div>
+              <!-- Q7 -->
+              <div class="question-container" id="q7">
+                <div class="question-text">Q7. 将来、人を支える仕事をするとしたら、どんなことがしたい？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('A')">A. 心の悩みや生きづらさに寄り添いたい</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">B. 生活上の困りごとを一緒に解決したい</button>
+                  <button class="diag-btn" onclick="nextQuestion('C')">C. 人と人をつなぐ仕事がしたい</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">D. 学校・地域・社会の仕組みから人を支えたい</button>
+                  <button class="diag-btn" onclick="nextQuestion('E')">E. まだ決めていないけれど、人についてもっと知りたい</button>
+                </div>
+              </div>
             </div>
 
+            <!-- 結果表示エリア -->
             <div id="diagnosis-result">
-              <!-- JSでここに結果が入ります -->
+              <div class="result-type-title" id="result-title"></div>
+              <div class="result-desc" id="result-desc"></div>
+              
+              <div style="margin-bottom: 24px;">
+                <h4 style="font-size: 0.9rem; color: var(--text-sub); margin-bottom: 12px; text-align: center;">あなたの興味のバランス</h4>
+                <div id="result-graphs"></div>
+              </div>
+
+              <div class="result-footer">
+                <p style="font-weight: 700; margin-bottom: 12px;">あなたの「気になる」は、大学で学べます。</p>
+                <p style="font-size: 0.9rem; color: var(--text-sub); line-height: 1.6; margin-bottom: 20px;">
+                  心理学では「こころ」から。<br>
+                  社会福祉学では「暮らし」から。<br>
+                  でも、人を本当に理解するには、その両方が必要かもしれません。<br>
+                  大阪大谷大学 心理・福祉学科では、心理学と社会福祉学の両方の視点から人を学びます。
+                </p>
+                <a href="https://www.osaka-ohtani.ac.jp/department/human_society/psychology_welfare/" target="_blank" rel="noopener" style="display: inline-block; background: var(--accent); color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none;">心理・福祉学科について見てみる（大学公式HP）</a>
+                <div style="margin-top: 16px;">
+                  <button onclick="resetQuiz()" style="background: transparent; border: none; color: var(--text-muted); text-decoration: underline; cursor: pointer;">もう一度診断する</button>
+                </div>
+              </div>
             </div>
-            
-            <p style="margin-top: 30px; font-size: 0.85rem; color: var(--text-muted);">
-              あなたは、どんな「人を支える仕事」が向いていそうですか？<br>
-              本学科では【公認心理師】【社会福祉士】【スクールソーシャルワーカー】など、多様な進路を目指せます！
-            </p>
           </div>
         </section>
       </div>
@@ -676,6 +930,11 @@
             <a href="https://youtube.com/shorts/qfGKkiASuNM" target="_blank" rel="noopener" class="embed-card">
               <span class="embed-title">【授業のチラ見せ：介護あるある】</span>
               <span style="font-size: 0.9rem; color: var(--text-main); margin-bottom: 8px;">「お風呂イヤ！」と言われたら？心理学で解決する声かけのコツ</span>
+              <span class="embed-url">YouTubeショートで見る</span>
+            </a>
+            <a href="https://youtube.com/shorts/0sfPuCXzQI8" target="_blank" rel="noopener" class="embed-card">
+              <span class="embed-title">【心に寄り添う休息の時間】</span>
+              <span style="font-size: 0.9rem; color: var(--text-main); margin-bottom: 8px;">大学でのちょっとした癒やしの時間をお届け。</span>
               <span class="embed-url">YouTubeショートで見る</span>
             </a>
           </div>
@@ -795,9 +1054,12 @@
               <div class="profile-links">
                 <!-- 各種SNSリンク -->
                 <a href="https://www.youtube.com/@%E3%83%8F%E3%82%BF%E3%83%94%E7%A4%BE%E4%BC%9A%E7%A6%8F%E7%A5%89%E7%A0%94%E7%A9%B6%E5%AE%A41234" target="_blank" rel="noopener" class="btn-link">🔗 はた研究室YouTube</a>
-                <a href="https://www.tiktok.com/@user3162795665954" target="_blank" rel="noopener" class="btn-link">🔗 秦研究室TikTok</a>
-                <a href="https://www.instagram.com/ooupsysw/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">📸 学科公式Instagram</a>
-                <a href="https://www.instagram.com/socialwork0729/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">📸 はたやん国試対策インスタ</a>
+                <a href="https://www.tiktok.com/@user536125305440" target="_blank" rel="noopener" class="btn-link">🔗 秦研究室TikTok</a>
+                <a href="https://www.instagram.com/ooupsysw/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">📸 心理・福祉学科 公式Instagram</a>
+                <a href="https://www.instagram.com/osakabon1234/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">📸 福祉・介護・ケアマネ・心理応援ゼミ</a>
+                <a href="https://www.instagram.com/socialwork0729/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">📸 はたやん 社会福祉士 受験応援ゼミ</a>
+                <a href="https://www.instagram.com/kaigofukushi0729/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">📸 はたやん 介護福祉士 受験応援ゼミ</a>
+                <a href="https://www.instagram.com/caremana0729/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">📸 はたやん 介護支援専門員 受験応援ゼミ</a>
               </div>
             </div>
 
@@ -964,30 +1226,137 @@
   </footer>
 
   <script>
-    // 心理・福祉適性診断のロジック
-    function showResult(type) {
-      const resultBox = document.getElementById('diagnosis-result');
-      let text = "";
-      switch(type) {
-        case 'psycho': 
-          text = "<strong>【心理学タイプ】</strong><br>人のこころの動きや感情に興味があるあなた。<br>👉 <strong>公認心理師</strong>や心理カウンセラーを目指して、心理の専門家への道を調べてみよう！"; 
-          break;
-        case 'welfare': 
-          text = "<strong>【福祉タイプ】</strong><br>人が生活する環境や社会の仕組みに興味があるあなた。<br>👉 <strong>社会福祉士</strong>や生活相談員など、暮らしを支える仕事が向いているかも！"; 
-          break;
-        case 'both': 
-          text = "<strong>【心理・福祉タイプ】</strong><br>こころと暮らし、両方からアプローチしたいあなた。<br>👉 <strong>公認心理師と社会福祉士の両方</strong>の資格取得を目指せる本学科にぴったりです！"; 
-          break;
-        case 'social': 
-          text = "<strong>【ソーシャルワークタイプ】</strong><br>人の話を聴き、一緒に解決策を考えるのが好きなあなた。<br>👉 <strong>医療ソーシャルワーカー</strong>や<strong>公務員（福祉職）</strong>として活躍できそう！"; 
-          break;
-        case 'school': 
-          text = "<strong>【スクールソーシャルワークタイプ】</strong><br>子どもたちの成長や学校での悩みに寄り添いたいあなた。<br>👉 <strong>スクールソーシャルワーカー</strong>や<strong>子ども家庭福祉</strong>の専門家を目指してみよう！"; 
-          break;
+    // ▼▼ 心理×福祉 7問チャレンジのロジック ▼▼
+    let currentQuestion = 1;
+    const totalQuestions = 7;
+    const scores = {
+      'A': 0, // こころ探求
+      'B': 0, // くらし支援
+      'C': 0, // 人つなぎ
+      'D': 0, // 社会チェンジ
+      'E': 0  // 人間まるごと探求
+    };
+
+    function nextQuestion(answer) {
+      // スコアを加算
+      scores[answer]++;
+      
+      // 現在の質問を非表示
+      document.getElementById('q' + currentQuestion).classList.remove('active');
+      
+      currentQuestion++;
+      
+      // 次の質問を表示、または結果発表
+      if (currentQuestion <= totalQuestions) {
+        document.getElementById('q' + currentQuestion).classList.add('active');
+      } else {
+        showQuizResult();
       }
-      resultBox.innerHTML = text;
-      resultBox.style.display = "block";
     }
+
+    function showQuizResult() {
+      document.getElementById('quiz-area').style.display = 'none';
+      const resultArea = document.getElementById('diagnosis-result');
+      
+      // 最大スコアを見つける
+      let maxScore = -1;
+      let maxType = '';
+      for (const [type, score] of Object.entries(scores)) {
+        if (score > maxScore) {
+          maxScore = score;
+          maxType = type;
+        }
+      }
+
+      let title = "";
+      let desc = "";
+
+      // タイプ判定
+      if (maxType === 'A') {
+        title = "🧠 こころ探求タイプ";
+        desc = "人の心や気持ちを知ることに興味があるあなた。<br>「どうしてこんな気持ちになるんだろう？」「人によって考え方が違うのはなぜだろう？」そんな疑問を大切にするタイプです。<br><strong>心理学との相性がよさそうです。</strong>大学では、人の心や行動を科学的に学ぶことで、自分の「なぜ？」をさらに深められます。";
+      } else if (maxType === 'B') {
+        title = "🤝 くらし支援タイプ";
+        desc = "人が安心して生活できることに関心があるあなた。<br>困っている人を見たとき、「どうすればこの人の生活がよくなるだろう？」と考えるタイプです。<br><strong>社会福祉学との相性がよさそうです。</strong>福祉では、個人だけでなく、家族、地域、制度など、さまざまな視点から人の暮らしを考えます。";
+      } else if (maxType === 'C') {
+        title = "💬 人つなぎタイプ";
+        desc = "人と人との関係に興味があるあなた。<br>話を聞いたり、場をつくったり、人と人をつないだりすることが好きなタイプです。<br><strong>心理学にも福祉にも、この力はとても重要です。</strong>「人との関わり」を深く学びたい人に向いているタイプです。";
+      } else if (maxType === 'D') {
+        title = "🌍 社会チェンジタイプ";
+        desc = "「個人だけではなく、社会も変えたい」と考えるあなた。<br>「どうしてこの問題が起きるの？」「仕組みを変えたらもっと暮らしやすくなるのでは？」という視点を持っています。<br><strong>福祉だけでなく、地域、学校、行政などにも目を向けるタイプです。</strong>";
+      } else {
+        title = "🔎 人間まるごと探求タイプ";
+        desc = "人を一つの見方だけで決めつけたくないあなた。<br>心も、生活も、人間関係も、社会も気になる。「人って、そんなに単純じゃない」と感じるタイプかもしれません。<br><strong>心理学と社会福祉学を「一緒に学ぶ」ことに最も向いているかもしれません。</strong>";
+      }
+
+      document.getElementById('result-title').innerHTML = title;
+      
+      // サブメッセージ（2番目に高い要素などを考慮）
+      let subMessage = "";
+      if (maxType === 'A' && scores['B'] > 0) {
+        subMessage = "<br><br>あなたは「こころ」への関心が特に高いタイプ！<br>でも「くらし」も気になっているようです。だから心理学だけでなく、福祉も学んでみると面白いかもしれません。";
+      } else if (maxType === 'B' && scores['A'] > 0) {
+        subMessage = "<br><br>あなたは「くらし」への関心が特に高いタイプ！<br>でも「こころ」も気になっているようです。だから社会福祉だけでなく、心理学も学んでみると面白いかもしれません。";
+      }
+
+      document.getElementById('result-desc').innerHTML = desc + subMessage;
+
+      // グラフの描画
+      const graphContainer = document.getElementById('result-graphs');
+      graphContainer.innerHTML = '';
+      
+      const labels = {
+        'A': 'こころ探求',
+        'B': 'くらし支援',
+        'C': '人つなぎ',
+        'D': '社会チェンジ',
+        'E': '人間まるごと'
+      };
+
+      // 点数順に並び替え
+      const sortedScores = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+
+      sortedScores.forEach(item => {
+        const type = item[0];
+        const score = item[1];
+        const percentage = (score / totalQuestions) * 100;
+        
+        const html = `
+          <div class="graph-bar-container">
+            <div class="graph-label">${labels[type]}</div>
+            <div class="graph-bar-bg">
+              <div class="graph-bar-fill" style="width: 0%;" data-width="${percentage}%"></div>
+            </div>
+            <div class="graph-score">${score}点</div>
+          </div>
+        `;
+        graphContainer.insertAdjacentHTML('beforeend', html);
+      });
+
+      resultArea.style.display = 'block';
+
+      // アニメーションでグラフを伸ばす
+      setTimeout(() => {
+        const bars = document.querySelectorAll('.graph-bar-fill');
+        bars.forEach(bar => {
+          bar.style.width = bar.getAttribute('data-width');
+        });
+      }, 100);
+    }
+
+    function resetQuiz() {
+      currentQuestion = 1;
+      for (let key in scores) {
+        scores[key] = 0;
+      }
+      document.getElementById('diagnosis-result').style.display = 'none';
+      document.getElementById('quiz-area').style.display = 'block';
+      const questions = document.querySelectorAll('.question-container');
+      questions.forEach(q => q.classList.remove('active'));
+      document.getElementById('q1').classList.add('active');
+    }
+    // ▲▲ 心理×福祉 7問チャレンジのロジック ここまで ▲▲
+
 
     function sendMail(e) {
       e.preventDefault();
