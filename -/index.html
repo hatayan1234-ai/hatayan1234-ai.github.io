@@ -656,6 +656,38 @@
       letter-spacing: 0.05em;
     }
 
+    /* 写真スライド（カルーセル）スタイル */
+    .photo-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 16px;
+      padding-bottom: 16px;
+      margin: 0 auto;
+      max-width: 400px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent) #e2e8f0;
+    }
+    .photo-slider::-webkit-scrollbar {
+      height: 8px;
+    }
+    .photo-slider::-webkit-scrollbar-track {
+      background: #e2e8f0;
+      border-radius: 4px;
+    }
+    .photo-slider::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 4px;
+    }
+    .photo-slider img {
+      scroll-snap-align: center;
+      flex: 0 0 100%;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      object-fit: contain;
+    }
+
     /* ▼ スマートフォン・タブレット向け修正 ▼ */
     @media (max-width: 1000px) {
       .profile-grid, .contact-wrapper { grid-template-columns: 1fr; }
@@ -1334,11 +1366,12 @@
               「人のこころと生活の両方について学びたい」<br>
               そんな人に向いた学びが、心理・福祉学科にはあります。
             </p>
-            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-              <img src="wakayama_access_1.jpg" alt="和歌山から大阪大谷大学って、遠いと思ってない？" class="responsive-img" style="max-width: 300px; width: 100%;">
-              <img src="wakayama_access_2.jpg" alt="実は約30分で行けちゃうんです！" class="responsive-img" style="max-width: 300px; width: 100%;">
-              <img src="wakayama_access_3.jpg" alt="橋本駅からのアクセスルート" class="responsive-img" style="max-width: 300px; width: 100%;">
+            <div class="photo-slider">
+              <img src="bandicam 2026-09-12 11-02-14-458.jpg" alt="和歌山から大阪大谷大学って、遠いと思ってない？">
+              <img src="bandicam 2026-09-12 11-02-19-457.jpg" alt="実は約30分で行けちゃうんです！">
+              <img src="bandicam 2026-09-12 11-02-30-115.jpg" alt="橋本駅からのアクセスルート">
             </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">※画像を横にスクロールしてご覧ください</p>
           </div>
 
           <div class="contact-wrapper">
