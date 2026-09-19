@@ -1470,5 +1470,346 @@
       }
     });
   </script>
+<!-- 社会福祉士国家試験：無料教材ページ ここから -->
+<style>
+  .exam-materials-banner {
+    margin: 32px auto;
+    padding: 28px 24px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+    text-align: center;
+  }
+
+  .exam-materials-banner h2 {
+    margin: 0 0 12px;
+    font-size: 1.4rem;
+    color: #1e3a8a;
+  }
+
+  .exam-materials-banner p {
+    margin: 0 0 20px;
+    line-height: 1.9;
+    color: #334155;
+  }
+
+  .exam-materials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .exam-material-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(30, 58, 138, 0.05);
+  }
+
+  .exam-material-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #1e3a8a;
+  }
+
+  .exam-material-meta {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+
+  .exam-material-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+  }
+
+  .exam-material-button {
+    display: inline-block;
+    padding: 13px 20px;
+    border: 1px solid #1e3a8a;
+    border-radius: 10px;
+    background: #1e3a8a;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .exam-material-button:hover {
+    background: #172e6e;
+    color: #fff;
+  }
+
+  .exam-material-button.secondary {
+    background: #fff;
+    color: #1e3a8a;
+  }
+
+  .exam-material-button.secondary:hover {
+    background: #eff6ff;
+  }
+
+  .exam-material-button:focus-visible {
+    outline: 3px solid #f97316;
+    outline-offset: 4px;
+  }
+
+  .exam-materials-intro {
+    margin-bottom: 30px;
+    line-height: 1.9;
+    color: #334155;
+  }
+
+  .exam-materials-note {
+    margin-top: 28px;
+    padding: 22px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    line-height: 1.9;
+    color: #475569;
+  }
+
+  /* メニュー項目が増えても折り返せるようにする */
+  @media (min-width: 769px) {
+    .nav-inner {
+      height: auto;
+      min-height: 72px;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    #global-nav ul {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .exam-materials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+(function () {
+  function setupExamMaterials() {
+    const main = document.querySelector("main");
+    const home = document.getElementById("home");
+    const navList = document.querySelector("#global-nav ul");
+
+    if (!main) return;
+
+    // 無料教材ページを追加
+    if (!document.getElementById("materials")) {
+      main.insertAdjacentHTML("beforeend", `
+        <div id="materials" class="page-section">
+          <div class="container">
+            <section aria-labelledby="exam-materials-title">
+              <div class="section-header">
+                <div class="section-num">FREE LEARNING MATERIALS</div>
+                <h2 class="section-title" id="exam-materials-title">
+                  社会福祉士国家試験<br>
+                  模擬問題・無料教材
+                </h2>
+                <p>
+                  受験勉強に取り組む皆さんを、秦研究室が応援します。
+                </p>
+              </div>
+
+              <div class="exam-materials-intro">
+                <p>
+                  夏のボランティア受験対策講座で作成した、
+                  3科目の模擬問題を公開しています。
+                  登録不要・無料でダウンロードできます。
+                  日々の学習や復習にご活用ください。
+                </p>
+              </div>
+
+              <div class="exam-materials-grid">
+
+                <article class="exam-material-card">
+                  <p class="exam-material-meta">2026年作成 ／ 模擬問題</p>
+                  <h3>高齢者福祉論</h3>
+                  <p class="exam-material-meta">PDF形式 ／ 約1.3 MB</p>
+
+                  <div class="exam-material-actions">
+                    <a class="exam-material-button"
+                       href="./2026kourei.pdf"
+                       download="2026kourei.pdf"
+                       aria-label="高齢者福祉論の模擬問題を無料ダウンロード">
+                      無料ダウンロード
+                    </a>
+                    <a class="exam-material-button secondary"
+                       href="./2026kourei.pdf"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="高齢者福祉論のPDFを見る（新しいタブ）">
+                      PDFを見る ↗
+                    </a>
+                  </div>
+                </article>
+
+                <article class="exam-material-card">
+                  <p class="exam-material-meta">2026年作成 ／ 模擬問題</p>
+                  <h3>社会福祉調査の基礎</h3>
+                  <p class="exam-material-meta">PDF形式 ／ 約1.3 MB</p>
+
+                  <div class="exam-material-actions">
+                    <a class="exam-material-button"
+                       href="./2026chousa.pdf"
+                       download="2026chousa.pdf"
+                       aria-label="社会福祉調査の基礎の模擬問題を無料ダウンロード">
+                      無料ダウンロード
+                    </a>
+                    <a class="exam-material-button secondary"
+                       href="./2026chousa.pdf"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="社会福祉調査の基礎のPDFを見る（新しいタブ）">
+                      PDFを見る ↗
+                    </a>
+                  </div>
+                </article>
+
+                <article class="exam-material-card">
+                  <p class="exam-material-meta">2026年作成 ／ 模擬問題</p>
+                  <h3>ソーシャルワークの理論と方法</h3>
+                  <p class="exam-material-meta">PDF形式 ／ 約1.6 MB</p>
+
+                  <div class="exam-material-actions">
+                    <a class="exam-material-button"
+                       href="./2026riron.pdf"
+                       download="2026riron.pdf"
+                       aria-label="ソーシャルワークの理論と方法の模擬問題を無料ダウンロード">
+                      無料ダウンロード
+                    </a>
+                    <a class="exam-material-button secondary"
+                       href="./2026riron.pdf"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="ソーシャルワークの理論と方法のPDFを見る（新しいタブ）">
+                      PDFを見る ↗
+                    </a>
+                  </div>
+                </article>
+
+              </div>
+
+              <div class="exam-materials-note">
+                <p>
+                  スマートフォンでPDFが表示された場合は、
+                  共有メニューなどから保存できます。
+                </p>
+                <p style="margin-top:12px;">
+                  作成：大阪大谷大学 心理・福祉学科 秦研究室
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      `);
+    }
+
+    // トップページに案内を追加
+    if (home && !home.querySelector('a[href="#materials"]')) {
+      home.insertAdjacentHTML("beforeend", `
+        <div class="container">
+          <aside class="exam-materials-banner"
+                 aria-label="無料教材のお知らせ">
+            <h2>社会福祉士国家試験を目指す皆さんへ</h2>
+            <p>
+              夏のボランティア受験対策講座で作成した<br>
+              3科目の模擬問題を無料公開しています。
+            </p>
+            <a class="exam-material-button" href="#materials">
+              模擬問題を無料ダウンロード →
+            </a>
+          </aside>
+        </div>
+      `);
+    }
+
+    // メニューに「無料教材」を追加
+    if (navList && !navList.querySelector('a[href="#materials"]')) {
+      const item = document.createElement("li");
+      item.innerHTML = '<a href="#materials">無料教材</a>';
+
+      const contactLink = navList.querySelector('a[href="#contact"]');
+      if (contactLink) {
+        navList.insertBefore(item, contactLink.closest("li"));
+      } else {
+        navList.appendChild(item);
+      }
+    }
+
+    // 動的に追加したページも含めて切り替える
+    function showCurrentPage() {
+      const id = window.location.hash.slice(1) || "home";
+      let target = document.getElementById(id);
+
+      if (!target || !target.classList.contains("page-section")) {
+        target = document.getElementById("home");
+      }
+      if (!target) return;
+
+      document.querySelectorAll(".page-section").forEach(function (page) {
+        page.style.display = page === target ? "block" : "none";
+      });
+
+      const nav = document.getElementById("global-nav");
+      const menuButton = document.getElementById("mobile-menu-btn");
+
+      if (nav) nav.classList.remove("active");
+      if (menuButton) menuButton.textContent = "☰";
+
+      window.scrollTo(0, 0);
+    }
+
+    // 既存のページ切り替え処理との重複を避ける
+    document.addEventListener("click", function (event) {
+      if (!(event.target instanceof Element)) return;
+      const link = event.target.closest('a[href^="#"]');
+      if (!link) return;
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+
+      const href = link.getAttribute("href");
+      const target = document.getElementById(href.slice(1));
+
+      if (!target || !target.classList.contains("page-section")) return;
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      if (window.location.hash !== href) {
+        history.pushState(null, "", href);
+      }
+      showCurrentPage();
+    }, true);
+
+    window.addEventListener("hashchange", showCurrentPage);
+    window.addEventListener("popstate", showCurrentPage);
+
+    showCurrentPage();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupExamMaterials);
+  } else {
+    setupExamMaterials();
+  }
+})();
+</script>
+<!-- 社会福祉士国家試験：無料教材ページ ここまで -->
 </body>
 </html>
