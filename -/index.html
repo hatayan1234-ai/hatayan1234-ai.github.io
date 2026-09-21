@@ -664,6 +664,20 @@
       .flip-card { height: 200px; }
     }
   </style>
+<style>
+
+#hata-perspective{--hp-ink:#243d37;--hp-green:#245e4e;--hp-line:#d7e2da;max-width:1000px;margin:36px auto;padding:clamp(22px,5vw,52px);border:1px solid var(--hp-line);border-radius:26px;background:#fafaf4;color:var(--hp-ink);font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.85;text-align:left}
+#hata-perspective *{box-sizing:border-box}#hata-perspective [hidden]{display:none!important}#hata-perspective p{margin:12px 0}#hata-perspective h2{font-size:clamp(27px,5vw,42px);line-height:1.5;margin:16px 0;font-weight:700;color:var(--hp-ink)}#hata-perspective h3{font-size:22px;line-height:1.65;margin:8px 0 18px;color:var(--hp-ink)}#hata-perspective .hp-eyebrow{font-size:13px;letter-spacing:.12em;font-weight:bold;color:var(--hp-green)}#hata-perspective .hp-tag{display:inline-block;border:1px solid var(--hp-line);border-radius:24px;padding:3px 13px;font-size:13px;background:white}#hata-perspective .hp-note{font-size:14px;color:#4d6058}#hata-perspective .hp-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:20px 0}#hata-perspective button{font:inherit;cursor:pointer;color:var(--hp-ink);border:1px solid #adc3b7;background:#fff;border-radius:12px;padding:14px;text-align:left;line-height:1.6;min-height:48px}#hata-perspective button:hover{background:#edf4ec}#hata-perspective button[aria-pressed="true"]{background:var(--hp-green);color:#fff;border-color:var(--hp-green)}#hata-perspective button:focus-visible,#hata-perspective summary:focus-visible,#hata-perspective a:focus-visible{outline:3px solid #b56823;outline-offset:4px}#hata-perspective .hp-result{background:#fff;border:1px solid var(--hp-line);padding:clamp(20px,4vw,32px);border-radius:18px;margin:24px 0;scroll-margin-top:30px}#hata-perspective .hp-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}#hata-perspective .hp-box{background:#edf4ec;padding:18px;border-radius:12px}#hata-perspective .hp-box:last-child{background:#fcf3e3}#hata-perspective h4{font-size:16px;margin:0}#hata-perspective .hp-feedback{display:flex;flex-wrap:wrap;gap:8px}#hata-perspective .hp-feedback button{font-size:14px;padding:10px 14px}#hata-perspective .hp-response{border-left:3px solid #c6974b;padding:10px 16px;background:#fffaf0}#hata-perspective .hp-closing{margin-top:30px;border-top:1px solid var(--hp-line);padding-top:24px}#hata-perspective details{margin-top:24px;font-size:14px}#hata-perspective summary{cursor:pointer;font-weight:bold;padding:10px 0}#hata-perspective a{color:#245e4e;text-decoration:underline}#hata-perspective .hp-sign{font-size:13px;margin-top:24px}#hata-perspective .hp-empty{background:#f0f2eb;padding:16px;border-radius:12px;font-size:14px}@media(max-width:560px){#hata-perspective{margin:12px auto;border-radius:18px}#hata-perspective .hp-columns{grid-template-columns:1fr}#hata-perspective button{font-size:14px;padding:12px}#hata-perspective h3{font-size:20px}}
+
+/* 既存サイト内での表示を調整 */
+#hata-perspective{scroll-margin-top:110px}
+#hata-perspective .hp-result{scroll-margin-top:110px}
+#about-hs .flip-card-back{top:0;left:0;overflow-y:auto}
+#about-hs .hp-launch{display:inline-block;margin:22px 0 0;padding:13px 24px;border:1px solid #245e4e;border-radius:30px;background:#245e4e;color:#fff;font:inherit;font-weight:700;cursor:pointer}
+#about-hs .hp-launch:focus-visible,#about-hs .flip-card:focus-visible{outline:3px solid #b56823;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){#about-hs .flip-card-inner{transition:none}#about-hs .tap-hint{animation:none}}
+
+</style>
 </head>
 <body>
 
@@ -724,13 +738,14 @@
         <section>
           <div class="section-header">
             <div class="section-num">FOR HIGH SCHOOL STUDENTS</div>
-            <h2 class="section-title">🎓 高校生の方へ</h2>
-            <p class="section-subtitle">大学で何を学ぶの？ 気になるカードをタップしてみてね！</p>
+            <h2 class="section-title">🎓 心理・福祉のギモン</h2>
+            <p class="section-subtitle">大学で何を学ぶの？ カードとミニワークで、心理・福祉の学びにふれてみよう。</p>
+            <button type="button" class="hp-launch" id="hp-launch">その「短所」、違う角度から見てみよう。<br>ミニワークを試す ↓</button>
           </div>
 
           <div class="hs-card-grid">
             <!-- カード1 -->
-            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card" role="button" tabindex="0" aria-pressed="false" onclick="this.classList.toggle('flipped');this.setAttribute('aria-pressed',this.classList.contains('flipped'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
                   <h3>「心理学って、カウンセリングだけ？」</h3>
@@ -743,7 +758,7 @@
             </div>
 
             <!-- カード2 -->
-            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card" role="button" tabindex="0" aria-pressed="false" onclick="this.classList.toggle('flipped');this.setAttribute('aria-pressed',this.classList.contains('flipped'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
                   <h3>「福祉って、介護だけ？」</h3>
@@ -756,7 +771,7 @@
             </div>
 
             <!-- カード3 -->
-            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card" role="button" tabindex="0" aria-pressed="false" onclick="this.classList.toggle('flipped');this.setAttribute('aria-pressed',this.classList.contains('flipped'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
                   <h3>「公認心理師と社会福祉士って何が違う？」</h3>
@@ -769,7 +784,7 @@
             </div>
 
             <!-- カード4 -->
-            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card" role="button" tabindex="0" aria-pressed="false" onclick="this.classList.toggle('flipped');this.setAttribute('aria-pressed',this.classList.contains('flipped'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
                   <h3>「心理学と福祉を一緒に学ぶと、何ができる？」</h3>
@@ -782,6 +797,40 @@
             </div>
           </div>
         </section>
+<section id="hata-perspective" aria-labelledby="hp-title">
+<div class="hp-eyebrow">HATA LAB / 自分と環境を考える</div>
+<h2 id="hp-title">その「短所」、<br>違う角度から見てみよう。</h2>
+<span class="hp-tag">自己理解のためのミニワーク · 約１〜２分</span>
+<p>「自分のこういうところ、ちょっと苦手。」<br>そう感じる言葉を、一つ選んでみてください。</p>
+<p>見方を少し変えたり、周りの環境を整えたりすると、<br>今とは違う自分の支え方が見つかるかもしれません。</p>
+<p class="hp-note">無理に前向きにならなくても大丈夫。性格や適性を判定するものではありません。</p>
+<div class="hp-choices" role="group" aria-label="気になる言葉を一つ選ぶ"></div>
+<noscript><p>このミニワークはJavaScriptを有効にすると操作できます。自分の気になるところについて、「別の見方」「過ごしやすい環境」「小さな一歩」の三つから考えてみましょう。</p></noscript>
+<p class="hp-empty">気になる言葉を選ぶと、三つの視点が表示されます。どれも選ばず、下の説明だけ読んでも大丈夫です。</p>
+<article class="hp-result" hidden aria-label="選んだ言葉について考える">
+<p class="hp-eyebrow" data-hp="selected"></p>
+<h3 tabindex="-1" data-hp="title"></h3>
+<p data-hp="view"></p>
+<div class="hp-columns"><div class="hp-box"><h4>過ごしやすくなる環境</h4><p data-hp="environment"></p></div><div class="hp-box"><h4>試せそうなら、小さな一歩</h4><p data-hp="step"></p></div></div>
+<p><strong>この見方は、今の自分に合いそう？</strong></p>
+<div class="hp-feedback" role="group" aria-label="表示された見方の受け止め方"><button type="button" data-feedback="yes" aria-pressed="false">少ししっくりくる</button><button type="button" data-feedback="no" aria-pressed="false">今はしっくりこない</button><button type="button" data-feedback="later" aria-pressed="false">まだ分からない</button></div>
+<div role="status" aria-live="polite"><p class="hp-response" hidden></p></div>
+<p class="hp-note">ここにあるのは、見方の一例です。当てはまらない部分があっても大丈夫。別の言葉も自由に選べます。</p>
+<button type="button" data-hp-reset>選択をリセットする</button>
+</article>
+<div class="hp-closing"><h3>自分だけが、変わらなくてもいい。</h3>
+<p>あなたが持っている力、これまでの経験、周りの人、使える場所や仕組み。自分を支える手がかりは、いろいろなところにあります。</p>
+<p>「自分をどう変えるか」に加えて、<strong>「どんな環境なら過ごしやすいか」</strong>も考える。それも、社会福祉学の大切な視点です。</p>
+<p class="hp-note">つらいことまで、よい意味に言い換える必要はありません。困りごとが続くときは、信頼できる人や学校の相談先に、一緒に考えてもらう方法もあります。</p></div>
+<details><summary>このミニワークの考え方・参考資料</summary>
+<p>ソーシャルワークの教育的な視点から作成した、自己理解のための教材です。「ストレングスの視点」（本人の力や経験、周囲の資源に目を向けること）、「リフレーミング」（出来事や特徴を別の枠組みから捉え直すこと）、人と環境の関係を考える視点を参考にしています。</p>
+<p>ストレングスの視点は、短所を長所に言い換えることだけを意味しません。困りごとを受け止めたうえで、本人が大切にしたいことや、利用できる支えを一緒に探します。</p>
+<p>各項目の言い換えと提案は、この教材のために作成した例です。検証された心理尺度ではなく、性格・能力・進路適性の判定や、医療的な診断を行うものではありません。</p>
+<p>参考：<a href="https://www.ifsw.org/what-is-social-work/global-definition-of-social-work/" target="_blank" rel="noopener noreferrer">IFSW・IASSW「ソーシャルワーク専門職のグローバル定義」（2014）と解説</a>。人と環境の関係や、本人と共に取り組む視点を参照しています。この定義が本教材の個々の言い換えや効果を検証したものではありません。</p>
+<p>このミニワーク自体は、選択内容の外部送信・保存を行いません。</p>
+</details>
+<p class="hp-sign">大阪大谷大学 心理・福祉学科 秦研究室<br>人の心って、おもしろい。人を支えるって、もっとおもしろい。</p>
+</section>
       </div>
     </div>
 
@@ -1811,5 +1860,38 @@
 })();
 </script>
 <!-- 社会福祉士国家試験：無料教材ページ ここまで -->
+<script>
+
+(function(){
+'use strict';
+const root=document.getElementById('hata-perspective');
+if(!root || root.dataset.initialized) return;
+root.dataset.initialized='true';
+const items=[["心配性", "先のことを、いろいろ考えているのかも。", "心配の中に、備えておきたいことや大切にしたいことが隠れている場合もあります。ただ、つらい心配を無理に「長所」と思わなくても大丈夫です。", "予定や手順が前もって分かること。分からないことを聞ける相手がいること。", "気になることを一つだけ選び、「今できる準備」と「今は決められないこと」に分けてみる。"], ["優柔不断", "いくつかの可能性を、大切にしているのかも。", "決められないのは、性格だけが理由とは限りません。情報が足りない、どちらにもよいところがある、という場合もあります。", "選択肢を整理してもらえること。決めるための時間や、お試しの機会があること。", "今回いちばん大切にしたい条件を一つ選んでみる。例えば、楽しさ・安心・時間など。"], ["人前で話すのが苦手", "伝える方法は、一つではありません。", "大勢の前では話しにくくても、文章や一対一なら伝えやすいことはありませんか。話す場面が苦手でも、考えや思いがないわけではありません。", "話す内容を事前に知れること。メモ、文章、少人数など、参加方法を選べること。", "次の発表や話し合いで、伝えたいことを一行メモにしてみる。"], ["人に頼るのが苦手", "一人で何とかしようとしてきたのかも。", "頼ることにためらいがあるのには、これまでの経験や相手との関係が影響している場合もあります。助けを求めることも、自分を支える方法です。", "頼んでも責められない関係があること。相談先や、お願いできる範囲が分かること。", "頼めそうな相手がいれば、「ここだけ教えてもらえる？」と小さく具体的に伝えてみる。"], ["周りに合わせすぎる", "人との関係を、大切にしているのかも。", "周りを気にかけることと、自分の気持ちを大切にすることは、どちらもあってよいものです。合わせることで疲れているなら、その負担にも目を向けてみましょう。", "違う意見を言っても否定されないこと。その場で返事をせず、考える時間を持てること。", "返事の前に「少し考えてからでもいい？」と伝えて、自分の気持ちを確かめてみる。"], ["マイペースと言われる", "取り組みやすいペースがあるのかも。", "人によって、考える時間や作業の進め方は違います。一方で、一緒に進める相手との調整が必要になることもあります。", "締め切りや役割がはっきりしていること。途中で相談でき、自分に合った手順を使えること。", "「いつまでに、どこまで」を相手と一つ確認してみる。"], ["飽きっぽい", "新しいことに、関心が向きやすいのかも。", "興味が広がりやすい場合もあれば、課題が難しすぎる、単調、疲れているなど、取り組む条件が合っていない場合もあります。", "課題を小さく区切れること。休憩や、進め方の選択肢があること。", "続けたいことがあれば、まず５分でできる部分を一つ決めてみる。"], ["失敗を引きずる", "大切にしたいことが、あったのかも。", "うまくやりたかった気持ちが残っている場合もあります。ただ、振り返りと自分を責め続けることは同じではありません。休むことも選べます。", "失敗を責めるより、次の方法を一緒に考えてくれる人がいること。やり直せる機会があること。", "落ち着いたときに、「起きたこと」と「次に変えられそうなこと」を一つずつ分けてみる。"]];
+const choices=root.querySelector('.hp-choices'),result=root.querySelector('.hp-result'),empty=root.querySelector('.hp-empty');
+const response=root.querySelector('.hp-response');
+const feedback=Array.from(root.querySelectorAll('[data-feedback]'));
+const messages={yes:'どの部分が合いそうでしたか？ 思い当たる場面があれば、一つ振り返ってみましょう。提案を全部取り入れる必要はありません。',no:'しっくりこない、という受け止め方も大切です。例えば「こう見られたい」より「こんなとき困る」「こうしてもらうと助かる」から考えてもかまいません。',later:'今すぐ答えを決めなくても大丈夫。場面や相手によって感じ方が違うこともあります。今日は読むだけで終えてもかまいません。'};
+function clearFeedback(){feedback.forEach(b=>b.setAttribute('aria-pressed','false'));response.textContent='';response.hidden=true;}
+items.forEach((item,index)=>{const b=document.createElement('button');b.type='button';b.textContent=item[0];b.setAttribute('aria-pressed','false');b.addEventListener('click',()=>{choices.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));['selected','title','view','environment','step'].forEach((key,i)=>{root.querySelector('[data-hp="'+key+'"]').textContent=i===0?'選んだ言葉：'+item[i]:item[i];});clearFeedback();result.hidden=false;empty.hidden=true;root.querySelector('[data-hp="title"]').focus({preventScroll:true});result.style.scrollMarginTop=((document.querySelector('header')?.getBoundingClientRect().height||0)+18)+'px';result.scrollIntoView({behavior:'auto',block:'start'});});choices.appendChild(b);});
+feedback.forEach(b=>b.addEventListener('click',()=>{feedback.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));response.textContent=messages[b.dataset.feedback];response.hidden=false;}));
+root.querySelector('[data-hp-reset]').addEventListener('click',()=>{result.hidden=true;empty.hidden=false;clearFeedback();choices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));choices.querySelector('button').focus();});
+})();
+
+(function(){
+  const launch=document.getElementById('hp-launch');
+  const work=document.getElementById('hata-perspective');
+  if(!launch || !work) return;
+  launch.addEventListener('click',function(){
+    const height=document.querySelector('header')?.getBoundingClientRect().height||0;
+    work.style.scrollMarginTop=(height+18)+'px';
+    const title=document.getElementById('hp-title');
+    title.setAttribute('tabindex','-1');
+    title.focus({preventScroll:true});
+    work.scrollIntoView({behavior:'auto',block:'start'});
+  });
+})();
+
+</script>
 </body>
 </html>
