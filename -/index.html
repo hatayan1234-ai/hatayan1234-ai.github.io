@@ -14,9 +14,9 @@
   <meta name="google-site-verification" content="ry_TKGBYO8tfGdt8J-VZKZABTKEm73Km5CR6yOY-nus" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>大阪大谷大学 心理・福祉学科 秦康宏 研究室</title>
-  <meta name="description" content="大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏 研究室。心理学と社会福祉学を融合し、公認心理師や社会福祉士を目指す高校生を応援するサイトです。">
-  <meta name="keywords" content="大阪大谷大学,心理・福祉学科,秦康宏,社会福祉士,公認心理師,高校生向け">
+  <title>秦 康宏 研究室｜個人研究室の発信</title>
+  <meta name="description" content="大阪大谷大学教員・秦康宏が個人研究室として運営するウェブサイトです。大学・学科の公式サイトではなく、入試広報を目的としたものではありません。研究、教育、心理・福祉に関する情報を発信しています。">
+  <meta name="keywords" content="秦康宏,秦研究室,心理学,社会福祉学,社会福祉士,研究・教育情報">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;800&family=Shippori+Mincho:wght@500;700;800&display=swap" rel="stylesheet">
@@ -677,6 +677,49 @@
 #about-hs .hp-launch:focus-visible,#about-hs .flip-card:focus-visible{outline:3px solid #b56823;outline-offset:4px}
 @media(prefers-reduced-motion:reduce){#about-hs .flip-card-inner{transition:none}#about-hs .tap-hint{animation:none}}
 
+
+/* 個人研究室サイトであることを明示する案内 */
+.site-disclaimer {
+  position: relative;
+  z-index: 1;
+  padding: 16px 20px;
+  background: #fff8e8;
+  border-bottom: 1px solid #e7c979;
+  color: #3f3522;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+.site-disclaimer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.site-disclaimer strong {
+  display: inline-block;
+  margin-right: 0.35em;
+  color: #68480c;
+}
+.site-disclaimer p { margin: 0; }
+.site-disclaimer a {
+  color: #174b87;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.site-disclaimer-footer {
+  margin: 20px 0 12px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 8px;
+  text-align: left;
+  font-size: .88rem;
+  line-height: 1.8;
+}
+.site-disclaimer-footer p { margin: 0 0 8px; }
+.site-disclaimer-footer p:last-child { margin-bottom: 0; }
+.site-disclaimer-footer a { color: #fff; text-decoration: underline; }
+@media (max-width: 600px) {
+  .site-disclaimer { padding: 13px 16px; font-size: .84rem; }
+}
+
 </style>
 </head>
 <body>
@@ -703,6 +746,12 @@
       </nav>
     </div>
   </header>
+
+  <aside class="site-disclaimer" aria-label="このウェブサイトについて">
+    <div class="site-disclaimer-inner">
+      <p><strong>このサイトについて</strong>本サイトは、秦 康宏が「秦研究室」として個人で運営・発信しているウェブサイトです。心理・福祉学科の公式サイトではなく、大阪大谷大学の公式ウェブサイト・公式発信とも一切関係ありません。大学・学科の承認または監修を受けた公式情報ではなく、入試広報や学生募集を目的とするものでもありません。入試・学科に関する正式な情報は、<a href="https://www.osaka-ohtani.ac.jp/department/human_societies/psychology/" target="_blank" rel="noopener noreferrer">大学公式サイト</a>をご確認ください。</p>
+    </div>
+  </aside>
 
   <main>
     <div id="home" class="page-section">
@@ -944,7 +993,7 @@
                   でも、人を本当に理解するには、その両方が必要かもしれません。<br>
                   大阪大谷大学 心理・福祉学科では、心理学と社会福祉学の両方の視点から人を学びます。
                 </p>
-                <a href="https://www.osaka-ohtani.ac.jp/department/human_society/psychology_welfare/" target="_blank" rel="noopener" style="display: inline-block; background: var(--accent); color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none;">心理・福祉学科について見てみる（大学公式HP）</a>
+                <a href="https://www.osaka-ohtani.ac.jp/department/human_societies/psychology/" target="_blank" rel="noopener" style="display: inline-block; background: var(--accent); color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none;">心理・福祉学科について見てみる（大学公式HP）</a>
                 <div style="margin-top: 16px;">
                   <button onclick="resetQuiz()" style="background: transparent; border: none; color: var(--text-muted); text-decoration: underline; cursor: pointer;">もう一度診断する</button>
                 </div>
@@ -1274,6 +1323,12 @@
     <div class="container">
       <p><strong>大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏 研究室</strong></p>
       <p style="font-size: 0.82rem; margin-top: 4px;">Hata Laboratory of Social Welfare | Osaka Ohtani University</p>
+
+      <div class="site-disclaimer-footer" aria-label="サイト運営について">
+        <p><strong>本サイトの運営について</strong></p>
+        <p>本サイトは、秦 康宏が秦研究室として個人で運営・発信しています。心理・福祉学科の公式サイトではなく、大阪大谷大学の公式ウェブサイト・公式発信とも一切関係ありません。大学・学科の承認または監修を受けた公式情報ではなく、入試広報や学生募集を目的としたものではありません。</p>
+        <p>入試・学科に関する正式な情報は、<a href="https://www.osaka-ohtani.ac.jp/department/human_societies/psychology/" target="_blank" rel="noopener noreferrer">大阪大谷大学公式サイト「心理・福祉学科」</a>をご確認ください。</p>
+      </div>
       
       <!-- 自前駆動型テキストアクセスカウンター -->
       <div style="text-align: center;">
