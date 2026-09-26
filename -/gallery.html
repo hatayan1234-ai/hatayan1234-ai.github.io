@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ギャラリー｜秦 康宏 研究室</title>
   <meta name="description" content="大阪大谷大学 心理・福祉学科 秦研究室のギャラリー。研究室での交流や活動の場面をイラストで紹介します。">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5H86SF7PWR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -12,92 +13,338 @@
     gtag('js', new Date());
     gtag('config', 'G-5H86SF7PWR');
   </script>
+
   <style>
     * { box-sizing: border-box; }
-    body { margin: 0; background: #f7f8fb; color: #243047; font-family: "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif; line-height: 1.8; }
+
+    body {
+      margin: 0;
+      background: #f7f8fb;
+      color: #243047;
+      font-family: "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.8;
+    }
+
     a { color: #1e3a8a; }
     button { font: inherit; cursor: pointer; }
-    a:focus-visible, button:focus-visible { outline: 3px solid #f59e0b; outline-offset: 4px; }
-    .container { width: min(1100px, 92%); margin: auto; }
-    header { background: #fff; border-bottom: 1px solid #e2e8f0; }
-    .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; }
-    .brand { font-size: 20px; font-weight: bold; text-decoration: none; }
-    .brand span { display: block; color: #64748b; font-size: 12px; font-weight: normal; }
-    .back { font-size: 14px; white-space: nowrap; }
-    .notice { background: #eff6ff; padding: 16px 0; font-size: 13px; }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid #f59e0b;
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 0;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .brand span {
+      display: block;
+      color: #64748b;
+      font-size: 12px;
+      font-weight: normal;
+    }
+
+    .back {
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .notice {
+      background: #eff6ff;
+      padding: 16px 0;
+      font-size: 13px;
+    }
+
     .notice p { margin: 0; }
+
     main { padding: 48px 0 64px; }
-    .eyebrow { color: #1e3a8a; font-size: 13px; font-weight: bold; letter-spacing: .2em; }
-    h1 { margin: 4px 0 16px; font-size: clamp(28px, 5vw, 40px); }
-    .intro { margin: 0 0 30px; color: #526078; }
-    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
-    .card { display: block; overflow: hidden; border: 1px solid #e2e8f0; border-radius: 16px; background: #fff; color: inherit; text-decoration: none; box-shadow: 0 4px 16px #24304708; transition: transform .2s, box-shadow .2s; }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px #24304718; }
-    .card img { display: block; width: 100%; height: 270px; padding: 12px; object-fit: contain; background: #eef1f6; }
-    .card-label { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 14px 16px; font-size: 14px; font-weight: bold; }
-    .card-label small { font-size: 12px; font-weight: normal; color: #64748b; white-space: nowrap; }
-    .image-error { display: block; padding: 0 16px 14px; color: #9a3412; font-size: 12px; }
-    footer { padding: 26px 16px; background: #fff; border-top: 1px solid #e2e8f0; text-align: center; color: #64748b; font-size: 12px; }
-    dialog { position: fixed; inset: 0; width: min(1100px, 96vw); max-width: 96vw; max-height: 94vh; max-height: 94dvh; margin: auto; padding: 16px; border: 0; border-radius: 16px; background: #111827; color: #fff; overflow: auto; }
+
+    .eyebrow {
+      color: #1e3a8a;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: .2em;
+    }
+
+    h1 {
+      margin: 4px 0 16px;
+      font-size: clamp(28px, 5vw, 40px);
+    }
+
+    .intro {
+      margin: 0 0 30px;
+      color: #526078;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      display: block;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      background: #fff;
+      color: inherit;
+      text-decoration: none;
+      box-shadow: 0 4px 16px #24304708;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px #24304718;
+    }
+
+    .card img {
+      display: block;
+      width: 100%;
+      height: 270px;
+      padding: 12px;
+      object-fit: contain;
+      background: #eef1f6;
+    }
+
+    .card-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 16px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .card-label small {
+      font-size: 12px;
+      font-weight: normal;
+      color: #64748b;
+      white-space: nowrap;
+    }
+
+    .image-error {
+      display: block;
+      padding: 0 16px 14px;
+      color: #9a3412;
+      font-size: 12px;
+    }
+
+    footer {
+      padding: 26px 16px;
+      background: #fff;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+      color: #64748b;
+      font-size: 12px;
+    }
+
+    dialog {
+      position: fixed;
+      inset: 0;
+      width: min(1100px, 96vw);
+      max-width: 96vw;
+      max-height: 94vh;
+      max-height: 94dvh;
+      margin: auto;
+      padding: 16px;
+      border: 0;
+      border-radius: 16px;
+      background: #111827;
+      color: #fff;
+      overflow: auto;
+    }
+
     dialog::backdrop { background: #07101de8; }
-    .viewer-top, .viewer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-    .viewer-top h2 { margin: 0; font-size: 16px; }
-    .viewer-button { border: 1px solid #64748b; border-radius: 9px; background: #243047; color: #fff; padding: 9px 15px; min-height: 44px; }
-    .viewer-image { display: block; width: 100%; height: 65vh; height: 65dvh; margin: 14px 0; object-fit: contain; }
-    .viewer-bottom a { color: #e0e7ff; font-size: 13px; }
-    #viewer-count { margin: 8px 0 0; text-align: center; color: #cbd5e1; font-size: 13px; }
-    #viewer-error { color: #fed7aa; text-align: center; }
-    @media (max-width: 800px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+    .viewer-top,
+    .viewer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .viewer-top h2 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .viewer-button {
+      border: 1px solid #64748b;
+      border-radius: 9px;
+      background: #243047;
+      color: #fff;
+      padding: 9px 15px;
+      min-height: 44px;
+    }
+
+    .viewer-image {
+      display: block;
+      width: 100%;
+      height: 65vh;
+      height: 65dvh;
+      margin: 14px 0;
+      object-fit: contain;
+    }
+
+    .viewer-bottom a {
+      color: #e0e7ff;
+      font-size: 13px;
+    }
+
+    #viewer-count {
+      margin: 8px 0 0;
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 13px;
+    }
+
+    #viewer-error {
+      color: #fed7aa;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 520px) {
       main { padding-top: 30px; }
       .grid { gap: 12px; }
       .card img { height: 200px; padding: 6px; }
-      .card-label { display: block; padding: 10px; font-size: 12px; }
-      .card-label small { display: block; margin-top: 4px; }
+      .card-label {
+        display: block;
+        padding: 10px;
+        font-size: 12px;
+      }
+      .card-label small {
+        display: block;
+        margin-top: 4px;
+      }
       .brand { font-size: 17px; }
       .brand span { font-size: 10px; }
       .back { font-size: 12px; }
       dialog { padding: 12px; }
       .viewer-bottom { flex-wrap: wrap; }
-      .viewer-bottom a { order: 3; width: 100%; text-align: center; }
-      .viewer-image { height: 58vh; height: 58dvh; }
+      .viewer-bottom a {
+        order: 3;
+        width: 100%;
+        text-align: center;
+      }
+      .viewer-image {
+        height: 58vh;
+        height: 58dvh;
+      }
     }
-    @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card { transition: none; }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container header-inner">
-      <a class="brand" href="./index.html">秦 康宏 研究室<span>大阪大谷大学 心理・福祉学科</span></a>
+      <a class="brand" href="./index.html">
+        秦 康宏 研究室
+        <span>大阪大谷大学 心理・福祉学科</span>
+      </a>
       <a class="back" href="./index.html">← トップへ戻る</a>
     </div>
   </header>
+
   <aside class="notice" aria-label="このウェブサイトについて">
     <div class="container">
-      <p>本サイトは秦 康宏が個人の研究室として運営・発信しています。大学・学科の公式サイトではなく、入試広報を目的としたものでもありません。入試・学科に関する正式な情報は、<a href="https://www.osaka-ohtani.ac.jp/department/human_societies/psychology/" target="_blank" rel="noopener noreferrer">大学公式サイト</a>をご確認ください。</p>
+      <p>
+        本サイトは秦 康宏が個人の研究室として運営・発信しています。
+        大学・学科の公式サイトではなく、入試広報を目的としたものでもありません。
+        入試・学科に関する正式な情報は、
+        <a href="https://www.osaka-ohtani.ac.jp/department/human_societies/psychology/"
+           target="_blank"
+           rel="noopener noreferrer">大学公式サイト</a>
+        をご確認ください。
+      </p>
     </div>
   </aside>
+
   <main class="container">
     <div class="eyebrow">HATA LAB GALLERY</div>
     <h1>ギャラリー</h1>
-    <p class="intro">研究室での交流や活動の場面を、イラストで紹介します。<br>画像をクリック・タップすると拡大できます。</p>
+
+    <p class="intro">
+      研究室での交流や活動の場面を、イラストで紹介します。<br>
+      画像をクリック・タップすると拡大できます。
+    </p>
+
     <div class="grid" id="gallery-grid"></div>
-    <noscript><p>画像一覧を表示するには、ブラウザのJavaScriptを有効にしてください。</p></noscript>
+
+    <noscript>
+      <p>画像一覧を表示するには、ブラウザのJavaScriptを有効にしてください。</p>
+    </noscript>
   </main>
-  <footer>大阪大谷大学 心理・福祉学科 秦研究室｜個人研究室の発信</footer>
+
+  <footer>
+    大阪大谷大学 心理・福祉学科 秦研究室｜個人研究室の発信
+  </footer>
 
   <dialog id="viewer" aria-labelledby="viewer-title">
     <div class="viewer-top">
       <h2 id="viewer-title">ギャラリー</h2>
-      <button class="viewer-button" id="close-viewer" type="button" autofocus>閉じる ×</button>
+      <button class="viewer-button"
+              id="close-viewer"
+              type="button"
+              autofocus>閉じる ×</button>
     </div>
+
     <img class="viewer-image" id="viewer-image" alt="">
-    <p id="viewer-error" role="status" hidden>画像を読み込めませんでした。</p>
+
+    <p id="viewer-error" role="status" hidden>
+      画像を読み込めませんでした。
+    </p>
+
     <div class="viewer-bottom">
-      <button class="viewer-button" id="previous" type="button" aria-label="前の画像">← 前へ</button>
-      <a id="original-image" target="_blank" rel="noopener noreferrer">元の画像を開く ↗</a>
-      <button class="viewer-button" id="next" type="button" aria-label="次の画像">次へ →</button>
+      <button class="viewer-button"
+              id="previous"
+              type="button"
+              aria-label="前の画像">← 前へ</button>
+
+      <a id="original-image"
+         target="_blank"
+         rel="noopener noreferrer">元の画像を開く ↗</a>
+
+      <button class="viewer-button"
+              id="next"
+              type="button"
+              aria-label="次の画像">次へ →</button>
     </div>
+
     <p id="viewer-count" aria-live="polite"></p>
   </dialog>
 
@@ -105,24 +352,111 @@
     (() => {
       // 画像は、このHTMLと同じフォルダーに置きます。
       const pictures = [
-        { file: 'c07968f2-3ff6-4cac-bb8e-e99ba1b4d9a4.jfif', title: '研究室での交流' },
-        { file: '3fdc478c-b796-4a0f-a664-1578d8289277 (1).jfif', title: '釣りのひとこま' },
-        { file: 'ad9a99e7-f459-41f5-9611-5a77e7c88f3f.jfif', title: '表彰の記念に' },
-        { file: 'bb06a104-63db-46d0-95f1-8b83b7ea6be0.jfif', title: '仲間とともに' },
-        { file: 'b20b9a0a-9d11-4ea3-87eb-a46dfe189b4f.jfif', title: 'みんなで学ぶ時間' },
-        { file: '11ae1da8-3258-4e74-b4f1-c72d878f1dc9.jfif', title: '記念の一枚' },
-        { file: 'e267f393-58b8-46e7-83c3-c15d135816dd.jfif', title: '笑顔の記念撮影' },
-        { file: '583f6271-4cd6-4913-be13-cf82d078998f.jfif', title: '交流と思い出' },
-        { file: 'e666637e-3e48-432b-8d23-5da9c43ec1f6.jfif', title: '研究室のひとこま' },
-        { file: 'e4773a19-4d08-4e31-b195-e443c3ad9c3d.jfif', title: '出会いの一枚' }
+        {
+          file: 'c07968f2-3ff6-4cac-bb8e-e99ba1b4d9a4.jfif',
+          title: '研究室での交流'
+        },
+        {
+          file: '3fdc478c-b796-4a0f-a664-1578d8289277 (1).jfif',
+          title: '釣りのひとこま'
+        },
+        {
+          file: 'ad9a99e7-f459-41f5-9611-5a77e7c88f3f.jfif',
+          title: '表彰の記念に'
+        },
+        {
+          file: 'bb06a104-63db-46d0-95f1-8b83b7ea6be0.jfif',
+          title: '仲間とともに'
+        },
+        {
+          file: 'b20b9a0a-9d11-4ea3-87eb-a46dfe189b4f.jfif',
+          title: 'みんなで学ぶ時間'
+        },
+        {
+          file: '11ae1da8-3258-4e74-b4f1-c72d878f1dc9.jfif',
+          title: '記念の一枚'
+        },
+        {
+          file: 'e267f393-58b8-46e7-83c3-c15d135816dd.jfif',
+          title: '笑顔の記念撮影'
+        },
+        {
+          file: '583f6271-4cd6-4913-be13-cf82d078998f.jfif',
+          title: '交流と思い出'
+        },
+        {
+          file: 'e666637e-3e48-432b-8d23-5da9c43ec1f6.jfif',
+          title: '研究室のひとこま'
+        },
+        {
+          file: 'e4773a19-4d08-4e31-b195-e443c3ad9c3d.jfif',
+          title: '出会いの一枚'
+        },
+        {
+          file: '25610e57-7047-48e3-a4e2-d17f5a2782ed.jfif',
+          title: '教室での記念撮影'
+        },
+        {
+          file: '698ea17d-d09c-41bd-8320-bd4a25ba77c3.jfif',
+          title: '交流のひとこま'
+        },
+        {
+          file: '1a442e2f-6a76-403b-859c-03ca6f920d68.jfif',
+          title: '晴れの日の記念に'
+        },
+        {
+          file: '8c9f352d-f49f-4f4d-a9f0-1b121d4dd7e3.jfif',
+          title: '出会いと交流'
+        },
+        {
+          file: '81fca4d9-aea2-45db-971b-1b52b403b535.jfif',
+          title: 'みんなで記念撮影'
+        },
+        {
+          file: '67b167cc-7bb8-4f64-a61b-e41a1cf5c3ba.jfif',
+          title: '笑顔が集まる時間'
+        },
+        {
+          file: 'a87c60f4-7204-4aac-b208-fd7363acc1f0.jfif',
+          title: 'テーブルを囲んで'
+        },
+        {
+          file: 'a4f5d23d-8ae0-4b58-ae39-6f0fe52fa4be.jfif',
+          title: '仲間との記念の一枚'
+        },
+        {
+          file: '89e65f20-b124-4195-9539-eb2dfa98dcf7.jfif',
+          title: '講義のひとこま'
+        },
+        {
+          file: 'b881420f-37d1-40aa-b81c-4ebbf5bc89c5 (1).jfif',
+          title: 'まちでのひとこま ①'
+        },
+        {
+          file: '580afe95-c165-48de-a885-155a03d61668.jfif',
+          title: '屋外での記念撮影'
+        },
+        {
+          file: 'b881420f-37d1-40aa-b81c-4ebbf5bc89c5.jfif',
+          title: 'まちでのひとこま ②'
+        },
+        {
+          file: 'b349ceb3-9ec3-45ec-bf0d-cfe96c769122.jfif',
+          title: 'みんなの笑顔'
+        }
       ];
+
       const grid = document.getElementById('gallery-grid');
       const viewer = document.getElementById('viewer');
       const largeImage = document.getElementById('viewer-image');
       const error = document.getElementById('viewer-error');
+
       let current = 0;
       let previousOverflow = '';
-      const imageURL = picture => './' + encodeURIComponent(picture.file);
+
+      // 空白や括弧を含むファイル名にも対応します。
+      const imageURL = picture =>
+        './' + encodeURIComponent(picture.file);
 
       pictures.forEach((picture, index) => {
         const card = document.createElement('a');
@@ -130,62 +464,123 @@
         card.href = imageURL(picture);
         card.setAttribute('aria-label', picture.title + 'を拡大');
         card.setAttribute('aria-haspopup', 'dialog');
+
         const img = document.createElement('img');
         img.alt = picture.title + 'のイラスト';
         img.loading = 'lazy';
         img.decoding = 'async';
+
         img.addEventListener('error', () => {
           const message = document.createElement('span');
           message.className = 'image-error';
           message.textContent = '画像を読み込めませんでした。';
           card.append(message);
         }, { once: true });
+
         img.src = card.href;
+
         const label = document.createElement('span');
         label.className = 'card-label';
+
         const title = document.createElement('span');
         title.textContent = picture.title;
+
         const hint = document.createElement('small');
         hint.textContent = '拡大する ＋';
+
         label.append(title, hint);
         card.append(img, label);
+
         card.addEventListener('click', event => {
-          if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+          if (
+            event.ctrlKey ||
+            event.metaKey ||
+            event.shiftKey ||
+            event.altKey ||
+            event.button !== 0
+          ) return;
+
           if (typeof viewer.showModal !== 'function') return;
+
           event.preventDefault();
           showImage(index);
+
           previousOverflow = document.body.style.overflow;
           document.body.style.overflow = 'hidden';
+
           viewer.showModal();
         });
+
         grid.append(card);
       });
 
       function showImage(index) {
         current = (index + pictures.length) % pictures.length;
         const picture = pictures[current];
+
         error.hidden = true;
+
         largeImage.alt = picture.title + 'のイラスト';
         largeImage.src = imageURL(picture);
-        document.getElementById('viewer-title').textContent = picture.title;
-        document.getElementById('original-image').href = imageURL(picture);
-        document.getElementById('viewer-count').textContent = (current + 1) + ' / ' + pictures.length;
+
+        document.getElementById('viewer-title').textContent =
+          picture.title;
+
+        document.getElementById('original-image').href =
+          imageURL(picture);
+
+        document.getElementById('viewer-count').textContent =
+          (current + 1) + ' / ' + pictures.length;
       }
-      largeImage.addEventListener('error', () => { error.hidden = false; });
-      largeImage.addEventListener('load', () => { error.hidden = true; });
-      document.getElementById('close-viewer').addEventListener('click', () => viewer.close());
-      document.getElementById('previous').addEventListener('click', () => showImage(current - 1));
-      document.getElementById('next').addEventListener('click', () => showImage(current + 1));
-      viewer.addEventListener('close', () => { document.body.style.overflow = previousOverflow; });
+
+      largeImage.addEventListener('error', () => {
+        error.hidden = false;
+      });
+
+      largeImage.addEventListener('load', () => {
+        error.hidden = true;
+      });
+
+      document.getElementById('close-viewer')
+        .addEventListener('click', () => viewer.close());
+
+      document.getElementById('previous')
+        .addEventListener('click', () => showImage(current - 1));
+
+      document.getElementById('next')
+        .addEventListener('click', () => showImage(current + 1));
+
+      viewer.addEventListener('close', () => {
+        document.body.style.overflow = previousOverflow;
+      });
+
+      // 拡大表示枠の外をクリックすると閉じます。
       viewer.addEventListener('click', event => {
         if (event.target !== viewer) return;
+
         const rect = viewer.getBoundingClientRect();
-        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) viewer.close();
+
+        if (
+          event.clientX < rect.left ||
+          event.clientX > rect.right ||
+          event.clientY < rect.top ||
+          event.clientY > rect.bottom
+        ) {
+          viewer.close();
+        }
       });
+
+      // 左右キーで画像を切り替えます。Escキーでも閉じられます。
       viewer.addEventListener('keydown', event => {
-        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+        if (
+          event.key === 'ArrowLeft' ||
+          event.key === 'ArrowRight'
+        ) {
           event.preventDefault();
-          showImage(current + (event.key === 'ArrowLeft' ? -1 : 1));
+
+          showImage(
+            current + (event.key === 'ArrowLeft' ? -1 : 1)
+          );
         }
       });
     })();
