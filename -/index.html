@@ -1,588 +1,1953 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ギャラリー｜秦 康宏 研究室</title>
-  <meta name="description" content="大阪大谷大学 心理・福祉学科 秦研究室のギャラリー。研究室での交流や活動の場面をイラストで紹介します。">
-
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5H86SF7PWR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+
     gtag('config', 'G-5H86SF7PWR');
   </script>
 
+  <meta name="google-site-verification" content="ry_TKGBYO8tfGdt8J-VZKZABTKEm73Km5CR6yOY-nus" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>秦 康宏 研究室｜個人研究室の発信</title>
+  <meta name="description" content="大阪大谷大学教員・秦康宏が個人研究室として運営するウェブサイトです。大学・学科の公式サイトではなく、入試広報を目的としたものではありません。研究、教育、心理・福祉に関する情報を発信しています。">
+  <meta name="keywords" content="秦康宏,秦研究室,心理学,社会福祉学,社会福祉士,研究・教育情報">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;800&family=Shippori+Mincho:wght@500;700;800&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
+    :root {
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-main: #1a1a1a;
+      --text-sub: #4a5568;
+      --text-muted: #718096;
+      --accent: #1e3a8a;
+      --accent-light: #3b82f6;
+      --accent-soft: #eff6ff;
+      --accent-orange: #f97316;
+      --border-color: #e2e8f0;
+      --tag-bg: #edf2f7;
     }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      margin: 0;
-      background: #f7f8fb;
-      color: #243047;
-      font-family: "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
-      line-height: 1.8;
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+      word-break: normal;
+      overflow-wrap: break-word;
+      overflow-x: hidden;
     }
 
-    a {
-      color: #1e3a8a;
+    a { color: inherit; text-decoration: none; transition: 0.2s; }
+    a:hover { opacity: 0.8; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
 
-    button {
-      font: inherit;
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .site-title {
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.02em;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .site-title span {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 8px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-sub);
+      padding: 6px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent);
+      background-color: var(--accent-soft);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--accent);
+      user-select: none;
+    }
+
+    .page-section {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 新しいHeroセクション */
+    .hero-new {
+      padding: 80px 0 60px;
+      background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+      border-bottom: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .hero-new .catchphrase {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.4;
+    margin-bottom: 24px;
+    }
+    
+    .hero-new .catchphrase span {
+      display: block;
+    }
+
+    .hero-new .sub-catch {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent-orange);
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-new .lead-text {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--text-main);
+      color: #fff;
+      padding: 8px 24px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+    }
+
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    section:last-child {
+      border-bottom: none;
+    }
+
+    .section-header {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .section-num {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #fff;
+      background: var(--accent-light);
+      padding: 4px 16px;
+      border-radius: 20px;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    /* 高校生向け フリップ（裏返る）カードグリッド */
+    .hs-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      height: 250px;
+      perspective: 1000px;
       cursor: pointer;
     }
 
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid #f59e0b;
-      outline-offset: 4px;
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
     }
 
-    .container {
-      width: min(1100px, 92%);
-      margin: auto;
+    /* クラス付与で裏返す */
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
     }
 
-    header {
-      background: #fff;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .header-inner {
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.04);
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      gap: 16px;
-      padding: 18px 0;
+      box-sizing: border-box;
     }
 
-    .brand {
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none;
+    .flip-card-front {
+      background: var(--card-bg);
+      border: 2px solid var(--accent-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .flip-card-front:hover {
+      border-color: var(--accent-light);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
     }
 
-    .brand span {
-      display: block;
-      color: #64748b;
-      font-size: 12px;
-      font-weight: normal;
+    .flip-card-front::before {
+      content: "Q.";
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--accent-soft);
+      z-index: 0;
     }
 
-    .back {
-      font-size: 14px;
-      white-space: nowrap;
+    .flip-card-front h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent);
+      position: relative;
+      z-index: 1;
+      line-height: 1.4;
     }
 
-    .notice {
-      background: #eff6ff;
-      padding: 16px 0;
-      font-size: 13px;
+    .flip-card-front .tap-hint {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.8rem;
+      color: var(--accent-orange);
+      font-weight: 600;
+      animation: bounce 2s infinite;
     }
 
-    .notice p {
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-5px); }
+      60% { transform: translateY(-3px); }
+    }
+
+    .flip-card-back {
+      background: var(--accent-soft);
+      border: 2px solid var(--accent-light);
+      color: var(--text-main);
+      transform: rotateY(180deg);
+      text-align: left;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .flip-card-back p {
+      font-size: 0.95rem;
+      color: #1e293b;
+      line-height: 1.8;
       margin: 0;
     }
 
-    main {
-      padding: 48px 0 64px;
-    }
-
-    .eyebrow {
-      color: #1e3a8a;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: .2em;
-    }
-
-    h1 {
-      margin: 4px 0 16px;
-      font-size: clamp(28px, 5vw, 40px);
-    }
-
-    .intro {
-      margin: 0 0 30px;
-      color: #526078;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      display: block;
-      overflow: hidden;
-      border: 1px solid #e2e8f0;
-      border-radius: 16px;
+    /* 7問チャレンジ 適性診断エリア */
+    .diagnosis-box {
       background: #fff;
-      color: inherit;
-      text-decoration: none;
-      box-shadow: 0 4px 16px #24304708;
-      transition: transform .2s, box-shadow .2s;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px #24304718;
-    }
-
-    .card img {
-      display: block;
-      width: 100%;
-      height: 270px;
-      padding: 12px;
-      object-fit: contain;
-      background: #eef1f6;
-    }
-
-    .card-label {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 16px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .card-label small {
-      font-size: 12px;
-      font-weight: normal;
-      color: #64748b;
-      white-space: nowrap;
-    }
-
-    .image-error {
-      display: block;
-      padding: 0 16px 14px;
-      color: #9a3412;
-      font-size: 12px;
-    }
-
-    footer {
-      padding: 26px 16px;
-      background: #fff;
-      border-top: 1px solid #e2e8f0;
+      border: 3px dashed var(--accent-light);
+      border-radius: 20px;
+      padding: 40px;
       text-align: center;
-      color: #64748b;
-      font-size: 12px;
     }
 
-    dialog {
-      position: fixed;
-      inset: 0;
-      width: min(1100px, 96vw);
-      max-width: 96vw;
-      max-height: 94vh;
-      max-height: 94dvh;
-      margin: auto;
-      padding: 16px;
-      border: 0;
-      border-radius: 16px;
-      background: #111827;
-      color: #fff;
-      overflow: auto;
+    .diagnosis-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 16px;
     }
 
-    dialog::backdrop {
-      background: #07101de8;
+    .question-container {
+      display: none;
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeIn 0.3s ease;
     }
 
-    .viewer-top,
-    .viewer-bottom {
+    .question-container.active {
+      display: block;
+    }
+
+    .question-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent-soft);
+      padding-bottom: 10px;
+    }
+
+    .diagnosis-buttons {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
       gap: 12px;
     }
 
-    .viewer-top h2 {
+    .diag-btn {
+      padding: 16px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      background: #f8fafc;
+      border: 2px solid #cbd5e1;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: left;
+    }
+
+    .diag-btn:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent-light);
+      transform: scale(1.02);
+    }
+
+    #diagnosis-result {
+      display: none;
+      background: #fff;
+      border: 2px solid var(--accent);
+      padding: 30px;
+      border-radius: 12px;
+      margin: 0 auto;
+      max-width: 700px;
+      text-align: left;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .result-type-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent-orange);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .result-desc {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      margin-bottom: 24px;
+      background: var(--accent-soft);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .graph-bar-container {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+    }
+
+    .graph-label {
+      width: 100px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-sub);
+    }
+
+    .graph-bar-bg {
+      flex-grow: 1;
+      background: #e2e8f0;
+      height: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-right: 10px;
+    }
+
+    .graph-bar-fill {
+      height: 100%;
+      background: var(--accent-light);
+      width: 0%; /* JSで設定 */
+      transition: width 1s ease-in-out;
+    }
+
+    .graph-score {
+      width: 30px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .result-footer {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px dashed var(--border-color);
+      text-align: center;
+    }
+
+    /* 冒険ロードマップ */
+    .roadmap-container {
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 30px;
+    }
+    
+    .roadmap-container::before {
+      content: '';
+      position: absolute;
+      left: 14px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--accent-soft);
+      border-radius: 2px;
+    }
+
+    .roadmap-step {
+      position: relative;
+      margin-bottom: 30px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border: 1px solid var(--border-color);
+    }
+
+    .roadmap-step::before {
+      content: '';
+      position: absolute;
+      left: -26px;
+      top: 24px;
+      width: 20px;
+      height: 20px;
+      background: var(--accent-light);
+      border: 4px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--accent-soft);
+    }
+
+    .step-num {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+
+    .step-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    /* Q&A アコーディオン */
+    .qa-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .qa-item {
+      margin-bottom: 16px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    .qa-item summary {
+      background: #fff;
+      padding: 20px 24px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .qa-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .qa-item summary::before {
+      content: "Q.";
+      color: var(--accent-orange);
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-right: 12px;
+    }
+
+    .qa-item summary::after {
+      content: "▼";
+      position: absolute;
+      right: 24px;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      transition: transform 0.3s;
+    }
+
+    .qa-item[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .qa-item p {
+      background: #fafafa;
+      padding: 20px 24px 20px 50px;
       margin: 0;
-      font-size: 16px;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      border-top: 1px solid var(--border-color);
+      position: relative;
+    }
+    
+    .qa-item p::before {
+      content: "A.";
+      position: absolute;
+      left: 24px;
+      color: var(--accent);
+      font-size: 1.4rem;
+      font-weight: 800;
     }
 
-    .viewer-button {
-      border: 1px solid #64748b;
-      border-radius: 9px;
-      background: #243047;
-      color: #fff;
-      padding: 9px 15px;
-      min-height: 44px;
+    /* 埋め込みリンクカードスタイル */
+    .embed-card {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      margin-bottom: 16px;
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+    .embed-card:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      border-color: var(--accent-light);
+      transform: translateY(-3px);
+    }
+    .embed-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .embed-title::before {
+      content: "▶";
+      margin-right: 8px;
+      color: #ef4444; /* YouTubeレッド風 */
+    }
+    .embed-url {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      word-break: break-all;
     }
 
-    .viewer-image {
-      display: block;
-      width: 100%;
-      height: 65vh;
-      height: 65dvh;
-      margin: 14px 0;
-      object-fit: contain;
+    /* その他既存スタイル */
+    .profile-grid { display: grid; grid-template-columns: 310px 1fr; gap: 40px; align-items: start; }
+    .profile-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .profile-avatar-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 16px; display: block; border: 3px solid #eff6ff; box-shadow: 0 4px 10px rgba(0,0,0,0.08); background-color: #000; }
+    .profile-name { font-size: 1.35rem; font-weight: 700; margin-bottom: 2px; }
+    .profile-position { font-size: 0.86rem; font-weight: 600; color: var(--accent); line-height: 1.5; padding-bottom: 14px; border-bottom: 1px solid var(--border-color); margin-bottom: 14px; }
+    .btn-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 12px; font-size: 0.82rem; font-weight: 600; border-radius: 8px; background: var(--tag-bg); border: 1px solid var(--border-color); color: var(--text-main); text-align: left; line-height: 1.5; width: 100%; margin-bottom: 8px;}
+    .btn-link:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-insta { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); color: #fff; border: none; }
+    .content-box { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 28px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .content-box-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
+    .tags-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .badge-tag { background: var(--tag-bg); border: 1px solid var(--border-color); padding: 4px 12px; border-radius: 20px; font-size: 0.82rem; font-weight: 500; color: var(--text-sub); }
+    .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.86rem; font-weight: 600; margin-bottom: 6px; }
+    .form-group input, .form-group textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 0.92rem; font-family: inherit; background: #fbfbfb; box-sizing: border-box; }
+    .btn-submit { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; }
+    .shinpuku-gallery { display: flex; flex-direction: column; align-items: center; margin: 30px 0; }
+    .shinpuku-images { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 10px; }
+    .shinpuku-images img { width: 120px; height: auto; }
+    .responsive-img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 16px; }
+    .counter-badge-box { margin: 20px auto 10px; display: inline-flex; align-items: center; gap: 8px; padding: 6px 18px; background-color: var(--accent-soft); border: 1px solid #bfdbfe; border-radius: 20px; font-size: 0.88rem; color: var(--accent); font-weight: 600; }
+    .counter-num { font-size: 1.1rem; font-weight: 700; color: #1e3a8a; letter-spacing: 0.05em; }
+
+    /* 写真スライド（カルーセル）スタイル維持 */
+    .photo-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 16px;
+      padding-bottom: 16px;
+      margin: 0 auto;
+      max-width: 400px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent) #e2e8f0;
     }
+    .photo-slider::-webkit-scrollbar { height: 8px; }
+    .photo-slider::-webkit-scrollbar-track { background: #e2e8f0; border-radius: 4px; }
+    .photo-slider::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+    .photo-slider img { scroll-snap-align: center; flex: 0 0 100%; width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); object-fit: contain; }
 
-    .viewer-bottom a {
-      color: #e0e7ff;
-      font-size: 13px;
-    }
-
-    #viewer-count {
-      margin: 8px 0 0;
-      text-align: center;
-      color: #cbd5e1;
-      font-size: 13px;
-    }
-
-    #viewer-error {
-      color: #fed7aa;
-      text-align: center;
-    }
-
-    @media (max-width: 800px) {
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 520px) {
-      main {
-        padding-top: 30px;
-      }
-
-      .grid {
-        gap: 12px;
-      }
-
-      .card img {
-        height: 200px;
-        padding: 6px;
-      }
-
-      .card-label {
-        display: block;
-        padding: 10px;
-        font-size: 12px;
-      }
-
-      .card-label small {
-        display: block;
-        margin-top: 4px;
-      }
-
-      .brand {
-        font-size: 17px;
-      }
-
-      .brand span {
-        font-size: 10px;
-      }
-
-      .back {
-        font-size: 12px;
-      }
-
-      dialog {
-        padding: 12px;
-      }
-
-      .viewer-bottom {
-        flex-wrap: wrap;
-      }
-
-      .viewer-bottom a {
-        order: 3;
-        width: 100%;
-        text-align: center;
-      }
-
-      .viewer-image {
-        height: 58vh;
-        height: 58dvh;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .card {
-        transition: none;
-      }
+    @media (max-width: 1000px) {
+      .hs-card-grid { grid-template-columns: 1fr; }
+      .profile-grid, .contact-wrapper { grid-template-columns: 1fr; }
+      .menu-toggle { display: block; }
+      nav { display: none; position: absolute; top: 72px; left: 0; width: 100%; background: rgba(255, 255, 255, 0.98); box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 0; }
+      nav.active { display: block; }
+      nav ul { flex-direction: column; gap: 0; }
+      nav ul li a { display: block; padding: 16px 24px; border-bottom: 1px solid var(--border-color); border-radius: 0; font-size: 1rem; }
+      .hero-new .catchphrase { font-size: 2rem; }
+      .section-title { font-size: 1.6rem; }
+      section { padding: 40px 0; }
+      .flip-card { height: 200px; }
     }
   </style>
-</head>
+<style>
 
+#hata-perspective{--hp-ink:#243d37;--hp-green:#245e4e;--hp-line:#d7e2da;max-width:1000px;margin:36px auto;padding:clamp(22px,5vw,52px);border:1px solid var(--hp-line);border-radius:26px;background:#fafaf4;color:var(--hp-ink);font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.85;text-align:left}
+#hata-perspective *{box-sizing:border-box}#hata-perspective [hidden]{display:none!important}#hata-perspective p{margin:12px 0}#hata-perspective h2{font-size:clamp(27px,5vw,42px);line-height:1.5;margin:16px 0;font-weight:700;color:var(--hp-ink)}#hata-perspective h3{font-size:22px;line-height:1.65;margin:8px 0 18px;color:var(--hp-ink)}#hata-perspective .hp-eyebrow{font-size:13px;letter-spacing:.12em;font-weight:bold;color:var(--hp-green)}#hata-perspective .hp-tag{display:inline-block;border:1px solid var(--hp-line);border-radius:24px;padding:3px 13px;font-size:13px;background:white}#hata-perspective .hp-note{font-size:14px;color:#4d6058}#hata-perspective .hp-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:20px 0}#hata-perspective button{font:inherit;cursor:pointer;color:var(--hp-ink);border:1px solid #adc3b7;background:#fff;border-radius:12px;padding:14px;text-align:left;line-height:1.6;min-height:48px}#hata-perspective button:hover{background:#edf4ec}#hata-perspective button[aria-pressed="true"]{background:var(--hp-green);color:#fff;border-color:var(--hp-green)}#hata-perspective button:focus-visible,#hata-perspective summary:focus-visible,#hata-perspective a:focus-visible{outline:3px solid #b56823;outline-offset:4px}#hata-perspective .hp-result{background:#fff;border:1px solid var(--hp-line);padding:clamp(20px,4vw,32px);border-radius:18px;margin:24px 0;scroll-margin-top:30px}#hata-perspective .hp-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}#hata-perspective .hp-box{background:#edf4ec;padding:18px;border-radius:12px}#hata-perspective .hp-box:last-child{background:#fcf3e3}#hata-perspective h4{font-size:16px;margin:0}#hata-perspective .hp-feedback{display:flex;flex-wrap:wrap;gap:8px}#hata-perspective .hp-feedback button{font-size:14px;padding:10px 14px}#hata-perspective .hp-response{border-left:3px solid #c6974b;padding:10px 16px;background:#fffaf0}#hata-perspective .hp-closing{margin-top:30px;border-top:1px solid var(--hp-line);padding-top:24px}#hata-perspective details{margin-top:24px;font-size:14px}#hata-perspective summary{cursor:pointer;font-weight:bold;padding:10px 0}#hata-perspective a{color:#245e4e;text-decoration:underline}#hata-perspective .hp-sign{font-size:13px;margin-top:24px}#hata-perspective .hp-empty{background:#f0f2eb;padding:16px;border-radius:12px;font-size:14px}@media(max-width:560px){#hata-perspective{margin:12px auto;border-radius:18px}#hata-perspective .hp-columns{grid-template-columns:1fr}#hata-perspective button{font-size:14px;padding:12px}#hata-perspective h3{font-size:20px}}
+
+/* 既存サイト内での表示を調整 */
+#hata-perspective{scroll-margin-top:110px}
+#hata-perspective .hp-result{scroll-margin-top:110px}
+#about-hs .flip-card-back{top:0;left:0;overflow-y:auto}
+#about-hs .hp-launch{display:inline-block;margin:22px 0 0;padding:13px 24px;border:1px solid #245e4e;border-radius:30px;background:#245e4e;color:#fff;font:inherit;font-weight:700;cursor:pointer}
+#about-hs .hp-launch:focus-visible,#about-hs .flip-card:focus-visible{outline:3px solid #b56823;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){#about-hs .flip-card-inner{transition:none}#about-hs .tap-hint{animation:none}}
+
+
+/* 個人研究室サイトであることを明示する案内 */
+.site-disclaimer {
+  position: relative;
+  z-index: 1;
+  padding: 16px 20px;
+  background: #fff8e8;
+  border-bottom: 1px solid #e7c979;
+  color: #3f3522;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+.site-disclaimer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.site-disclaimer strong {
+  display: inline-block;
+  margin-right: 0.35em;
+  color: #68480c;
+}
+.site-disclaimer p { margin: 0; }
+.site-disclaimer a {
+  color: #174b87;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.site-disclaimer-footer {
+  margin: 20px 0 12px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 8px;
+  text-align: left;
+  font-size: .88rem;
+  line-height: 1.8;
+}
+.site-disclaimer-footer p { margin: 0 0 8px; }
+.site-disclaimer-footer p:last-child { margin-bottom: 0; }
+.site-disclaimer-footer a { color: #fff; text-decoration: underline; }
+@media (max-width: 600px) {
+  .site-disclaimer { padding: 13px 16px; font-size: .84rem; }
+}
+
+</style>
+</head>
 <body>
+
   <header>
-    <div class="container header-inner">
-      <a class="brand" href="./index.html">
+    <div class="container nav-inner">
+      <a href="#home" class="site-title">
         秦 康宏 研究室
         <span>大阪大谷大学 心理・福祉学科</span>
       </a>
-      <a class="back" href="./index.html">← トップへ戻る</a>
+      <div class="menu-toggle" id="mobile-menu-btn">☰</div>
+      <nav id="global-nav">
+        <ul>
+          <li><a href="#home">トップ</a></li>
+          <li><a href="#about-hs">心理・福祉のギモン</a></li>
+          <li><a href="#diagnosis">7問チャレンジ</a></li>
+          <li><a href="#campus-life">大学生活のリアル</a></li>
+          <li><a href="#adventure">冒険マップ</a></li>
+          <li><a href="#qa">先生Q&A</a></li>
+          <li><a href="#profile">はたやん先生</a></li>
+          <li><a href="#access">アクセス</a></li>
+          <li><a href="./gallery.html">ギャラリー</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <aside class="notice" aria-label="このウェブサイトについて">
-    <div class="container">
-      <p>
-        本サイトは秦 康宏が個人の研究室として運営・発信しています。
-        大学・学科の公式サイトではなく、入試広報を目的としたものでもありません。
-        入試・学科に関する正式な情報は、
-        <a
-          href="https://www.osaka-ohtani.ac.jp/department/human_societies/psychology/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >大学公式サイト</a>
-        をご確認ください。
-      </p>
+  <aside class="site-disclaimer" aria-label="このウェブサイトについて">
+    <div class="site-disclaimer-inner">
+      <p><strong>このサイトについて</strong>本サイトは、秦 康宏が「秦研究室」として個人で運営・発信しているウェブサイトです。心理・福祉学科の公式サイトではなく、大阪大谷大学の公式ウェブサイト・公式発信とも一切関係ありません。大学・学科の承認または監修を受けた公式情報ではなく、入試広報や学生募集を目的とするものでもありません。入試・学科に関する正式な情報は、<a href="https://www.osaka-ohtani.ac.jp/department/human_societies/psychology/" target="_blank" rel="noopener noreferrer">大学公式サイト</a>をご確認ください。</p>
     </div>
   </aside>
 
-  <main class="container">
-    <div class="eyebrow">HATA LAB GALLERY</div>
-    <h1>ギャラリー</h1>
+  <main>
+    <div id="home" class="page-section">
+      <div class="hero-new">
+        <div class="container">
+          <div class="sub-catch">心理学 × 社会福祉学</div>
+          <h1 class="catchphrase">
+            <span>「人の心って、おもしろい。」</span>
+            <span>「人を支えるって、もっとおもしろい。」</span>
+          </h1>
+          <p class="lead-text">
+            こころと暮らしの両方から、人を考える。<br>
+            ここは、あなたの人を支えたいという思いを形にする研究室です。
+          </p>
+          <div class="hero-badge">大阪大谷大学 心理・福祉学科</div>
+          
+          <div style="margin-top: 30px;">
+            <a href="#diagnosis" style="display: inline-block; background: var(--accent-orange); color: #fff; padding: 12px 30px; border-radius: 30px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);">👉 まずは適性診断をやってみる！</a>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="padding-top: 40px; text-align: center;">
+          <a href="https://youtube.com/shorts/c87-3Fm0zwg" target="_blank" rel="noopener" style="display: inline-block; max-width: 320px;">
+            <img src="74ab6356-2593-41b4-99d7-081d2c110c5a.jfif" alt="キャンパス風景" class="responsive-img" style="margin-bottom: 8px;">
+            <div style="color: var(--accent); font-weight: 600; text-decoration: underline; font-size: 0.9rem;">【14秒でわかる！】キャンパス風景を覗いてみる (YouTube)</div>
+          </a>
+      </div>
+    </div>
 
-    <p class="intro">
-      研究室での交流や活動の場面を、イラストで紹介します。<br>
-      画像をクリック・タップすると拡大できます。
-    </p>
+    <!-- 高校生の方へ：ギモン解消カード（フリップカード） -->
+    <div id="about-hs" class="page-section">
+      <div class="container">
+        <section>
+          <div class="section-header">
+            <div class="section-num">FOR HIGH SCHOOL STUDENTS</div>
+            <h2 class="section-title">🎓 心理・福祉のギモン</h2>
+            <p class="section-subtitle">大学で何を学ぶの？ カードとミニワークで、心理・福祉の学びにふれてみよう。</p>
+            <button type="button" class="hp-launch" id="hp-launch">その「短所」、違う角度から見てみよう。<br>ミニワークを試す ↓</button>
+          </div>
 
-    <div class="grid" id="gallery-grid"></div>
+          <div class="hs-card-grid">
+            <!-- カード1 -->
+            <div class="flip-card" role="button" tabindex="0" aria-pressed="false" onclick="this.classList.toggle('flipped');this.setAttribute('aria-pressed',this.classList.contains('flipped'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>「心理学って、カウンセリングだけ？」</h3>
+                  <div class="tap-hint">タップして裏返す☝️</div>
+                </div>
+                <div class="flip-card-back">
+                  <p>実は、心理学はもっと広いです。「なぜ人はそう考えるの？」「なぜ同じ出来事でも感じ方が違うの？」「高齢者が昔の話をするのはなぜ？」「子どもが学校に行けなくなるのはなぜ？」そんな<strong>「人間の不思議」を科学的に考える</strong>学問です。</p>
+                </div>
+              </div>
+            </div>
 
-    <noscript>
-      <p>画像一覧を表示するには、ブラウザのJavaScriptを有効にしてください。</p>
-    </noscript>
+            <!-- カード2 -->
+            <div class="flip-card" role="button" tabindex="0" aria-pressed="false" onclick="this.classList.toggle('flipped');this.setAttribute('aria-pressed',this.classList.contains('flipped'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>「福祉って、介護だけ？」</h3>
+                  <div class="tap-hint">タップして裏返す☝️</div>
+                </div>
+                <div class="flip-card-back">
+                  <p>福祉の対象は全世代です。子ども、若者、障害を持つ人、生活に困っている人など、あらゆる人が<strong>「その人らしく生きる」</strong>ための方法や、社会の仕組みを考え、サポートする実践的な学問です。</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- カード3 -->
+            <div class="flip-card" role="button" tabindex="0" aria-pressed="false" onclick="this.classList.toggle('flipped');this.setAttribute('aria-pressed',this.classList.contains('flipped'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>「公認心理師と社会福祉士って何が違う？」</h3>
+                  <div class="tap-hint">タップして裏返す☝️</div>
+                </div>
+                <div class="flip-card-back">
+                  <p>公認心理師は<strong>「こころの内面」</strong>からアプローチする心理の専門家。社会福祉士は<strong>「環境や制度、社会との繋がり」</strong>からアプローチする生活支援の専門家。この両方の視点を持つことが、最強の強みになります。</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- カード4 -->
+            <div class="flip-card" role="button" tabindex="0" aria-pressed="false" onclick="this.classList.toggle('flipped');this.setAttribute('aria-pressed',this.classList.contains('flipped'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>「心理学と福祉を一緒に学ぶと、何ができる？」</h3>
+                  <div class="tap-hint">タップして裏返す☝️</div>
+                </div>
+                <div class="flip-card-back">
+                  <p>こころ（内面）と暮らし（環境）の両方に寄り添えるプロになれます！病院、学校、福祉施設、公務員、一般企業など、<strong>人と関わるあらゆる仕事で求められる「対人援助」の力</strong>が身につきます。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+<section id="hata-perspective" aria-labelledby="hp-title">
+<div class="hp-eyebrow">HATA LAB / 自分と環境を考える</div>
+<h2 id="hp-title">その「短所」、<br>違う角度から見てみよう。</h2>
+<span class="hp-tag">自己理解のためのミニワーク · 約１〜２分</span>
+<p>「自分のこういうところ、ちょっと苦手。」<br>そう感じる言葉を、一つ選んでみてください。</p>
+<p>見方を少し変えたり、周りの環境を整えたりすると、<br>今とは違う自分の支え方が見つかるかもしれません。</p>
+<p class="hp-note">無理に前向きにならなくても大丈夫。性格や適性を判定するものではありません。</p>
+<div class="hp-choices" role="group" aria-label="気になる言葉を一つ選ぶ"></div>
+<noscript><p>このミニワークはJavaScriptを有効にすると操作できます。自分の気になるところについて、「別の見方」「過ごしやすい環境」「小さな一歩」の三つから考えてみましょう。</p></noscript>
+<p class="hp-empty">気になる言葉を選ぶと、三つの視点が表示されます。どれも選ばず、下の説明だけ読んでも大丈夫です。</p>
+<article class="hp-result" hidden aria-label="選んだ言葉について考える">
+<p class="hp-eyebrow" data-hp="selected"></p>
+<h3 tabindex="-1" data-hp="title"></h3>
+<p data-hp="view"></p>
+<div class="hp-columns"><div class="hp-box"><h4>過ごしやすくなる環境</h4><p data-hp="environment"></p></div><div class="hp-box"><h4>試せそうなら、小さな一歩</h4><p data-hp="step"></p></div></div>
+<p><strong>この見方は、今の自分に合いそう？</strong></p>
+<div class="hp-feedback" role="group" aria-label="表示された見方の受け止め方"><button type="button" data-feedback="yes" aria-pressed="false">少ししっくりくる</button><button type="button" data-feedback="no" aria-pressed="false">今はしっくりこない</button><button type="button" data-feedback="later" aria-pressed="false">まだ分からない</button></div>
+<div role="status" aria-live="polite"><p class="hp-response" hidden></p></div>
+<p class="hp-note">ここにあるのは、見方の一例です。当てはまらない部分があっても大丈夫。別の言葉も自由に選べます。</p>
+<button type="button" data-hp-reset>選択をリセットする</button>
+</article>
+<div class="hp-closing"><h3>自分だけが、変わらなくてもいい。</h3>
+<p>あなたが持っている力、これまでの経験、周りの人、使える場所や仕組み。自分を支える手がかりは、いろいろなところにあります。</p>
+<p>「自分をどう変えるか」に加えて、<strong>「どんな環境なら過ごしやすいか」</strong>も考える。それも、社会福祉学の大切な視点です。</p>
+<p class="hp-note">つらいことまで、よい意味に言い換える必要はありません。困りごとが続くときは、信頼できる人や学校の相談先に、一緒に考えてもらう方法もあります。</p></div>
+<details><summary>このミニワークの考え方・参考資料</summary>
+<p>ソーシャルワークの教育的な視点から作成した、自己理解のための教材です。「ストレングスの視点」（本人の力や経験、周囲の資源に目を向けること）、「リフレーミング」（出来事や特徴を別の枠組みから捉え直すこと）、人と環境の関係を考える視点を参考にしています。</p>
+<p>ストレングスの視点は、短所を長所に言い換えることだけを意味しません。困りごとを受け止めたうえで、本人が大切にしたいことや、利用できる支えを一緒に探します。</p>
+<p>各項目の言い換えと提案は、この教材のために作成した例です。検証された心理尺度ではなく、性格・能力・進路適性の判定や、医療的な診断を行うものではありません。</p>
+<p>参考：<a href="https://www.ifsw.org/what-is-social-work/global-definition-of-social-work/" target="_blank" rel="noopener noreferrer">IFSW・IASSW「ソーシャルワーク専門職のグローバル定義」（2014）と解説</a>。人と環境の関係や、本人と共に取り組む視点を参照しています。この定義が本教材の個々の言い換えや効果を検証したものではありません。</p>
+<p>このミニワーク自体は、選択内容の外部送信・保存を行いません。</p>
+</details>
+<p class="hp-sign">大阪大谷大学 心理・福祉学科 秦研究室<br>人の心って、おもしろい。人を支えるって、もっとおもしろい。</p>
+</section>
+      </div>
+    </div>
+
+    <!-- 7問チャレンジ 適性診断 -->
+    <div id="diagnosis" class="page-section">
+      <div class="container">
+        <section>
+          <div class="diagnosis-box">
+            <h2 class="diagnosis-title">あなたはどのタイプ？<br>心理×福祉 7問チャレンジ</h2>
+            <p style="margin-bottom: 24px; color: var(--text-sub); font-size: 0.9rem;">
+              ※これは心理検査や医学的診断ではありません。あなたが「人」について、どんなことに興味を持ちやすいかをチェックする簡易診断です。<br>
+              正解・不正解はありません。直感で答えてみてください！
+            </p>
+            
+            <!-- 質問エリア -->
+            <div id="quiz-area">
+              <!-- Q1 -->
+              <div class="question-container active" id="q1">
+                <div class="question-text">Q1. クラスに、最近ちょっと元気がない友達がいます。あなたなら？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('A')">A. 何があったのか、じっくり話を聞く</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">B. その人が困っていることは何か考える</button>
+                  <button class="diag-btn" onclick="nextQuestion('C')">C. まず一緒に楽しいことをして気分転換する</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">D. 周りの人にも気づいてもらえるようにする</button>
+                  <button class="diag-btn" onclick="nextQuestion('E')">E. 「なぜ元気がなくなったのだろう？」と考える</button>
+                </div>
+              </div>
+              <!-- Q2 -->
+              <div class="question-container" id="q2">
+                <div class="question-text">Q2. 新しいことを始めるとき、あなたは？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('E')">A. まず調べて、いろいろな方法を考える</button>
+                  <button class="diag-btn" onclick="nextQuestion('C')">B. 誰かと相談しながら進めたい</button>
+                  <button class="diag-btn" onclick="nextQuestion('A')">C. とりあえずやってみる</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">D. みんなが参加しやすい方法を考える</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">E. 計画を立てて、順番に進めたい</button>
+                </div>
+              </div>
+              <!-- Q3 -->
+              <div class="question-container" id="q3">
+                <div class="question-text">Q3. あなたが興味を持ちやすいのは、次のどれ？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('A')">A. 「人はなぜそのように感じるのか」</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">B. 「人が安心して暮らすには何が必要か」</button>
+                  <button class="diag-btn" onclick="nextQuestion('C')">C. 「人と人との関係はどう変わるのか」</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">D. 「社会の仕組みをどう変えられるか」</button>
+                  <button class="diag-btn" onclick="nextQuestion('E')">E. 「いろいろな人の違いには何があるのか」</button>
+                </div>
+              </div>
+              <!-- Q4 -->
+              <div class="question-container" id="q4">
+                <div class="question-text">Q4. テレビやSNSで「困っている人」の話を見たとき、最も気になるのは？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('A')">A. その人はどんな気持ちなのだろう</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">B. なぜそのような状況になったのだろう</button>
+                  <button class="diag-btn" onclick="nextQuestion('C')">C. 周囲の人はどう関わればよいのだろう</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">D. 制度や社会の仕組みを変えられないだろうか</button>
+                  <button class="diag-btn" onclick="nextQuestion('E')">E. 同じことで困っている人は他にもいるのだろうか</button>
+                </div>
+              </div>
+              <!-- Q5 -->
+              <div class="question-container" id="q5">
+                <div class="question-text">Q5. グループ活動では、どの役割が一番自分らしい？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('C')">A. みんなの話を聞いてまとめる</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">B. 困っている人をサポートする</button>
+                  <button class="diag-btn" onclick="nextQuestion('A')">C. アイデアを出して盛り上げる</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">D. 全体を見て調整する</button>
+                  <button class="diag-btn" onclick="nextQuestion('E')">E. 資料を集めて詳しく調べる</button>
+                </div>
+              </div>
+              <!-- Q6 -->
+              <div class="question-container" id="q6">
+                <div class="question-text">Q6. 大学で一番やってみたい授業は？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('A')">A. 人の心や行動について調べる授業</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">B. 福祉施設や地域で実際に人と関わる授業</button>
+                  <button class="diag-btn" onclick="nextQuestion('C')">C. 人間関係について考え、話し合う授業</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">D. 地域や社会の課題を考える授業</button>
+                  <button class="diag-btn" onclick="nextQuestion('E')">E. 心理学・福祉学を組み合わせて考える授業</button>
+                </div>
+              </div>
+              <!-- Q7 -->
+              <div class="question-container" id="q7">
+                <div class="question-text">Q7. 将来、人を支える仕事をするとしたら、どんなことがしたい？</div>
+                <div class="diagnosis-buttons">
+                  <button class="diag-btn" onclick="nextQuestion('A')">A. 心の悩みや生きづらさに寄り添いたい</button>
+                  <button class="diag-btn" onclick="nextQuestion('B')">B. 生活上の困りごとを一緒に解決したい</button>
+                  <button class="diag-btn" onclick="nextQuestion('C')">C. 人と人をつなぐ仕事がしたい</button>
+                  <button class="diag-btn" onclick="nextQuestion('D')">D. 学校・地域・社会の仕組みから人を支えたい</button>
+                  <button class="diag-btn" onclick="nextQuestion('E')">E. まだ決めていないけれど、人についてもっと知りたい</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 結果表示エリア -->
+            <div id="diagnosis-result">
+              <div class="result-type-title" id="result-title"></div>
+              <div class="result-desc" id="result-desc"></div>
+              
+              <div style="margin-bottom: 24px;">
+                <h4 style="font-size: 0.9rem; color: var(--text-sub); margin-bottom: 12px; text-align: center;">あなたの興味のバランス</h4>
+                <div id="result-graphs"></div>
+              </div>
+
+              <div class="result-footer">
+                <p style="font-weight: 700; margin-bottom: 12px;">あなたの「気になる」は、大学で学べます。</p>
+                <p style="font-size: 0.9rem; color: var(--text-sub); line-height: 1.6; margin-bottom: 20px;">
+                  心理学では「こころ」から。<br>
+                  社会福祉学では「暮らし」から。<br>
+                  でも、人を本当に理解するには、その両方が必要かもしれません。<br>
+                  大阪大谷大学 心理・福祉学科では、心理学と社会福祉学の両方の視点から人を学びます。
+                </p>
+                <a href="https://www.osaka-ohtani.ac.jp/department/human_societies/psychology/" target="_blank" rel="noopener" style="display: inline-block; background: var(--accent); color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none;">心理・福祉学科について見てみる（大学公式HP）</a>
+                <div style="margin-top: 16px;">
+                  <button onclick="resetQuiz()" style="background: transparent; border: none; color: var(--text-muted); text-decoration: underline; cursor: pointer;">もう一度診断する</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 大学生活のリアル -->
+    <div id="campus-life" class="page-section">
+      <div class="container">
+        <section>
+          <div class="section-header">
+            <div class="section-num">CAMPUS LIFE</div>
+            <h2 class="section-title">🎒 大学って、実際どんな毎日？</h2>
+            <p class="section-subtitle">先輩たちの時間割やリアルな声を動画でチェック！</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+            <a href="https://youtube.com/shorts/mtUYnwgb_4U" target="_blank" rel="noopener" class="embed-card">
+              <span class="embed-title">【1年〜4年生の時間割を大公開！】</span>
+              <span style="font-size: 0.9rem; color: var(--text-main); margin-bottom: 8px;">心理・福祉学科 社会福祉コースの場合、どんな授業を受けているの？</span>
+              <span class="embed-url">YouTubeショートで見る</span>
+            </a>
+            <a href="https://youtube.com/shorts/F06EXCEu5SE" target="_blank" rel="noopener" class="embed-card">
+              <span class="embed-title">【心理・福祉学科の魅力を紹介】</span>
+              <span style="font-size: 0.9rem; color: var(--text-main); margin-bottom: 8px;">心とくらしの両方に寄り添うプロへ！どんな学びがあるか見てみよう。</span>
+              <span class="embed-url">YouTubeショートで見る</span>
+            </a>
+            <a href="https://youtube.com/shorts/qfGKkiASuNM" target="_blank" rel="noopener" class="embed-card">
+              <span class="embed-title">【授業のチラ見せ：介護あるある】</span>
+              <span style="font-size: 0.9rem; color: var(--text-main); margin-bottom: 8px;">「お風呂イヤ！」と言われたら？心理学で解決する声かけのコツ</span>
+              <span class="embed-url">YouTubeショートで見る</span>
+            </a>
+            <a href="https://youtube.com/shorts/0sfPuCXzQI8" target="_blank" rel="noopener" class="embed-card">
+              <span class="embed-title">【心に寄り添う休息の時間】</span>
+              <span style="font-size: 0.9rem; color: var(--text-main); margin-bottom: 8px;">大学でのちょっとした癒やしの時間をお届け。</span>
+              <span class="embed-url">YouTubeショートで見る</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 冒険ロードマップ -->
+    <div id="adventure" class="page-section">
+      <div class="container">
+        <section>
+          <div class="section-header">
+            <div class="section-num">ROADMAP</div>
+            <h2 class="section-title">🗺️ 心理・福祉を学ぶ冒険</h2>
+            <p class="section-subtitle">大学入学からプロになるまでの道のり</p>
+          </div>
+
+          <div style="margin-bottom: 40px; text-align: center;">
+            <div class="photo-slider">
+              <img src="s1.JPG" alt="心理福祉学科へようこそ！">
+              <img src="s8.JPG" alt="2年次、あなたはどちらの道へ？">
+              <img src="s9.JPG" alt="心理コース">
+              <img src="s10.JPG" alt="社会福祉コース">
+              <img src="s11.JPG" alt="教室を飛び出し、最前線へ">
+              <img src="s12.JPG" alt="リアルな学びの声">
+              <img src="s13.JPG" alt="取得可能な免許・資格">
+              <img src="s14.JPG" alt="卒業後の多彩なフィールド">
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">※画像を横にスクロールしてご覧ください</p>
+          </div>
+
+          <div class="roadmap-container">
+            <div class="roadmap-step">
+              <div class="step-num">Step 01</div>
+              <div class="step-title">人間ってなんだろう？（1年生）</div>
+              <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 8px;">心理学と福祉の基礎を学び、自分自身のコミュニケーションを見つめ直します。</p>
+            </div>
+            <div class="roadmap-step">
+              <div class="step-num">Step 02 & 03</div>
+              <div class="step-title">こころを知る ＆ 社会を知る（2年生）</div>
+              <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 8px;">こころのメカニズムや、人を支える法律・制度など、専門的な知識を深く学びます。</p>
+            </div>
+            <div class="roadmap-step">
+              <div class="step-num">Step 04 & 05</div>
+              <div class="step-title">人を支える方法を学ぶ ＆ 現場へ行く（3年生）</div>
+              <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 8px;">ゼミが始まり、演習や実際の施設での「実習」を通じて実践力を磨きます。</p>
+            </div>
+            <div class="roadmap-step">
+              <div class="step-num">Step 06 & 07</div>
+              <div class="step-title">資格に挑戦し、専門職へ！（4年生〜）</div>
+              <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 8px;">国家試験対策を徹底！卒業後は医療、福祉、教育、行政など、あなただけのステージへ。</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 40px;">
+            <h3 style="font-size: 1.1rem; font-weight: 700; text-align: center; margin-bottom: 16px;">動画で見る詳しいクエストマップ ⚔️</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+              <a href="https://www.youtube.com/watch?v=Bwol69jKS7A&list=PLJvyp9D8XP2w&index=27" target="_blank" rel="noopener" class="embed-card">
+                <span class="embed-title">公認心理師になるための冒険</span>
+                <span class="embed-url">大学4年＋大学院2年のプロへの道のり</span>
+              </a>
+              <a href="https://www.youtube.com/watch?v=SFpg1U-gd_I&list=PLJQZveQC5v9M&index=5" target="_blank" rel="noopener" class="embed-card">
+                <span class="embed-title">社会福祉士になるための冒険</span>
+                <span class="embed-url">最強の国家資格取得ロードマップ</span>
+              </a>
+              <a href="https://www.youtube.com/watch?v=mrQ0AjXU7TE&list=PLJQZveQC5v9M&index=6" target="_blank" rel="noopener" class="embed-card">
+                <span class="embed-title">スクールソーシャルワーカーへの道</span>
+                <span class="embed-url">SSW認定資格の取得ロードマップ</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- はたやん先生Q&A -->
+    <div id="qa" class="page-section">
+      <div class="container">
+        <section>
+          <div class="section-header">
+            <div class="section-num">Q & A</div>
+            <h2 class="section-title">👨‍🏫 はたやん先生に聞いてみよう</h2>
+            <p class="section-subtitle">現場経験豊富な先生が、みんなの疑問に答えます！</p>
+          </div>
+
+          <div class="qa-container">
+            <details class="qa-item">
+              <summary>心理学と福祉って、結局何が違うの？</summary>
+              <p>心理学は「こころのメカニズム（内側）」を探求する学問、福祉は人が幸せに生きるための「社会の仕組みや環境（外側）」を整える学問です。実際の支援の現場では、どちらか一つだけでは解決できない問題ばかり。だからこそ、両方を学ぶことに大きな意味があります。</p>
+            </details>
+            <details class="qa-item">
+              <summary>社会福祉士って、どんな仕事をするんですか？</summary>
+              <p>生活に困っている人や悩みを抱えている人の相談に乗り、一緒に解決策を考え、必要なサービスや制度へとつなぐ「暮らしのコーディネーター」です。病院（医療ソーシャルワーカー）や学校、行政機関など、活躍の場はとても広いです。</p>
+            </details>
+            <details class="qa-item">
+              <summary>大学の先生って、普段は何をしてるの？</summary>
+              <p>学生のみなさんに授業をしたり、ゼミで国家試験の勉強を一緒に頑張ったりするのはもちろんですが、実際の福祉現場に出向いて、現場の職員さんが抱える困りごとを一緒に解決するお手伝い（研究や実践活動）もしています！</p>
+            </details>
+            <details class="qa-item">
+              <summary>福祉や心理の仕事って、大変じゃないですか？</summary>
+              <p>もちろん、人の命や生活に関わるので大変なこともあります。でも、クライエント（相談者）の人生に伴走し、その人が困難を乗り越えて笑顔を取り戻す瞬間に立ち会えるのは、他の仕事にはない圧倒的なやりがいと感動があります。</p>
+            </details>
+            <details class="qa-item">
+              <summary>高校生のうちにやっておくといいことはありますか？</summary>
+              <p>いろんな人と話すこと、本を読むこと、そしてニュースを見て「なぜこんなことが起きるんだろう？」という疑問を持つこと。自分の周りの「社会」や「人」に、少しだけ興味を持ってみてください。それが立派な第一歩です！</p>
+            </details>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- プロフィール・専門情報（既存情報をアコーディオン等で整理） -->
+    <div id="profile" class="page-section">
+      <div class="container">
+        <section>
+          <div class="section-header">
+            <div class="section-num">PROFILE & RESEARCH</div>
+            <h2 class="section-title">はたやん先生ってどんな人？</h2>
+            <p class="section-subtitle">現場から大学へ。先生の詳しい経歴や研究活動</p>
+          </div>
+
+          <div class="profile-grid">
+            <div class="profile-card">
+              <img src="はたイラスト.JPG" alt="秦 康宏 教授" class="profile-avatar-img" onerror="this.src='hata_avatar.jpg'; this.onerror=null;">
+              <h3 class="profile-name">秦 康宏</h3>
+              <p class="profile-en-name">Yasuhiro HATA（はたやん）</p>
+              <p class="profile-position">
+                大阪大谷大学 人間社会学部<br>
+                心理・福祉学科長 / 教授
+              </p>
+              <div class="profile-links">
+                <!-- 各種SNSリンク -->
+                <a href="https://www.youtube.com/@%E3%83%8F%E3%82%BF%E3%83%94%E7%A4%BE%E4%BC%9A%E7%A6%8F%E7%A5%89%E7%A0%94%E7%A9%B6%E5%AE%A41234" target="_blank" rel="noopener" class="btn-link">🔗 はた研究室YouTube</a>
+                <a href="https://www.tiktok.com/@user536125305440" target="_blank" rel="noopener" class="btn-link">🔗 秦研究室TikTok</a>
+                <a href="https://www.instagram.com/ooupsysw/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">📸 心理・福祉学科 公式Instagram</a>
+                <a href="https://www.instagram.com/osakabon1234/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">📸 福祉・介護・ケアマネ・心理応援ゼミ</a>
+                <a href="https://www.instagram.com/socialwork0729/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">📸 はたやん 社会福祉士 受験応援ゼミ</a>
+                <a href="https://www.instagram.com/kaigofukushi0729/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">📸 はたやん 介護福祉士 受験応援ゼミ</a>
+                <a href="https://www.instagram.com/caremana0729/?hl=ja" target="_blank" rel="noopener" class="btn-link btn-insta">📸 はたやん 介護支援専門員 受験応援ゼミ</a>
+              </div>
+            </div>
+
+            <div>
+              <div class="content-box" style="margin-bottom: 24px;">
+                <p style="font-weight: 700; margin-bottom: 12px; color: var(--accent);">現場での22年間を、いま学生たちへ。</p>
+                <p style="font-size: 0.95rem; color: var(--text-sub); line-height: 1.8;">
+                  社会福祉法人での22年間の現場実務（ソーシャルワーカー、施設管理者など）を経て大学教員になりました。「臨床心理学や社会福祉の目的は、その人が困っていることや望んでいることを自己実現できるように支援すること。クライエントが自分の人生に積極的に向き合っていける力を出せるように支援し、一緒に伴奏（伴走）することです。」
+                </p>
+                <div class="tags-container">
+                  <span class="badge-tag">社会福祉士</span>
+                  <span class="badge-tag">介護福祉士</span>
+                  <span class="badge-tag">ケアマネジャー</span>
+                  <span class="badge-tag">スクールソーシャルワーク教育教員</span>
+                </div>
+              </div>
+
+              <!-- 専門的な情報をアコーディオンで格納（高校生が難しく感じないように配慮） -->
+              <details class="qa-item" style="margin-bottom: 12px;">
+                <summary style="font-size: 0.95rem;">📚 先生の研究テーマ（ちょっと専門的なお話）</summary>
+                <div style="padding: 20px; font-size: 0.9rem; line-height: 1.7; background: #fafafa;">
+                  <p><strong>1. スウェーデン福祉倫理とソーシャルワーカーの自己覚知</strong><br>高福祉国スウェーデンの倫理綱領を研究。対人援助職が現場で直面する倫理的ジレンマに対する支援モデルを開発しています。</p>
+                  <p style="margin-top: 12px;"><strong>2. 外国人介護人材の受入れと「地域メディエーション」</strong><br>インドネシア等からの外国人介護職員が日本社会で誇りを持ってキャリアを形成できるよう、施設と地域をつなぐ支援モデルを構築しています。</p>
+                  <p style="margin-top: 12px;"><strong>3. 高齢者福祉・現場実践知</strong><br>過去には、全国的にも先進事例であった「24時間ホームヘルプサービス」の立ち上げや、訪問看護ステーション、認知症グループホームの運営を統括しました。</p>
+                </div>
+              </details>
+
+              <details class="qa-item">
+                <summary style="font-size: 0.95rem;">🏢 学外での活動・著書・業績</summary>
+                <div style="padding: 20px; font-size: 0.85rem; line-height: 1.6; background: #fafafa;">
+                  <p><strong>主な公職・委員歴（通算40期以上）</strong><br>豊中市 介護保険事業運営委員会 地域包括支援センター運営協議会 会長、羽曳野市 高齢者・障害者虐待防止ネットワーク会議 会長、介護保険市民オンブズマン機構大阪（O-ネット） 副代表・理事、日本レセプト学会 理事など多数。</p>
+                  <p style="margin-top: 12px;"><strong>主な著書・論文（49冊以上）</strong><br>『実践力を育てる高齢者福祉 地域と共に歩むソーシャルワーク』（2025年・共著）、『高齢者福祉 (社会福祉を学ぶ50の扉)』（2025年・共著）、論文「社会福祉士から見た外国人介護職員の現状と自立支援」（2025年）など。</p>
+                  <div style="margin-top: 12px;">
+                    <a href="https://researchmap.jp/read07291963" target="_blank" style="color: var(--accent); text-decoration: underline;">🔗 Researchmap 公式</a> / 
+                    <a href="https://www.osaka-ohtani.ac.jp/department/teacher/detail/?id=787" target="_blank" style="color: var(--accent); text-decoration: underline;">🔗 大学公式 教員紹介</a>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- アクセス・キャンパス -->
+    <div id="access" class="page-section">
+      <div class="container">
+        <section>
+          <div class="section-header">
+            <div class="section-num">ACCESS & CAMPUS</div>
+            <h2 class="section-title">大学へのアクセス</h2>
+          </div>
+
+          <div style="margin-bottom: 40px; text-align: center;">
+            <p style="font-size: 1.05rem; font-weight: 600; line-height: 1.8; margin-bottom: 20px;">
+              大阪大谷大学心理・福祉学科では、心理学と社会福祉学を横断して学ぶことができます。<br>
+              「心理学を学びたい」「社会福祉学を学びたい」「人のこころと生活の両方について学びたい」<br>
+              そんな人に向いた学びが、ここにはあります。
+            </p>
+            
+            <div class="photo-slider">
+              <img src="bandicam 2026-09-12 11-02-14-458.jpg" alt="和歌山から大阪大谷大学って、遠いと思ってない？">
+              <img src="bandicam 2026-09-12 11-02-19-457.jpg" alt="実は約30分で行けちゃうんです！">
+              <img src="bandicam 2026-09-12 11-02-30-115.jpg" alt="橋本駅からのアクセスルート">
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">※画像を横にスクロールしてご覧ください</p>
+          </div>
+
+          <div style="text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px;">キャンパス周辺のドローン映像</h3>
+            <img src="ohtani.png" alt="大阪大谷大学キャンパス全景" class="responsive-img">
+            <a href="https://www.youtube.com/watch?v=lw2BUTfkavI" target="_blank" rel="noopener" style="color: var(--accent); font-weight: 600; text-decoration: underline; font-size: 0.9rem; display: block;">
+              【ドローン撮影】 大阪大谷大学 周辺（大阪府富田林市・最寄り駅：滝谷不動駅）
+            </a>
+          </div>
+
+          <!-- しんぷくちゃんギャラリー -->
+          <div class="shinpuku-gallery">
+            <div class="shinpuku-images">
+              <img src="shinpuku1.png" alt="しんぷくちゃん1">
+              <img src="shinpuku2.png" alt="しんぷくちゃん2">
+              <img src="shinpuku3.png" alt="しんぷくちゃん3">
+              <img src="shinpuku4.png" alt="しんぷくちゃん4">
+            </div>
+            <p class="shinpuku-caption">
+              ※心理・福祉学科の公式キャラクター「しんぷくちゃん」。心理の「しん」と福祉の「ふく」が名前の由来。元秦ゼミ生が作成したお餅の妖精です！
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- お問い合わせ (既存維持) -->
+    <div id="contact" class="page-section">
+      <div class="container">
+        <section>
+          <div class="section-header">
+            <div class="section-num">CONTACT</div>
+            <h2 class="section-title">お問い合わせ</h2>
+            <p class="section-subtitle">各種のご相談，お問い合わせ</p>
+          </div>
+
+          <div class="contact-wrapper">
+            <div class="profile-card" style="text-align: left;">
+              <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px;">秦 康宏 研究室</h4>
+              <p style="font-size: 0.9rem; color: var(--text-sub);">
+                大阪大谷大学 人間社会学部 心理・福祉学科<br>
+                〒584-8540 大阪府富田林市錦織北3丁目11番1号
+              </p>
+              <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+                <div style="font-size: 0.85rem; color: var(--text-muted);">E-mail</div>
+                <div style="font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-top: 4px;">
+                  hatayasu@osaka-ohtani.ac.jp
+                </div>
+              </div>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 16px; line-height: 1.6;">
+                ※高校生からの進路相談、大学院・ゼミ進学に関するご質問、出張模擬授業のご依頼などはお気軽にご連絡ください。
+              </p>
+            </div>
+
+            <div class="profile-card" style="text-align: left;">
+              <form onsubmit="sendMail(event)">
+                <div class="form-group">
+                  <label>お名前（高校名・ご所属）</label>
+                  <input type="text" name="name" placeholder="例：山田 太郎（〇〇高校）" required>
+                </div>
+                <div class="form-group">
+                  <label>メールアドレス</label>
+                  <input type="email" name="email" placeholder="example@domain.com" required>
+                </div>
+                <div class="form-group">
+                  <label>ご用件・種別</label>
+                  <input type="text" name="subject" placeholder="例：進路の相談、模擬授業の依頼など">
+                </div>
+                <div class="form-group">
+                  <label>メッセージ内容</label>
+                  <textarea name="message" rows="4" placeholder="ご相談内容をご記入ください" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">メールソフトを起動して送信</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   </main>
 
   <footer>
-    大阪大谷大学 心理・福祉学科 秦研究室｜個人研究室の発信
+    <div class="container">
+      <p><strong>大阪大谷大学 人間社会学部 心理・福祉学科 秦 康宏 研究室</strong></p>
+      <p style="font-size: 0.82rem; margin-top: 4px;">Hata Laboratory of Social Welfare | Osaka Ohtani University</p>
+
+      <div class="site-disclaimer-footer" aria-label="サイト運営について">
+        <p><strong>本サイトの運営について</strong></p>
+        <p>本サイトは、秦 康宏が秦研究室として個人で運営・発信しています。心理・福祉学科の公式サイトではなく、大阪大谷大学の公式ウェブサイト・公式発信とも一切関係ありません。大学・学科の承認または監修を受けた公式情報ではなく、入試広報や学生募集を目的としたものではありません。</p>
+        <p>入試・学科に関する正式な情報は、<a href="https://www.osaka-ohtani.ac.jp/department/human_societies/psychology/" target="_blank" rel="noopener noreferrer">大阪大谷大学公式サイト「心理・福祉学科」</a>をご確認ください。</p>
+      </div>
+      
+      <!-- 自前駆動型テキストアクセスカウンター -->
+      <div style="text-align: center;">
+        <div class="counter-badge-box">
+          <span>👥 累計アクセス数:</span>
+          <span id="site-visitor-counter" class="counter-num">1</span>
+          <span>人</span>
+        </div>
+      </div>
+
+      <p style="margin-top: 16px; font-size: 0.78rem;">© 2026 Yasuhiro Hata. All Rights Reserved.</p>
+    </div>
   </footer>
 
-  <dialog id="viewer" aria-labelledby="viewer-title">
-    <div class="viewer-top">
-      <h2 id="viewer-title">ギャラリー</h2>
-      <button
-        class="viewer-button"
-        id="close-viewer"
-        type="button"
-        autofocus
-      >閉じる ×</button>
-    </div>
-
-    <img class="viewer-image" id="viewer-image" alt="">
-
-    <p id="viewer-error" role="status" hidden>
-      画像を読み込めませんでした。
-    </p>
-
-    <div class="viewer-bottom">
-      <button
-        class="viewer-button"
-        id="previous"
-        type="button"
-        aria-label="前の画像"
-      >← 前へ</button>
-
-      <a
-        id="original-image"
-        target="_blank"
-        rel="noopener noreferrer"
-      >元の画像を開く ↗</a>
-
-      <button
-        class="viewer-button"
-        id="next"
-        type="button"
-        aria-label="次の画像"
-      >次へ →</button>
-    </div>
-
-    <p id="viewer-count" aria-live="polite"></p>
-  </dialog>
-
   <script>
-    (() => {
-      // 画像は、このHTMLと同じフォルダーに置きます。
-      const pictures = [
-        {
-          file: 'c07968f2-3ff6-4cac-bb8e-e99ba1b4d9a4.jfif',
-          title: '研究室での交流'
-        },
-        {
-          file: '3fdc478c-b796-4a0f-a664-1578d8289277 (1).jfif',
-          title: '釣りのひとこま'
-        },
-        {
-          file: 'ad9a99e7-f459-41f5-9611-5a77e7c88f3f.jfif',
-          title: '表彰の記念に'
-        },
-        {
-          file: 'bb06a104-63db-46d0-95f1-8b83b7ea6be0.jfif',
-          title: '仲間とともに'
-        },
-        {
-          file: 'b20b9a0a-9d11-4ea3-87eb-a46dfe189b4f.jfif',
-          title: 'みんなで学ぶ時間'
-        },
-        {
-          file: '11ae1da8-3258-4e74-b4f1-c72d878f1dc9.jfif',
-          title: '記念の一枚'
-        },
-        {
-          file: 'e267f393-58b8-46e7-83c3-c15d135816dd.jfif',
-          title: '笑顔の記念撮影'
-        },
-        {
-          file: '583f6271-4cd6-4913-be13-cf82d078998f.jfif',
-          title: '交流と思い出'
-        },
-        {
-          file: 'e666637e-3e48-432b-8d23-5da9c43ec1f6.jfif',
-          title: '研究室のひとこま'
-        },
-        {
-          file: 'e4773a19-4d08-4e31-b195-e443c3ad9c3d.jfif',
-          title: '出会いの一枚'
+    // ▼▼ 心理×福祉 7問チャレンジのロジック ▼▼
+    let currentQuestion = 1;
+    const totalQuestions = 7;
+    const scores = {
+      'A': 0, // こころ探求
+      'B': 0, // くらし支援
+      'C': 0, // 人つなぎ
+      'D': 0, // 社会チェンジ
+      'E': 0  // 人間まるごと探求
+    };
+
+    function nextQuestion(answer) {
+      // スコアを加算
+      scores[answer]++;
+      
+      // 現在の質問を非表示
+      document.getElementById('q' + currentQuestion).classList.remove('active');
+      
+      currentQuestion++;
+      
+      // 次の質問を表示、または結果発表
+      if (currentQuestion <= totalQuestions) {
+        document.getElementById('q' + currentQuestion).classList.add('active');
+      } else {
+        showQuizResult();
+      }
+    }
+
+    function showQuizResult() {
+      document.getElementById('quiz-area').style.display = 'none';
+      const resultArea = document.getElementById('diagnosis-result');
+      
+      // 最大スコアを見つける
+      let maxScore = -1;
+      let maxType = '';
+      for (const [type, score] of Object.entries(scores)) {
+        if (score > maxScore) {
+          maxScore = score;
+          maxType = type;
         }
-      ];
-
-      const grid = document.getElementById('gallery-grid');
-      const viewer = document.getElementById('viewer');
-      const largeImage = document.getElementById('viewer-image');
-      const error = document.getElementById('viewer-error');
-
-      let current = 0;
-      let previousOverflow = '';
-
-      const imageURL = picture =>
-        './' + encodeURIComponent(picture.file);
-
-      pictures.forEach((picture, index) => {
-        const card = document.createElement('a');
-        card.className = 'card';
-        card.href = imageURL(picture);
-        card.setAttribute('aria-label', picture.title + 'を拡大');
-        card.setAttribute('aria-haspopup', 'dialog');
-
-        const img = document.createElement('img');
-        img.alt = picture.title + 'のイラスト';
-        img.loading = 'lazy';
-        img.decoding = 'async';
-
-        img.addEventListener('error', () => {
-          const message = document.createElement('span');
-          message.className = 'image-error';
-          message.textContent = '画像を読み込めませんでした。';
-          card.append(message);
-        }, { once: true });
-
-        img.src = card.href;
-
-        const label = document.createElement('span');
-        label.className = 'card-label';
-
-        const title = document.createElement('span');
-        title.textContent = picture.title;
-
-        const hint = document.createElement('small');
-        hint.textContent = '拡大する ＋';
-
-        label.append(title, hint);
-        card.append(img, label);
-
-        card.addEventListener('click', event => {
-          if (
-            event.ctrlKey ||
-            event.metaKey ||
-            event.shiftKey ||
-            event.altKey ||
-            event.button !== 0
-          ) return;
-
-          if (typeof viewer.showModal !== 'function') return;
-
-          event.preventDefault();
-          showImage(index);
-
-          previousOverflow = document.body.style.overflow;
-          document.body.style.overflow = 'hidden';
-          viewer.showModal();
-        });
-
-        grid.append(card);
-      });
-
-      function showImage(index) {
-        current = (index + pictures.length) % pictures.length;
-        const picture = pictures[current];
-
-        error.hidden = true;
-        largeImage.alt = picture.title + 'のイラスト';
-        largeImage.src = imageURL(picture);
-
-        document.getElementById('viewer-title').textContent =
-          picture.title;
-
-        document.getElementById('original-image').href =
-          imageURL(picture);
-
-        document.getElementById('viewer-count').textContent =
-          (current + 1) + ' / ' + pictures.length;
       }
 
-      largeImage.addEventListener('error', () => {
-        error.hidden = false;
+      let title = "";
+      let desc = "";
+
+      // タイプ判定
+      if (maxType === 'A') {
+        title = "🧠 こころ探求タイプ";
+        desc = "人の心や気持ちを知ることに興味があるあなた。<br>「どうしてこんな気持ちになるんだろう？」「人によって考え方が違うのはなぜだろう？」そんな疑問を大切にするタイプです。<br><strong>心理学との相性がよさそうです。</strong>大学では、人の心や行動を科学的に学ぶことで、自分の「なぜ？」をさらに深められます。";
+      } else if (maxType === 'B') {
+        title = "🤝 くらし支援タイプ";
+        desc = "人が安心して生活できることに関心があるあなた。<br>困っている人を見たとき、「どうすればこの人の生活がよくなるだろう？」と考えるタイプです。<br><strong>社会福祉学との相性がよさそうです。</strong>福祉では、個人だけでなく、家族、地域、制度など、さまざまな視点から人の暮らしを考えます。";
+      } else if (maxType === 'C') {
+        title = "💬 人つなぎタイプ";
+        desc = "人と人との関係に興味があるあなた。<br>話を聞いたり、場をつくったり、人と人をつないだりすることが好きなタイプです。<br><strong>心理学にも福祉にも、この力はとても重要です。</strong>「人との関わり」を深く学びたい人に向いているタイプです。";
+      } else if (maxType === 'D') {
+        title = "🌍 社会チェンジタイプ";
+        desc = "「個人だけではなく、社会も変えたい」と考えるあなた。<br>「どうしてこの問題が起きるの？」「仕組みを変えたらもっと暮らしやすくなるのでは？」という視点を持っています。<br><strong>福祉だけでなく、地域、学校、行政などにも目を向けるタイプです。</strong>";
+      } else {
+        title = "🔎 人間まるごと探求タイプ";
+        desc = "人を一つの見方だけで決めつけたくないあなた。<br>心も、生活も、人間関係も、社会も気になる。「人って、そんなに単純じゃない」と感じるタイプかもしれません。<br><strong>心理学と社会福祉学を「一緒に学ぶ」ことに最も向いているかもしれません。</strong>";
+      }
+
+      document.getElementById('result-title').innerHTML = title;
+      
+      // サブメッセージ（2番目に高い要素などを考慮）
+      let subMessage = "";
+      if (maxType === 'A' && scores['B'] > 0) {
+        subMessage = "<br><br>あなたは「こころ」への関心が特に高いタイプ！<br>でも「くらし」も気になっているようです。だから心理学だけでなく、福祉も学んでみると面白いかもしれません。";
+      } else if (maxType === 'B' && scores['A'] > 0) {
+        subMessage = "<br><br>あなたは「くらし」への関心が特に高いタイプ！<br>でも「こころ」も気になっているようです。だから社会福祉だけでなく、心理学も学んでみると面白いかもしれません。";
+      }
+
+      document.getElementById('result-desc').innerHTML = desc + subMessage;
+
+      // グラフの描画
+      const graphContainer = document.getElementById('result-graphs');
+      graphContainer.innerHTML = '';
+      
+      const labels = {
+        'A': 'こころ探求',
+        'B': 'くらし支援',
+        'C': '人つなぎ',
+        'D': '社会チェンジ',
+        'E': '人間まるごと'
+      };
+
+      // 点数順に並び替え
+      const sortedScores = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+
+      sortedScores.forEach(item => {
+        const type = item[0];
+        const score = item[1];
+        const percentage = (score / totalQuestions) * 100;
+        
+        const html = `
+          <div class="graph-bar-container">
+            <div class="graph-label">${labels[type]}</div>
+            <div class="graph-bar-bg">
+              <div class="graph-bar-fill" style="width: 0%;" data-width="${percentage}%"></div>
+            </div>
+            <div class="graph-score">${score}点</div>
+          </div>
+        `;
+        graphContainer.insertAdjacentHTML('beforeend', html);
       });
 
-      largeImage.addEventListener('load', () => {
-        error.hidden = true;
+      resultArea.style.display = 'block';
+
+      // アニメーションでグラフを伸ばす
+      setTimeout(() => {
+        const bars = document.querySelectorAll('.graph-bar-fill');
+        bars.forEach(bar => {
+          bar.style.width = bar.getAttribute('data-width');
+        });
+      }, 100);
+    }
+
+    function resetQuiz() {
+      currentQuestion = 1;
+      for (let key in scores) {
+        scores[key] = 0;
+      }
+      document.getElementById('diagnosis-result').style.display = 'none';
+      document.getElementById('quiz-area').style.display = 'block';
+      const questions = document.querySelectorAll('.question-container');
+      questions.forEach(q => q.classList.remove('active'));
+      document.getElementById('q1').classList.add('active');
+    }
+    // ▲▲ 心理×福祉 7問チャレンジのロジック ここまで ▲▲
+
+
+    function sendMail(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.name.value;
+      const email = form.email.value;
+      const subject = form.subject.value || 'お問い合わせ';
+      const message = form.message.value;
+      
+      const bodyText = "お名前（ご所属・法人名）：\n" + name + "\n\n" +
+                       "メールアドレス：\n" + email + "\n\n" +
+                       "ご用件・種別：\n" + form.subject.value + "\n\n" +
+                       "メッセージ内容：\n" + message;
+      
+      window.location.href = "mailto:hatayasu@osaka-ohtani.ac.jp?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(bodyText);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.page-section');
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const nav = document.getElementById('global-nav');
+
+      // ハンバーガーメニューの開閉
+      menuBtn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        menuBtn.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
       });
 
-      document.getElementById('close-viewer')
-        .addEventListener('click', () => viewer.close());
-
-      document.getElementById('previous')
-        .addEventListener('click', () => showImage(current - 1));
-
-      document.getElementById('next')
-        .addEventListener('click', () => showImage(current + 1));
-
-      viewer.addEventListener('close', () => {
-        document.body.style.overflow = previousOverflow;
-      });
-
-      // 画像表示枠の外をクリックすると閉じます。
-      viewer.addEventListener('click', event => {
-        if (event.target !== viewer) return;
-
-        const rect = viewer.getBoundingClientRect();
-
-        if (
-          event.clientX < rect.left ||
-          event.clientX > rect.right ||
-          event.clientY < rect.top ||
-          event.clientY > rect.bottom
-        ) {
-          viewer.close();
+      // ページ切り替え処理
+      function showPage(hash) {
+        if (!hash) hash = '#home';
+        let target = document.querySelector(hash);
+        
+        // 存在しないハッシュの場合はトップページを表示
+        if (!target || !target.classList.contains('page-section')) {
+          target = document.getElementById('home');
         }
+
+        // 全て隠して、対象だけ表示
+        sections.forEach(sec => sec.style.display = 'none');
+        target.style.display = 'block';
+
+        // スマホ用メニューが開いていれば閉じる
+        nav.classList.remove('active');
+        menuBtn.innerHTML = '☰';
+        
+        // ページ遷移時に一番上へスクロール
+        window.scrollTo(0, 0);
+      }
+
+      // リンククリック時の動作
+      const navLinks = document.querySelectorAll('nav ul li a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if(href.startsWith('#')) {
+            e.preventDefault();
+            history.pushState(null, null, href);
+            showPage(href);
+          }
+        });
       });
 
-      // 左右キーで画像を切り替えます。Escキーで閉じられます。
-      viewer.addEventListener('keydown', event => {
-        if (
-          event.key === 'ArrowLeft' ||
-          event.key === 'ArrowRight'
-        ) {
-          event.preventDefault();
+      // ブラウザの戻る・進むボタン対応
+      window.addEventListener('popstate', () => {
+        showPage(window.location.hash);
+      });
 
-          showImage(
-            current + (event.key === 'ArrowLeft' ? -1 : 1)
-          );
+      // 初期表示
+      showPage(window.location.hash);
+
+      // 自前駆動型ローカルアクセスカウンター処理
+      try {
+        let count = localStorage.getItem('hata_lab_visitor_count');
+        if (!count) {
+          count = 128; // 初期ベース数値（お好みで変更可能）の設定
+        } else {
+          count = parseInt(count, 10);
         }
-      });
-    })();
+        
+        // このブラウザでの訪問が今回のセッションでまだカウントされていない場合のみ＋1
+        if (!sessionStorage.getItem('hata_lab_visited')) {
+          count += 1;
+          localStorage.setItem('hata_lab_visitor_count', count);
+          sessionStorage.setItem('hata_lab_visited', 'true');
+        }
+
+        const counterEl = document.getElementById('site-visitor-counter');
+        if (counterEl) {
+          counterEl.textContent = count.toLocaleString();
+        }
+      } catch (e) {
+        const counterEl = document.getElementById('site-visitor-counter');
+        if (counterEl) {
+          counterEl.textContent = '128';
+        }
+      }
+    });
   </script>
+<!-- 社会福祉士国家試験：無料教材ページ ここから -->
+<style>
+  .exam-materials-banner {
+    margin: 32px auto;
+    padding: 28px 24px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+    text-align: center;
+  }
+
+  .exam-materials-banner h2 {
+    margin: 0 0 12px;
+    font-size: 1.4rem;
+    color: #1e3a8a;
+  }
+
+  .exam-materials-banner p {
+    margin: 0 0 20px;
+    line-height: 1.9;
+    color: #334155;
+  }
+
+  .exam-materials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .exam-material-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(30, 58, 138, 0.05);
+  }
+
+  .exam-material-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #1e3a8a;
+  }
+
+  .exam-material-meta {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+
+  .exam-material-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+  }
+
+  .exam-material-button {
+    display: inline-block;
+    padding: 13px 20px;
+    border: 1px solid #1e3a8a;
+    border-radius: 10px;
+    background: #1e3a8a;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .exam-material-button:hover {
+    background: #172e6e;
+    color: #fff;
+  }
+
+  .exam-material-button.secondary {
+    background: #fff;
+    color: #1e3a8a;
+  }
+
+  .exam-material-button.secondary:hover {
+    background: #eff6ff;
+  }
+
+  .exam-material-button:focus-visible {
+    outline: 3px solid #f97316;
+    outline-offset: 4px;
+  }
+
+  .exam-materials-intro {
+    margin-bottom: 30px;
+    line-height: 1.9;
+    color: #334155;
+  }
+
+  .exam-materials-note {
+    margin-top: 28px;
+    padding: 22px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    line-height: 1.9;
+    color: #475569;
+  }
+
+  /* メニュー項目が増えても折り返せるようにする */
+  @media (min-width: 769px) {
+    .nav-inner {
+      height: auto;
+      min-height: 72px;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    #global-nav ul {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .exam-materials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+(function () {
+  function setupExamMaterials() {
+    const main = document.querySelector("main");
+    const home = document.getElementById("home");
+    const navList = document.querySelector("#global-nav ul");
+
+    if (!main) return;
+
+    // 無料教材ページを追加
+    if (!document.getElementById("materials")) {
+      main.insertAdjacentHTML("beforeend", `
+        <div id="materials" class="page-section">
+          <div class="container">
+            <section aria-labelledby="exam-materials-title">
+              <div class="section-header">
+                <div class="section-num">FREE LEARNING MATERIALS</div>
+                <h2 class="section-title" id="exam-materials-title">
+                  社会福祉士国家試験<br>
+                  模擬問題・無料教材
+                </h2>
+                <p>
+                  受験勉強に取り組む皆さんを、秦研究室が応援します。
+                </p>
+              </div>
+
+              <div class="exam-materials-intro">
+                <p>
+                  夏のボランティア受験対策講座で作成した、
+                  3科目の模擬問題を公開しています。
+                  登録不要・無料でダウンロードできます。
+                  日々の学習や復習にご活用ください。
+                </p>
+              </div>
+
+              <div class="exam-materials-grid">
+
+                <article class="exam-material-card">
+                  <p class="exam-material-meta">2026年作成 ／ 模擬問題</p>
+                  <h3>高齢者福祉論</h3>
+                  <p class="exam-material-meta">PDF形式 ／ 約1.3 MB</p>
+
+                  <div class="exam-material-actions">
+                    <a class="exam-material-button"
+                       href="./2026kourei.pdf"
+                       download="2026kourei.pdf"
+                       aria-label="高齢者福祉論の模擬問題を無料ダウンロード">
+                      無料ダウンロード
+                    </a>
+                    <a class="exam-material-button secondary"
+                       href="./2026kourei.pdf"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="高齢者福祉論のPDFを見る（新しいタブ）">
+                      PDFを見る ↗
+                    </a>
+                  </div>
+                </article>
+
+                <article class="exam-material-card">
+                  <p class="exam-material-meta">2026年作成 ／ 模擬問題</p>
+                  <h3>社会福祉調査の基礎</h3>
+                  <p class="exam-material-meta">PDF形式 ／ 約1.3 MB</p>
+
+                  <div class="exam-material-actions">
+                    <a class="exam-material-button"
+                       href="./2026chousa.pdf"
+                       download="2026chousa.pdf"
+                       aria-label="社会福祉調査の基礎の模擬問題を無料ダウンロード">
+                      無料ダウンロード
+                    </a>
+                    <a class="exam-material-button secondary"
+                       href="./2026chousa.pdf"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="社会福祉調査の基礎のPDFを見る（新しいタブ）">
+                      PDFを見る ↗
+                    </a>
+                  </div>
+                </article>
+
+                <article class="exam-material-card">
+                  <p class="exam-material-meta">2026年作成 ／ 模擬問題</p>
+                  <h3>ソーシャルワークの理論と方法</h3>
+                  <p class="exam-material-meta">PDF形式 ／ 約1.6 MB</p>
+
+                  <div class="exam-material-actions">
+                    <a class="exam-material-button"
+                       href="./2026riron.pdf"
+                       download="2026riron.pdf"
+                       aria-label="ソーシャルワークの理論と方法の模擬問題を無料ダウンロード">
+                      無料ダウンロード
+                    </a>
+                    <a class="exam-material-button secondary"
+                       href="./2026riron.pdf"
+                       target="_blank"
+                       rel="noopener"
+                       aria-label="ソーシャルワークの理論と方法のPDFを見る（新しいタブ）">
+                      PDFを見る ↗
+                    </a>
+                  </div>
+                </article>
+
+              </div>
+
+              <div class="exam-materials-note">
+                <p>
+                  スマートフォンでPDFが表示された場合は、
+                  共有メニューなどから保存できます。
+                </p>
+                <p style="margin-top:12px;">
+                  作成：大阪大谷大学 心理・福祉学科 秦研究室
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      `);
+    }
+
+    // トップページに案内を追加
+    if (home && !home.querySelector('a[href="#materials"]')) {
+      home.insertAdjacentHTML("beforeend", `
+        <div class="container">
+          <aside class="exam-materials-banner"
+                 aria-label="無料教材のお知らせ">
+            <h2>社会福祉士国家試験を目指す皆さんへ</h2>
+            <p>
+              夏のボランティア受験対策講座で作成した<br>
+              3科目の模擬問題を無料公開しています。
+            </p>
+            <a class="exam-material-button" href="#materials">
+              模擬問題を無料ダウンロード →
+            </a>
+          </aside>
+        </div>
+      `);
+    }
+
+    // メニューに「無料教材」を追加
+    if (navList && !navList.querySelector('a[href="#materials"]')) {
+      const item = document.createElement("li");
+      item.innerHTML = '<a href="#materials">無料教材</a>';
+
+      const contactLink = navList.querySelector('a[href="#contact"]');
+      if (contactLink) {
+        navList.insertBefore(item, contactLink.closest("li"));
+      } else {
+        navList.appendChild(item);
+      }
+    }
+
+    // 動的に追加したページも含めて切り替える
+    function showCurrentPage() {
+      const id = window.location.hash.slice(1) || "home";
+      let target = document.getElementById(id);
+
+      if (!target || !target.classList.contains("page-section")) {
+        target = document.getElementById("home");
+      }
+      if (!target) return;
+
+      document.querySelectorAll(".page-section").forEach(function (page) {
+        page.style.display = page === target ? "block" : "none";
+      });
+
+      const nav = document.getElementById("global-nav");
+      const menuButton = document.getElementById("mobile-menu-btn");
+
+      if (nav) nav.classList.remove("active");
+      if (menuButton) menuButton.textContent = "☰";
+
+      window.scrollTo(0, 0);
+    }
+
+    // 既存のページ切り替え処理との重複を避ける
+    document.addEventListener("click", function (event) {
+      if (!(event.target instanceof Element)) return;
+      const link = event.target.closest('a[href^="#"]');
+      if (!link) return;
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+
+      const href = link.getAttribute("href");
+      const target = document.getElementById(href.slice(1));
+
+      if (!target || !target.classList.contains("page-section")) return;
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      if (window.location.hash !== href) {
+        history.pushState(null, "", href);
+      }
+      showCurrentPage();
+    }, true);
+
+    window.addEventListener("hashchange", showCurrentPage);
+    window.addEventListener("popstate", showCurrentPage);
+
+    showCurrentPage();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupExamMaterials);
+  } else {
+    setupExamMaterials();
+  }
+})();
+</script>
+<!-- 社会福祉士国家試験：無料教材ページ ここまで -->
+<script>
+
+(function(){
+'use strict';
+const root=document.getElementById('hata-perspective');
+if(!root || root.dataset.initialized) return;
+root.dataset.initialized='true';
+const items=[["心配性", "先のことを、いろいろ考えているのかも。", "心配の中に、備えておきたいことや大切にしたいことが隠れている場合もあります。ただ、つらい心配を無理に「長所」と思わなくても大丈夫です。", "予定や手順が前もって分かること。分からないことを聞ける相手がいること。", "気になることを一つだけ選び、「今できる準備」と「今は決められないこと」に分けてみる。"], ["優柔不断", "いくつかの可能性を、大切にしているのかも。", "決められないのは、性格だけが理由とは限りません。情報が足りない、どちらにもよいところがある、という場合もあります。", "選択肢を整理してもらえること。決めるための時間や、お試しの機会があること。", "今回いちばん大切にしたい条件を一つ選んでみる。例えば、楽しさ・安心・時間など。"], ["人前で話すのが苦手", "伝える方法は、一つではありません。", "大勢の前では話しにくくても、文章や一対一なら伝えやすいことはありませんか。話す場面が苦手でも、考えや思いがないわけではありません。", "話す内容を事前に知れること。メモ、文章、少人数など、参加方法を選べること。", "次の発表や話し合いで、伝えたいことを一行メモにしてみる。"], ["人に頼るのが苦手", "一人で何とかしようとしてきたのかも。", "頼ることにためらいがあるのには、これまでの経験や相手との関係が影響している場合もあります。助けを求めることも、自分を支える方法です。", "頼んでも責められない関係があること。相談先や、お願いできる範囲が分かること。", "頼めそうな相手がいれば、「ここだけ教えてもらえる？」と小さく具体的に伝えてみる。"], ["周りに合わせすぎる", "人との関係を、大切にしているのかも。", "周りを気にかけることと、自分の気持ちを大切にすることは、どちらもあってよいものです。合わせることで疲れているなら、その負担にも目を向けてみましょう。", "違う意見を言っても否定されないこと。その場で返事をせず、考える時間を持てること。", "返事の前に「少し考えてからでもいい？」と伝えて、自分の気持ちを確かめてみる。"], ["マイペースと言われる", "取り組みやすいペースがあるのかも。", "人によって、考える時間や作業の進め方は違います。一方で、一緒に進める相手との調整が必要になることもあります。", "締め切りや役割がはっきりしていること。途中で相談でき、自分に合った手順を使えること。", "「いつまでに、どこまで」を相手と一つ確認してみる。"], ["飽きっぽい", "新しいことに、関心が向きやすいのかも。", "興味が広がりやすい場合もあれば、課題が難しすぎる、単調、疲れているなど、取り組む条件が合っていない場合もあります。", "課題を小さく区切れること。休憩や、進め方の選択肢があること。", "続けたいことがあれば、まず５分でできる部分を一つ決めてみる。"], ["失敗を引きずる", "大切にしたいことが、あったのかも。", "うまくやりたかった気持ちが残っている場合もあります。ただ、振り返りと自分を責め続けることは同じではありません。休むことも選べます。", "失敗を責めるより、次の方法を一緒に考えてくれる人がいること。やり直せる機会があること。", "落ち着いたときに、「起きたこと」と「次に変えられそうなこと」を一つずつ分けてみる。"]];
+const choices=root.querySelector('.hp-choices'),result=root.querySelector('.hp-result'),empty=root.querySelector('.hp-empty');
+const response=root.querySelector('.hp-response');
+const feedback=Array.from(root.querySelectorAll('[data-feedback]'));
+const messages={yes:'どの部分が合いそうでしたか？ 思い当たる場面があれば、一つ振り返ってみましょう。提案を全部取り入れる必要はありません。',no:'しっくりこない、という受け止め方も大切です。例えば「こう見られたい」より「こんなとき困る」「こうしてもらうと助かる」から考えてもかまいません。',later:'今すぐ答えを決めなくても大丈夫。場面や相手によって感じ方が違うこともあります。今日は読むだけで終えてもかまいません。'};
+function clearFeedback(){feedback.forEach(b=>b.setAttribute('aria-pressed','false'));response.textContent='';response.hidden=true;}
+items.forEach((item,index)=>{const b=document.createElement('button');b.type='button';b.textContent=item[0];b.setAttribute('aria-pressed','false');b.addEventListener('click',()=>{choices.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));['selected','title','view','environment','step'].forEach((key,i)=>{root.querySelector('[data-hp="'+key+'"]').textContent=i===0?'選んだ言葉：'+item[i]:item[i];});clearFeedback();result.hidden=false;empty.hidden=true;root.querySelector('[data-hp="title"]').focus({preventScroll:true});result.style.scrollMarginTop=((document.querySelector('header')?.getBoundingClientRect().height||0)+18)+'px';result.scrollIntoView({behavior:'auto',block:'start'});});choices.appendChild(b);});
+feedback.forEach(b=>b.addEventListener('click',()=>{feedback.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));response.textContent=messages[b.dataset.feedback];response.hidden=false;}));
+root.querySelector('[data-hp-reset]').addEventListener('click',()=>{result.hidden=true;empty.hidden=false;clearFeedback();choices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));choices.querySelector('button').focus();});
+})();
+
+(function(){
+  const launch=document.getElementById('hp-launch');
+  const work=document.getElementById('hata-perspective');
+  if(!launch || !work) return;
+  launch.addEventListener('click',function(){
+    const height=document.querySelector('header')?.getBoundingClientRect().height||0;
+    work.style.scrollMarginTop=(height+18)+'px';
+    const title=document.getElementById('hp-title');
+    title.setAttribute('tabindex','-1');
+    title.focus({preventScroll:true});
+    work.scrollIntoView({behavior:'auto',block:'start'});
+  });
+})();
+
+</script>
 </body>
 </html>
